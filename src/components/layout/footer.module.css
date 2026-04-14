@@ -1,0 +1,263 @@
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.footerFrame {
+  margin-top: auto;
+  padding: 1.25rem 1.25rem 1.25rem;
+  background-color: var(--bg-primary);
+  display: flex;
+  justify-content: center;
+}
+
+.footer {
+  position: relative;
+  width: 100%;
+  max-width: 1600px;
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+  border-radius: 2.5rem;
+  overflow: hidden;
+}
+
+/* ---- Notches ---- */
+.topNotch {
+  position: absolute;
+  top: 0;
+  left: 35%; /* Shifted more to the right */
+  width: 34rem; /* Shortened as requested */
+  height: 2.75rem;
+  background-color: var(--bg-primary);
+  border-bottom-left-radius: 1.75rem;
+  border-bottom-right-radius: 1.75rem;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.topNotch::before,
+.topNotch::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+.topNotch::before {
+  left: -1.7rem; /* Deeper overlap to kill the slit */
+  background: radial-gradient(circle at 0% 100%, transparent 1.75rem, var(--bg-primary) 1.75rem);
+}
+
+.topNotch::after {
+  right: -1.7rem; /* Deeper overlap to kill the slit */
+  background: radial-gradient(circle at 100% 100%, transparent 1.75rem, var(--bg-primary) 1.75rem);
+}
+
+.leftNotch {
+  position: absolute;
+  left: 0;
+  top: 58%;
+  width: 3.5rem;
+  height: 9rem;
+  background-color: var(--bg-primary);
+  border-top-right-radius: 1.75rem;
+  border-bottom-right-radius: 1.75rem;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.leftNotch::before,
+.leftNotch::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+.leftNotch::before {
+  top: -1.75rem;
+  background: radial-gradient(circle at 100% 0%, transparent 1.75rem, var(--bg-primary) 1.75rem);
+}
+
+.leftNotch::after {
+  bottom: -1.75rem;
+  background: radial-gradient(circle at 100% 100%, transparent 1.75rem, var(--bg-primary) 1.75rem);
+}
+
+.footerInner {
+  width: 100%;
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 4rem 3rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---- Top Row ---- */
+.footerTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  padding-bottom: 3rem;
+  z-index: 2;
+}
+
+.footerCtaHeading {
+  font-size: clamp(1.75rem, 2.5vw, 2.5rem);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--dark-text);
+  margin-bottom: 1.5rem;
+}
+
+.footerRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1.5rem;
+}
+
+.footerNote {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: clamp(1.75rem, 2.5vw, 2.5rem);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--dark-text);
+  text-align: right;
+}
+
+.footerSocials {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--dark-border);
+  color: var(--dark-text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.socialLink:hover {
+  color: var(--dark-text);
+  border-color: var(--dark-text-muted);
+}
+
+.socialLink svg {
+  width: 18px;
+  height: 18px;
+}
+
+
+
+/* ---- Brand Mark (Massive) ---- */
+.footerBrand {
+  width: 100%;
+  overflow: hidden;
+  padding: 6rem 0 4rem; /* Increased top padding */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.brandText {
+  width: 100%;
+  font-family: var(--font-logo);
+  /* Slightly safer scale to prevent period cutoff, but still huge */
+  font-size: clamp(4rem, 22vw, 26rem);
+  padding: 0 1rem; /* Safely buffer the edges */
+  text-transform: lowercase;
+  letter-spacing: -0.06em;
+  line-height: 0.65;
+  white-space: nowrap;
+  text-align: center;
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  color: var(--dark-text);
+}
+
+.brandThin {
+  font-weight: 300; /* One weight thinner (Light) */
+}
+
+.brandBold {
+  font-weight: 700;
+}
+
+.brandPeriod {
+  color: #FF8F6B;
+  font-weight: 700;
+  display: inline-block;
+}
+
+.logoPeriodBounce {
+  animation: periodBounce 0.8s ease forwards;
+}
+
+@keyframes periodBounce {
+  0%   { transform: translateY(0) scale(1); }
+  25%  { transform: translateY(-30px) scale(1.3); }
+  45%  { transform: translateY(8px) scale(0.9); }
+  65%  { transform: translateY(-15px) scale(1.15); }
+  80%  { transform: translateY(4px) scale(0.97); }
+  100% { transform: translateY(0) scale(1); }
+}
+
+/* ---- Meta row ---- */
+.footerMeta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 2rem;
+  z-index: 2;
+}
+
+.footerCopyright {
+  font-size: 0.85rem;
+  font-weight: var(--font-weight-light);
+  color: var(--dark-text-secondary);
+  letter-spacing: 0.01em;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.metaDivider {
+  color: var(--dark-text-muted);
+  font-size: 0.6rem;
+  opacity: 0.5;
+}
+
+.footerLink {
+  color: var(--dark-text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.footerLink:hover {
+  color: var(--dark-text);
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .footerFrame { padding: 0.75rem; }
+  .footer { border-radius: 1.75rem; }
+  .footerInner { padding: 3rem 1.5rem 0; }
+  .footerTop { flex-direction: column; gap: 2rem; }
+  .brandText { font-size: clamp(3rem, 20vw, 6rem); }
+}

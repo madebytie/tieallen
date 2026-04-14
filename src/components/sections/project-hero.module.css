@@ -1,0 +1,364 @@
+/* ============================================
+   PROJECT HERO — Portfolio Item Template
+   White L-shape (top strip + left tab) over the
+   image. Title straddles the strip's bottom edge
+   so its second line hangs into the tab overhang.
+   Inverse concave corner where strip meets tab —
+   same pattern as the footer notches.
+   ============================================ */
+
+.projectHero {
+  width: 100%;
+  background-color: var(--bg-primary);
+}
+
+.projectHeroFrame {
+  width: 100%;
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+.projectHeroCard {
+  position: relative;
+  width: 100%;
+  min-height: 760px;
+  max-height: 820px;
+  border-radius: 2.5rem;
+  overflow: hidden;
+  background-color: var(--bg-primary);
+}
+
+/* ---- Image fills the card ---- */
+.projectHeroImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  z-index: 1;
+}
+
+/* ---- Top strip: full-width white bar ----
+   STRIP_H = 4.5rem. Title is positioned so its line break sits
+   on this edge, putting line 1 in the strip and line 2 in the
+   tab overhang below — that's the "half in, half out" effect. */
+.projectHeroStrip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4.5rem;
+  background-color: var(--bg-primary);
+  z-index: 2;
+}
+
+/* Inverse concave corner: strip's bottom edge × card's right edge.
+   Rounds the image's top-right where it meets the strip. */
+.projectHeroStrip::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: calc(-2.5rem + 1px); /* 1px overlap kills the subpixel seam */
+  width: 2.5rem;
+  height: 2.5rem;
+  background: radial-gradient(
+    circle at 0% 100%,
+    transparent 2.5rem,
+    var(--bg-primary) 2.5rem
+  );
+}
+
+/* ---- Title tab: white block on the left, taller than the strip.
+   The strip + tab visually merge into an L-shape. ---- */
+.projectHeroTab {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: min(58%, 44rem);
+  min-height: 9rem;
+  background-color: var(--bg-primary);
+  border-bottom-right-radius: 2.5rem;
+  z-index: 3;
+  padding: 1.55rem 3rem 1.5rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Inverse concave corner: tab's right edge × strip's bottom edge.
+   Same trick as footer .topNotch::before — a quarter-disc pseudo
+   in the image area whose curve smoothly connects strip↔tab. */
+.projectHeroTab::after {
+  content: "";
+  position: absolute;
+  top: 4.5rem;       /* MUST equal strip height */
+  right: -2.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: radial-gradient(
+    circle at 100% 100%,
+    transparent 2.5rem,
+    var(--bg-primary) 2.5rem
+  );
+}
+
+/* Inverse concave corner: tab's bottom edge × card's left edge.
+   Same pattern as footer .leftNotch::after — smooths the tab's
+   bottom-left so the image's top-left doesn't hit a sharp 90°. */
+.projectHeroTab::before {
+  content: "";
+  position: absolute;
+  bottom: -2.5rem;
+  left: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: radial-gradient(
+    circle at 100% 100%,
+    transparent 2.5rem,
+    var(--bg-primary) 2.5rem
+  );
+}
+
+.projectHeroTitle {
+  font-size: clamp(1.9rem, 2.85vw, 2.65rem);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+/* ---- Tag pills: floating on the strip, top-right ---- */
+.projectHeroTags {
+  position: absolute;
+  top: 1.4rem;
+  right: 2rem;
+  display: flex;
+  gap: 0.4rem;
+  z-index: 4;
+}
+
+.projectHeroTag {
+  padding: 0.5rem 1.1rem;
+  background-color: var(--bg-tertiary);
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: var(--font-weight-medium);
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+/* ---- Accent notch: bottom-right ---- */
+.projectHeroAccent {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: min(22%, 18rem);
+  height: 3rem;
+  background-color: var(--bg-primary);
+  border-top-left-radius: 1.75rem;
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* Inverse corner: accent's top edge × card's right edge.
+   Box is UP from the accent along the card's right edge; the L
+   corner sits at the box's bottom-right, so the gradient center
+   goes at the opposite (top-left) corner for a tangent arc. */
+.projectHeroAccent::after {
+  content: "";
+  position: absolute;
+  top: -1.75rem;
+  right: 0;
+  width: 1.75rem;
+  height: calc(1.75rem + 1px); /* 1px overlap kills the subpixel seam */
+  background: radial-gradient(
+    circle at 0% 0%,
+    transparent 1.75rem,
+    var(--bg-primary) 1.75rem
+  );
+}
+
+/* Inverse corner: accent's left edge × card's bottom edge.
+   Box is LEFT of the accent along the card's bottom edge; L
+   corner at box's bottom-right, center at opposite top-left. */
+.projectHeroAccent::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -1.75rem;
+  width: calc(1.75rem + 1px); /* 1px overlap kills the subpixel seam */
+  height: 1.75rem;
+  background: radial-gradient(
+    circle at 0% 0%,
+    transparent 1.75rem,
+    var(--bg-primary) 1.75rem
+  );
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .projectHeroCard {
+    min-height: 580px;
+    max-height: 660px;
+  }
+
+  .projectHeroStrip {
+    height: 4rem;
+  }
+
+  .projectHeroStrip::after {
+    bottom: calc(-2rem + 1px);
+    width: 2rem;
+    height: 2rem;
+    background: radial-gradient(
+      circle at 0% 100%,
+      transparent 2rem,
+      var(--bg-primary) 2rem
+    );
+  }
+
+  .projectHeroAccent::after {
+    top: -1.75rem;
+    height: calc(1.75rem + 1px);
+  }
+
+  .projectHeroAccent::before {
+    width: calc(1.75rem + 1px);
+  }
+
+  .projectHeroTab {
+    width: min(72%, 32rem);
+    min-height: 7.75rem;
+    padding: 1.25rem 2rem 1.25rem;
+    border-bottom-right-radius: 2rem;
+  }
+
+  .projectHeroTab::after {
+    top: 4rem;
+    right: -2rem;
+    width: 2rem;
+    height: 2rem;
+    background: radial-gradient(
+      circle at 100% 100%,
+      transparent 2rem,
+      var(--bg-primary) 2rem
+    );
+  }
+
+  .projectHeroTab::before {
+    bottom: -2rem;
+    width: 2rem;
+    height: 2rem;
+    background: radial-gradient(
+      circle at 100% 100%,
+      transparent 2rem,
+      var(--bg-primary) 2rem
+    );
+  }
+
+  .projectHeroTags {
+    top: 1.25rem;
+    right: 1.5rem;
+  }
+
+  .projectHeroAccent {
+    width: 36%;
+    height: 2.5rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .projectHeroFrame {
+    padding: 0.75rem;
+  }
+
+  .projectHeroCard {
+    border-radius: 1.75rem;
+    min-height: 460px;
+    max-height: 540px;
+  }
+
+  .projectHeroStrip {
+    height: 3.25rem;
+  }
+
+  .projectHeroStrip::after {
+    bottom: calc(-1.5rem + 1px);
+    width: 1.5rem;
+    height: 1.5rem;
+    background: radial-gradient(
+      circle at 0% 100%,
+      transparent 1.5rem,
+      var(--bg-primary) 1.5rem
+    );
+  }
+
+  .projectHeroTab {
+    width: 88%;
+    min-height: 6.25rem;
+    padding: 0.95rem 1.4rem 1rem;
+    border-bottom-right-radius: 1.5rem;
+  }
+
+  .projectHeroTab::after {
+    top: 3.25rem;
+    right: -1.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: radial-gradient(
+      circle at 100% 100%,
+      transparent 1.5rem,
+      var(--bg-primary) 1.5rem
+    );
+  }
+
+  .projectHeroTab::before {
+    bottom: -1.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: radial-gradient(
+      circle at 100% 100%,
+      transparent 1.5rem,
+      var(--bg-primary) 1.5rem
+    );
+  }
+
+  .projectHeroTitle {
+    font-size: clamp(1.4rem, 6.5vw, 2rem);
+  }
+
+  .projectHeroTags {
+    top: 0.85rem;
+    right: 1rem;
+  }
+
+  .projectHeroAccent {
+    width: 40%;
+    height: 2rem;
+    border-top-left-radius: 1.25rem;
+  }
+
+  .projectHeroAccent::before {
+    left: -1.25rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    background: radial-gradient(
+      circle at 0% 0%,
+      transparent 1.25rem,
+      var(--bg-primary) 1.25rem
+    );
+  }
+
+  .projectHeroAccent::after {
+    top: -1.25rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    background: radial-gradient(
+      circle at 0% 0%,
+      transparent 1.25rem,
+      var(--bg-primary) 1.25rem
+    );
+  }
+}
