@@ -6,7 +6,7 @@ interface PricingTier {
   title: string;
   price: string;
   priceSuffix?: string;
-  description: string;
+  description: ReactNode;
   features: string[];
   ctaLabel: string;
   ctaHref: string;
@@ -26,8 +26,11 @@ const tiers: PricingTier[] = [
     title: "Custom Project",
     price: "$10k+",
     priceSuffix: "one-time",
-    description:
-      "I bring your vision to life. There is pretty much no limits. Brand design, UI/UX, high-end web design, marketing funnels and custom platforms from the ground up.",
+    description: (
+      <>
+        <strong>I bring your vision to life. There is pretty much no limits.</strong> Brand design, UI/UX, high-end web design, marketing funnels and custom platforms from the ground up.
+      </>
+    ),
     features: [
       "Full project lifecycle strategy",
       "High-end Design & Branding",
@@ -45,8 +48,11 @@ const tiers: PricingTier[] = [
     title: "Unlimited Retainer",
     price: "$5k+",
     priceSuffix: "monthly",
-    description:
-      "Available exclusively to partners who have completed a Foundation project. Like having an entire premium design and development department at your fingertips.",
+    description: (
+      <>
+        <strong>Available exclusively to partners who have completed a Foundation project.</strong> Like having an entire premium design and development department at your fingertips.
+      </>
+    ),
     features: [
       "One request at a time",
       "Deliverable every 2-3 days",

@@ -46,7 +46,7 @@ export default function Introduction() {
         {/* Large Statement */}
         <h2 className={styles.statement}>
           <span className={styles.statementBold}>I design and build premium brands, websites, applications and marketing funnels from end-to-end. </span>
-          <span className={styles.statementMuted}>With over 18 years experience, I bring visions to life for founders and teams from ambitious startups, enterprise and moonshots.</span>
+          <span className={styles.statementMuted}>With 18 years experience I bring visions to life for ambitious startups, enterprise teams and moonshots.</span>
         </h2>
 
         {/* Separator Icon */}
