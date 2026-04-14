@@ -30,19 +30,21 @@ export default function LoveHero({
 
           {overlay && <div className={styles.overlay} />}
 
-          {/* Top white strip */}
-          <div className={styles.loveHeroStrip} aria-hidden="true" />
-
-          {/* Title tab: Right-aligned */}
-          <div className={styles.loveHeroTab}>
-            <div className={styles.loveHeroContent}>
-              <h1 className={styles.loveHeroTitle}>{title}</h1>
-              <p className={styles.loveHeroSubtitle}>{subtitle}</p>
-            </div>
-          </div>
+          {/* Top white strip + title tab — hidden when no title */}
+          {title && (
+            <>
+              <div className={styles.loveHeroStrip} aria-hidden="true" />
+              <div className={styles.loveHeroTab}>
+                <div className={styles.loveHeroContent}>
+                  <h1 className={styles.loveHeroTitle}>{title}</h1>
+                  {subtitle && <p className={styles.loveHeroSubtitle}>{subtitle}</p>}
+                </div>
+              </div>
+            </>
+          )}
 
           {/* Accent notch: Bottom-left */}
-          <div className={styles.loveHeroAccent} aria-hidden="true" />
+          {title && <div className={styles.loveHeroAccent} aria-hidden="true" />}
         </div>
       </div>
     </section>

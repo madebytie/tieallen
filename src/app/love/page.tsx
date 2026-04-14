@@ -17,6 +17,13 @@ const testimonials = [
     text: "Thank you for everything! My business is already performing so much better with our new website. We are already getting new bookings and inquiries! I'm so excited and feel very blessed to have been referred to Tie! After paying 5 companies who failed to give me a professional website I was sent to you and I'm so thankful! The website is absolutely beautiful, it's my dream website! I love your work and have never seen better! I knew it would be worth it. Thank you for being such great communicators and keeping me updated! I'm super excited for the next phase, I can't wait for the e-commerce website! Thank you so much! My website is now both incredibly beautiful and is already helping grow my business after the first day of launching! So thankful!"
   },
   {
+    name: "BCH Devcon",
+    role: "Global Hackathon Team",
+    company: "",
+    highlight: "Tie delivered with high quality!",
+    text: "We were starting from zero and needed our brand and website launched in two weeks before our global hackathon kickoff. Tie delivered with high quality!"
+  },
+  {
     name: "Matthew Haggett",
     role: "Founder",
     company: "mandelbulb.com",

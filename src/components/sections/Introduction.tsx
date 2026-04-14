@@ -20,10 +20,9 @@ export default function Introduction() {
   useEffect(() => {
     const handleScroll = () => {
       if (starRef.current) {
-        // Grow star based on scroll position (start at scale 1, grow up to e.g. scale 1.5)
-        // Adjust the multiplier to control the growth rate.
-        const scale = 1 + (window.scrollY * 0.001); 
-        starRef.current.style.transform = `scale(${Math.min(scale, 2.5)})`; // Cap at 2.5x to prevent it getting too big
+        // Start smaller (0.6) and grow up to 1.4
+        const scale = 0.6 + (window.scrollY * 0.0005); 
+        starRef.current.style.transform = `scale(${Math.min(scale, 1.4)})`; 
       }
     };
 
