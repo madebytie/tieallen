@@ -1,0 +1,64 @@
+:root {
+  /* Clean White Aesthetic Variables */
+  --bg-primary: #ffffff;
+  --bg-secondary: #fafafa;
+  --bg-tertiary: #f0f0f0;
+
+  --text-primary: #111111;
+  --text-secondary: #4b5563;
+  --text-muted: #888888;
+
+  --border-subtle: #eaeaea;
+  --border-strong: #d4d4d4;
+
+  --accent-color: #000000;
+  --accent-hover: #333333;
+
+  --nav-height: 80px;
+  --max-width: 1200px;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: inherit; /* Inherited from layout via next/font */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+li {
+  list-style: none;
+}
+
+/* Base utility for hiding elements */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
