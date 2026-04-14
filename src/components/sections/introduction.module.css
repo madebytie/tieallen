@@ -1,0 +1,130 @@
+/* ============================================
+   INTRODUCTION SECTION — Minimal Text Statement
+   ============================================ */
+
+.introFrame {
+  width: 100%;
+  padding: var(--section-padding-lg);
+  background-color: var(--bg-primary);
+  display: flex;
+  justify-content: center;
+}
+
+.introInner {
+  width: 100%;
+  max-width: 1100px; /* Kept tight to force good text wrapping */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* ---- Eyebrow ---- */
+.eyebrowWrapper {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 3.5rem;
+  width: 100%;
+  max-width: 280px;
+}
+
+.eyebrowLine {
+  flex: 1;
+  height: 1px;
+  background-color: var(--border-strong);
+  opacity: 0.4;
+}
+
+.eyebrow {
+  font-size: 0.55rem;
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+/* ---- Statement ---- */
+.statement {
+  font-family: var(--font-logo);
+  font-size: clamp(2rem, 4.2vw, 3.45rem);
+  line-height: 1.05;
+  letter-spacing: -0.07em;
+  margin-bottom: 5rem;
+}
+
+.statementBold {
+  color: var(--text-primary);
+  font-weight: var(--font-weight-medium);
+}
+
+.statementMuted {
+  color: var(--text-muted);
+  font-weight: var(--font-weight-light);
+}
+
+/* ---- Star ---- */
+.starWrapper {
+  margin-bottom: 3.5rem;
+  color: var(--text-primary);
+}
+
+.starIcon {
+  width: 120px;
+  height: 120px;
+  /* transform is now updated via JS on scroll */
+}
+
+/* ---- Description ---- */
+.description {
+  font-size: 1.15rem;
+  font-weight: var(--font-weight-light);
+  line-height: 1.6;
+  color: var(--text-secondary);
+  max-width: 580px;
+  margin-bottom: 2rem;
+}
+
+/* ---- CTA ---- */
+.ctaWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.outlineButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 2.25rem;
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  background-color: transparent;
+  border: 1px solid var(--text-primary);
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
+}
+
+.outlineButton:hover {
+  background-color: var(--text-primary);
+  color: var(--bg-primary);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .introFrame {
+    padding: var(--section-padding);
+  }
+
+  .statement {
+    font-size: clamp(2rem, 8vw, 2.75rem);
+    margin-bottom: 3.5rem;
+  }
+  
+  .starIcon {
+    width: 60px;
+    height: 60px;
+  }
+}

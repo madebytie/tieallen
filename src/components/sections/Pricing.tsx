@@ -42,17 +42,18 @@ function RetainerIcon() {
 
 const tiers: PricingTier[] = [
   {
-    title: "Custom Project Buildout",
+    title: "Custom Project",
     price: "$10k+",
     priceSuffix: "one-time",
     description:
-      "The essential first step. We architect your brand, design standard-setting interfaces, and build a high-performance web platform from the ground up.",
+      "I will build exactly what you want and beyond. There pretty much no limits. Brand design, UI/UX, high-end web design and custom platforms from the ground up.",
     features: [
-      "Standard-setting UI/UX design",
-      "Premium web development",
-      "Comprehensive brand identity",
-      "Technical SEO & performance",
-      "Dedicated project management",
+      "Full project lifecycle strategy",
+      "High-end Design & Branding",
+      "Advanced UI & UX",
+      "Custom full-stack development",
+      "Technical SEO & optimization",
+      "CRM, Funnels & Automation",
     ],
     ctaLabel: "Book a discovery call",
     ctaHref: "/get-started",
@@ -60,14 +61,14 @@ const tiers: PricingTier[] = [
   },
   {
     exclusive: true,
-    title: "Unlimited Design & Dev Retainer",
-    price: "$5k",
+    title: "Unlimited Retainer",
+    price: "$5k+",
     priceSuffix: "/ month",
     description:
-      "Available exclusively to partners who have completed a Foundation project. An entire premium design and development department at your fingertips.",
+      "Available exclusively to partners who have completed a Foundation project. Like having an entire premium design and development department at your fingertips.",
     features: [
-      "Unlimited requests (one at a time)",
-      "Deliverables every few days",
+      "One request at a time",
+      "Deliverable every 2-3 days",
       "Continuous feature development",
       "Conversion rate optimization",
       "Ongoing brand asset creation",
@@ -100,6 +101,9 @@ export default function Pricing() {
   return (
     <section className={styles.pricingFrame} id="pricing">
       <div className={styles.pricing}>
+        {/* Top Notch UI */}
+        <div className={styles.topNotch} aria-hidden="true" />
+
         <div className={styles.pricingHeader}>
           <span className={styles.eyebrow}>Pricing</span>
           <h2 className={styles.pricingTitle}>
@@ -129,8 +133,15 @@ export default function Pricing() {
                     <span className={styles.exclusiveBadge}>Exclusive</span>
                   )}
 
+                  <div className={styles.titleArea}>
+                    <h3 className={styles.cardTitle}>
+                      {tier.title.split(' ').map((word, i) => (
+                        <span key={i}>{word}</span>
+                      ))}
+                    </h3>
+                  </div>
+
                   <div className={styles.cardHeader}>
-                    <h3 className={styles.cardTitle}>{tier.title}</h3>
                     <div className={styles.priceRow}>
                       <span className={styles.price}>{tier.price}</span>
                       {tier.priceSuffix && (
