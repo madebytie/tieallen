@@ -19,6 +19,8 @@ interface HomeTestimonialCardProps {
   image: string;
   objectPosition?: string;
   overlay?: boolean;
+  images?: string[];
+  logo?: string;
 }
 
 export default function HomeTestimonialCard({
@@ -26,22 +28,26 @@ export default function HomeTestimonialCard({
   subtitle,
   objectPosition = "center center",
   overlay = true,
+  images,
+  logo,
 }: HomeTestimonialCardProps) {
+  const resolvedImages = images ?? IMAGES;
+  const resolvedLogo = logo ?? "/projects/bch-devcon/bch-devcon-logo_3.png";
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % IMAGES.length);
+      setCurrent((prev) => (prev + 1) % resolvedImages.length);
     }, 3000);
     return () => clearInterval(interval);
-  }, []);
+  }, [resolvedImages.length]);
 
   return (
     <section className={styles.loveHero}>
       <div className={styles.loveHeroFrame}>
         <div className={styles.loveHeroCard}>
           <img
-            src={IMAGES[current]}
+            src={resolvedImages[current]}
             alt=""
             className={styles.loveHeroImage}
             style={{ objectPosition }}
@@ -55,7 +61,7 @@ export default function HomeTestimonialCard({
           {/* Title tab: Right-aligned */}
           <div className={styles.loveHeroTab}>
             <div className={styles.loveHeroContent}>
-              <img src="/projects/bch-devcon/bch-devcon-logo_3.png" alt="BCH Devcon" className={styles.loveHeroLogo} />
+              <img src={resolvedLogo} alt="BCH Devcon" className={styles.loveHeroLogo} />
               {subtitle && <p className={styles.loveHeroSubtitle}>{subtitle}</p>}
             </div>
           </div>

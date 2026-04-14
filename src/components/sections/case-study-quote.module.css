@@ -1,0 +1,60 @@
+.quoteSection {
+  padding: 6rem 1.25rem;
+  background-color: var(--bg-secondary);
+}
+
+.quoteSection[data-variant="dark"] {
+  background-color: var(--dark-bg);
+}
+
+.quoteSection[data-variant="dark"] .quoteText,
+.quoteSection[data-variant="dark"] .quoteAttribution {
+  color: var(--dark-text);
+}
+
+.quoteSection[data-variant="dark"] .quoteAttribution {
+  color: var(--dark-text-secondary);
+}
+
+.quoteFrame {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.quoteMark {
+  font-family: var(--font-logo);
+  font-size: 8rem;
+  line-height: 1;
+  color: #FF8F6B;
+  opacity: 0.25;
+  margin-bottom: -2rem;
+  user-select: none;
+}
+
+.quoteText {
+  font-family: var(--font-primary);
+  font-size: clamp(1.5rem, 2.8vw, 2.2rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.45;
+  color: var(--text-primary);
+  margin: 0 0 2rem;
+}
+
+.quoteAttribution {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .quoteSection {
+    padding: 4rem 1.25rem;
+  }
+
+  .quoteMark {
+    font-size: 5rem;
+    margin-bottom: -1.5rem;
+  }
+}

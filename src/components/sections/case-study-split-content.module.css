@@ -1,0 +1,124 @@
+.splitSection {
+  padding: 5rem 1.25rem;
+  background-color: var(--bg-primary);
+}
+
+.splitFrame {
+  max-width: 1350px;
+  margin: 0 auto;
+}
+
+.splitGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+/* When imagePosition="left", image column comes first visually */
+.imageFirst .textSide {
+  order: 2;
+}
+
+.imageFirst .imageSide {
+  order: 1;
+}
+
+/* Text side */
+.textSide {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.eyebrow {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+.heading {
+  font-family: var(--font-logo);
+  font-size: clamp(2rem, 3.5vw, 3.5rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.body {
+  font-size: clamp(1rem, 1.4vw, 1.1rem);
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* Image side */
+.imageSide {
+  position: relative;
+}
+
+.imageWrapper {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Dots for carousel */
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 0 0;
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 2px solid var(--text-primary);
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.dotActive {
+  background-color: var(--text-primary);
+}
+
+@media (max-width: 900px) {
+  .splitGrid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  /* Image always goes second when stacked */
+  .imageFirst .textSide {
+    order: 1;
+  }
+
+  .imageFirst .imageSide {
+    order: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .splitSection {
+    padding: 3.5rem 1.25rem;
+  }
+}

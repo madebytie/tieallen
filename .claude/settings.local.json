@@ -6,7 +6,11 @@
       "WebFetch(domain:localhost)",
       "Bash(curl -s http://localhost:3000/_next/static/chunks/src_0h-fphz._.css)",
       "Bash(curl -s http://localhost:3000/_next/static/chunks/src_components_0l-5act._.css)",
-      "Bash(curl -s \"http://localhost:3000/_next/static/chunks/src_0h-fphz._.css\")"
+      "Bash(curl -s \"http://localhost:3000/_next/static/chunks/src_0h-fphz._.css\")",
+      "Bash(git -C /Users/tie/Dev/tieallen log --oneline --all)",
+      "Bash(git -C /Users/tie/Dev/tieallen show 19e965f --stat)",
+      "WebFetch(domain:old.vizonos.com)",
+      "Bash(ls -1 /Users/tie/Dev/tieallen/src/components/sections/*.tsx)"
     ]
   }
 }
