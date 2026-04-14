@@ -13,29 +13,10 @@ interface PricingTier {
   icon: ReactNode;
 }
 
-function FoundationIcon() {
+function CircleIcon() {
   return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <path d="M3 21h18" />
-      <path d="M5 21V9l7-5 7 5v12" />
-      <path d="M9 21v-6h6v6" />
-      <path d="M9 12h6" />
-    </svg>
-  );
-}
-
-function RetainerIcon() {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <path d="M12 2v3" />
-      <path d="M12 19v3" />
-      <path d="M4.2 4.2l2.1 2.1" />
-      <path d="M17.7 17.7l2.1 2.1" />
-      <path d="M2 12h3" />
-      <path d="M19 12h3" />
-      <path d="M4.2 19.8l2.1-2.1" />
-      <path d="M17.7 6.3l2.1-2.1" />
-      <circle cx="12" cy="12" r="4" />
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <circle cx="12" cy="12" r="6" />
     </svg>
   );
 }
@@ -46,7 +27,7 @@ const tiers: PricingTier[] = [
     price: "$10k+",
     priceSuffix: "one-time",
     description:
-      "I will build exactly what you want and beyond. There pretty much no limits. Brand design, UI/UX, high-end web design and custom platforms from the ground up.",
+      "I bring your vision to life. There is pretty much no limits. Brand design, UI/UX, high-end web design, marketing funnels and custom platforms from the ground up.",
     features: [
       "Full project lifecycle strategy",
       "High-end Design & Branding",
@@ -57,13 +38,13 @@ const tiers: PricingTier[] = [
     ],
     ctaLabel: "Book a discovery call",
     ctaHref: "/get-started",
-    icon: <FoundationIcon />,
+    icon: <CircleIcon />,
   },
   {
     exclusive: true,
     title: "Unlimited Retainer",
     price: "$5k+",
-    priceSuffix: "/ month",
+    priceSuffix: "monthly",
     description:
       "Available exclusively to partners who have completed a Foundation project. Like having an entire premium design and development department at your fingertips.",
     features: [
@@ -76,7 +57,7 @@ const tiers: PricingTier[] = [
     ],
     ctaLabel: "Apply for retainer",
     ctaHref: "/get-started",
-    icon: <RetainerIcon />,
+    icon: <CircleIcon />,
   },
 ];
 

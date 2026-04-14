@@ -170,9 +170,9 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 6.85rem;
-  height: 5.35rem;
-  border-radius: 1rem;
+  width: 5.85rem;
+  height: 5.85rem;
+  border-radius: 1.25rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -189,8 +189,8 @@
 }
 
 .iconSquare svg {
-  width: 28px;
-  height: 28px;
+  width: 48px;
+  height: 48px;
 }
 
 /* ---- Notch cutout ----
@@ -201,11 +201,11 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 7.5rem;
-  height: 6rem;
+  width: 6.5rem;
+  height: 6.5rem;
   background-color: var(--pricing-bg);
-  border-bottom-right-radius: 1.25rem;
-  border-top-left-radius: 1.75rem;
+  border-bottom-right-radius: 1.5rem;
+  border-top-left-radius: 1.5rem;
   z-index: 2;
   pointer-events: none;
 }
@@ -236,20 +236,20 @@
 }
 
 .notchEarBottomLeft {
-  top: 6rem;
+  top: 6.5rem;
   left: 0;
 }
 
 .notchEarTopRight {
   top: 0;
-  left: 7.5rem;
+  left: 6.5rem;
 }
 
 /* ---- Title Area (beside notch) ---- */
 .titleArea {
   position: absolute;
-  top: 3.25rem; /* increased from 2rem */
-  left: 10.5rem;
+  top: 2.85rem;
+  left: 8.35rem;
   right: 1.5rem;
   z-index: 1;
 }
@@ -282,9 +282,9 @@
 
 .cardTitle {
   font-family: var(--font-primary);
-  font-size: 3.25rem;
-  font-weight: var(--font-weight-black);
-  letter-spacing: -0.02em; /* loosened for readability */
+  font-size: 3.65rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.01em; /* loosened for readability */
   color: inherit; /* follow parent */
   line-height: 0.82;
   display: flex;
@@ -313,10 +313,14 @@
 }
 
 .priceSuffix {
-  font-size: 0.9rem;
-  font-weight: var(--font-weight-light);
-  color: currentColor;
-  opacity: 0.7;
+  font-size: 0.95rem;
+  font-weight: var(--font-weight-medium);
+  color: #ffffff;
+  opacity: 1;
+}
+
+.cardExclusive .priceSuffix {
+  color: #111111;
 }
 
 .cardDescription {

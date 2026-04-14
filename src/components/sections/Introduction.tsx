@@ -61,8 +61,8 @@ export default function Introduction() {
 
         {/* Call to Action */}
         <div className={styles.ctaWrapper}>
-          <Link href="/work" className={styles.outlineButton}>
-            SEE LATEST WORK
+          <Link href="#projects" className={styles.outlineButton}>
+            SEE MY WORK
           </Link>
         </div>
       </div>
