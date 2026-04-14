@@ -12,15 +12,7 @@ interface Project {
   href: string;
 }
 
-const projects: Project[] = [
-  {
-    title: "YULI",
-    client: "YULI",
-    year: "2024",
-    tags: ["Web Design", "Web Development"],
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1800&q=80",
-    href: "/work/yuli",
-  },
+const featuredProjects: Project[] = [
   {
     title: "BCH Devcon",
     client: "BCH Devcon",
@@ -28,14 +20,6 @@ const projects: Project[] = [
     tags: ["Web Design", "Web Development"],
     image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1800&q=80",
     href: "/work/bch-devcon",
-  },
-  {
-    title: "Blue Divine Aesthetics",
-    client: "Blue Divine Aesthetics",
-    year: "2024",
-    tags: ["Web Design", "Web Development"],
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1800&q=80",
-    href: "/work/blue-divine-aesthetics",
   },
   {
     title: "CI² Aviation",
@@ -46,46 +30,6 @@ const projects: Project[] = [
     href: "/work/ci2-aviation",
   },
   {
-    title: "Expose Hair",
-    client: "Expose Hair",
-    year: "2024",
-    tags: ["Web Design", "Web Development"],
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1800&q=80",
-    href: "/work/expose-hair",
-  },
-  {
-    title: "Permissionless Ventures",
-    client: "Permissionless Ventures",
-    year: "2024",
-    tags: ["Web Design", "Web Development"],
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1800&q=80",
-    href: "/work/permissionless-ventures",
-  },
-  {
-    title: "Servco Wholesale",
-    client: "Servco Wholesale",
-    year: "2024",
-    tags: ["Web Design", "Web Development"],
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1800&q=80",
-    href: "/work/servco-wholesale",
-  },
-  {
-    title: "Stanlok Precision Manufacturing",
-    client: "Stanlok Precision Manufacturing",
-    year: "2024",
-    tags: ["Web Design", "Web Development"],
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1800&q=80",
-    href: "/work/stanlok-precision-manufacturing",
-  },
-  {
-    title: "Taste of Alpharetta",
-    client: "Taste of Alpharetta",
-    year: "2024",
-    tags: ["Web Design", "Web Development"],
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1800&q=80",
-    href: "/work/taste-of-alpharetta",
-  },
-  {
     title: "Windward Tech District",
     client: "Windward Tech District",
     year: "2024",
@@ -94,12 +38,12 @@ const projects: Project[] = [
     href: "/work/windward-tech-district",
   },
   {
-    title: "Wire & Wood Festival",
-    client: "Wire & Wood Festival",
+    title: "Permissionless Ventures",
+    client: "Permissionless Ventures",
     year: "2024",
     tags: ["Web Design", "Web Development"],
     image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1800&q=80",
-    href: "/work/wire-and-wood-festival",
+    href: "/work/permissionless-ventures",
   },
 ];
 
@@ -119,9 +63,9 @@ function ArrowIcon() {
   );
 }
 
-export default function ProjectsGrid() {
-  const leftCol = projects.filter((_, i) => i % 2 === 0);
-  const rightCol = projects.filter((_, i) => i % 2 !== 0);
+export default function FeaturedProjects() {
+  const leftCol = featuredProjects.filter((_, i) => i % 2 === 0);
+  const rightCol = featuredProjects.filter((_, i) => i % 2 !== 0);
 
   return (
     <section className={styles.projectsSection} id="projects">
@@ -130,7 +74,7 @@ export default function ProjectsGrid() {
         <div className={styles.projectsHeader}>
           <span className={styles.projectsLabel}>
             <span className={styles.projectsLabelDot} />
-            Selected Work
+            Featured Work
           </span>
           <h2 className={styles.projectsTitle}>
             Take a look at

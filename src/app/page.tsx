@@ -1,5 +1,5 @@
 import FAQ from "@/components/sections/FAQ";
-import ProjectsGrid from "@/components/sections/ProjectsGrid";
+import FeaturedProjects from "@/components/sections/FeaturedProjects";
 
 export default function Home() {
   return (
@@ -12,7 +12,7 @@ export default function Home() {
         </p>
       </div>
 
-      <ProjectsGrid />
+      <FeaturedProjects />
       <FAQ />
     </>
   );

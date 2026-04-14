@@ -5,8 +5,6 @@ export default function CI2Aviation() {
     <>
       <ProjectHero
         title="CI² Aviation"
-        client="CI² Aviation"
-        year="2024"
         tags={["Web Design", "Web Development"]}
         image="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1800&q=80"
       />

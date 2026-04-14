@@ -5,8 +5,6 @@ export default function WireAndWoodFestival() {
     <>
       <ProjectHero
         title="Wire & Wood Festival"
-        client="Wire & Wood Festival"
-        year="2024"
         tags={["Web Design", "Web Development"]}
         image="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1800&q=80"
       />

@@ -2,8 +2,6 @@ import styles from "./project-hero.module.css";
 
 interface ProjectHeroProps {
   title: string;
-  client: string;
-  year: string;
   tags: string[];
   image: string;
 }
