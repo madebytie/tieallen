@@ -1,0 +1,206 @@
+/* ============================================
+   ABOUT HERO — Flipped Project Hero Pattern
+   ============================================ */
+
+.aboutHero {
+  width: 100%;
+  background-color: var(--bg-primary);
+}
+
+.aboutHeroFrame {
+  width: 100%;
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+.aboutHeroCard {
+  position: relative;
+  width: 100%;
+  min-height: 820px;
+  max-height: 900px;
+  border-radius: 2.5rem;
+  overflow: hidden;
+  background-color: var(--bg-primary);
+}
+
+.aboutHeroImage {
+  position: absolute;
+  inset: 0;
+  width: 120%;
+  height: 120%;
+  left: -10%;
+  top: -10%;
+  object-fit: cover;
+  object-position: 100% 25%;
+  display: block;
+  z-index: 1;
+}
+
+.aboutHeroStrip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4.5rem;
+  background-color: var(--bg-primary);
+  z-index: 2;
+}
+
+/* Concave corner: top-left corner where strip meets card edge */
+.aboutHeroStrip::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: calc(-2.5rem + 1px);
+  width: 2.5rem;
+  height: 2.5rem;
+  background: radial-gradient(
+    circle at 100% 100%,
+    transparent 2.5rem,
+    var(--bg-primary) 2.5rem
+  );
+}
+
+/* ---- Title tab: Now on the RIGHT ---- */
+.aboutHeroTab {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: min(65%, 48rem);
+  min-height: 12rem;
+  background-color: var(--bg-primary);
+  border-bottom-left-radius: 2.5rem;
+  z-index: 3;
+  padding: 1.6rem 4rem 2rem;
+  display: flex;
+  align-items: center;
+}
+
+/* Concave corner: tab's left edge × strip's bottom edge */
+.aboutHeroTab::after {
+  content: "";
+  position: absolute;
+  top: 4.5rem;
+  left: -2.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: radial-gradient(
+    circle at 0% 100%,
+    transparent 2.5rem,
+    var(--bg-primary) 2.5rem
+  );
+}
+
+/* Concave corner: tab's bottom edge × card's right edge */
+.aboutHeroTab::before {
+  content: "";
+  position: absolute;
+  bottom: -2.5rem;
+  right: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: radial-gradient(
+    circle at 0% 100%,
+    transparent 2.5rem,
+    var(--bg-primary) 2.5rem
+  );
+}
+
+.aboutHeroContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.aboutHeroTitle {
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.06em;
+  line-height: 0.95;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.aboutHeroSubtitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 480px;
+  line-height: 1.6;
+}
+
+/* ---- Accent notch: Now on the BOTTOM-LEFT ---- */
+.aboutHeroAccent {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: min(25%, 20rem);
+  height: 4rem;
+  background-color: var(--bg-primary);
+  border-top-right-radius: 2.5rem;
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* Concave corner: accent's top edge × card's left edge */
+.aboutHeroAccent::after {
+  content: "";
+  position: absolute;
+  top: -2.5rem;
+  left: 0;
+  width: 2.5rem;
+  height: calc(2.5rem + 1px);
+  background: radial-gradient(
+    circle at 100% 0%,
+    transparent 2.5rem,
+    var(--bg-primary) 2.5rem
+  );
+}
+
+/* Concave corner: accent's right edge × card's bottom edge */
+.aboutHeroAccent::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: -2.5rem;
+  width: calc(2.5rem + 1px);
+  height: 2.5rem;
+  background: radial-gradient(
+    circle at 100% 0%,
+    transparent 2.5rem,
+    var(--bg-primary) 2.5rem
+  );
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .aboutHeroCard {
+    min-height: 550px;
+  }
+  .aboutHeroTab {
+    width: 85%;
+    padding: 2rem;
+  }
+  .aboutHeroTitle {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .aboutHeroCard {
+    border-radius: 1.75rem;
+    min-height: 480px;
+  }
+  .aboutHeroTab {
+    width: 95%;
+    min-height: 10rem;
+    padding: 1.5rem;
+  }
+  .aboutHeroTitle {
+    font-size: 2.2rem;
+  }
+  .aboutHeroAccent {
+    width: 35%;
+    height: 3rem;
+  }
+}
