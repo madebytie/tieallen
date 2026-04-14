@@ -1,18 +1,14 @@
+import HomeHero from "@/components/sections/HomeHero";
 import FAQ from "@/components/sections/FAQ";
 import FeaturedProjects from "@/components/sections/FeaturedProjects";
+import Pricing from "@/components/sections/Pricing";
 
 export default function Home() {
   return (
     <>
-      <div style={{ padding: "6rem 2rem", maxWidth: "1200px", margin: "0 auto" }}>
-        <h1>Concept to Scale.</h1>
-        <p style={{ marginTop: "1rem", color: "var(--text-secondary)" }}>
-          I execute premium projects from pristine design to robust development.
-          [Hero Section coming next]
-        </p>
-      </div>
-
+      <HomeHero />
       <FeaturedProjects />
+      <Pricing />
       <FAQ />
     </>
   );

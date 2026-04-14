@@ -81,7 +81,7 @@
   background-color: var(--bg-primary);
   border-bottom-right-radius: 2.5rem;
   z-index: 3;
-  padding: 1.55rem 3rem 1.5rem;
+  padding: 1.6rem 3rem 1.75rem;
   display: flex;
   align-items: flex-start;
 }
@@ -121,7 +121,7 @@
 }
 
 .projectHeroTitle {
-  font-size: clamp(1.9rem, 2.85vw, 2.65rem);
+  font-size: clamp(2.4rem, 4.5vw, 4rem);
   font-weight: var(--font-weight-bold);
   letter-spacing: -0.03em;
   line-height: 1.15;

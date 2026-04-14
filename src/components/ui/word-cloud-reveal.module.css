@@ -1,0 +1,82 @@
+/* ============================================
+   WORD CLOUD REVEAL — Flashlight Effect
+   Clean, flat, orderly rows of large text.
+   ============================================ */
+
+.wordCloud {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  cursor: default;
+  --fx: 50%;
+  --fy: 50%;
+  --flashlight-on: 0;
+}
+
+/* The base gradient — exactly the original */
+.gradientBg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  z-index: 1;
+}
+
+/* Word layer sits above the gradient, masked by a radial flashlight */
+.wordLayer {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+
+  -webkit-mask-image: radial-gradient(
+    ellipse 350px 250px at var(--fx) var(--fy),
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.5) 40%,
+    rgba(0, 0, 0, 0.1) 70%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  mask-image: radial-gradient(
+    ellipse 350px 250px at var(--fx) var(--fy),
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.5) 40%,
+    rgba(0, 0, 0, 0.1) 70%,
+    rgba(0, 0, 0, 0) 100%
+  );
+
+  opacity: var(--flashlight-on);
+  transition: opacity 0.4s ease;
+}
+
+/* Grid of words — fills top to bottom */
+.wordGrid {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+}
+
+/* Each row of words */
+.wordRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+/* Individual word — clean filled text, no stroke */
+.word {
+  font-family: var(--font-primary);
+  font-size: clamp(2.5rem, 5.5vw, 5.5rem);
+  font-weight: var(--font-weight-bold);
+  color: rgba(255, 143, 107, 0.35);
+  white-space: nowrap;
+  user-select: none;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  padding: 0 0.4rem;
+  text-transform: uppercase;
+}

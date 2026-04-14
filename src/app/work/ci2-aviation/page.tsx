@@ -4,7 +4,7 @@ export default function CI2Aviation() {
   return (
     <>
       <ProjectHero
-        title="CI² Aviation"
+        title="Running 150+ National Airports & Air Traffic"
         tags={["Web Design", "Web Development"]}
         image="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1800&q=80"
       />

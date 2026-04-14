@@ -7,8 +7,9 @@
 }
 
 .projectsInner {
-  max-width: var(--max-width);
+  max-width: 1450px;
   margin: 0 auto;
+  padding: 0 1.25rem;
 }
 
 /* ---- Section Header ---- */
@@ -55,14 +56,14 @@
 .projectsColLeft {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 5rem;
 }
 
 .projectsColRight {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  padding-top: 8rem;
+  gap: 5rem;
+  padding-top: 10rem;
 }
 
 /* ---- Project Card ---- */
@@ -209,7 +210,7 @@
 }
 
 .projectTitle {
-  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  font-size: clamp(1.4rem, 2.5vw, 2.2rem);
   font-weight: var(--font-weight-semibold);
   letter-spacing: -0.02em;
   margin-top: 0.4rem;
@@ -233,5 +234,6 @@
 
   .projectsTitle {
     text-align: left;
+    font-size: clamp(2rem, 8vw, 3rem);
   }
 }

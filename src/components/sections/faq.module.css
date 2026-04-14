@@ -3,8 +3,8 @@
    ============================================ */
 
 .faqSection {
-  background-color: var(--dark-bg);
-  color: var(--dark-text);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
   padding: var(--section-padding-lg);
 }
 
@@ -20,7 +20,7 @@
   gap: 2rem;
   align-items: end;
   padding-bottom: 3rem;
-  border-bottom: 1px solid var(--dark-border);
+  border-bottom: 1px solid var(--border-subtle);
   margin-bottom: 3rem;
 }
 
@@ -46,20 +46,20 @@
   display: inline-block;
   width: 80px;
   height: 2px;
-  background-color: var(--dark-text);
+  background-color: var(--text-primary);
   flex-shrink: 0;
 }
 
 .faqTitleAccent {
   display: block;
   font-weight: var(--font-weight-regular);
-  color: var(--dark-text-secondary);
+  color: var(--text-secondary);
 }
 
 .faqSubtitle {
   font-size: 0.95rem;
   font-weight: var(--font-weight-light);
-  color: var(--dark-text-secondary);
+  color: var(--text-secondary);
   line-height: 1.6;
   max-width: 380px;
 }
@@ -86,14 +86,14 @@
   width: 44px;
   height: 44px;
   border-radius: var(--radius-full);
-  border: 1px solid var(--dark-border);
-  color: var(--dark-text-secondary);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
   transition: all var(--transition-fast);
 }
 
 .faqSocialLink:hover {
-  color: var(--dark-text);
-  border-color: var(--dark-text-muted);
+  color: var(--text-primary);
+  border-color: var(--text-muted);
 }
 
 .faqSocialLink svg {
@@ -109,14 +109,14 @@
 }
 
 .accordionItem {
-  background-color: var(--dark-bg-card);
+  background-color: var(--bg-tertiary);
   border-radius: var(--radius-md);
   overflow: hidden;
   transition: background-color var(--transition-fast);
 }
 
 .accordionItem:hover {
-  background-color: var(--dark-bg-elevated);
+  background-color: var(--bg-secondary);
 }
 
 .accordionTrigger {
@@ -127,14 +127,14 @@
   padding: 1.25rem 1.5rem;
   font-size: 0.95rem;
   font-weight: var(--font-weight-regular);
-  color: var(--dark-text);
+  color: var(--text-primary);
   text-align: left;
   cursor: pointer;
   transition: color var(--transition-fast);
 }
 
 .accordionTrigger:hover {
-  color: var(--dark-text);
+  color: var(--text-primary);
 }
 
 .accordionIcon {
@@ -144,7 +144,7 @@
   align-items: center;
   justify-content: center;
   border-radius: var(--radius-full);
-  border: 1px solid var(--dark-border);
+  border: 1px solid var(--border-subtle);
   flex-shrink: 0;
   transition: transform var(--transition-base), border-color var(--transition-fast);
 }
@@ -152,12 +152,12 @@
 .accordionIcon svg {
   width: 14px;
   height: 14px;
-  color: var(--dark-text-secondary);
+  color: var(--text-secondary);
 }
 
 .accordionIconOpen {
   transform: rotate(45deg);
-  border-color: var(--dark-text-muted);
+  border-color: var(--text-muted);
 }
 
 .accordionPanel {
@@ -174,7 +174,7 @@
   padding: 0 1.5rem 1.25rem;
   font-size: 0.9rem;
   font-weight: var(--font-weight-light);
-  color: var(--dark-text-secondary);
+  color: var(--text-secondary);
   line-height: 1.7;
 }
 

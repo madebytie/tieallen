@@ -1,0 +1,536 @@
+/* ============================================
+   PRICING SECTION — Framed dark card with top notch
+   Cards are white with a top-left notched icon square.
+   ============================================ */
+
+.pricingFrame {
+  padding: 4rem 1.25rem 1.25rem;
+  background-color: var(--bg-primary);
+  display: flex;
+  justify-content: center;
+}
+
+.pricing {
+  position: relative;
+  width: 100%;
+  max-width: 1600px;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  color: var(--dark-text);
+  border-radius: 2.5rem;
+  overflow: hidden;
+}
+
+/* ---- Ambient glow accents ---- */
+.pricing::before,
+.pricing::after {
+  content: "";
+  position: absolute;
+  width: 38rem;
+  height: 38rem;
+  border-radius: 50%;
+  filter: blur(120px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.pricing::before {
+  top: -16rem;
+  left: -10rem;
+  background: radial-gradient(circle, rgba(255, 143, 107, 0.18), transparent 70%);
+}
+
+.pricing::after {
+  bottom: -18rem;
+  right: -12rem;
+  background: radial-gradient(circle, rgba(90, 120, 255, 0.22), transparent 70%);
+}
+
+/* ---- Top notch (identical recipe to footer) ---- */
+.topNotch {
+  position: absolute;
+  top: 0;
+  left: 35%;
+  width: 34rem;
+  height: 2.75rem;
+  background-color: var(--bg-primary);
+  border-bottom-left-radius: 1.75rem;
+  border-bottom-right-radius: 1.75rem;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.topNotch::before,
+.topNotch::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+.topNotch::before {
+  left: -1.7rem;
+  background: radial-gradient(circle at 0% 100%, transparent 1.75rem, var(--bg-primary) 1.75rem);
+}
+
+.topNotch::after {
+  right: -1.7rem;
+  background: radial-gradient(circle at 100% 100%, transparent 1.75rem, var(--bg-primary) 1.75rem);
+}
+
+/* ---- Inner content ---- */
+.pricingInner {
+  position: relative;
+  width: 100%;
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 7rem 3rem 5rem;
+  z-index: 2;
+}
+
+/* ---- Header ---- */
+.pricingHeader {
+  max-width: 48rem;
+  margin: 0 auto 4rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #ff8f6b;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(255, 143, 107, 0.35);
+  border-radius: var(--radius-full);
+  background-color: rgba(255, 143, 107, 0.08);
+}
+
+.pricingTitle {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--dark-text);
+}
+
+.pricingTitleBold {
+  display: block;
+  font-weight: var(--font-weight-bold);
+}
+
+.pricingTitleAccent {
+  display: block;
+  font-weight: var(--font-weight-regular);
+  color: var(--dark-text-secondary);
+}
+
+.pricingSubtitle {
+  font-size: 1rem;
+  font-weight: var(--font-weight-light);
+  color: var(--dark-text-secondary);
+  line-height: 1.7;
+  max-width: 36rem;
+}
+
+/* ---- Grid ---- */
+.pricingGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem;
+  align-items: stretch;
+}
+
+/* ---- Card wrapper ----
+   Layout: icon square at top-left, cardBody below. The cardBody is
+   shifted right at its top so the icon square sits in the top-left
+   "L" cutout. Concave ear notches at the inside corner where icon
+   meets card, mirroring the home-hero overlay technique. */
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-base);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+/* ---- Card body ----
+   Sits BELOW the icon square (margin-top creates the L-shape:
+   icon at top-left, dark gradient to its right, then cardBody
+   spanning full width below). Top-left corner is squared because
+   the inside corner of the L is at (icon's right, cardBody's top). */
+.cardBody {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 3rem 2.5rem 2.5rem;
+  margin-top: 4.5rem;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  border-radius: 1.75rem;
+  border-top-left-radius: 0;
+  transition: box-shadow var(--transition-base);
+}
+
+.card:hover .cardBody {
+  box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.55);
+}
+
+.cardExclusive:hover .cardBody {
+  box-shadow: 0 30px 70px -25px rgba(255, 143, 107, 0.3),
+              0 20px 50px -25px rgba(90, 120, 255, 0.25);
+}
+
+/* ---- Icon square ----
+   Floats at top-left of the card. Top-left is rounded to match
+   the card's outer radius; bottom-right is squared because that's
+   the inside corner of the L (where the notch ear lives). */
+.iconSquare {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4.5rem;
+  height: 4.5rem;
+  background-color: var(--bg-primary);
+  border-top-left-radius: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  z-index: 2;
+}
+
+.iconSquare svg {
+  width: 28px;
+  height: 28px;
+}
+
+.cardExclusive .iconSquare {
+  color: #ff6b4a;
+}
+
+/* ---- Concave ear notches ----
+   The L-shape has TWO outer convex corners that need rounding:
+   - Icon's top-right (at x=4.5rem, y=0)        → notchTopRight
+   - Card's bottom-left of its top edge          → notchBottomLeft
+   Wait — actually only ONE inside corner exists at (4.5rem, 4.5rem),
+   and TWO adjacent outer corners need rounding via the home-hero
+   "ear" recipe: an absolutely-positioned tile filled with white
+   everywhere EXCEPT a quarter-circle bite that reveals the dark
+   gradient behind. */
+
+.notch {
+  position: absolute;
+  width: 1.77rem;
+  height: 1.77rem;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Top-right of icon square: rounds icon's right edge into the dark area
+   above the cardBody. Tile sits to the right of the icon at top:0.
+   Center the radial at bottom-left (0% 100%) so the BITE faces
+   down-left INTO the inside corner. White on the rest fills the
+   ear extending up-right. */
+.notchTopRight {
+  top: 0;
+  left: 4.5rem;
+  background: radial-gradient(
+    circle at 0% 100%,
+    transparent 1.75rem,
+    var(--bg-primary) calc(1.75rem + 1px)
+  );
+}
+
+/* Bottom-left of cardBody's top edge: rounds the card's top-left
+   squared corner into the dark area to its left. Tile sits below
+   the icon square at left:0. Center the radial at top-right (100% 0%)
+   so the BITE faces up-right INTO the inside corner. */
+.notchBottomLeft {
+  top: 4.5rem;
+  left: 0;
+  background: radial-gradient(
+    circle at 100% 0%,
+    transparent 1.75rem,
+    var(--bg-primary) calc(1.75rem + 1px)
+  );
+}
+
+/* ---- Exclusive badge (top-right of card) ---- */
+.exclusiveBadge {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.65rem;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 0.4rem 0.75rem;
+  border-radius: var(--radius-full);
+  color: #ff6b4a;
+  background-color: rgba(255, 143, 107, 0.1);
+  border: 1px solid rgba(255, 143, 107, 0.35);
+  z-index: 2;
+}
+
+/* ---- Card header ---- */
+.cardHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.priceRow {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  margin-top: 0.25rem;
+}
+
+.price {
+  font-family: var(--font-logo);
+  font-size: clamp(3.5rem, 6vw, 4.75rem);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.04em;
+  line-height: 1;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cardExclusive .price {
+  background: linear-gradient(135deg, #ff8f6b 0%, #ff6b4a 55%, #0f3460 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.priceSuffix {
+  font-size: 0.9rem;
+  font-weight: var(--font-weight-light);
+  color: var(--text-secondary);
+}
+
+.cardDescription {
+  font-size: 0.92rem;
+  font-weight: var(--font-weight-light);
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin-top: 0.25rem;
+}
+
+/* ---- Divider ---- */
+.divider {
+  height: 1px;
+  margin: 2rem 0 1.75rem;
+  background-color: var(--border-subtle);
+}
+
+/* ---- Feature list ---- */
+.featureList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-bottom: 2.5rem;
+  flex: 1;
+}
+
+.feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  font-size: 0.93rem;
+  font-weight: var(--font-weight-regular);
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+.featureIcon {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
+  margin-top: 0.1rem;
+}
+
+.featureIcon svg {
+  width: 12px;
+  height: 12px;
+}
+
+.cardExclusive .featureIcon {
+  background-color: rgba(255, 143, 107, 0.15);
+  color: #ff6b4a;
+}
+
+/* ---- CTA ---- */
+.cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius-full);
+  font-size: 0.95rem;
+  font-weight: var(--font-weight-medium);
+  color: var(--bg-primary);
+  background-color: var(--text-primary);
+  border: 1px solid var(--text-primary);
+  transition: background-color var(--transition-fast), color var(--transition-fast), box-shadow var(--transition-fast);
+  margin-top: auto;
+}
+
+.cta svg {
+  width: 16px;
+  height: 16px;
+  transition: transform var(--transition-fast);
+}
+
+.cta:hover {
+  background-color: var(--accent-hover);
+}
+
+.cta:hover svg {
+  transform: translate(2px, -2px);
+}
+
+.cardExclusive .cta {
+  background: linear-gradient(135deg, #ff8f6b 0%, #ff6b4a 100%);
+  border-color: transparent;
+  color: #0a0a0a;
+  font-weight: var(--font-weight-semibold);
+}
+
+.cardExclusive .cta:hover {
+  background: linear-gradient(135deg, #ffa080 0%, #ff7d5c 100%);
+  box-shadow: 0 12px 32px -12px rgba(255, 143, 107, 0.6);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .pricingInner {
+    padding: 6rem 2rem 4rem;
+  }
+
+  .pricingGrid {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .card {
+    padding: 5rem 2rem 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .pricingFrame {
+    padding: 2.5rem 0.75rem 0.75rem;
+  }
+
+  .pricing {
+    border-radius: 1.75rem;
+  }
+
+  .topNotch {
+    left: 20%;
+    width: 60%;
+    height: 2.25rem;
+    border-bottom-left-radius: 1.25rem;
+    border-bottom-right-radius: 1.25rem;
+  }
+
+  .topNotch::before,
+  .topNotch::after {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  .topNotch::before {
+    left: -1.2rem;
+    background: radial-gradient(circle at 0% 100%, transparent 1.25rem, var(--bg-primary) 1.25rem);
+  }
+
+  .topNotch::after {
+    right: -1.2rem;
+    background: radial-gradient(circle at 100% 100%, transparent 1.25rem, var(--bg-primary) 1.25rem);
+  }
+
+  .pricingInner {
+    padding: 5rem 1.25rem 3rem;
+  }
+
+  .pricingHeader {
+    margin-bottom: 2.5rem;
+  }
+
+  .card {
+    padding: 4.5rem 1.5rem 1.75rem;
+    border-radius: 1.5rem;
+    border-top-left-radius: 0;
+  }
+
+  .iconSquare {
+    width: 3.75rem;
+    height: 3.75rem;
+    border-bottom-right-radius: 1.25rem;
+  }
+
+  .iconInner svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .iconCorner {
+    width: 1.27rem;
+    height: 1.27rem;
+  }
+
+  .iconCornerBottomLeft {
+    bottom: -1.27rem;
+    background: radial-gradient(
+      circle at 100% 100%,
+      transparent 1.25rem,
+      var(--bg-primary) calc(1.25rem + 1px)
+    );
+  }
+
+  .iconCornerTopRight {
+    right: -1.27rem;
+    background: radial-gradient(
+      circle at 100% 100%,
+      transparent 1.25rem,
+      var(--bg-primary) calc(1.25rem + 1px)
+    );
+  }
+
+  .exclusiveBadge {
+    top: 1.25rem;
+    right: 1.25rem;
+  }
+}

@@ -14,7 +14,7 @@ interface Project {
 
 const featuredProjects: Project[] = [
   {
-    title: "BCH Devcon",
+    title: "Global Bitcoin Hackathon Series",
     client: "BCH Devcon",
     year: "2024",
     tags: ["Web Design", "Web Development"],
@@ -22,7 +22,7 @@ const featuredProjects: Project[] = [
     href: "/work/bch-devcon",
   },
   {
-    title: "CI² Aviation",
+    title: "Running 150+ National Airports & Air Traffic",
     client: "CI² Aviation",
     year: "2024",
     tags: ["Web Design", "Web Development"],
@@ -30,7 +30,7 @@ const featuredProjects: Project[] = [
     href: "/work/ci2-aviation",
   },
   {
-    title: "Windward Tech District",
+    title: "The Tech Hub of The South",
     client: "Windward Tech District",
     year: "2024",
     tags: ["Web Design", "Web Development"],
@@ -38,7 +38,7 @@ const featuredProjects: Project[] = [
     href: "/work/windward-tech-district",
   },
   {
-    title: "Permissionless Ventures",
+    title: "BITMAIN's Crypto Focused VC Fund",
     client: "Permissionless Ventures",
     year: "2024",
     tags: ["Web Design", "Web Development"],
@@ -163,8 +163,6 @@ function ProjectCard({ project }: { project: Project }) {
 
       {/* Info below image */}
       <div className={styles.projectMeta}>
-        <span>{project.year}</span>
-        <span className={styles.projectMetaDot} />
         <span>{project.client}</span>
       </div>
       <h3 className={styles.projectTitle}>{project.title}</h3>

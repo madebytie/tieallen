@@ -1,0 +1,386 @@
+/* ============================================
+   HOME HERO — Stepped notch design
+   White overlay follows each text line with rounded
+   corners at each transition, starting from top-left.
+   Bottom-right accent notch preserved from ProjectHero.
+   ============================================ */
+
+.homeHero {
+  width: 100%;
+}
+
+.homeHeroFrame {
+  width: 100%;
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 1.25rem;
+  background-color: transparent;
+}
+
+.homeHeroCard {
+  position: relative;
+  width: 100%;
+  min-height: 760px;
+  max-height: 820px;
+  border-radius: 2.5rem;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0;
+  overflow: hidden;
+}
+
+/* ---- Placeholder image ---- */
+.homeHeroImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  z-index: 1;
+}
+
+/* ---- Stepped white overlay ---- */
+.homeHeroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: min(60%, 44rem);
+  background-color: var(--bg-primary);
+  z-index: 4;
+  padding: 2.5rem 3rem 2rem;
+  border-bottom-right-radius: 2.5rem;
+}
+
+/* ---- Overlay corner notches ----
+   Rule: center at the corner facing INTO the dark area.
+
+   Smoothing: "transparent R, white calc(R + 1px)" puts the 1px feather
+   OUTSIDE the disc (into the white region), so it's covered by the 2px
+   size overlap and never creates a dark inset at the inner corners.
+   DO NOT use "transparent calc(R - 1px), white R" — that puts the feather
+   inside the disc (dark side) which creates a visible dark crescent.
+
+   overlayBottomLeft  — below overlay at left:0      → center 100% 100%
+   overlayTopRight    — right of overlay at top:0    → center 100% 100%
+   accentTopRight     — above accent at right:0      → center 0% 0%
+   accentBottomLeft   — left of accent at bottom:0   → center 0% 0%
+   ---- */
+.overlayCorner {
+  position: absolute;
+  z-index: 5;
+}
+
+.overlayBottomLeft {
+  bottom: -2.52rem;
+  left: 0;
+  width: 2.52rem;
+  height: 2.52rem;
+  background: radial-gradient(
+    circle at 100% 100%,
+    transparent 2.5rem,
+    var(--bg-primary) calc(2.5rem + 1px)
+  );
+}
+
+.overlayTopRight {
+  top: 0;
+  right: -2.52rem;
+  width: 2.52rem;
+  height: 2.52rem;
+  background: radial-gradient(
+    circle at 100% 100%,
+    transparent 2.5rem,
+    var(--bg-primary) calc(2.5rem + 1px)
+  );
+}
+
+
+/* ---- Title with stepped line backgrounds ---- */
+.homeHeroTitle {
+  font-family: var(--font-primary);
+  font-size: clamp(1.9rem, 2.85vw, 2.65rem);
+  font-weight: var(--font-weight-light);
+  letter-spacing: -0.05em;
+  line-height: 1.25;
+  color: var(--text-primary);
+  margin: 0 0 2rem 0;
+}
+
+.titleLine {
+  display: block;
+  position: relative;
+  padding-right: 1rem;
+}
+
+.titleLineBold {
+  font-family: var(--font-logo);
+  font-size: clamp(3.5rem, 6vw, 4.8rem);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.05em;
+}
+
+/* Stepped notch after each line except the last */
+.titleLine:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  right: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: radial-gradient(
+    circle at 0% 100%,
+    transparent 1.5rem,
+    var(--bg-primary) calc(1.5rem + 1px)
+  );
+}
+
+/* ---- Buttons ---- */
+.homeHeroButtons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+
+.textButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: var(--font-weight-medium);
+  color: var(--text-primary);
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 0.25rem;
+  transition: color var(--transition-fast);
+}
+
+.textButton:hover {
+  color: var(--text-secondary);
+}
+
+.textButtonArrow {
+  width: 18px;
+  height: 18px;
+  transition: transform var(--transition-fast);
+}
+
+.textButton:hover .textButtonArrow {
+  transform: translate(-2px, -2px);
+}
+
+.textButton::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--text-primary);
+  transition: width var(--transition-fast);
+}
+
+.textButton:hover::after {
+  width: 100%;
+}
+
+/* ---- Accent notch: bottom-right ---- */
+.homeHeroAccent {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: min(22%, 18rem);
+  height: 3rem;
+  background-color: var(--bg-primary);
+  border-top-left-radius: 1.75rem;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.accentCorner {
+  position: absolute;
+  z-index: 5;
+}
+
+.accentTopRight {
+  top: -1.77rem;
+  right: 0;
+  width: 1.77rem;
+  height: 1.77rem;
+  background: radial-gradient(
+    circle at 0% 0%,
+    transparent 1.75rem,
+    var(--bg-primary) calc(1.75rem + 1px)
+  );
+}
+
+.accentBottomLeft {
+  bottom: 0;
+  left: -1.77rem;
+  width: 1.77rem;
+  height: 1.77rem;
+  background: radial-gradient(
+    circle at 0% 0%,
+    transparent 1.75rem,
+    var(--bg-primary) calc(1.75rem + 1px)
+  );
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .homeHeroCard {
+    min-height: 580px;
+    max-height: 660px;
+  }
+
+  .homeHeroOverlay {
+    width: min(72%, 32rem);
+    padding: 2rem 2rem 1.5rem;
+    border-bottom-right-radius: 2rem;
+  }
+
+  .overlayBottomLeft {
+    bottom: -2.02rem;
+    width: 2.02rem;
+    height: 2.02rem;
+    background: radial-gradient(
+      circle at 100% 100%,
+      transparent 2rem,
+      var(--bg-primary) calc(2rem + 1px)
+    );
+  }
+
+  .overlayTopRight {
+    right: -2.02rem;
+    width: 2.02rem;
+    height: 2.02rem;
+    background: radial-gradient(
+      circle at 100% 100%,
+      transparent 2rem,
+      var(--bg-primary) calc(2rem + 1px)
+    );
+  }
+
+  .homeHeroTitle {
+    font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  }
+
+  .titleLine:not(:last-child)::after {
+    width: 1.25rem;
+    height: 1.25rem;
+    background: radial-gradient(
+      circle at 0% 100%,
+      transparent 1.25rem,
+      var(--bg-primary) calc(1.25rem + 1px)
+    );
+  }
+
+  .homeHeroAccent {
+    width: 36%;
+    height: 2.5rem;
+  }
+
+  .accentTopRight {
+    top: -1.77rem;
+    width: 1.77rem;
+    height: 1.77rem;
+    background: radial-gradient(
+      circle at 0% 0%,
+      transparent 1.75rem,
+      var(--bg-primary) calc(1.75rem + 1px)
+    );
+  }
+
+  .accentBottomLeft {
+    bottom: 0;
+    left: -1.77rem;
+    width: 1.77rem;
+    height: 1.77rem;
+    background: radial-gradient(
+      circle at 0% 0%,
+      transparent 1.75rem,
+      var(--bg-primary) calc(1.75rem + 1px)
+    );
+  }
+}
+
+@media (max-width: 560px) {
+  .homeHeroFrame {
+    padding: 0.75rem;
+  }
+
+  .homeHeroCard {
+    border-radius: 1.75rem;
+    min-height: 460px;
+    max-height: 540px;
+  }
+
+  .homeHeroOverlay {
+    width: 88%;
+    padding: 1.5rem 1.4rem 1.25rem;
+    border-bottom-right-radius: 1.5rem;
+  }
+
+  .overlayBottomLeft {
+    bottom: -1.52rem;
+    width: 1.52rem;
+    height: 1.52rem;
+    background: radial-gradient(
+      circle at 100% 100%,
+      transparent 1.5rem,
+      var(--bg-primary) calc(1.5rem + 1px)
+    );
+  }
+
+  .overlayTopRight {
+    right: -1.52rem;
+    width: 1.52rem;
+    height: 1.52rem;
+    background: radial-gradient(
+      circle at 100% 100%,
+      transparent 1.5rem,
+      var(--bg-primary) calc(1.5rem + 1px)
+    );
+  }
+
+  .homeHeroTitle {
+    font-size: clamp(1.4rem, 6.5vw, 2rem);
+  }
+
+  .titleLine:not(:last-child)::after {
+    width: 1rem;
+    height: 1rem;
+    background: radial-gradient(
+      circle at 0% 100%,
+      transparent 1rem,
+      var(--bg-primary) calc(1rem + 1px)
+    );
+  }
+
+  .homeHeroAccent {
+    width: 40%;
+    height: 2rem;
+    border-top-left-radius: 1.25rem;
+  }
+
+  .accentTopRight {
+    top: -1.27rem;
+    width: 1.27rem;
+    height: 1.27rem;
+    background: radial-gradient(
+      circle at 0% 0%,
+      transparent 1.25rem,
+      var(--bg-primary) calc(1.25rem + 1px)
+    );
+  }
+
+  .accentBottomLeft {
+    left: -1.27rem;
+    width: 1.27rem;
+    height: 1.27rem;
+    background: radial-gradient(
+      circle at 0% 0%,
+      transparent 1.25rem,
+      var(--bg-primary) calc(1.25rem + 1px)
+    );
+  }
+}
