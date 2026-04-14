@@ -1,0 +1,127 @@
+.lovePage {
+  background-color: var(--bg-primary);
+  min-height: 100vh;
+}
+
+.testimonialsSection {
+  padding: 4rem 0 12rem; /* Reduced top padding from 8rem */
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 90%;
+  max-width: 1300px;
+}
+
+/* ---- Featured Pullquote ---- */
+.featured {
+  text-align: center;
+  padding: 2rem 0 8rem; /* Reduced top padding significantly */
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.featuredQuote {
+  font-family: var(--font-primary);
+  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+}
+
+.featuredAuthor {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.featuredName {
+  font-size: 1.1rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+}
+
+.featuredRole {
+  font-size: 0.9rem;
+  color: var(--card-orange);
+  font-weight: var(--font-weight-medium);
+}
+
+.divider {
+  display: none;
+}
+
+/* ---- Masonry Grid ---- */
+.masonryGrid {
+  column-count: 2;
+  column-gap: 10rem; /* Massive horizontal gap to air it out */
+}
+
+@media (max-width: 1100px) {
+  .masonryGrid {
+    column-count: 2;
+    column-gap: 6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .masonryGrid {
+    column-count: 1;
+  }
+}
+
+/* ---- Individual Testimonial (card-free) ---- */
+.testimonialItem {
+  break-inside: avoid;
+  margin-bottom: 8rem; /* Vertical spacing is good */
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.highlight {
+  font-family: var(--font-logo);
+  font-size: 1.85rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+  line-height: 1.25;
+  letter-spacing: -0.03em;
+  transition: color var(--transition-base); /* Smooth transition */
+}
+
+.testimonialItem:hover .highlight {
+  color: #FF8F6B; /* Turn brand orange on hover */
+}
+
+.text {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #000000;
+  font-weight: var(--font-weight-normal);
+}
+
+.author {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding-top: 0rem; /* Removed padding */
+  border-top: none; /* Removed divider */
+}
+
+.name {
+  font-size: 0.95rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+}
+
+.role {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: var(--font-weight-medium);
+}

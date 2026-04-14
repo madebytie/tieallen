@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import GooeyButton from "@/components/ui/GooeyButton";
 import styles from "./about-global.module.css";
 
 function Globe() {
@@ -134,6 +135,10 @@ export default function AboutGlobal() {
             <p className={styles.locationSummary}>
               Clients over <span className={styles.accent}>3</span> continents, <span className={styles.accent}>5</span> countries and <span className={styles.accent}>20</span> cities.
             </p>
+
+            <div className={styles.buttonWrapper}>
+              <GooeyButton label="Hire Tie" href="/get-started" />
+            </div>
           </div>
 
           {/* Right Side: Large Globe */}

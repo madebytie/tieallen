@@ -2,13 +2,13 @@ import styles from "./project-hero.module.css";
 
 interface ProjectHeroProps {
   title: string;
-  tags: string[];
+  tags?: string[];
   image: string;
 }
 
 export default function ProjectHero({
   title,
-  tags,
+  tags = [],
   image,
 }: ProjectHeroProps) {
   return (
@@ -31,7 +31,7 @@ export default function ProjectHero({
 
           {/* Tag pills — top-right of the strip */}
           <div className={styles.projectHeroTags}>
-            {tags.map((tag) => (
+            {tags && tags.map((tag) => (
               <span key={tag} className={styles.projectHeroTag}>{tag}</span>
             ))}
           </div>

@@ -4,22 +4,31 @@ interface AboutHeroProps {
   title: string;
   subtitle: string;
   image: string;
+  small?: boolean;
+  objectPosition?: string;
+  overlay?: boolean;
 }
 
 export default function AboutHero({
   title,
   subtitle,
   image,
+  small = false,
+  objectPosition = "100% 25%",
+  overlay = false,
 }: AboutHeroProps) {
   return (
-    <section className={styles.aboutHero}>
+    <section className={`${styles.aboutHero} ${small ? styles.aboutHeroSmall : ""}`}>
       <div className={styles.aboutHeroFrame}>
         <div className={styles.aboutHeroCard}>
           <img
             src={image}
             alt=""
             className={styles.aboutHeroImage}
+            style={{ objectPosition }}
           />
+
+          {overlay && <div className={styles.overlay} />}
 
           {/* Top white strip — full width */}
           <div className={styles.aboutHeroStrip} aria-hidden="true" />

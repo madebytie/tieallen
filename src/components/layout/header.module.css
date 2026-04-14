@@ -2,6 +2,7 @@
    HEADER — Scroll-aware Navigation
    ============================================ */
 
+
 .headerOuter {
   position: fixed;
   top: 0;
@@ -18,7 +19,7 @@
   padding: 0.75rem 2rem 0;
 }
 
-/* We need an ::before element because Safari drops backdrop-filters 
+/* We need an ::before element because Safari drops backdrop-filters
    if the parent has a transparent background-color transition active */
 .header::before {
   content: "";
@@ -45,7 +46,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* Remove direct transitions that conflict with the blur */
   transition: max-width 0.4s var(--ease-smooth);
 }
 
@@ -54,10 +54,10 @@
 }
 
 .headerScrolled::before {
-  background-color: rgba(255, 255, 255, 0.4); 
-  backdrop-filter: blur(24px); 
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  border: 1px solid rgba(255, 255, 255, 0.5); 
+  border: 1px solid rgba(255, 255, 255, 0.5);
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   box-shadow:
     0 8px 32px rgba(0, 0, 0, 0.08),
@@ -165,19 +165,232 @@
 /* ---- Navigation Links ---- */
 .links {
   display: flex;
-  gap: 2rem;
+  gap: 2.75rem;
   align-items: center;
 }
 
 .link {
-  font-size: 0.95rem;
-  color: var(--text-secondary);
-  font-weight: var(--font-weight-medium);
+  font-size: 1rem;
+  color: var(--text-primary);
+  font-weight: var(--font-weight-regular);
   transition: color var(--transition-fast);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.link:hover {
+/* Orange dot above — hidden by default */
+.link::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%) scale(0);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #FF8F6B;
+  transition: transform 0.2s var(--ease-smooth), opacity 0.2s var(--ease-smooth);
+  opacity: 0;
+}
+
+.link:hover::before,
+.linkActive::before {
+  transform: translateX(-50%) scale(1);
+  opacity: 1;
+}
+
+.link:hover,
+.linkActive {
   color: var(--text-primary);
+}
+
+/* ---- Nav items with dropdowns ---- */
+.navItem {
+  position: relative;
+}
+
+.navToggle {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.chevron {
+  transition: transform 0.25s var(--ease-smooth);
+  flex-shrink: 0;
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 1.25rem);
+  left: 50%;
+  transform: translateX(-50%) translateY(-6px);
+  /* two columns: left list + right CTA */
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  width: 660px;
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.1),
+    0 4px 16px rgba(0, 0, 0, 0.06);
+  padding: 1.25rem;
+  gap: 1rem;
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    opacity 0.22s var(--ease-smooth),
+    transform 0.22s var(--ease-smooth);
+  z-index: 999;
+}
+
+/* Arrow tip */
+.dropdown::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  background: #ffffff;
+  border-left: 1px solid var(--border-subtle);
+  border-top: 1px solid var(--border-subtle);
+  rotate: 45deg;
+  border-radius: 2px 0 0 0;
+}
+
+.dropdownOpen {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Narrow single-column variant (About) */
+.dropdownNarrow {
+  grid-template-columns: 1fr;
+  width: 280px;
+}
+
+/* ---- Left column ---- */
+.dropdownList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.dropdownItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.85rem 1.1rem;
+  border-radius: var(--radius-md);
+  transition: background 0.18s var(--ease-smooth);
+  cursor: pointer;
+}
+
+.dropdownItem:hover {
+  background: var(--bg-tertiary);
+}
+
+.dropdownItemInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dropdownLabel {
+  font-size: 0.9rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+/* Arrow: hidden + shifted down-left, slides to top-right on hover */
+.dropdownArrow {
+  color: var(--text-primary);
+  opacity: 0;
+  transform: translate(-4px, 4px);
+  transition:
+    opacity 0.18s var(--ease-smooth),
+    transform 0.18s var(--ease-smooth);
+  flex-shrink: 0;
+}
+
+.dropdownItem:hover .dropdownArrow {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.dropdownDesc {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.3;
+}
+
+/* ---- Right column — View all Services CTA ---- */
+.dropdownSide {
+  display: flex;
+}
+
+.dropdownSideCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  transition: background 0.15s var(--ease-smooth);
+  overflow: hidden;
+  gap: 0.75rem;
+}
+
+.dropdownSideCard:hover {
+  background: var(--bg-tertiary);
+}
+
+.dropdownSideText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.dropdownSideTitle {
+  font-size: 0.9rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.dropdownSideDesc {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.dropdownSideImage {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-sm);
+  background: var(--border-subtle);
+  background-image: url('/assets/IMG_3257.jpg');
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
 }
 
 /* ---- Spacer (prevents content from going under fixed header) ---- */
@@ -198,5 +411,8 @@
   .headerScrolled {
     max-width: calc(100% - 2rem);
   }
-}
 
+  .dropdown {
+    width: 290px;
+  }
+}

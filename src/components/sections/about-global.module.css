@@ -75,6 +75,10 @@
   max-width: 400px;
 }
 
+.buttonWrapper {
+  margin-top: 1rem;
+}
+
 .accent {
   font-family: var(--font-primary);
   font-weight: var(--font-weight-bold);

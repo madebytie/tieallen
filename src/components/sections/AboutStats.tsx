@@ -69,7 +69,7 @@ export default function AboutStats() {
             <div className={styles.statValue}>
               <AnimatedNumber value={199} suffix="+" />
             </div>
-            <span className={styles.statLabel}>Successful projects Delivered</span>
+            <span className={styles.statLabel}>projects delivered</span>
           </div>
 
           {/* Industries */}
@@ -77,7 +77,7 @@ export default function AboutStats() {
             <div className={styles.statValue}>
               <AnimatedNumber value={15} suffix="+" />
             </div>
-            <span className={styles.statLabel}>Industries Served</span>
+            <span className={styles.statLabel}>industries served</span>
           </div>
 
           {/* Experience */}
@@ -85,7 +85,7 @@ export default function AboutStats() {
             <div className={styles.statValue}>
               <AnimatedNumber value={18} suffix="Y" />
             </div>
-            <span className={styles.statLabel}>Oldest Client Relationship</span>
+            <span className={styles.statLabel}>years experience</span>
           </div>
         </div>
       </div>

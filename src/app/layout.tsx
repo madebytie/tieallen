@@ -20,10 +20,12 @@ export default function RootLayout({
     <html lang="en">
       <body suppressHydrationWarning>
         <GooeyFilter />
-        <div className={styles.pageWrapper}>
+        <div id="page-wrapper" className={styles.pageWrapper}>
           <Header />
-          <main className={styles.mainContent}>{children}</main>
-          <Footer />
+          <div id="page-content" className={styles.pageContent}>
+            <main className={styles.mainContent}>{children}</main>
+            <Footer />
+          </div>
         </div>
       </body>
     </html>
