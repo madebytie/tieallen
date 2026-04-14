@@ -100,33 +100,31 @@ export default function Pricing() {
   return (
     <section className={styles.pricingFrame} id="pricing">
       <div className={styles.pricing}>
-        {/* Top notch — matches footer pattern */}
-        <div className={styles.topNotch} aria-hidden="true" />
+        <div className={styles.pricingHeader}>
+          <span className={styles.eyebrow}>Pricing</span>
+          <h2 className={styles.pricingTitle}>
+            <span className={styles.pricingTitleBold}>Straightforward</span>
+            <span className={styles.pricingTitleAccent}>pricing.</span>
+          </h2>
+          <p className={styles.pricingSubtitle}>
+            Start with a custom buildout. Long-term partners unlock ongoing
+            design and development on an exclusive monthly retainer.
+          </p>
+        </div>
 
-        <div className={styles.pricingInner}>
-          <div className={styles.pricingHeader}>
-            <span className={styles.eyebrow}>Pricing</span>
-            <h2 className={styles.pricingTitle}>
-              <span className={styles.pricingTitleBold}>Straightforward</span>
-              <span className={styles.pricingTitleAccent}>pricing.</span>
-            </h2>
-            <p className={styles.pricingSubtitle}>
-              Start with a custom buildout. Long-term partners unlock ongoing
-              design and development on an exclusive monthly retainer.
-            </p>
-          </div>
-
-          <div className={styles.pricingGrid}>
-            {tiers.map((tier) => (
-              <article
-                key={tier.title}
-                className={`${styles.card} ${tier.exclusive ? styles.cardExclusive : ""}`}
-              >
+        <div className={styles.pricingGrid}>
+          {tiers.map((tier) => (
+            <article
+              key={tier.title}
+              className={`${styles.card} ${tier.exclusive ? styles.cardExclusive : styles.cardFoundation}`}
+            >
                 <div className={styles.cardBody}>
-                  {/* Top-left notched icon square */}
+                  {/* Notch cutout + concave ears rounding the inside corners */}
+                  <div className={styles.notchCutout} aria-hidden="true" />
+                  <div className={`${styles.notchEar} ${styles.notchEarBottomLeft}`} aria-hidden="true" />
+                  <div className={`${styles.notchEar} ${styles.notchEarTopRight}`} aria-hidden="true" />
                   <div className={styles.iconSquare}>{tier.icon}</div>
-                  <div className={`${styles.notch} ${styles.notchBelow}`} aria-hidden="true" />
-                  <div className={`${styles.notch} ${styles.notchRight}`} aria-hidden="true" />
+
                   {tier.exclusive && (
                     <span className={styles.exclusiveBadge}>Exclusive</span>
                   )}
@@ -160,9 +158,8 @@ export default function Pricing() {
                     <ArrowIcon />
                   </a>
                 </div>
-              </article>
-            ))}
-          </div>
+            </article>
+          ))}
         </div>
       </div>
     </section>
