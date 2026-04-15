@@ -210,28 +210,90 @@
 
 @media (max-width: 900px) {
   .loveHeroCard {
-    min-height: 450px;
+    min-height: 420px;
   }
   .loveHeroTab {
-    width: 85%;
-    padding: 2rem;
+    width: 80%;
+    padding: 1.5rem 2rem 2rem;
+    min-height: 10rem;
   }
-  .loveHeroTitle {
-    font-size: 2.8rem;
+  .loveHeroLogo {
+    height: 5rem;
   }
 }
 
 @media (max-width: 600px) {
+  .loveHeroFrame {
+    padding: 0;
+  }
+
   .loveHeroCard {
-    border-radius: 1.75rem;
-    min-height: 380px;
+    border-radius: 1.5rem;
+    min-height: 320px;
+    max-height: 380px;
+    height: 340px;
+  }
+  .loveHeroStrip {
+    height: calc(3rem + 2px);
   }
   .loveHeroTab {
-    width: 95%;
-    min-height: 10rem;
-    padding: 1.5rem;
+    width: 80%;
+    min-height: 8rem;
+    padding: 1rem 1.25rem 1.5rem;
+    border-bottom-left-radius: 1.5rem;
   }
-  .loveHeroTitle {
-    font-size: 2.2rem;
+  .loveHeroTab::after {
+    top: 3rem;
+    left: -1.5rem;
+    width: 1.5rem;
+    height: calc(1.5rem + 1px);
+    background: radial-gradient(circle at 0% 100%, transparent 1.5rem, var(--bg-primary) 1.5rem);
+  }
+  .loveHeroTab::before {
+    bottom: -1.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: radial-gradient(circle at 0% 100%, transparent 1.5rem, var(--bg-primary) 1.5rem);
+  }
+  .loveHeroLogo {
+    height: 3.5rem;
+  }
+  .loveHeroContent {
+    padding-top: 1.5rem;
+    gap: 0.5rem;
+  }
+  .loveHeroAccent {
+    width: min(15%, 4rem);
+    height: calc(2.5rem + 2px);
+    border-top-right-radius: 1.5rem;
+  }
+  .loveHeroAccent::after {
+    top: -1.5rem;
+    width: 1.5rem;
+    height: calc(1.5rem + 1px);
+    background: radial-gradient(circle at 100% 0%, transparent 1.5rem, var(--bg-primary) 1.5rem);
+  }
+  .loveHeroAccent::before {
+    right: -1.5rem;
+    width: calc(1.5rem + 1px);
+    height: 1.5rem;
+    background: radial-gradient(circle at 100% 0%, transparent 1.5rem, var(--bg-primary) 1.5rem);
+  }
+  .ctaNotch {
+    height: calc(2.5rem + 2px);
+    padding: 0 1rem 0 1.25rem;
+    border-top-left-radius: 1.5rem;
+  }
+  .ctaNotch::before {
+    top: -1.5rem;
+    width: 1.5rem;
+    height: calc(1.5rem + 1px);
+    background: radial-gradient(circle at 0% 0%, transparent 1.5rem, var(--bg-primary) 1.5rem);
+  }
+  .ctaNotch::after {
+    left: -1.5rem;
+    width: calc(1.5rem + 1px);
+    height: 1.5rem;
+    background: radial-gradient(circle at 0% 0%, transparent 1.5rem, var(--bg-primary) 1.5rem);
   }
 }

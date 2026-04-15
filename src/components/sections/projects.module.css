@@ -243,6 +243,39 @@
     gap: 1rem;
   }
 
+  .projectTagsWrapper {
+    padding: 0.6rem 0.6rem 0.75rem 0.75rem;
+    border-bottom-left-radius: 16px;
+  }
+
+  .projectTagsWrapper::before {
+    left: -16px;
+    width: 16px;
+    height: 16px;
+    background: radial-gradient(circle at 0% 100%, transparent 16px, var(--bg-primary) 16px);
+  }
+
+  .projectTagsWrapper::after {
+    bottom: -16px;
+    width: 16px;
+    height: 16px;
+    background: radial-gradient(circle at 0% 100%, transparent 16px, var(--bg-primary) 16px);
+  }
+
+  .projectTags {
+    gap: 0.25rem;
+  }
+
+  .projectTag {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.68rem;
+  }
+
+  /* Hide tags beyond the first 2 on mobile */
+  .projectTag:nth-child(n+3) {
+    display: none;
+  }
+
   .projectsTitle {
     font-size: clamp(2rem, 8vw, 3rem);
   }

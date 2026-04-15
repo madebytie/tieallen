@@ -187,14 +187,15 @@ export default function Header() {
                 onMouseEnter={() => openDropdown("services")}
                 onMouseLeave={scheduleClose}
               >
-                <button
+                <Link
+                  href="/services"
                   className={[styles.link, styles.navToggle, openMenu === "services" ? styles.linkActive : ""].filter(Boolean).join(" ")}
                   aria-expanded={openMenu === "services"}
                   aria-haspopup="true"
-                  onClick={() => openMenu === "services" ? (setOpenMenu(null), document.body.classList.remove("nav-open")) : openDropdown("services")}
+                  onClick={() => { setOpenMenu(null); document.body.classList.remove("nav-open"); }}
                 >
                   Services
-                </button>
+                </Link>
                 <div
                   className={[styles.dropdown, openMenu === "services" ? styles.dropdownOpen : ""].filter(Boolean).join(" ")}
                   role="menu"

@@ -1,0 +1,204 @@
+/* ============================================
+   SERVICE IMAGE SPLIT REVERSE — Left text / right image
+   Mirror of ServiceImageSplit.
+   ============================================ */
+
+.section {
+  width: 100%;
+  padding: var(--section-padding-lg);
+  background-color: var(--bg-primary);
+}
+
+.inner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 4fr 5fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+/* ---- Left — content ---- */
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.headline {
+  font-family: var(--font-logo);
+  font-size: clamp(2rem, 3.5vw, 2.9rem);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.body {
+  font-size: 1.05rem;
+  font-weight: var(--font-weight-light);
+  line-height: 1.75;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.ctaWrap {
+  margin-top: 1.5rem;
+}
+
+/* ---- Checkpoints ---- */
+.checkpoints {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin: 0;
+  padding: 0;
+}
+
+.checkpoint {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.88rem;
+  font-weight: var(--font-weight-medium);
+  color: var(--text-primary);
+}
+
+.checkIcon {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.checkIcon svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* ---- Right — image ---- */
+.imageWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 6 / 6.5;
+  border-radius: 2rem;
+  border-bottom-left-radius: 0;
+  overflow: hidden;
+  background-color: var(--bg-tertiary);
+}
+
+.image {
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ---- Bottom-left accent notch (mirror of bottom-right in left version) ---- */
+/* Left version: right:0, bottom:0, border-top-left-radius, accentTopRight at top:-/right:0 circle 0% 0%, accentBottomLeft at bottom:0/left:- circle 0% 0% */
+/* Mirror: left:0, bottom:0, border-top-right-radius, accentTopLeft at top:-/left:0 circle 100% 0%, accentBottomRight at bottom:0/right:- circle 100% 0% */
+.accent {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: min(28%, 6rem);
+  height: 2.5rem;
+  background-color: var(--bg-primary);
+  border-top-right-radius: 1.5rem;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.accentCorner {
+  position: absolute;
+  z-index: 5;
+  width: 1.52rem;
+  height: 1.52rem;
+}
+
+.accentTopLeft {
+  top: -1.52rem;
+  left: 0;
+  background: radial-gradient(
+    circle at 100% 0%,
+    transparent 1.5rem,
+    var(--bg-primary) calc(1.5rem + 1px)
+  );
+}
+
+.accentBottomRight {
+  bottom: 0;
+  right: -1.52rem;
+  background: radial-gradient(
+    circle at 100% 0%,
+    transparent 1.5rem,
+    var(--bg-primary) calc(1.5rem + 1px)
+  );
+}
+
+/* ---- Right-center accent notch (mirror of left-center in left version) ---- */
+/* Left version: left:0, border-top/bottom-right-radius, top corner left:0 circle 100% 0%, bottom corner left:0 circle 100% 100% */
+/* Mirror: right:0, border-top/bottom-left-radius, top corner right:0 circle 0% 0%, bottom corner right:0 circle 0% 100% */
+.accentRight {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.25rem;
+  height: 21rem;
+  background-color: var(--bg-primary);
+  border-top-left-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.accentRightCorner {
+  position: absolute;
+  z-index: 5;
+  width: 1.52rem;
+  height: 1.52rem;
+}
+
+.accentRightTop {
+  top: -1.52rem;
+  right: 0;
+  background: radial-gradient(
+    circle at 0% 0%,
+    transparent 1.5rem,
+    var(--bg-primary) calc(1.5rem + 1px)
+  );
+}
+
+.accentRightBottom {
+  bottom: -1.52rem;
+  right: 0;
+  background: radial-gradient(
+    circle at 0% 100%,
+    transparent 1.5rem,
+    var(--bg-primary) calc(1.5rem + 1px)
+  );
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 860px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  /* Stack image below text on mobile */
+  .imageWrap {
+    order: 2;
+    aspect-ratio: 4 / 3;
+  }
+
+  .content {
+    order: 1;
+  }
+}
+
+@media (max-width: 560px) {
+  .section {
+    padding: var(--section-padding);
+  }
+}

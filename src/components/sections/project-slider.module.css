@@ -1,0 +1,170 @@
+/* ============================================
+   PROJECT SLIDER — Horizontal draggable slider
+   Cards reuse projects.module.css styles.
+   ============================================ */
+
+.section {
+  width: 100%;
+  padding: 4rem 0 2rem;
+  overflow-x: clip;
+}
+
+.inner {
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* ---- Header ---- */
+.header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+  gap: 2rem;
+}
+
+.headerLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.7rem;
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.eyebrowDot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.headline {
+  font-family: var(--font-logo);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  margin: 0;
+  white-space: pre-line;
+}
+
+.ctaLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: var(--font-weight-medium);
+  color: var(--text-primary);
+  text-decoration: none;
+  white-space: nowrap;
+  padding-bottom: 0.2rem;
+  border-bottom: 1px solid var(--border-strong);
+  transition: border-color var(--transition-fast), color var(--transition-fast);
+  margin-bottom: 0.5rem;
+}
+
+.ctaLink:hover {
+  color: var(--text-secondary);
+  border-color: var(--border-subtle);
+}
+
+.ctaArrow {
+  width: 14px;
+  height: 14px;
+  transition: transform var(--transition-fast);
+}
+
+.ctaLink:hover .ctaArrow {
+  transform: translate(2px, -2px);
+}
+
+/* ---- Track ---- */
+.track {
+  display: flex;
+  gap: 2.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  cursor: grab;
+  /* bleed off the right edge — negative margin lets content scroll past .inner boundary */
+  margin-right: -100vw;
+  padding: 0 4rem 1rem 4rem;
+}
+
+.track::-webkit-scrollbar {
+  display: none;
+}
+
+.dragging {
+  cursor: grabbing;
+  scroll-snap-type: none;
+  user-select: none;
+}
+
+/* Prevent link clicks during drag */
+.dragging a {
+  pointer-events: none;
+}
+
+/* ---- Card sizing in slider context ---- */
+.card {
+  flex: 0 0 clamp(300px, 40vw, 540px);
+  scroll-snap-align: start;
+}
+
+/* ---- Arrows ---- */
+.arrows {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--border-strong);
+  background: transparent;
+  cursor: pointer;
+  transition: background var(--transition-fast), border-color var(--transition-fast);
+  color: var(--text-primary);
+}
+
+.arrow svg {
+  width: 18px;
+  height: 18px;
+}
+
+.arrow:hover {
+  background: var(--text-primary);
+  border-color: var(--text-primary);
+  color: var(--bg-primary);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .card {
+    flex: 0 0 80vw;
+  }
+}

@@ -12,7 +12,8 @@
       "WebFetch(domain:old.vizonos.com)",
       "Bash(ls -1 /Users/tie/Dev/tieallen/src/components/sections/*.tsx)",
       "Bash(npm run:*)",
-      "Bash(grep -l \"blurBacking\\\\|headerScrolled\\\\|backdrop\" .next/static/chunks/*.css)"
+      "Bash(grep -l \"blurBacking\\\\|headerScrolled\\\\|backdrop\" .next/static/chunks/*.css)",
+      "Bash(npx tsc:*)"
     ]
   }
 }
