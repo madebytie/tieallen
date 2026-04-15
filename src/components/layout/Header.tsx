@@ -18,7 +18,6 @@ const ABOUT = [
   { href: "/love", label: "Wall of Love", desc: "Client testimonials" },
 ];
 
-
 function ArrowIcon() {
   return (
     <svg className={styles.dropdownArrow} width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
@@ -28,11 +27,44 @@ function ArrowIcon() {
   );
 }
 
+function ChevronIcon({ open }: { open: boolean }) {
+  return (
+    <svg
+      width="16" height="16" viewBox="0 0 16 16" fill="none"
+      aria-hidden="true"
+      style={{ transform: open ? "rotate(180deg)" : "rotate(0deg)", transition: "transform 0.25s ease", flexShrink: 0 }}
+    >
+      <polyline points="4,6 8,10 12,6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function HamburgerIcon({ open }: { open: boolean }) {
+  return (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      {open ? (
+        <>
+          <line x1="5" y1="5" x2="19" y2="19" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
+          <line x1="19" y1="5" x2="5" y2="19" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
+        </>
+      ) : (
+        <>
+          <line x1="4" y1="7" x2="20" y2="7" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
+          <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
+          <line x1="4" y1="17" x2="20" y2="17" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
+        </>
+      )}
+    </svg>
+  );
+}
+
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [dotPhase, setDotPhase] = useState<"idle" | "rolling" | "landed">("idle");
   const [animKey, setAnimKey] = useState(0);
   const [openMenu, setOpenMenu] = useState<"services" | "about" | null>(null);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileExpanded, setMobileExpanded] = useState<"services" | "about" | null>(null);
 
   const rollTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const landTimeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -50,7 +82,13 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Close on outside click
+  // Lock body scroll when mobile nav open
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [mobileOpen]);
+
+  // Close desktop dropdown on outside click
   useEffect(() => {
     if (!openMenu) return;
     const handleClick = (e: MouseEvent) => {
@@ -77,6 +115,11 @@ export default function Header() {
       setOpenMenu(null);
       document.body.classList.remove("nav-open");
     }, 150);
+  };
+
+  const closeMobile = () => {
+    setMobileOpen(false);
+    setMobileExpanded(null);
   };
 
   const handleLogoHover = useCallback(() => {
@@ -115,9 +158,6 @@ export default function Header() {
   return (
     <>
       <div className={outerClasses}>
-        {/* Blur backdrop — must be a real DOM sibling BEFORE <header>, not a pseudo-element.
-            Any CSS filter inside <header> (gooey button) would kill backdrop-filter if it
-            were on <header> itself or a pseudo. As a preceding sibling it is unaffected. */}
         <div
           className={styles.blurBacking}
           aria-hidden="true"
@@ -138,9 +178,8 @@ export default function Header() {
               <span className={periodClasses} ref={periodRef} key={`period-${animKey}`}>.</span>
             </Link>
 
-            {/* Navigation */}
+            {/* Desktop Navigation */}
             <div className={styles.links}>
-
               {/* Services dropdown */}
               <div
                 className={styles.navItem}
@@ -156,7 +195,6 @@ export default function Header() {
                 >
                   Services
                 </button>
-
                 <div
                   className={[styles.dropdown, openMenu === "services" ? styles.dropdownOpen : ""].filter(Boolean).join(" ")}
                   role="menu"
@@ -203,7 +241,6 @@ export default function Header() {
                 >
                   About
                 </button>
-
                 <div
                   className={[styles.dropdown, styles.dropdownNarrow, openMenu === "about" ? styles.dropdownOpen : ""].filter(Boolean).join(" ")}
                   role="menu"
@@ -228,13 +265,101 @@ export default function Header() {
               <Link href="/contact" className={styles.link}>Contact</Link>
             </div>
 
-            {/* CTA */}
-            <div ref={ctaRef} style={{ position: "relative", zIndex: 10 }}>
+            {/* Desktop CTA */}
+            <div ref={ctaRef} className={styles.desktopCta} style={{ position: "relative", zIndex: 10 }}>
               <GooeyButton label="Hire Tie" href="/get-started" />
             </div>
+
+            {/* Mobile hamburger */}
+            <button
+              className={styles.hamburger}
+              onClick={() => setMobileOpen((v) => !v)}
+              aria-label={mobileOpen ? "Close menu" : "Open menu"}
+              aria-expanded={mobileOpen}
+            >
+              <HamburgerIcon open={mobileOpen} />
+            </button>
           </nav>
         </header>
+      </div>
 
+      {/* Mobile drawer */}
+      <div className={[styles.mobileDrawer, mobileOpen ? styles.mobileDrawerOpen : ""].filter(Boolean).join(" ")} aria-hidden={!mobileOpen}>
+        <div className={styles.mobileDrawerInner}>
+
+          {/* Services accordion */}
+          <div className={styles.mobileSection}>
+            <button
+              className={styles.mobileSectionToggle}
+              onClick={() => setMobileExpanded(mobileExpanded === "services" ? null : "services")}
+              aria-expanded={mobileExpanded === "services"}
+            >
+              <span>Services</span>
+              <ChevronIcon open={mobileExpanded === "services"} />
+            </button>
+            <div className={[styles.mobileAccordion, mobileExpanded === "services" ? styles.mobileAccordionOpen : ""].filter(Boolean).join(" ")}>
+              <div className={styles.mobileAccordionInner}>
+                <ul className={styles.dropdownList}>
+                  {SERVICES.map((s) => (
+                    <li key={s.href}>
+                      <Link href={s.href} className={styles.dropdownItem} onClick={closeMobile}>
+                        <span className={styles.dropdownItemInner}>
+                          <span className={styles.dropdownLabel}>{s.label}</span>
+                          <ArrowIcon />
+                        </span>
+                        <span className={styles.dropdownDesc}>{s.desc}</span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+                <Link href="/services" className={styles.dropdownSideCard} onClick={closeMobile} style={{ marginTop: "0.5rem" }}>
+                  <div className={styles.dropdownSideText}>
+                    <span className={styles.dropdownSideTitle}>View all Services</span>
+                    <span className={styles.dropdownSideDesc}>Check out everything we offer.</span>
+                  </div>
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          <Link href="/work" className={styles.mobileLink} onClick={closeMobile}>Work</Link>
+
+          {/* About accordion */}
+          <div className={styles.mobileSection}>
+            <button
+              className={styles.mobileSectionToggle}
+              onClick={() => setMobileExpanded(mobileExpanded === "about" ? null : "about")}
+              aria-expanded={mobileExpanded === "about"}
+            >
+              <span>About</span>
+              <ChevronIcon open={mobileExpanded === "about"} />
+            </button>
+            <div className={[styles.mobileAccordion, mobileExpanded === "about" ? styles.mobileAccordionOpen : ""].filter(Boolean).join(" ")}>
+              <div className={styles.mobileAccordionInner}>
+                <ul className={styles.dropdownList}>
+                  {ABOUT.map((a) => (
+                    <li key={a.href}>
+                      <Link href={a.href} className={styles.dropdownItem} onClick={closeMobile}>
+                        <span className={styles.dropdownItemInner}>
+                          <span className={styles.dropdownLabel}>{a.label}</span>
+                          <ArrowIcon />
+                        </span>
+                        <span className={styles.dropdownDesc}>{a.desc}</span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <Link href="/blog" className={styles.mobileLink} onClick={closeMobile}>Blog</Link>
+          <Link href="/contact" className={styles.mobileLink} onClick={closeMobile}>Contact</Link>
+
+          <div className={styles.mobileCta}>
+            <GooeyButton label="Hire Tie" href="/get-started" />
+          </div>
+        </div>
       </div>
 
       <div className={styles.headerSpacer} />

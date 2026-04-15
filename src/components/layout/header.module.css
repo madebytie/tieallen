@@ -398,21 +398,150 @@
   height: var(--nav-height);
 }
 
+/* ---- Hamburger button — mobile only ---- */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  padding: 0.25rem;
+  cursor: pointer;
+  color: var(--text-primary);
+  position: relative;
+  z-index: 10;
+}
+
+.desktopCta {
+  display: flex;
+}
+
+/* ---- Mobile drawer ---- */
+.mobileDrawer {
+  display: none;
+}
+
 /* ---- Responsive ---- */
 @media (max-width: 768px) {
   .links {
-    gap: 1rem;
+    display: none;
   }
 
-  .link {
-    font-size: 0.85rem;
+  .desktopCta {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .headerOuterScrolled {
+    padding: 0.75rem 1rem 0;
   }
 
   .headerScrolled {
     max-width: calc(100% - 2rem);
   }
 
-  .dropdown {
-    width: 290px;
+  .header {
+    height: 52px;
+  }
+
+  .headerOuterScrolled .blurBacking {
+    height: 52px;
+  }
+
+  .nav {
+    padding: 0 1rem;
+  }
+
+  /* Mobile drawer */
+  .mobileDrawer {
+    display: block;
+    position: fixed;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #ffffff;
+    z-index: 999;
+    overflow-y: auto;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition:
+      transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+      opacity 0.35s ease;
+    pointer-events: none;
+  }
+
+  .mobileDrawerOpen {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .mobileDrawerInner {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 1.25rem 3rem;
+    gap: 0;
+  }
+
+  /* Plain nav links */
+  .mobileLink {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0.25rem;
+    font-size: 1.1rem;
+    font-weight: var(--font-weight-medium);
+    color: var(--text-primary);
+    text-decoration: none;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  /* Accordion section */
+  .mobileSection {
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .mobileSectionToggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem 0.25rem;
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: var(--font-weight-medium);
+    color: var(--text-primary);
+    cursor: pointer;
+    font-family: inherit;
+    text-align: left;
+  }
+
+  .mobileAccordion {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s ease;
+  }
+
+  .mobileAccordionOpen {
+    grid-template-rows: 1fr;
+  }
+
+  .mobileAccordionInner {
+    overflow: hidden;
+    padding-bottom: 0.75rem;
+  }
+
+  /* Reuse the desktop dropdown item styles — they work great on mobile too */
+  .mobileAccordionInner .dropdownItem {
+    border-radius: var(--radius-md);
+  }
+
+  .mobileCta {
+    margin-top: 2rem;
+    display: flex;
   }
 }
