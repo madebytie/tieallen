@@ -72,15 +72,12 @@ export default function FeaturedProjects() {
       <div className={styles.projectsInner}>
         {/* Section Header */}
         <div className={styles.projectsHeader}>
-          <span className={styles.projectsLabel}>
-            <span className={styles.projectsLabelDot} />
-            Featured Work
-          </span>
-          <h2 className={styles.projectsTitle}>
-            Take a look at
-            <br />
-            my projects
-          </h2>
+          <div className={styles.projectsHeaderLeft}>
+            <span className={styles.projectsLabel}>Featured Work</span>
+            <h2 className={styles.projectsTitle}>
+              Some of my projects
+            </h2>
+          </div>
         </div>
 
         {/* Staggered Grid */}

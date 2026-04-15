@@ -109,12 +109,12 @@ export default function Pricing() {
               key={tier.title}
               className={`${styles.card} ${tier.exclusive ? styles.cardExclusive : styles.cardFoundation}`}
             >
+                <div className={styles.iconSquare} aria-hidden="true">{tier.icon}</div>
                 <div className={styles.cardBody}>
                   {/* Notch cutout + concave ears rounding the inside corners */}
                   <div className={styles.notchCutout} aria-hidden="true" />
                   <div className={`${styles.notchEar} ${styles.notchEarBottomLeft}`} aria-hidden="true" />
                   <div className={`${styles.notchEar} ${styles.notchEarTopRight}`} aria-hidden="true" />
-                  <div className={styles.iconSquare}>{tier.icon}</div>
 
                   {tier.exclusive && (
                     <span className={styles.exclusiveBadge}>Exclusive</span>

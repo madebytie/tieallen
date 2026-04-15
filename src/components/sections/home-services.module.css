@@ -1,0 +1,326 @@
+.servicesSection {
+  padding: 6rem 1.25rem;
+  background-color: var(--bg-primary);
+}
+
+.servicesFrame {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ---- Header ---- */
+.servicesHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+
+.servicesHeaderLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.servicesEyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.servicesEyebrow::before {
+  content: "";
+  display: block;
+  width: 2rem;
+  height: 1px;
+  background-color: var(--border-strong);
+  flex-shrink: 0;
+}
+
+.servicesTitle {
+  font-family: var(--font-logo);
+  font-size: clamp(3rem, 7vw, 6.5rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.servicesDesc {
+  max-width: 340px;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin: 0;
+  padding-bottom: 0.25rem;
+}
+
+/* ---- Rows ---- */
+.servicesList {
+  border-top: 1px solid var(--border-subtle);
+}
+
+.serviceRow {
+  position: relative;
+  border-bottom: 1px solid var(--border-subtle);
+  cursor: none;
+}
+
+/* ---- Arrow ---- */
+.rowArrow {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  border-radius: 9999px;
+  background-color: #FF8F6B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.5);
+  transition: opacity 0.18s ease, transform 0.18s ease;
+  pointer-events: none;
+  z-index: 10;
+  will-change: left, top;
+}
+
+.rowArrow svg {
+  width: 22px;
+  height: 22px;
+  color: #111;
+}
+
+.rowArrowVisible {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* ---- Row inner: 3 columns — number | content | image ---- */
+.rowInner {
+  display: grid;
+  grid-template-columns: 5rem 1fr 520px;
+  align-items: center;
+  gap: 2rem;
+  padding: 0.4rem 0;
+  transition: padding var(--transition-base);
+}
+
+.serviceRowActive .rowInner {
+  padding: 1.5rem 0;
+}
+
+.serviceNumber {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  font-family: var(--font-primary);
+  align-self: center;
+}
+
+/* Title + description stacked as one anchor — zero gap between them */
+.serviceContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  text-decoration: none;
+  color: inherit;
+}
+
+.serviceName {
+  font-family: var(--font-logo);
+  font-size: clamp(2rem, 4.5vw, 4rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: var(--text-primary);
+  display: block;
+}
+
+/* Description clips in below the title — height 0 when inactive */
+.serviceDescription {
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+  max-width: 340px;
+  display: block;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  /* margin-top is 0 collapsed, transitions to a small gap when open */
+  margin-top: 0;
+  transition:
+    max-height 0.35s cubic-bezier(0.25, 0.1, 0.25, 1),
+    opacity 0.25s ease,
+    margin-top 0.35s ease;
+}
+
+.serviceRowActive .serviceDescription {
+  max-height: 120px;
+  opacity: 1;
+  margin-top: 0.85rem;
+}
+
+/* ---- Notched image card ---- */
+/* Outer wrapper: overflow visible so notch pseudo-elements render outside the clip */
+.serviceImageCard {
+  position: relative;
+  width: 100%;
+  height: 190px;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+.serviceRowActive .serviceImageCard {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Inner clip: this is what clips the image to rounded corners */
+.serviceImageClip {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background-color: var(--bg-tertiary);
+}
+
+.serviceImageImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s var(--ease-smooth);
+}
+
+.serviceImageCard:hover .serviceImageImg {
+  transform: scale(1.04);
+}
+
+/* ---- Top-left notch ---- */
+/* White block sits at top-left corner, rounded on bottom-right */
+.imageAccent {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 3.5rem;
+  height: 2.5rem;
+  background-color: var(--bg-primary);
+  border-bottom-right-radius: 1.5rem;
+  z-index: 4;
+}
+
+/* Corner to the RIGHT of the block */
+.imageAccent::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -1.5rem;
+  width: calc(1.5rem + 1px);
+  height: 1.5rem;
+  background: radial-gradient(circle at 100% 100%, transparent 1.5rem, var(--bg-primary) 1.5rem);
+}
+
+/* Corner BELOW the block */
+.imageAccent::before {
+  content: "";
+  position: absolute;
+  bottom: -1.5rem;
+  left: 0;
+  width: 1.5rem;
+  height: calc(1.5rem + 1px);
+  background: radial-gradient(circle at 100% 100%, transparent 1.5rem, var(--bg-primary) 1.5rem);
+}
+
+/* ---- Bottom-right CTA notch ---- */
+.imageCtaNotch {
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+  height: calc(3rem + 1px);
+  padding: 0 1rem 0 1.5rem;
+  background-color: var(--bg-primary);
+  border-top-left-radius: 1.5rem;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+}
+
+/* Corner above the notch — matches working ctaNotch exactly */
+.imageCtaNotch::before {
+  content: "";
+  position: absolute;
+  top: -1.5rem;
+  right: 0;
+  width: 1.5rem;
+  height: calc(1.5rem + 1px);
+  background: radial-gradient(circle at 0% 0%, transparent 1.5rem, var(--bg-primary) 1.5rem);
+}
+
+/* Corner to the left of the notch — matches working ctaNotch exactly */
+.imageCtaNotch::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -1.5rem;
+  width: calc(1.5rem + 1px);
+  height: 1.5rem;
+  background: radial-gradient(circle at 0% 0%, transparent 1.5rem, var(--bg-primary) 1.5rem);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 1024px) {
+  .rowInner {
+    grid-template-columns: 4rem 1fr 380px;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .servicesHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .servicesDesc {
+    max-width: 100%;
+  }
+
+  .rowInner {
+    grid-template-columns: 3.5rem 1fr;
+    gap: 1rem;
+  }
+
+  /* Image drops below on tablet */
+  .serviceImageCard {
+    grid-column: 1 / -1;
+    height: 120px;
+  }
+}
+
+@media (max-width: 600px) {
+  .servicesSection {
+    padding: 4rem 1.25rem;
+  }
+
+  .rowInner {
+    grid-template-columns: 3rem 1fr;
+    gap: 0.75rem;
+  }
+
+  .serviceImageCard {
+    height: 100px;
+  }
+}
