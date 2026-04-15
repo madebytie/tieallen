@@ -115,6 +115,20 @@ export default function Header() {
   return (
     <>
       <div className={outerClasses}>
+        {/* Blur backdrop — must be a real DOM sibling BEFORE <header>, not a pseudo-element.
+            Any CSS filter inside <header> (gooey button) would kill backdrop-filter if it
+            were on <header> itself or a pseudo. As a preceding sibling it is unaffected. */}
+        <div
+          className={styles.blurBacking}
+          aria-hidden="true"
+          style={scrolled ? {
+            backdropFilter: "blur(16px)",
+            WebkitBackdropFilter: "blur(16px)",
+          } : undefined}
+        />
+        {dotPhase === "rolling" && (
+          <div className={styles.rollingDot} style={dotVars} key={`dot-${animKey}`} />
+        )}
         <header className={headerClasses}>
           <nav className={styles.nav}>
             {/* Logo */}
@@ -215,15 +229,12 @@ export default function Header() {
             </div>
 
             {/* CTA */}
-            <div ref={ctaRef}>
+            <div ref={ctaRef} style={{ position: "relative", zIndex: 10 }}>
               <GooeyButton label="Hire Tie" href="/get-started" />
             </div>
           </nav>
         </header>
 
-        {dotPhase === "rolling" && (
-          <div className={styles.rollingDot} style={dotVars} key={`dot-${animKey}`} />
-        )}
       </div>
 
       <div className={styles.headerSpacer} />
