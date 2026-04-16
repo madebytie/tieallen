@@ -368,13 +368,13 @@ Project Brief: ${formData.brief ? formData.brief.name : "None uploaded"}
         },
         company: {
           name: formData.company,
+          domain: "", // Matches the example structure
           description: "Project Lead",
         },
         tags: ["lead", "project lead"],
         deal: {
           title: dealTitle,
           value: parseFloat(formData.budgetMax) || 0,
-          currency: "USD",
           stage: "New",
           notes: dealNotes,
         }
