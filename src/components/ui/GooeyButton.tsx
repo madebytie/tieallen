@@ -3,7 +3,23 @@
 import Link from "next/link";
 import styles from "./gooey-button.module.css";
 
-function ArrowIcon() {
+function ArrowIcon({ direction = "top-right" }: { direction?: "top-right" | "down" }) {
+  if (direction === "down") {
+    return (
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <line x1="7" y1="7" x2="17" y2="17" />
+        <polyline points="17 7 17 17 7 17" />
+      </svg>
+    );
+  }
+
   return (
     <svg
       viewBox="0 0 24 24"
@@ -32,6 +48,8 @@ type GooeyButtonBaseProps = {
   textColor?: string;
   /** Additional className */
   className?: string;
+  /** Arrow icon direction */
+  icon?: "top-right" | "down";
 };
 
 type GooeyButtonLinkProps = GooeyButtonBaseProps & {
@@ -61,6 +79,7 @@ export default function GooeyButton({
   color,
   textColor,
   className = "",
+  icon = "top-right",
 }: GooeyButtonProps) {
   const sizeClass = size === "lg" ? styles.sizeLg : size === "sm" ? styles.sizeSm : "";
   const variantClass =
@@ -81,7 +100,7 @@ export default function GooeyButton({
     <div className={styles.gooeyWrapper}>
       <span className={styles.button}>{label}</span>
       <span className={styles.arrow}>
-        <ArrowIcon />
+        <ArrowIcon direction={icon} />
       </span>
     </div>
   );

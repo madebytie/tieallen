@@ -6,8 +6,9 @@ import styles from "./service-page-hero.module.css";
 type ServicePageHeroProps = {
   titleLines: ReactNode[];
   boldLineIndex?: number;
-  primaryCta?: { label: string; href: string };
+  primaryCta?: { label: string; href: string; icon?: "top-right" | "down" };
   secondaryCta?: { label: string; href: string };
+  align?: "center" | "left";
 };
 
 export default function ServicePageHero({
@@ -15,12 +16,13 @@ export default function ServicePageHero({
   boldLineIndex = 0,
   primaryCta = { label: "See my work", href: "/work" },
   secondaryCta = { label: "Start your project", href: "/get-started" },
+  align = "center",
 }: ServicePageHeroProps) {
   return (
     <section className={styles.servicePageHero}>
-      <div className={styles.servicePageHeroFrame}>
+      <div className={`${styles.servicePageHeroFrame} ${align === "left" ? styles.frameLeft : ""}`}>
         {/* Bottom-left concave corner of the top-left step */}
-        <div className={styles.stepCornerBottomLeft} aria-hidden="true" />
+        {align !== "left" && <div className={styles.stepCornerBottomLeft} aria-hidden="true" />}
         <div className={styles.servicePageHeroCard}>
           {/* Gradient background with interactive word reveal */}
           <div className={styles.servicePageHeroImage} aria-hidden="true">
@@ -28,9 +30,9 @@ export default function ServicePageHero({
           </div>
 
           {/* Top-centered stepped white overlay with headline */}
-          <div className={styles.servicePageHeroOverlay}>
+          <div className={`${styles.servicePageHeroOverlay} ${align === "left" ? styles.overlayLeft : ""}`}>
             {/* Corner notches — overlay top edge meets card top edge on both sides */}
-            <div className={`${styles.overlayCorner} ${styles.overlayTopLeft}`} aria-hidden="true" />
+            {align !== "left" && <div className={`${styles.overlayCorner} ${styles.overlayTopLeft}`} aria-hidden="true" />}
             <div className={`${styles.overlayCorner} ${styles.overlayTopRight}`} aria-hidden="true" />
 
             <h1 className={styles.servicePageHeroTitle}>
@@ -45,8 +47,8 @@ export default function ServicePageHero({
             </h1>
 
             {/* Buttons */}
-            <div className={styles.servicePageHeroButtons}>
-              <GooeyButton label={primaryCta.label} href={primaryCta.href} />
+            <div className={`${styles.servicePageHeroButtons} ${align === "left" ? styles.buttonsLeft : ""}`}>
+              <GooeyButton label={primaryCta.label} href={primaryCta.href} icon={primaryCta.icon} />
               <a href={secondaryCta.href} className={styles.textButton}>
                 {secondaryCta.label}
                 <svg className={styles.textButtonArrow} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

@@ -1,0 +1,1 @@
+- [Writing style preferences](feedback_writing_style.md) - US English, no em dashes, first person singular only

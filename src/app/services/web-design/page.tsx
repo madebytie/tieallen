@@ -6,7 +6,7 @@ import ServiceImageSplitReverse from "@/components/sections/ServiceImageSplitRev
 import ProjectSlider from "@/components/sections/ProjectSlider";
 
 export const metadata: Metadata = {
-  title: "Web Design — tieallen.",
+  title: "Web Design - tieallen.",
   description: "Beautiful, conversion-focused websites that deliver your business to a wider audience.",
 };
 
@@ -24,7 +24,7 @@ export default function WebDesignPage() {
       <ServiceCapabilities
         eyebrow="Web Design"
         headline={`Design that\nworks as hard\nas you do.`}
-        subhead="Every pixel has a purpose. I design websites that look exceptional and convert — built around your audience, your goals, and where you're headed."
+        subhead="Every pixel has a purpose. I design websites that look exceptional and convert - built around your audience, your goals, and where you're headed."
         capabilities={[
           "Website Design",
           "Landing Pages",
@@ -38,8 +38,8 @@ export default function WebDesignPage() {
         ]}
       />
       <ServiceImageSplit
-        headline="We create a website you're proud of, and want to show off."
-        body="Your website is the first thing people see. It should reflect exactly who you are — polished, purposeful, and built to convert. I design every detail around your brand and your audience, so it doesn't just look great, it works."
+        headline="I create a website you're proud of, and want to show off."
+        body="Your website is the first thing people see. It should reflect exactly who you are - polished, purposeful, and built to convert. I design every detail around your brand and your audience, so it doesn't just look great, it works."
         checkpoints={[
           "Designed around your brand & goals",
           "Built to convert the right audience",
@@ -48,9 +48,9 @@ export default function WebDesignPage() {
         image={{ src: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1800&q=80", alt: "Web design work" }}
       />
       <ProjectSlider
-        eyebrow="Our Work"
-        headline={`Our favourite\nWeb Design Projects`}
-        cta={{ label: "View our work", href: "/work" }}
+        eyebrow="My Work"
+        headline={`My favourite\nWeb Design Projects`}
+        cta={{ label: "View my work", href: "/work" }}
         projects={[
           {
             title: "YULI",
@@ -96,7 +96,7 @@ export default function WebDesignPage() {
       />
       <ServiceImageSplitReverse
         headline="Every detail designed with intention."
-        body="From layout to micro-interactions, nothing is left to chance. I sweat the details so your visitors feel the difference — a site that's smooth, intuitive, and impossible to leave."
+        body="From layout to micro-interactions, nothing is left to chance. I sweat the details so your visitors feel the difference - a site that's smooth, intuitive, and impossible to leave."
         checkpoints={[
           "Pixel-perfect execution",
           "Smooth interactions & animations",

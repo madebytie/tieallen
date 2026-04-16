@@ -6,6 +6,7 @@ import HomeFeaturedTestimonial from "@/components/sections/HomeFeaturedTestimoni
 import FAQ from "@/components/sections/FAQ";
 import FeaturedProjects from "@/components/sections/FeaturedProjects";
 import Pricing from "@/components/sections/Pricing";
+import ClientRoster from "@/components/sections/ClientRoster";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <LogoMarquee />
       <Introduction />
       <FeaturedProjects />
+      <ClientRoster />
       <HomeFeaturedTestimonial />
       <HomeServices />
       <Pricing />

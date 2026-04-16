@@ -148,6 +148,45 @@
   );
 }
 
+
+/* Mirror of overlayTopRight, but anchored to bottom of overlay instead of top.
+   overlayTopRight: top:0, right:-2.52rem, circle at 100% 100% → white fills top-left ✓
+   overlayBottomRight: bottom:0, right:-2.52rem, circle at 100% 0% → white fills bottom-left ✓ */
+.overlayBottomRight {
+  bottom: 0;
+  right: -2.52rem;
+  width: 2.52rem;
+  height: 2.52rem;
+  background: radial-gradient(
+    circle at 100% 0%,
+    transparent 2.5rem,
+    var(--bg-primary) calc(2.5rem + 1px)
+  );
+}
+
+/* ---- Left-aligned overlay variant ---- */
+.overlayLeft {
+  left: 0;
+  transform: none;
+  width: min(42%, 34rem);
+  text-align: left;
+  padding-left: 4rem;
+  border-bottom-left-radius: 2.5rem;
+  border-bottom-right-radius: 2.5rem;
+}
+
+.frameLeft::before {
+  display: none;
+}
+
+.frameLeft::after {
+  display: none;
+}
+
+.buttonsLeft {
+  justify-content: flex-start;
+}
+
 /* ---- Title ---- */
 .servicePageHeroTitle {
   font-family: var(--font-primary);
@@ -278,6 +317,13 @@
     border-bottom-right-radius: 2rem;
   }
 
+  .overlayLeft {
+    left: 0;
+    padding-left: 2.5rem;
+    width: min(55%, 30rem);
+    border-radius: 0 0 2rem 0;
+  }
+
   .overlayTopLeft {
     left: -2.02rem;
     width: 2.02rem;
@@ -349,6 +395,20 @@
     padding: 1.5rem 1.4rem 1.25rem;
     border-bottom-left-radius: 1.5rem;
     border-bottom-right-radius: 1.5rem;
+  }
+
+  .overlayLeft {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 88%;
+    text-align: center;
+    padding-left: 1.4rem;
+    border-radius: 0 0 1.5rem 1.5rem;
+    /* on mobile it's centered so restore both bottom corners */
+  }
+
+  .buttonsLeft {
+    justify-content: center;
   }
 
   .overlayTopLeft {

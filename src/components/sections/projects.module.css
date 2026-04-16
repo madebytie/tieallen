@@ -3,20 +3,21 @@
    ============================================ */
 
 .projectsSection {
-  padding: var(--section-padding-lg);
+  padding: 2rem 2rem 8rem;
 }
 
 .projectsInner {
-  max-width: 1450px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
 }
 
 /* ---- Section Header ---- */
 .projectsHeader {
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
-  margin-bottom: 4rem;
+  gap: 1.5rem;
+  margin-bottom: 6rem;
 }
 
 .projectsHeaderLeft {

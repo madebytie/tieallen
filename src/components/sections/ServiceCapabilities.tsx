@@ -1,6 +1,7 @@
 import styles from "./service-capabilities.module.css";
 
 type ServiceCapabilitiesProps = {
+  id?: string;
   eyebrow: string;
   headline: string;
   subhead?: string;
@@ -8,13 +9,14 @@ type ServiceCapabilitiesProps = {
 };
 
 export default function ServiceCapabilities({
+  id,
   eyebrow,
   headline,
   subhead,
   capabilities,
 }: ServiceCapabilitiesProps) {
   return (
-    <section className={styles.section}>
+    <section id={id} className={styles.section}>
       <div className={styles.inner}>
         {/* Left — editorial headline */}
         <div className={styles.left}>

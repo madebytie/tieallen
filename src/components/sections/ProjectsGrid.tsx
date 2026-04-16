@@ -129,8 +129,7 @@ export default function ProjectsGrid() {
         {/* Section Header */}
         <div className={styles.projectsHeader}>
           <span className={styles.projectsLabel}>
-            <span className={styles.projectsLabelDot} />
-            Selected Work
+            some projects
           </span>
           <h2 className={styles.projectsTitle}>
             Take a look at
