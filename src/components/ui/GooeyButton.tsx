@@ -19,11 +19,9 @@ function ArrowIcon() {
   );
 }
 
-interface GooeyButtonProps {
+type GooeyButtonBaseProps = {
   /** Text label inside the button */
   label: string;
-  /** Link destination */
-  href: string;
   /** Size variant */
   size?: "sm" | "md" | "lg";
   /** Color variant */
@@ -34,11 +32,30 @@ interface GooeyButtonProps {
   textColor?: string;
   /** Additional className */
   className?: string;
-}
+};
+
+type GooeyButtonLinkProps = GooeyButtonBaseProps & {
+  href: string;
+  onClick?: never;
+  type?: never;
+  disabled?: never;
+};
+
+type GooeyButtonActionProps = GooeyButtonBaseProps & {
+  href?: never;
+  onClick?: () => void;
+  type?: "button" | "submit";
+  disabled?: boolean;
+};
+
+type GooeyButtonProps = GooeyButtonLinkProps | GooeyButtonActionProps;
 
 export default function GooeyButton({
   label,
   href,
+  onClick,
+  type = "button",
+  disabled,
   size = "md",
   variant = "default",
   color,
@@ -58,19 +75,35 @@ export default function GooeyButton({
     ...(textColor ? { "--gooey-text": textColor } : {}),
   } as React.CSSProperties;
 
+  const sharedClass = `${styles.ctaGroup} ${sizeClass} ${variantClass} ${className}`.trim();
+
+  const inner = (
+    <div className={styles.gooeyWrapper}>
+      <span className={styles.button}>{label}</span>
+      <span className={styles.arrow}>
+        <ArrowIcon />
+      </span>
+    </div>
+  );
+
+  if (href) {
+    return (
+      <Link href={href} className={sharedClass} style={inlineVars}>
+        {inner}
+      </Link>
+    );
+  }
+
   return (
-    <Link
-      href={href}
-      className={`${styles.ctaGroup} ${sizeClass} ${variantClass} ${className}`.trim()}
+    <button
+      type={type}
+      onClick={onClick}
+      disabled={disabled}
+      className={sharedClass}
       style={inlineVars}
     >
-      <div className={styles.gooeyWrapper}>
-        <span className={styles.button}>{label}</span>
-        <span className={styles.arrow}>
-          <ArrowIcon />
-        </span>
-      </div>
-    </Link>
+      {inner}
+    </button>
   );
 }
 

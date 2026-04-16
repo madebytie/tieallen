@@ -1,0 +1,424 @@
+/* ============================================
+   START PROJECT FORM
+   ============================================ */
+
+/* ---- Progress bar ---- */
+
+.progressWrap {
+  width: 100%;
+  height: 4px;
+  background-color: var(--border-subtle);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.progressBar {
+  height: 100%;
+  background-color: var(--text-primary);
+  border-radius: var(--radius-full);
+  transition: width 0.4s var(--ease-smooth);
+}
+
+/* ---- Step counter ---- */
+
+.stepCount {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+}
+
+/* ---- Step wrapper ---- */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.stepContent {
+  /* natural height — nav follows immediately after content */
+}
+
+.stepTitle {
+  font-family: var(--font-logo);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+}
+
+/* ---- Fields ---- */
+
+.fields {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* ---- Floating label field ---- */
+
+.floatField {
+  position: relative;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  background: var(--bg-primary);
+  transition: border-color var(--transition-fast);
+  cursor: text;
+}
+
+.floatField:focus-within {
+  border-color: var(--text-primary);
+}
+
+.floatInput {
+  width: 100%;
+  padding: 1.5rem 1rem 0.5rem;
+  border: none;
+  border-radius: var(--radius-lg);
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  font-weight: var(--font-weight-medium);
+  color: var(--text-primary);
+  background: transparent;
+  outline: none;
+  appearance: none;
+}
+
+.floatLabel {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  color: var(--text-primary);
+  pointer-events: none;
+  transition: top 0.18s var(--ease-smooth), font-size 0.18s var(--ease-smooth);
+}
+
+.floatField:focus-within .floatLabel,
+.floatFieldFilled .floatLabel {
+  top: 0.6rem;
+  transform: none;
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+}
+
+/* kept for step 2 budget inputs */
+.fieldInput {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  font-weight: var(--font-weight-medium);
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  outline: none;
+  transition: border-color var(--transition-fast);
+  appearance: none;
+}
+
+.fieldInput:focus {
+  border-color: var(--text-primary);
+}
+
+.fieldInput::placeholder {
+  color: var(--text-muted);
+  font-weight: var(--font-weight-regular);
+}
+
+/* ---- Step 2 — inline fields ---- */
+
+.inlineField {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 0.5rem 0;
+}
+
+.inlineLabel {
+  font-size: 1rem;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+.dateWrapper {
+  flex: 1;
+  min-width: 160px;
+}
+
+.dateWrapper .fieldInput {
+  cursor: pointer;
+}
+
+.budgetRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.budgetInput {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.budgetInput .fieldInput {
+  padding-left: 2rem;
+  width: 130px;
+}
+
+.currency {
+  position: absolute;
+  left: 0.9rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.budgetAnd {
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+
+/* ---- Step 3 — services grid ---- */
+
+.servicesGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.serviceChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1.25rem;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-lg);
+  background: var(--bg-primary);
+  font-family: var(--font-primary);
+  font-size: 0.95rem;
+  font-weight: var(--font-weight-regular);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: border-color var(--transition-fast), background var(--transition-fast);
+  line-height: 1;
+}
+
+.serviceChip:hover {
+  border-color: var(--text-primary);
+}
+
+.serviceChipSelected {
+  border-color: var(--text-primary);
+  background: var(--bg-tertiary);
+}
+
+.serviceChipRadio {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border-strong);
+  display: inline-block;
+  flex-shrink: 0;
+  transition: border-color var(--transition-fast), background var(--transition-fast);
+  position: relative;
+}
+
+.serviceChipSelected .serviceChipRadio {
+  border-color: var(--text-primary);
+  background: var(--text-primary);
+}
+
+.serviceChipSelected .serviceChipRadio::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  border-radius: 50%;
+  background: var(--bg-primary);
+}
+
+/* ---- Step 4 — textarea & upload ---- */
+
+.textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  font-family: var(--font-primary);
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  resize: vertical;
+  outline: none;
+  line-height: 1.6;
+  transition: border-color var(--transition-fast);
+}
+
+.textarea:focus {
+  border-color: var(--text-primary);
+}
+
+.textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.uploadSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.uploadMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}
+
+.uploadHint {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.dropzone {
+  border: 1.5px dashed var(--border-strong);
+  border-radius: var(--radius-md);
+  padding: 2rem 1.5rem;
+  transition: border-color var(--transition-fast);
+}
+
+.dropzone:hover {
+  border-color: var(--text-primary);
+}
+
+.fileLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+}
+
+.fileInput {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.fileButton {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  background: var(--bg-secondary);
+  white-space: nowrap;
+}
+
+.fileName {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.checkboxRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  border: 1.5px solid var(--border-strong);
+  border-radius: 4px;
+  appearance: none;
+  cursor: pointer;
+  background: var(--bg-primary);
+  transition: background var(--transition-fast), border-color var(--transition-fast);
+}
+
+.checkbox:checked {
+  background: var(--text-primary);
+  border-color: var(--text-primary);
+}
+
+/* ---- Navigation ---- */
+
+.errorMsg {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: #c0392b;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.backBtn {
+  background: none;
+  border: none;
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  color: var(--text-primary);
+  cursor: pointer;
+  padding: 0;
+  transition: color var(--transition-fast);
+}
+
+.backBtn:hover {
+  color: var(--text-secondary);
+}
+
+/* ---- Success screen ---- */
+
+.successScreen {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding-top: 2rem;
+}
+
+.successIcon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--text-primary);
+  color: var(--bg-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+.successTitle {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: -0.02em;
+}
+
+.successText {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  max-width: 400px;
+  line-height: 1.6;
+}

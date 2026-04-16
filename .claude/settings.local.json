@@ -13,7 +13,9 @@
       "Bash(ls -1 /Users/tie/Dev/tieallen/src/components/sections/*.tsx)",
       "Bash(npm run:*)",
       "Bash(grep -l \"blurBacking\\\\|headerScrolled\\\\|backdrop\" .next/static/chunks/*.css)",
-      "Bash(npx tsc:*)"
+      "Bash(npx tsc:*)",
+      "Bash(ls /Users/tie/Dev/tieallen/public/assets/*.jpg)",
+      "Bash(ls /Users/tie/Dev/tieallen/public/assets/*.jpeg)"
     ]
   }
 }

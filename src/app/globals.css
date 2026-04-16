@@ -2,7 +2,7 @@
    GLOBALS — TieAllen.com Design System
    ============================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Figtree:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
   /* ---- Light Theme (Default) ---- */
@@ -38,7 +38,7 @@
 
   /* ---- Typography ---- */
   --font-primary: 'Outfit', sans-serif;
-  --font-logo: 'Space Grotesk', sans-serif;
+  --font-logo: 'Figtree', sans-serif;
   --font-weight-thin: 100;
   --font-weight-light: 300;
   --font-weight-regular: 400;
