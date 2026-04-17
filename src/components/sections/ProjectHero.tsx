@@ -21,22 +21,22 @@ export default function ProjectHero({
             className={styles.projectHeroImage}
           />
 
-          {/* Top white strip — full width */}
+          {/* Top white strip - full width */}
           <div className={styles.projectHeroStrip} aria-hidden="true" />
 
-          {/* Title tab — hangs down on the left, the title's 2nd line lives in the overhang */}
+          {/* Title tab - hangs down on the left, the title's 2nd line lives in the overhang */}
           <div className={styles.projectHeroTab}>
             <h1 className={styles.projectHeroTitle}>{title}</h1>
           </div>
 
-          {/* Tag pills — top-right of the strip */}
+          {/* Tag pills - top-right of the strip */}
           <div className={styles.projectHeroTags}>
             {tags && tags.map((tag) => (
               <span key={tag} className={styles.projectHeroTag}>{tag}</span>
             ))}
           </div>
 
-          {/* Accent notch — bottom-right */}
+          {/* Accent notch - bottom-right */}
           <div className={styles.projectHeroAccent} aria-hidden="true" />
         </div>
       </div>

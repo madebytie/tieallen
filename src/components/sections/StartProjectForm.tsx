@@ -261,7 +261,7 @@ function SuccessScreen({ name }: { name: string }) {
         You&apos;re in{name ? `, ${name.split(" ")[0]}` : ""}!
       </h2>
       <p className={styles.successText}>
-        Enquiry received — I&apos;ll review the details and come back to you within one business day.
+        Enquiry received - I&apos;ll review the details and come back to you within one business day.
       </p>
       <GooeyButton label="Back to home" href="/" size="lg" />
     </div>

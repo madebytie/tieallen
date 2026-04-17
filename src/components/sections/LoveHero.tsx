@@ -30,7 +30,7 @@ export default function LoveHero({
 
           {overlay && <div className={styles.overlay} />}
 
-          {/* Top white strip + title tab — hidden when no title */}
+          {/* Top white strip + title tab - hidden when no title */}
           {title && (
             <>
               <div className={styles.loveHeroStrip} aria-hidden="true" />

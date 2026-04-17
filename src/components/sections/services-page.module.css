@@ -1,54 +1,46 @@
 /* ============================================================
-   Services Page — Hero
+   Services Page - Hero
    ============================================================ */
 
 .hero {
-  padding: 10rem 1.25rem 6rem;
-  max-width: 1100px;
+  padding: 7rem 1.25rem 6rem;
+  max-width: 1400px;
   margin: 0 auto;
-}
-
-.heroEyebrow {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  margin-bottom: 2rem;
-}
-
-.heroEyebrow::before {
-  content: "";
-  display: block;
-  width: 2rem;
-  height: 1px;
-  background-color: var(--border-strong, #ccc);
-  flex-shrink: 0;
+  display: grid;
+  grid-template-columns: 1.25fr 1.1fr;
+  column-gap: 4rem;
+  row-gap: 2.5rem;
+  align-items: end;
 }
 
 .heroTitle {
+  grid-column: 1;
+  grid-row: 1;
   font-family: var(--font-logo);
-  font-size: clamp(3.5rem, 9vw, 8rem);
-  font-weight: 700;
-  letter-spacing: -0.04em;
-  line-height: 1;
+  font-size: clamp(2.75rem, 5.5vw, 5rem);
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  line-height: 1.02;
   color: var(--text-primary);
-  margin: 0 0 2.5rem;
-}
-
-.heroBody {
-  max-width: 560px;
-  font-size: clamp(1.1rem, 2vw, 1.35rem);
-  line-height: 1.6;
-  color: var(--text-secondary);
   margin: 0;
 }
 
+.heroBody {
+  grid-column: 2;
+  grid-row: 2;
+  max-width: 620px;
+  font-family: var(--font-logo);
+  font-size: clamp(1.5rem, 2.4vw, 2.1rem);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.32;
+  color: var(--text-primary);
+  margin: 0;
+  justify-self: end;
+}
+
 /* ============================================================
-   Services Page — Divider
+   Services Page - Divider
    ============================================================ */
 
 .divider {
@@ -58,209 +50,145 @@
 }
 
 /* ============================================================
-   Services Page — Service Section
+   Services Page - Service Section
    ============================================================ */
 
 .serviceSection {
+  position: relative;
   padding: 7rem 1.25rem;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
+}
+
+.serviceBackdrop {
+  position: absolute;
+  top: 3rem;
+  bottom: 3rem;
+  left: 50%;
+  width: calc(100vw - 100px);
+  transform: translateX(-50%) scale(0.98);
+  border-radius: var(--radius-lg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 1.1s var(--ease-smooth), transform 1.1s var(--ease-smooth);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.serviceSectionInView .serviceBackdrop {
+  opacity: 0.1;
+  transform: translateX(-50%) scale(1);
+}
+
+.serviceContent {
+  position: relative;
+  z-index: 1;
 }
 
 .serviceHeadline {
   font-family: var(--font-logo);
-  font-size: clamp(5rem, 12vw, 10rem);
-  font-weight: 700;
-  letter-spacing: -0.04em;
+  font-size: clamp(5rem, 15vw, 14rem);
+  font-weight: 500;
+  letter-spacing: -0.015em;
   line-height: 0.92;
   color: var(--text-primary);
-  margin: 0 0 2rem;
+  margin: 0 0 4rem;
 }
 
-.serviceSubhead {
-  font-family: var(--font-logo);
-  font-size: clamp(1.15rem, 2.5vw, 1.5rem);
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  line-height: 1.35;
-  color: var(--text-primary);
-  max-width: 640px;
-  margin: 0 0 1.25rem;
+.serviceGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
 }
 
 .serviceBody {
-  font-size: clamp(0.95rem, 1.5vw, 1.05rem);
-  line-height: 1.7;
-  color: var(--text-secondary);
-  max-width: 560px;
-  margin: 0;
-}
-
-/* ============================================================
-   Branding Detail Block
-   ============================================================ */
-
-.brandingDetail {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 1.25rem 7rem;
-}
-
-/* Top split: image left, statement right */
-.brandingSplit {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  align-items: stretch;
-  margin-bottom: 2.5rem;
-}
-
-/* Notched image card — mirrors the project card pattern */
-.brandingImageCard {
-  position: relative;
-  border-radius: var(--radius-lg);
-  overflow: visible;
-  min-height: 380px;
-  background-color: var(--bg-tertiary);
-}
-
-.brandingImageClip {
-  position: absolute;
-  inset: 0;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%);
-}
-
-/* Decorative text inside the placeholder */
-.brandingImageText {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  padding: 2rem;
-}
-
-.brandingImageWord {
   font-family: var(--font-logo);
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  line-height: 1;
-  color: #7ec8e3;
-  text-align: center;
-}
-
-.brandingImageWord:nth-child(1) { font-size: clamp(2rem, 5vw, 3.5rem); }
-.brandingImageWord:nth-child(3) { font-size: clamp(2.4rem, 6vw, 4.5rem); }
-.brandingImageWord:nth-child(5) { font-size: clamp(1.8rem, 4.5vw, 3rem); }
-
-.brandingImagePlus {
-  font-family: var(--font-logo);
-  font-size: 1.5rem;
-  color: rgba(126, 200, 227, 0.4);
-  font-weight: 300;
-}
-
-/* Top-right notch on the image card */
-.brandingImageNotch {
-  position: absolute;
-  top: -1px;
-  right: -1px;
-  width: 3.5rem;
-  height: 2.5rem;
-  background-color: var(--bg-primary);
-  border-bottom-left-radius: 1.5rem;
-  z-index: 4;
-}
-
-.brandingImageNotch::before {
-  content: "";
-  position: absolute;
-  bottom: -1.5rem;
-  right: 0;
-  width: 1.5rem;
-  height: calc(1.5rem + 1px);
-  background: radial-gradient(circle at 0% 0%, transparent 1.5rem, var(--bg-primary) 1.5rem);
-}
-
-.brandingImageNotch::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -1.5rem;
-  width: calc(1.5rem + 1px);
-  height: 1.5rem;
-  background: radial-gradient(circle at 100% 100%, transparent 1.5rem, var(--bg-primary) 1.5rem);
-}
-
-/* Right panel: launch statement */
-.brandingStatement {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1.5rem;
-  padding: 2.5rem;
-  background-color: var(--bg-secondary, #f7f7f7);
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--border-subtle);
-}
-
-.brandingStatementTitle {
-  font-family: var(--font-logo);
-  font-size: clamp(1.6rem, 3.5vw, 2.5rem);
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  line-height: 1.15;
+  font-size: clamp(1.6rem, 3vw, 2.35rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
   color: var(--text-primary);
+  max-width: 520px;
   margin: 0;
 }
 
-.brandingStatementBody {
-  font-size: 1rem;
-  line-height: 1.7;
-  color: var(--text-secondary);
-  margin: 0;
-}
-
-/* Three feature cards */
-.brandingCards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.25rem;
-}
-
-.brandingCard {
-  padding: 2rem 1.75rem;
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--border-subtle);
+/* ---- Capability list ---- */
+.capabilityList {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
-  transition: border-color var(--transition-base), box-shadow var(--transition-base);
+  border-top: 1px solid var(--border-subtle);
 }
 
-.brandingCard:hover {
-  border-color: var(--text-muted);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+.capabilityRow {
+  position: relative;
+  display: grid;
+  grid-template-columns: 4rem 1fr;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.35rem 0.5rem;
+  border-bottom: 1px solid var(--border-subtle);
+  cursor: none;
+  color: inherit;
+  text-decoration: none;
+  transition: border-bottom-color var(--transition-base);
 }
 
-.brandingCardTitle {
+.capabilityRow:hover {
+  z-index: 5;
+  border-bottom-color: var(--text-primary);
+}
+
+.capabilityNumber {
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  font-family: var(--font-primary);
+}
+
+.capabilityLabel {
   font-family: var(--font-logo);
-  font-size: 1.1rem;
-  font-weight: 700;
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  font-weight: 500;
   letter-spacing: -0.02em;
   color: var(--text-primary);
-  margin: 0;
+  transition: transform var(--transition-base);
 }
 
-.brandingCardBody {
-  font-size: 0.9rem;
-  line-height: 1.65;
-  color: var(--text-secondary);
-  margin: 0;
+.capabilityRow:hover .capabilityLabel {
+  transform: translateX(0.35rem);
+}
+
+/* ---- Circle arrow cursor ---- */
+.rowArrow {
+  position: absolute;
+  width: 72px;
+  height: 72px;
+  border-radius: 9999px;
+  background-color: var(--brand-orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.5);
+  transition: opacity 0.18s ease, transform 0.18s ease;
+  pointer-events: none;
+  z-index: 10;
+  will-change: left, top;
+}
+
+.rowArrow svg {
+  width: 24px;
+  height: 24px;
+  color: #111;
+}
+
+.rowArrowVisible {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
 }
 
 /* ============================================================
@@ -268,16 +196,28 @@
    ============================================================ */
 
 @media (max-width: 900px) {
-  .brandingSplit {
+  .hero {
     grid-template-columns: 1fr;
+    row-gap: 2rem;
   }
 
-  .brandingImageCard {
-    min-height: 280px;
+  .heroTitle {
+    grid-column: 1;
   }
 
-  .brandingCards {
+  .heroBody {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: start;
+  }
+
+  .serviceGrid {
     grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .serviceHeadline {
+    margin-bottom: 2.5rem;
   }
 }
 
@@ -290,11 +230,19 @@
     padding: 4rem 1.25rem;
   }
 
-  .brandingDetail {
-    padding-bottom: 4rem;
+  .capabilityRow {
+    grid-template-columns: 3rem 1fr;
+    gap: 1rem;
+    padding: 1.1rem 0.25rem;
   }
 
-  .brandingStatement {
-    padding: 1.75rem;
+  .rowArrow {
+    width: 56px;
+    height: 56px;
+  }
+
+  .rowArrow svg {
+    width: 20px;
+    height: 20px;
   }
 }

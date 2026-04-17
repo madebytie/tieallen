@@ -1,14 +1,19 @@
-import type { ReactNode } from "react";
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import styles from "./services-page.module.css";
 
 export function ServicesHero() {
   return (
     <div className={styles.hero}>
-      <span className={styles.heroEyebrow}>Services</span>
-      <h1 className={styles.heroTitle}>What I do.</h1>
+      <h1 className={styles.heroTitle}>
+        One craftsman. End-to-end. Made to last.
+      </h1>
       <p className={styles.heroBody}>
-        I build brands, websites, and growth systems that work together — each
-        one designed to make your business impossible to ignore.
+        From brand and website to the backend systems that run it all,
+        I bring strategy, design, and build together under one roof -
+        so every part of your business works as one.
       </p>
     </div>
   );
@@ -16,83 +21,100 @@ export function ServicesHero() {
 
 interface ServiceSectionProps {
   headline: string;
-  subhead: string;
+  href: string;
   body: string;
-  children?: ReactNode;
+  capabilities: string[];
+  image?: string;
 }
 
-export function ServiceSection({ headline, subhead, body, children }: ServiceSectionProps) {
+function ArrowIcon() {
   return (
-    <section className={styles.serviceSection}>
-      <h2 className={styles.serviceHeadline}>{headline}</h2>
-      <p className={styles.serviceSubhead}>{subhead}</p>
-      <p className={styles.serviceBody}>{body}</p>
-      {children}
-    </section>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <line x1="7" y1="17" x2="17" y2="7" />
+      <polyline points="7 7 17 7 17 17" />
+    </svg>
   );
 }
 
-export function BrandingDetail() {
+function CapabilityRow({ number, label, href }: { number: string; label: string; href: string }) {
+  const rowRef = useRef<HTMLAnchorElement>(null);
+  const arrowRef = useRef<HTMLSpanElement>(null);
+  const [hovered, setHovered] = useState(false);
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!rowRef.current || !arrowRef.current) return;
+    const rect = rowRef.current.getBoundingClientRect();
+    arrowRef.current.style.left = `${e.clientX - rect.left}px`;
+    arrowRef.current.style.top = `${e.clientY - rect.top}px`;
+  };
+
   return (
-    <div className={styles.brandingDetail}>
-      <div className={styles.brandingSplit}>
-        {/* Notched placeholder image */}
-        <div className={styles.brandingImageCard}>
-          <div className={styles.brandingImageClip}>
-            <div className={styles.brandingImageText}>
-              <span className={styles.brandingImageWord}>Epic Logo</span>
-              <span className={styles.brandingImagePlus}>+</span>
-              <span className={styles.brandingImageWord}>Identity System</span>
-              <span className={styles.brandingImagePlus}>+</span>
-              <span className={styles.brandingImageWord}>Tone + Voice</span>
-            </div>
+    <Link
+      ref={rowRef}
+      href={href}
+      className={styles.capabilityRow}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      onMouseMove={handleMouseMove}
+    >
+      <span
+        ref={arrowRef}
+        className={`${styles.rowArrow} ${hovered ? styles.rowArrowVisible : ""}`}
+        aria-hidden="true"
+      >
+        <ArrowIcon />
+      </span>
+      <span className={styles.capabilityNumber}>{number}</span>
+      <span className={styles.capabilityLabel}>{label}</span>
+    </Link>
+  );
+}
+
+export function ServiceSection({ headline, href, body, capabilities, image }: ServiceSectionProps) {
+  const sectionRef = useRef<HTMLElement>(null);
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setInView(entry.isIntersecting);
+      },
+      { rootMargin: "0px 0px -15% 0px", threshold: 0.15 },
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <section
+      ref={sectionRef}
+      className={`${styles.serviceSection} ${inView ? styles.serviceSectionInView : ""}`}
+    >
+      {image && (
+        <div
+          className={styles.serviceBackdrop}
+          style={{ backgroundImage: `url(${image})` }}
+          aria-hidden="true"
+        />
+      )}
+      <div className={styles.serviceContent}>
+        <h2 className={styles.serviceHeadline}>{headline}</h2>
+        <div className={styles.serviceGrid}>
+          <p className={styles.serviceBody}>{body}</p>
+          <div className={styles.capabilityList}>
+            {capabilities.map((label, i) => (
+              <CapabilityRow
+                key={label}
+                number={String(i + 1).padStart(2, "0")}
+                label={label}
+                href={href}
+              />
+            ))}
           </div>
-          <div className={styles.brandingImageNotch} aria-hidden="true" />
-        </div>
-
-        {/* Launch statement */}
-        <div className={styles.brandingStatement}>
-          <h3 className={styles.brandingStatementTitle}>Launch with impact&nbsp;&amp; authority.</h3>
-          <p className={styles.brandingStatementBody}>
-            A brand isn't just a logo — it's the first impression, the gut feeling, and the reason
-            someone chooses you over the next option. I build complete identity systems that give
-            ambitious founders the visual authority to compete from day one and the consistency to
-            scale without looking thrown together.
-          </p>
-          <p className={styles.brandingStatementBody}>
-            Every deliverable is built around your story, your audience, and where you're going —
-            not templates, not trends.
-          </p>
         </div>
       </div>
-
-      {/* Three feature cards */}
-      <div className={styles.brandingCards}>
-        <div className={styles.brandingCard}>
-          <h4 className={styles.brandingCardTitle}>Consistency</h4>
-          <p className={styles.brandingCardBody}>
-            A professionally built brand looks and feels the same at every touchpoint — from your
-            website to your pitch deck to your Instagram. That consistency is what builds trust
-            faster than any ad spend.
-          </p>
-        </div>
-        <div className={styles.brandingCard}>
-          <h4 className={styles.brandingCardTitle}>All the essentials</h4>
-          <p className={styles.brandingCardBody}>
-            Logo suite, colour system, typography, brand guidelines, tone of voice — everything
-            you need to show up with confidence at launch and hand off to any designer or developer
-            down the line without starting from scratch.
-          </p>
-        </div>
-        <div className={styles.brandingCard}>
-          <h4 className={styles.brandingCardTitle}>Dialled in</h4>
-          <p className={styles.brandingCardBody}>
-            Your brand is the point of contact between you and your audience. I make sure it
-            speaks to the right people, earns their attention, and moves them toward action —
-            every single time they see it.
-          </p>
-        </div>
-      </div>
-    </div>
+    </section>
   );
 }

@@ -8,7 +8,7 @@ import styles from "@/components/layout/layout.module.css";
 export const metadata: Metadata = {
   title: "Tie Allen Love | Concept to Scale",
   description:
-    "I design, build, and scale premium digital products — from concept through launch and beyond.",
+    "I design, build, and scale premium digital products - from concept through launch and beyond.",
 };
 
 export default function RootLayout({

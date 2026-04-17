@@ -1,5 +1,5 @@
 /* ============================================
-   SERVICE PAGE HERO — Top-centered stepped notch design
+   SERVICE PAGE HERO - Top-centered stepped notch design
    Exact copy of HomeHero with ONE change: the white
    headline overlay is centered horizontally at the top
    edge instead of pinned to top-left. Both bottom corners
@@ -21,26 +21,29 @@
   position: relative;
 }
 
-/* White block covering the top-left corner of the card to create a stepped effect */
+/* White block covering the top-left corner of the card to create a stepped effect.
+   Right edge lines up with the left edge of the centered overlay (at 33%) minus
+   the overlayTopLeft notch width (2.52rem), so the step flows cleanly into the
+   overlay's rounded bottom-left cutout. */
 .servicePageHeroFrame::before {
   content: "";
   position: absolute;
   top: 1.25rem;
   left: 1.25rem;
-  /* Wide enough to cover the rounded corner area, tall = the step height */
-  width: 12rem;
+  width: calc(33% - min(25%, 17rem) - 0.5rem);
   height: 75px;
   background-color: var(--bg-primary);
   z-index: 20;
   pointer-events: none;
 }
 
-/* Concave corner — bottom-right of step (extends right into dark area) */
+/* Concave corner - bottom-right of step (extends right into dark area).
+   Sits flush against the right edge of the ::before step. */
 .servicePageHeroFrame::after {
   content: "";
   position: absolute;
   top: calc(1.25rem + 75px);
-  left: calc(1.25rem + 12rem - 4rem + 6px);
+  left: calc(33% - min(25%, 17rem) - 2.05rem);
   width: 2.52rem;
   height: 2.52rem;
   background: radial-gradient(
@@ -52,7 +55,7 @@
   pointer-events: none;
 }
 
-/* Concave corner — bottom-left of step */
+/* Concave corner - bottom-left of step */
 .stepCornerBottomLeft {
   position: absolute;
   top: calc(1.25rem + 75px);
@@ -84,7 +87,7 @@
   inset: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  background: var(--brand-dark-blue);
   z-index: 1;
 }
 
@@ -108,16 +111,16 @@
 
    Smoothing: "transparent R, white calc(R + 1px)" puts the 1px feather
    OUTSIDE the disc (into the white region), matching HomeHero exactly.
-   DO NOT invert — "transparent calc(R - 1px), white R" creates a dark crescent.
+   DO NOT invert - "transparent calc(R - 1px), white R" creates a dark crescent.
 
    Overlay is centered at top, so both sides of its TOP edge meet the
    card's top edge. Notches sit to the LEFT and RIGHT of the overlay
    at top:0 (same pattern as home-hero's overlayTopRight, mirrored).
 
-   overlayTopLeft  — left of overlay at top:0   → center 0% 100%
-   overlayTopRight — right of overlay at top:0  → center 100% 100%
-   accentTopRight  — above accent at right:0    → center 0% 0%
-   accentBottomLeft — left of accent at bottom:0 → center 0% 0%
+   overlayTopLeft  - left of overlay at top:0   → center 0% 100%
+   overlayTopRight - right of overlay at top:0  → center 100% 100%
+   accentTopRight  - above accent at right:0    → center 0% 0%
+   accentBottomLeft - left of accent at bottom:0 → center 0% 0%
    ---- */
 .overlayCorner {
   position: absolute;

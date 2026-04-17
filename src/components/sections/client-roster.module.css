@@ -1,5 +1,5 @@
 .rosterSection {
-  padding: 10rem 2rem 1rem;
+  padding: 4rem 2rem 1rem;
   background-color: var(--bg-primary, #ffffff);
 }
 
@@ -48,8 +48,8 @@
   display: flex;
   align-items: center;
   gap: 3rem;
-  padding-top: 2rem;
-  border-top: 1px solid var(--border-subtle, #f0f0f0);
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border-subtle, #f0f0f0);
 }
 
 .statItem {
@@ -80,6 +80,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 4rem 2rem;
+  margin-top: 2rem;
   margin-bottom: 6rem;
 }
 
@@ -95,8 +96,6 @@
   color: var(--text-tertiary, #999);
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid var(--border-subtle, #f0f0f0);
 }
 
 .clientList {
@@ -117,6 +116,7 @@
 .clientName {
   font-size: 1.125rem;
   font-weight: 500;
+  line-height: 1.2;
   color: var(--text-primary, #000);
   display: flex;
   align-items: center;

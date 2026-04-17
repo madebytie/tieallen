@@ -1,5 +1,5 @@
 /* ============================================
-   PROJECTS GRID — Staggered Portfolio Cards
+   PROJECTS GRID - Staggered Portfolio Cards
    ============================================ */
 
 .projectsSection {
@@ -119,7 +119,7 @@
   width: 72px;
   height: 72px;
   border-radius: var(--radius-full);
-  background-color: #FF8F6B;
+  background-color: var(--brand-orange);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -144,7 +144,7 @@
   transform: translate(-50%, -50%) scale(1);
 }
 
-/* ---- Tags Container — white notch overlay ---- */
+/* ---- Tags Container - white notch overlay ---- */
 .projectTagsWrapper {
   position: absolute;
   top: 0;
@@ -161,7 +161,7 @@
   pointer-events: none;
 }
 
-/* Inverted corner — left side */
+/* Inverted corner - left side */
 .projectTagsWrapper::before {
   content: "";
   position: absolute;
@@ -172,7 +172,7 @@
   background: radial-gradient(circle at 0% 100%, transparent 24px, var(--bg-primary) 24px);
 }
 
-/* Inverted corner — bottom side */
+/* Inverted corner - bottom side */
 .projectTagsWrapper::after {
   content: "";
   position: absolute;

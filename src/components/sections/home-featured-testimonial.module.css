@@ -17,7 +17,7 @@
   gap: 6rem;
 }
 
-/* Left: HomeTestimonialCard at 50% — strip its own section/frame padding */
+/* Left: HomeTestimonialCard at 50% - strip its own section/frame padding */
 .imageSide {
   flex: 1;
   min-width: 0;
@@ -51,12 +51,12 @@
 }
 
 .highlight {
-  color: #FF8F6B;
+  color: var(--brand-orange);
   font-weight: 700;
 }
 
 .highlight {
-  color: #FF8F6B;
+  color: var(--brand-orange);
 }
 
 .author {

@@ -29,7 +29,7 @@
   font-size: clamp(4.5rem, 10vw, 9rem); /* Even larger */
   font-weight: 200; /* Thin weight */
   letter-spacing: -0.05em;
-  color: #FF8F6B; /* Stay orange */
+  color: var(--brand-orange); /* Stay orange */
   line-height: 1;
   margin-bottom: 1rem;
 }

@@ -26,7 +26,7 @@ export default function HomeFeaturedTestimonial() {
               {" "}Tie delivered. We received a lot of great comments on the branding during the kickoff SF Hackathon.{" "}
               <span className={styles.highlight}>You did a great job!</span>"
             </p>
-            <p className={styles.author}>— Vincent | BITMAIN, Investment Director</p>
+            <p className={styles.author}>- Vincent | BITMAIN, Investment Director</p>
           </div>
 
         </div>

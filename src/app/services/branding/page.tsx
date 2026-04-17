@@ -97,7 +97,7 @@ export default function BrandingPage() {
       />
       <ServiceBreakdown
         headline="Branding that helps you launch with impact and authority."
-        subhead="Every brand I build is crafted from the ground up — strategy first, then identity, then every asset you need to show up consistently across every touchpoint."
+        subhead="Every brand I build is crafted from the ground up - strategy first, then identity, then every asset you need to show up consistently across every touchpoint."
         cta={{ label: "Get in touch today", href: "/get-started" }}
         items={[
           {
@@ -107,7 +107,7 @@ export default function BrandingPage() {
           },
           {
             title: "Logo Design",
-            description: "A distinctive mark built for versatility — works at any size, in any context.",
+            description: "A distinctive mark built for versatility - works at any size, in any context.",
             icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>,
           },
           {

@@ -1,5 +1,5 @@
 /* ============================================
-   HEADER — Scroll-aware Navigation
+   HEADER - Scroll-aware Navigation
    ============================================ */
 
 
@@ -23,7 +23,7 @@
 /* The pill-shaped frosted glass backing.
    It's a real sibling div rendered BEFORE <header> in the DOM.
    The gooey CSS filter on the button inside <header> creates a stacking context
-   on <header> — but sibling elements are not affected by each other's stacking
+   on <header> - but sibling elements are not affected by each other's stacking
    contexts, so backdrop-filter works here without interference. */
 .blurBacking {
   display: none;
@@ -79,7 +79,7 @@
 .logo {
   font-family: var(--font-logo);
   font-size: 1.85rem;
-  letter-spacing: -0.09em;
+  letter-spacing: 0;
   color: var(--text-primary);
   display: flex;
   align-items: baseline;
@@ -87,17 +87,21 @@
 }
 
 .logoThin {
-  font-weight: var(--font-weight-regular);
+  font-weight: 500;
+  letter-spacing: -0.07em;
+  margin-right: 0.06em;
 }
 
 .logoBold {
-  font-weight: 700;
+  font-weight: 900;
+  letter-spacing: -0.04em;
 }
 
 .logoPeriod {
   font-weight: var(--font-weight-black);
-  color: #FF8F6B;
+  color: var(--brand-orange);
   display: inline-block;
+  margin-left: 0.06em;
   transition: opacity 0.15s ease;
 }
 
@@ -135,7 +139,7 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: #FF8F6B;
+  background-color: var(--brand-orange);
   left: var(--dot-x);
   top: var(--dot-y);
   z-index: 1;
@@ -180,7 +184,7 @@
   align-items: center;
 }
 
-/* Orange dot above — hidden by default */
+/* Orange dot above - hidden by default */
 .link::before {
   content: "";
   position: absolute;
@@ -190,7 +194,7 @@
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: #FF8F6B;
+  background: var(--brand-orange);
   transition: transform 0.2s var(--ease-smooth), opacity 0.2s var(--ease-smooth);
   opacity: 0;
 }
@@ -340,7 +344,7 @@
   line-height: 1.3;
 }
 
-/* ---- Right column — View all Services CTA ---- */
+/* ---- Right column - View all Services CTA ---- */
 .dropdownSide {
   display: flex;
 }
@@ -398,7 +402,7 @@
   height: var(--nav-height);
 }
 
-/* ---- Hamburger button — mobile only ---- */
+/* ---- Hamburger button - mobile only ---- */
 .hamburger {
   display: none;
   background: none;
@@ -535,7 +539,7 @@
     padding-bottom: 0.75rem;
   }
 
-  /* Reuse the desktop dropdown item styles — they work great on mobile too */
+  /* Reuse the desktop dropdown item styles - they work great on mobile too */
   .mobileAccordionInner .dropdownItem {
     border-radius: var(--radius-md);
   }

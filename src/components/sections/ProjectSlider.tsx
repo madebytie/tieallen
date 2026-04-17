@@ -116,7 +116,7 @@ export default function ProjectSlider({ eyebrow, headline, projects, cta }: Proj
     setDragging(false);
   }, []);
 
-  // Arrow navigation — scroll by one card width
+  // Arrow navigation - scroll by one card width
   const scroll = useCallback((dir: "prev" | "next") => {
     if (!trackRef.current) return;
     const card = trackRef.current.querySelector<HTMLElement>(`.${sliderStyles.card}`);

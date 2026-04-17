@@ -1,5 +1,5 @@
 /* ============================================
-   SERVICE CAPABILITIES — Headline left / list right
+   SERVICE CAPABILITIES - Headline left / list right
    ============================================ */
 
 .section {
@@ -45,10 +45,10 @@
 }
 
 .subhead {
-  font-size: 1rem;
+  font-size: 1.15rem;
   font-weight: var(--font-weight-light);
-  line-height: 1.65;
-  color: var(--text-secondary);
+  line-height: 1.5;
+  color: var(--text-primary);
   margin: 0;
   max-width: 34ch;
 }
@@ -101,12 +101,12 @@
    two outer ends (top/bottom or left/right). We pick 3 of those ends.
 
    Vertical divider 1 (between col1-col2):
-     — top end: top of cell 2 (row1), outside the grid top edge
-     — bottom end: bottom of cell 8 (row3), outside the grid bottom edge  ← dot here
+     - top end: top of cell 2 (row1), outside the grid top edge
+     - bottom end: bottom of cell 8 (row3), outside the grid bottom edge  ← dot here
    Vertical divider 2 (between col2-col3):
-     — top end: top of cell 3 (row1), outside the grid top edge  ← dot here
+     - top end: top of cell 3 (row1), outside the grid top edge  ← dot here
    Horizontal divider 1 (between row1-row2):
-     — left end: left of cell 4 (row2 col1), outside the grid left edge  ← dot here
+     - left end: left of cell 4 (row2 col1), outside the grid left edge  ← dot here
    ---- */
 .gridItem:nth-child(2)::after,
 .gridItem:nth-child(6)::after,
@@ -120,19 +120,19 @@
   z-index: 2;
 }
 
-/* top end of vertical divider 1 (col1/col2) — above cell 2, on its left edge */
+/* top end of vertical divider 1 (col1/col2) - above cell 2, on its left edge */
 .gridItem:nth-child(2)::after {
   top: -3px;
   left: -3px;
 }
 
-/* right end of horizontal divider 1 (row1/row2) — right of cell 6, on its top edge */
+/* right end of horizontal divider 1 (row1/row2) - right of cell 6, on its top edge */
 .gridItem:nth-child(6)::after {
   top: -3px;
   right: -3px;
 }
 
-/* bottom end of vertical divider 2 (col2/col3) — below cell 8, on its right edge */
+/* bottom end of vertical divider 2 (col2/col3) - below cell 8, on its right edge */
 .gridItem:nth-child(8)::after {
   bottom: -3px;
   right: -3px;

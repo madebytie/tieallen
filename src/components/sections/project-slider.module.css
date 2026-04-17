@@ -1,5 +1,5 @@
 /* ============================================
-   PROJECT SLIDER — Horizontal draggable slider
+   PROJECT SLIDER - Horizontal draggable slider
    Cards reuse projects.module.css styles.
    ============================================ */
 
@@ -98,7 +98,7 @@
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
   cursor: grab;
-  /* bleed off the right edge — negative margin lets content scroll past .inner boundary */
+  /* bleed off the right edge - negative margin lets content scroll past .inner boundary */
   margin-right: -100vw;
   padding: 0 4rem 1rem 4rem;
 }

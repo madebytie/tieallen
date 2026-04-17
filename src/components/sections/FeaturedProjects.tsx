@@ -146,7 +146,7 @@ function ProjectCard({ project }: { project: Project }) {
           <ArrowIcon />
         </div>
 
-        {/* Tags — white notch overlay with gray pills */}
+        {/* Tags - white notch overlay with gray pills */}
         <div className={styles.projectTagsWrapper}>
           <div className={styles.projectTags}>
             {project.tags.map((tag, i) => (

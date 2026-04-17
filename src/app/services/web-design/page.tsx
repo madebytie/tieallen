@@ -39,14 +39,14 @@ export default function WebDesignPage() {
         ]}
       />
       <ServiceImageSplit
-        headline="I create a website you're proud of, and want to show off."
-        body="Your website is the first thing people see. It should reflect exactly who you are - polished, purposeful, and built to convert. I design every detail around your brand and your audience, so it doesn't just look great, it works."
+        headline="Premium websites that bring your business to life."
+        body="Your website is the first thing people see. It should reflect exactly who you are - polished, purposeful, and built to convert. I design every detail around your brand and your audience, so it doesn't just look great, it performs at the highest level."
         checkpoints={[
-          "Designed around your brand & goals",
+          "Designed around your brand & mission",
           "Built to convert the right audience",
         ]}
         cta={{ label: "Start your project", href: "/get-started" }}
-        image={{ src: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1800&q=80", alt: "Web design work" }}
+        image={{ src: "/projects/yuli/yuli-lobby-2.png", alt: "YULI luxury salon lobby" }}
       />
       <ProjectSlider
         eyebrow="My Work"
@@ -97,12 +97,12 @@ export default function WebDesignPage() {
       />
       <ServiceBreakdown
         headline="Web design that converts visitors into customers."
-        subhead="Every site I build is designed with a clear purpose — to represent your brand at its best and turn the right visitors into paying customers."
+        subhead="Every site I build is designed with a clear purpose - to represent your brand at its best and turn the right visitors into paying customers."
         cta={{ label: "Get in touch today", href: "/get-started" }}
         items={[
           {
             title: "Website Design",
-            description: "Custom, conversion-focused designs built around your brand, audience, and goals — not a template.",
+            description: "Custom, conversion-focused designs built around your brand, audience, and goals - not a template.",
             icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>,
           },
           {
@@ -112,7 +112,7 @@ export default function WebDesignPage() {
           },
           {
             title: "eCommerce",
-            description: "Online stores designed to make buying effortless — beautiful product pages, smooth checkout, more sales.",
+            description: "Online stores designed to make buying effortless - beautiful product pages, smooth checkout, more sales.",
             icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>,
           },
           {
@@ -122,7 +122,7 @@ export default function WebDesignPage() {
           },
           {
             title: "Responsive Design",
-            description: "Pixel-perfect on every device — desktop, tablet, and mobile — without compromising the experience.",
+            description: "Pixel-perfect on every device - desktop, tablet, and mobile - without compromising the experience.",
             icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>,
           },
           {

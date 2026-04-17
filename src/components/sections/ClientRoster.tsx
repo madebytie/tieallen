@@ -17,28 +17,28 @@ const rosterData: Sector[] = [
   {
     title: "City & Events",
     clients: [
-      { name: "City of Alpharetta", details: "Tech Center Brand & Website" },
-      { name: "Mayor of Alpharetta", details: "Strategic digital presence" },
-      { name: "Taste of Alpharetta", details: "City-funded festival" },
-      { name: "Wire & Wood Festival", details: "City-funded festival" },
-      { name: "Chamber of Commerce", details: "Regional brand & website" },
+      { name: "City of Alpharetta", details: "City Tech Center" },
+      { name: "Mayor of Alpharetta", details: "Mayor" },
+      { name: "Taste of Alpharetta", details: "City festival" },
+      { name: "Wire & Wood Festival", details: "Music festival" },
+      { name: "Alpharetta Chamber of Commerce", details: "Chamber of commerce" },
     ],
   },
   {
     title: "Venture & Web3",
     clients: [
-      { name: "Bitmain", details: "#1 global bitcoin mining mfg" },
+      { name: "Bitmain", details: "#1 Bitcoin Mining Hardware" },
       { name: "Permissionless Ventures", details: "$100M VC Fund" },
-      { name: "BCH Global Hackathon", details: "Brand & ecosystem development" },
+      { name: "BCH Global Hackathon", details: "Global Crypto Hackathon" },
     ],
   },
   {
     title: "Specialized Industrial",
     clients: [
-      { name: "CI² Aviation", details: "150 private airports globally" },
-      { name: "IPG Medical", details: "$100M medical manufacturing" },
+      { name: "CI² Aviation", details: "150 private airports" },
+      { name: "IPG Medical", details: "$100M medical device provider" },
       { name: "Stanlok Precision MFG", details: "Lunar mission component manufacturing" },
-      { name: "Servco Wholesale", details: "National forklift & healthcare logistics" },
+      { name: "Servco Wholesale", details: "National forklift & warehouse equipment" },
     ],
   },
   {
@@ -54,8 +54,8 @@ const rosterData: Sector[] = [
     title: "Premium Lifestyle",
     clients: [
       { name: "Blue Divine", details: "Celebrity Med Spa" },
-      { name: "Expose", details: "Vogue Stylist Educator" },
-      { name: "YULI", details: "High-end luxury hair" },
+      { name: "Expose", details: "Vogue Stylist" },
+      { name: "YULI", details: "Luxury Salon" },
     ],
   },
 ];
@@ -74,13 +74,13 @@ export default function ClientRoster() {
           
           <div className={styles.statsStrip}>
             <div className={styles.statItem}>
-              <span className={styles.statValue}>98%</span>
-              <span className={styles.statLabel}>Client Retention</span>
+              <span className={styles.statValue}>169+</span>
+              <span className={styles.statLabel}>Projects Delivered</span>
             </div>
             <div className={styles.statDivider} />
             <div className={styles.statItem}>
-              <span className={styles.statValue}>$1B+</span>
-              <span className={styles.statLabel}>Client Portfolio Value</span>
+              <span className={styles.statValue}>15+</span>
+              <span className={styles.statLabel}>Industries Served</span>
             </div>
             <div className={styles.statDivider} />
             <div className={styles.statItem}>
@@ -98,12 +98,12 @@ export default function ClientRoster() {
               <ul className={styles.clientList}>
                 {sector.clients.map((client, cIdx) => (
                   <li key={cIdx} className={styles.clientItem}>
-                    <span className={styles.clientName}>
+                    {client.details && (
+                      <span className={styles.clientName}>{client.details}</span>
+                    )}
+                    <span className={styles.clientDetails}>
                       {client.name}
                     </span>
-                    {client.details && (
-                      <span className={styles.clientDetails}>{client.details}</span>
-                    )}
                   </li>
                 ))}
               </ul>

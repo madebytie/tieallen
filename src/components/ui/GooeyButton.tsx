@@ -127,7 +127,7 @@ export default function GooeyButton({
 }
 
 /**
- * Hidden SVG filter — render once in your layout or any parent.
+ * Hidden SVG filter - render once in your layout or any parent.
  * Multiple GooeyButtons can share this single filter.
  */
 export function GooeyFilter() {

@@ -12,12 +12,12 @@ const faqData: FAQItem[] = [
   {
     question: "What services does Tie Allen offer?",
     answer:
-      "I offer end-to-end product execution — strategy, brand identity, UI/UX design, full-stack development, and launch support. Whether you need a complete build or a focused sprint, I handle the entire pipeline.",
+      "I offer end-to-end product execution - strategy, brand identity, UI/UX design, full-stack development, and launch support. Whether you need a complete build or a focused sprint, I handle the entire pipeline.",
   },
   {
     question: "How does the design and development process work?",
     answer:
-      "Every engagement starts with a discovery call to understand your goals. From there I move through strategy, design, development, and launch in focused phases — keeping you in the loop at every milestone.",
+      "Every engagement starts with a discovery call to understand your goals. From there I move through strategy, design, development, and launch in focused phases - keeping you in the loop at every milestone.",
   },
   {
     question: "How long does a typical project take?",

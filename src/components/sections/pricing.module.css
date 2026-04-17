@@ -1,13 +1,13 @@
 /* ============================================
-   PRICING SECTION — Light blue-grey background,
+   PRICING SECTION - Light blue-grey background,
    solid colored cards, notches carved with the
    section bg color so they blend seamlessly.
    ============================================ */
 
 .pricingFrame {
   --pricing-bg: #eef1f7;
-  --card-blue: #0f3460;
-  --card-orange: #FF8F6B;
+  --card-blue: var(--brand-dark-blue);
+  --card-orange: var(--brand-orange);
   padding: 1.25rem 1.25rem 1.25rem;
   background-color: var(--bg-primary); /* Match site bg */
   display: flex;
@@ -223,7 +223,7 @@
 
    notchEarBottomLeft: below notchCutout, at left:0. The notchCutout's
      bottom-left corner is at the ear's top-left (0,0). Radial center
-     at 100% 100% (diagonally opposite) — card color INSIDE the disc
+     at 100% 100% (diagonally opposite) - card color INSIDE the disc
      (revealing card body), section-bg OUTSIDE (extending notchCutout).
 
    notchEarTopRight: right of notchCutout, at top:0. The notchCutout's

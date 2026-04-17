@@ -1,5 +1,5 @@
 /* ============================================
-   SERVICE BREAKDOWN — Dark blue gradient notched
+   SERVICE BREAKDOWN - Dark blue gradient notched
    section, same notch structure as Pricing but
    with the dark blue gradient background.
    ============================================ */
@@ -15,7 +15,7 @@
   position: relative;
   width: 100%;
   max-width: 1600px;
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  background: var(--brand-dark-blue);
   border-radius: 2.5rem;
   overflow: hidden;
   padding: 8rem 5rem 6rem;
@@ -122,7 +122,7 @@
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 0.65rem;
-  background-color: #FF8F6B;
+  background-color: var(--brand-orange);
   display: flex;
   align-items: center;
   justify-content: center;

@@ -21,7 +21,7 @@ export default function ServiceImageSplitReverse({
     <section className={styles.section}>
       <div className={styles.inner}>
 
-        {/* Left — text */}
+        {/* Left - text */}
         <div className={styles.content}>
           <h2 className={styles.headline}>{headline}</h2>
           <p className={styles.body}>{body}</p>
@@ -31,7 +31,7 @@ export default function ServiceImageSplitReverse({
               <li key={item} className={styles.checkpoint}>
                 <span className={styles.checkIcon} aria-hidden="true">
                   <svg viewBox="0 0 20 20" fill="none">
-                    <circle cx="10" cy="10" r="10" fill="#FF8F6B" />
+                    <circle cx="10" cy="10" r="10" fill="var(--brand-orange)" />
                     <polyline
                       points="5.5,10.5 8.5,13.5 14.5,7.5"
                       stroke="#111111"
@@ -51,7 +51,7 @@ export default function ServiceImageSplitReverse({
           </div>
         </div>
 
-        {/* Right — image with bottom-left notch + right-center notch */}
+        {/* Right - image with bottom-left notch + right-center notch */}
         <div className={styles.imageWrap}>
           <Image
             src={image.src}

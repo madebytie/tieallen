@@ -1,5 +1,5 @@
 /* ============================================
-   SERVICE IMAGE SPLIT — Left image / right text
+   SERVICE IMAGE SPLIT - Left image / right text
    Reusable across all service pages.
    ============================================ */
 
@@ -19,7 +19,7 @@
   align-items: center;
 }
 
-/* ---- Left — image ---- */
+/* ---- Left - image ---- */
 .imageWrap {
   position: relative;
   width: 100%;
@@ -119,7 +119,7 @@
   );
 }
 
-/* ---- Right — content ---- */
+/* ---- Right - content ---- */
 .content {
   display: flex;
   flex-direction: column;
@@ -138,10 +138,10 @@
 }
 
 .body {
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   font-weight: var(--font-weight-light);
   line-height: 1.75;
-  color: var(--text-secondary);
+  color: var(--text-primary);
   margin: 0;
 }
 

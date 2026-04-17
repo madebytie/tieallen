@@ -79,7 +79,7 @@
   width: 64px;
   height: 64px;
   border-radius: 9999px;
-  background-color: #FF8F6B;
+  background-color: var(--brand-orange);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -102,7 +102,7 @@
   transform: translate(-50%, -50%) scale(1);
 }
 
-/* ---- Row inner: 3 columns — number | content | image ---- */
+/* ---- Row inner: 3 columns - number | content | image ---- */
 .rowInner {
   display: grid;
   grid-template-columns: 5rem 1fr 520px;
@@ -125,7 +125,7 @@
   align-self: center;
 }
 
-/* Title + description stacked as one anchor — zero gap between them */
+/* Title + description stacked as one anchor - zero gap between them */
 .serviceContent {
   display: flex;
   flex-direction: column;
@@ -144,7 +144,7 @@
   display: block;
 }
 
-/* Description clips in below the title — height 0 when inactive */
+/* Description clips in below the title - height 0 when inactive */
 .serviceDescription {
   font-size: 1rem;
   line-height: 1.55;
@@ -256,7 +256,7 @@
   align-items: center;
 }
 
-/* Corner above the notch — matches working ctaNotch exactly */
+/* Corner above the notch - matches working ctaNotch exactly */
 .imageCtaNotch::before {
   content: "";
   position: absolute;
@@ -267,7 +267,7 @@
   background: radial-gradient(circle at 0% 0%, transparent 1.5rem, var(--bg-primary) 1.5rem);
 }
 
-/* Corner to the left of the notch — matches working ctaNotch exactly */
+/* Corner to the left of the notch - matches working ctaNotch exactly */
 .imageCtaNotch::after {
   content: "";
   position: absolute;

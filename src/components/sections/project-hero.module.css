@@ -1,9 +1,9 @@
 /* ============================================
-   PROJECT HERO — Portfolio Item Template
+   PROJECT HERO - Portfolio Item Template
    White L-shape (top strip + left tab) over the
    image. Title straddles the strip's bottom edge
    so its second line hangs into the tab overhang.
-   Inverse concave corner where strip meets tab —
+   Inverse concave corner where strip meets tab -
    same pattern as the footer notches.
    ============================================ */
 
@@ -43,7 +43,7 @@
 /* ---- Top strip: full-width white bar ----
    STRIP_H = 4.5rem. Title is positioned so its line break sits
    on this edge, putting line 1 in the strip and line 2 in the
-   tab overhang below — that's the "half in, half out" effect. */
+   tab overhang below - that's the "half in, half out" effect. */
 .projectHeroStrip {
   position: absolute;
   top: 0;
@@ -87,7 +87,7 @@
 }
 
 /* Inverse concave corner: tab's right edge × strip's bottom edge.
-   Same trick as footer .topNotch::before — a quarter-disc pseudo
+   Same trick as footer .topNotch::before - a quarter-disc pseudo
    in the image area whose curve smoothly connects strip↔tab. */
 .projectHeroTab::after {
   content: "";
@@ -104,7 +104,7 @@
 }
 
 /* Inverse concave corner: tab's bottom edge × card's left edge.
-   Same pattern as footer .leftNotch::after — smooths the tab's
+   Same pattern as footer .leftNotch::after - smooths the tab's
    bottom-left so the image's top-left doesn't hit a sharp 90°. */
 .projectHeroTab::before {
   content: "";

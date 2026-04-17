@@ -4,11 +4,11 @@ import { useEffect, useRef } from "react";
 import styles from "./word-cloud-reveal.module.css";
 
 /*
- * WordCloudReveal — Flashlight word reveal effect.
+ * WordCloudReveal - Flashlight word reveal effect.
  *
  * Words are laid out in clean, orderly rows filling the hero.
  * They are invisible until the cursor sweeps over, revealing
- * them with a thin, elegant outline — no rotation, no chaos.
+ * them with a thin, elegant outline - no rotation, no chaos.
  */
 
 const ROWS = [
@@ -58,7 +58,7 @@ export default function WordCloudReveal() {
       {/* The gradient background */}
       <div className={styles.gradientBg} />
 
-      {/* Word layer — masked by the flashlight */}
+      {/* Word layer - masked by the flashlight */}
       <div className={styles.wordLayer}>
         <div className={styles.wordGrid}>
           {ROWS.map((row, ri) => (

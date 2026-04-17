@@ -1,5 +1,5 @@
 /* ============================================
-   GOOEY BUTTON — Reusable CTA with droplet arrow
+   GOOEY BUTTON - Reusable CTA with droplet arrow
    ============================================ */
 
 .ctaGroup {
@@ -27,7 +27,7 @@
 }
 
 .button {
-  background-color: var(--gooey-color, #FF8F6B);
+  background-color: var(--gooey-color, var(--brand-orange));
   color: var(--gooey-text, #111111);
   padding: 0.45rem 1.3rem 0.45rem 1.4rem;
   border-radius: var(--radius-full);
@@ -45,7 +45,7 @@
   width: 38px;
   height: 38px;
   border-radius: var(--radius-full);
-  background-color: var(--gooey-color, #FF8F6B);
+  background-color: var(--gooey-color, var(--brand-orange));
   margin-left: -1px;
   position: relative;
   z-index: 1;

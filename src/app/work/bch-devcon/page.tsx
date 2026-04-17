@@ -7,7 +7,7 @@ import CaseStudyDeviceShowcase from "@/components/sections/CaseStudyDeviceShowca
 import CaseStudyQuote from "@/components/sections/CaseStudyQuote";
 
 export const metadata: Metadata = {
-  title: "BCH Devcon — Vizonos",
+  title: "BCH Devcon - Vizonos",
   description:
     "How we launched a fully branded global Bitcoin Cash hackathon series for Bitmain in just 2 weeks.",
 };
@@ -23,7 +23,7 @@ export default function BCHDevcon() {
 
       <CaseStudyIntro
         headline="A global Bitcoin Cash Hackathon Series by the Crypto Mining giant, Bitmain"
-        description="Bitmain's VC fund needed to launch a global hackathon series at SF Blockchain Week starting from zero. No branding, no website, no social media presence — not even a finalized name. Just a two-week runway and a global ambition."
+        description="Bitmain's VC fund needed to launch a global hackathon series at SF Blockchain Week starting from zero. No branding, no website, no social media presence - not even a finalized name. Just a two-week runway and a global ambition."
         client="Bitmain"
         industry="Crypto / Blockchain / Event"
         timeline="2 Weeks"
@@ -33,7 +33,7 @@ export default function BCHDevcon() {
       <CaseStudySplitContent
         eyebrow="• Context"
         heading="From zero to launch in 14 days"
-        body="Bitmain needed to launch an entire event brand at SF Blockchain Week with no branding, no website, no social media, and no name — with just a two-week runway and the expectation that it would look like months of planning had gone into it."
+        body="Bitmain needed to launch an entire event brand at SF Blockchain Week with no branding, no website, no social media, and no name - with just a two-week runway and the expectation that it would look like months of planning had gone into it."
         images={["/projects/bch-devcon/congruency-2.png"]}
         imageAlt="BCH Devcon branding design"
         imagePosition="right"
@@ -59,7 +59,7 @@ export default function BCHDevcon() {
       <CaseStudySplitContent
         eyebrow="• Brand Identity"
         heading="A cohesive brand built to last"
-        body="We delivered a complete brand identity system: logo, style guide, event ticket design, social media templates, and merchandise — all consistent across every touchpoint of the event. The result looked like months of planning had gone into it."
+        body="We delivered a complete brand identity system: logo, style guide, event ticket design, social media templates, and merchandise - all consistent across every touchpoint of the event. The result looked like months of planning had gone into it."
         images={[
           "/projects/bch-devcon/IMG_3257.jpg",
           "/projects/bch-devcon/IMG_3258.jpg",

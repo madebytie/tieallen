@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function GetStarted() {
   return (
     <div className={styles.page}>
-      {/* ── Left — image ── */}
+      {/* ── Left - image ── */}
       <div className={styles.imagePanel}>
         <Image
           src="/assets/Gemini_Generated_Image_x80i5lx80i5lx80i.jpeg"
@@ -23,7 +23,7 @@ export default function GetStarted() {
         />
       </div>
 
-      {/* ── Right — form ── */}
+      {/* ── Right - form ── */}
       <div className={styles.formPanel}>
         <StartProjectForm />
       </div>

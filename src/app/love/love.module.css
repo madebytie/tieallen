@@ -96,7 +96,7 @@
 }
 
 .testimonialItem:hover .highlight {
-  color: #FF8F6B; /* Turn brand orange on hover */
+  color: var(--brand-orange); /* Turn brand orange on hover */
 }
 
 .text {

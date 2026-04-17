@@ -67,7 +67,7 @@ export default function AboutStats() {
           {/* Projects */}
           <div className={styles.statItem}>
             <div className={styles.statValue}>
-              <AnimatedNumber value={199} suffix="+" />
+              <AnimatedNumber value={169} suffix="+" />
             </div>
             <span className={styles.statLabel}>projects delivered</span>
           </div>

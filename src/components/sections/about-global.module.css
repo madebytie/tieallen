@@ -31,7 +31,7 @@
 }
 
 .globalTitle span {
-  color: #FF8F6B;
+  color: var(--brand-orange);
   display: inline-block;
   transform: scale(0.85) translateY(-0.1em);
 }
@@ -82,7 +82,7 @@
 .accent {
   font-family: var(--font-primary);
   font-weight: var(--font-weight-bold);
-  color: #FF8F6B;
+  color: var(--brand-orange);
 }
 
 /* ---- Visual Area (Right) ---- */

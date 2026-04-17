@@ -1,5 +1,5 @@
 /* ============================================
-   GLOBALS — TieAllen.com Design System
+   GLOBALS - TieAllen.com Design System
    ============================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Figtree:wght@300;400;500;600;700;800;900&display=swap');
@@ -19,6 +19,10 @@
 
   --accent-color: #111111;
   --accent-hover: #333333;
+
+  /* ---- Brand Colors ---- */
+  --brand-orange: #ff6b6b;
+  --brand-dark-blue: #06071e;
 
   /* ---- Dark Section Theme ---- */
   --dark-bg: #0a0a0a;
@@ -140,7 +144,7 @@ h1, h2, h3, h4, h5, h6 {
    ============================================ */
 
 /* Blur the page content directly when services dropdown is open.
-   This sidesteps backdrop-filter stacking context issues entirely —
+   This sidesteps backdrop-filter stacking context issues entirely -
    we blur the source, not a layer on top of it. */
 .pageWrapper {
   transition:

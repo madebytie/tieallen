@@ -30,10 +30,10 @@ export default function AboutHero({
 
           {overlay && <div className={styles.overlay} />}
 
-          {/* Top white strip — full width */}
+          {/* Top white strip - full width */}
           <div className={styles.aboutHeroStrip} aria-hidden="true" />
 
-          {/* Title tab — flipped to the RIGHT */}
+          {/* Title tab - flipped to the RIGHT */}
           <div className={styles.aboutHeroTab}>
             <div className={styles.aboutHeroContent}>
               <h1 className={styles.aboutHeroTitle}>{title}</h1>
@@ -41,7 +41,7 @@ export default function AboutHero({
             </div>
           </div>
 
-          {/* Accent notch — flipped to the BOTTOM-LEFT */}
+          {/* Accent notch - flipped to the BOTTOM-LEFT */}
           <div className={styles.aboutHeroAccent} aria-hidden="true" />
         </div>
       </div>

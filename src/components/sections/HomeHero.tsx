@@ -37,7 +37,7 @@ export default function HomeHero() {
             </div>
           </div>
 
-          {/* Accent notch — bottom-right */}
+          {/* Accent notch - bottom-right */}
           <div className={styles.homeHeroAccent} aria-hidden="true">
             {/* Corner notches for accent */}
             <div className={`${styles.accentCorner} ${styles.accentTopRight}`} aria-hidden="true" />

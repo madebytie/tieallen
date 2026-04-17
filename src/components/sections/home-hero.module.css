@@ -1,5 +1,5 @@
 /* ============================================
-   HOME HERO — Stepped notch design
+   HOME HERO - Stepped notch design
    White overlay follows each text line with rounded
    corners at each transition, starting from top-left.
    Bottom-right accent notch preserved from ProjectHero.
@@ -34,7 +34,7 @@
   inset: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  background: var(--brand-dark-blue);
   z-index: 1;
 }
 
@@ -56,13 +56,13 @@
    Smoothing: "transparent R, white calc(R + 1px)" puts the 1px feather
    OUTSIDE the disc (into the white region), so it's covered by the 2px
    size overlap and never creates a dark inset at the inner corners.
-   DO NOT use "transparent calc(R - 1px), white R" — that puts the feather
+   DO NOT use "transparent calc(R - 1px), white R" - that puts the feather
    inside the disc (dark side) which creates a visible dark crescent.
 
-   overlayBottomLeft  — below overlay at left:0      → center 100% 100%
-   overlayTopRight    — right of overlay at top:0    → center 100% 100%
-   accentTopRight     — above accent at right:0      → center 0% 0%
-   accentBottomLeft   — left of accent at bottom:0   → center 0% 0%
+   overlayBottomLeft  - below overlay at left:0      → center 100% 100%
+   overlayTopRight    - right of overlay at top:0    → center 100% 100%
+   accentTopRight     - above accent at right:0      → center 0% 0%
+   accentBottomLeft   - left of accent at bottom:0   → center 0% 0%
    ---- */
 .overlayCorner {
   position: absolute;

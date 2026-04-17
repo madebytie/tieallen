@@ -18,7 +18,7 @@ const SERVICES: Service[] = [
   {
     number: "01",
     label: "Web Design",
-    description: "We design beautiful, conversion-focused websites that make your brand impossible to forget — crafted down to every pixel, interaction, and scroll.",
+    description: "We design beautiful, conversion-focused websites that make your brand impossible to forget - crafted down to every pixel, interaction, and scroll.",
     href: "/services/web-design",
     image: "/projects/bch-devcon/bch-desktop-1024x663.png",
     imageHref: "/work/bch-devcon",
@@ -26,7 +26,7 @@ const SERVICES: Service[] = [
   {
     number: "02",
     label: "Development",
-    description: "Custom-built websites and web apps engineered for speed, scale, and longevity — no templates, no shortcuts, just clean code that performs.",
+    description: "Custom-built websites and web apps engineered for speed, scale, and longevity - no templates, no shortcuts, just clean code that performs.",
     href: "/services/development",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&q=80",
     imageHref: "/work/servco-wholesale",
@@ -34,7 +34,7 @@ const SERVICES: Service[] = [
   {
     number: "03",
     label: "Branding",
-    description: "Full brand identities built from the ground up — logo, colour system, typography, and every touchpoint your audience will ever see.",
+    description: "Full brand identities built from the ground up - logo, colour system, typography, and every touchpoint your audience will ever see.",
     href: "/services/branding",
     image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=900&q=80",
     imageHref: "/work/expose-hair",
@@ -95,15 +95,15 @@ function ServiceRow({ service, isActive, onHover }: {
       <div className={styles.rowInner}>
         <span className={styles.serviceNumber}>{service.number}</span>
 
-        {/* Title and description stacked — NO gap between them */}
+        {/* Title and description stacked - NO gap between them */}
         <Link href={service.href} className={styles.serviceContent}>
           <span className={styles.serviceName}>{service.label}</span>
           <span className={styles.serviceDescription}>{service.description}</span>
         </Link>
 
-        {/* Notched image card — fades in when active */}
+        {/* Notched image card - fades in when active */}
         <div className={styles.serviceImageCard}>
-          {/* Actual image — clipped separately */}
+          {/* Actual image - clipped separately */}
           <div className={styles.serviceImageClip}>
             <img src={service.image} alt={service.label} className={styles.serviceImageImg} />
           </div>

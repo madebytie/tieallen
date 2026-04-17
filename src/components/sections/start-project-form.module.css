@@ -37,7 +37,7 @@
 }
 
 .stepContent {
-  /* natural height — nav follows immediately after content */
+  /* natural height - nav follows immediately after content */
 }
 
 .stepTitle {
@@ -131,7 +131,7 @@
   font-weight: var(--font-weight-regular);
 }
 
-/* ---- Step 2 — inline fields ---- */
+/* ---- Step 2 - inline fields ---- */
 
 .inlineField {
   display: flex;
@@ -187,7 +187,7 @@
   color: var(--text-primary);
 }
 
-/* ---- Step 3 — services grid ---- */
+/* ---- Step 3 - services grid ---- */
 
 .servicesGrid {
   display: flex;
@@ -245,7 +245,7 @@
   background: var(--bg-primary);
 }
 
-/* ---- Step 4 — textarea & upload ---- */
+/* ---- Step 4 - textarea & upload ---- */
 
 .textarea {
   width: 100%;

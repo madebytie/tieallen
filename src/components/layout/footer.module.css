@@ -14,7 +14,7 @@
   position: relative;
   width: 100%;
   max-width: 1600px;
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  background: var(--brand-dark-blue);
   color: var(--dark-text);
   border-radius: 2.5rem;
   overflow: hidden;
@@ -181,7 +181,7 @@
   font-size: clamp(4rem, 22vw, 26rem);
   padding: 0 1rem; /* Safely buffer the edges */
   text-transform: lowercase;
-  letter-spacing: -0.10em;
+  letter-spacing: 0;
   line-height: 0.65;
   white-space: nowrap;
   text-align: center;
@@ -193,17 +193,21 @@
 }
 
 .brandThin {
-  font-weight: 300; /* One weight thinner (Light) */
+  font-weight: 500;
+  letter-spacing: -0.10em;
+  margin-right: 0.06em;
 }
 
 .brandBold {
-  font-weight: 700;
+  font-weight: 900;
+  letter-spacing: -0.07em;
 }
 
 .brandPeriod {
-  color: #FF8F6B;
+  color: var(--brand-orange);
   font-weight: 700;
   display: inline-block;
+  margin-left: 0.06em;
 }
 
 .logoPeriodBounce {

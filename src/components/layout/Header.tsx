@@ -261,8 +261,6 @@ export default function Header() {
                 </div>
               </div>
 
-              <Link href="/blog" className={styles.link}>Blog</Link>
-              <Link href="/contact" className={styles.link}>Contact</Link>
             </div>
 
             {/* Desktop CTA */}
@@ -353,8 +351,6 @@ export default function Header() {
             </div>
           </div>
 
-          <Link href="/blog" className={styles.mobileLink} onClick={closeMobile}>Blog</Link>
-          <Link href="/contact" className={styles.mobileLink} onClick={closeMobile}>Contact</Link>
 
           <div className={styles.mobileCta}>
             <GooeyButton label="Hire Tie" href="/get-started" />

@@ -31,7 +31,7 @@ export default function ServicePageHero({
 
           {/* Top-centered stepped white overlay with headline */}
           <div className={`${styles.servicePageHeroOverlay} ${align === "left" ? styles.overlayLeft : ""}`}>
-            {/* Corner notches — overlay top edge meets card top edge on both sides */}
+            {/* Corner notches - overlay top edge meets card top edge on both sides */}
             {align !== "left" && <div className={`${styles.overlayCorner} ${styles.overlayTopLeft}`} aria-hidden="true" />}
             <div className={`${styles.overlayCorner} ${styles.overlayTopRight}`} aria-hidden="true" />
 
@@ -59,7 +59,7 @@ export default function ServicePageHero({
             </div>
           </div>
 
-          {/* Accent notch — bottom-right */}
+          {/* Accent notch - bottom-right */}
           <div className={styles.servicePageHeroAccent} aria-hidden="true">
             <div className={`${styles.accentCorner} ${styles.accentTopRight}`} aria-hidden="true" />
             <div className={`${styles.accentCorner} ${styles.accentBottomLeft}`} aria-hidden="true" />

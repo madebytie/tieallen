@@ -18,14 +18,14 @@ export default function ServiceCapabilities({
   return (
     <section id={id} className={styles.section}>
       <div className={styles.inner}>
-        {/* Left — editorial headline */}
+        {/* Left - editorial headline */}
         <div className={styles.left}>
           <span className={styles.eyebrow}>{eyebrow}</span>
           <h2 className={styles.headline}>{headline}</h2>
           {subhead && <p className={styles.subhead}>{subhead}</p>}
         </div>
 
-        {/* Right — capabilities grid */}
+        {/* Right - capabilities grid */}
         <div className={styles.right}>
           <p className={styles.listLabel}>Capabilities</p>
           <div className={styles.grid}>

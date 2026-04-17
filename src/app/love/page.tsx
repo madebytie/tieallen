@@ -28,14 +28,14 @@ const testimonials = [
     role: "Founder",
     company: "mandelbulb.com",
     highlight: "Tie did everything I hoped for and then some. I would definitely recommend him.",
-    text: "Tie did a great job with my site. He was easy to work with—fast, responsive, accurate, and thorough. He redeveloped a dated looking WordPress site and turned it into a flexible, functional, contemporary showpiece. The SEO aspect was a high priority in the project, and the site is always on the first page of Google results—and often the top Google result—in my specialty area. I could not have hoped for a better site or development experience. Tie did everything I hoped for and then some. I chose Tie because he had a strong portfolio and was genuinely interested in my content and my project. I would definitely recommend him."
+    text: "Tie did a great job with my site. He was easy to work with-fast, responsive, accurate, and thorough. He redeveloped a dated looking WordPress site and turned it into a flexible, functional, contemporary showpiece. The SEO aspect was a high priority in the project, and the site is always on the first page of Google results-and often the top Google result-in my specialty area. I could not have hoped for a better site or development experience. Tie did everything I hoped for and then some. I chose Tie because he had a strong portfolio and was genuinely interested in my content and my project. I would definitely recommend him."
   },
   {
     name: "Stephan Zenz",
     role: "Owner",
     company: "Exposé Hair Salon",
     highlight: "Every step of the way, he was accommodating and responsive. Five stars all the way. It was the best decision I made this year.",
-    text: "As a small business / salon owner, I dreamt of a website that would tell our story and be our digital storefront. It's the first point of contact for any potential client searching on the web. In a matter of seconds, that person may move on. A good website is not important, it's crucial. It was good fortune that I met Michelle and Tie in person. Once we got started with the project, I anticipated a painful process. Instead, when the first draft arrived, it was already beyond expectations. All it took was some finishing touches and a couple of additions I had not thought of earlier. Every step of the way, he was accommodating and responsive. Now that I look at the final result, I am thrilled and confident I got the best. Five stars all the way. It was the best decision I made this year. I have previously had a website designed twice—each time it fell short in terms of performance across platforms, was impossible to maintain and update by myself, and required multiple changes and corrections. Do yourself a favour, for peace of mind and a brilliant result, choose Tie."
+    text: "As a small business / salon owner, I dreamt of a website that would tell our story and be our digital storefront. It's the first point of contact for any potential client searching on the web. In a matter of seconds, that person may move on. A good website is not important, it's crucial. It was good fortune that I met Michelle and Tie in person. Once we got started with the project, I anticipated a painful process. Instead, when the first draft arrived, it was already beyond expectations. All it took was some finishing touches and a couple of additions I had not thought of earlier. Every step of the way, he was accommodating and responsive. Now that I look at the final result, I am thrilled and confident I got the best. Five stars all the way. It was the best decision I made this year. I have previously had a website designed twice-each time it fell short in terms of performance across platforms, was impossible to maintain and update by myself, and required multiple changes and corrections. Do yourself a favour, for peace of mind and a brilliant result, choose Tie."
   },
   {
     name: "Jeanette Lucero",
@@ -114,7 +114,7 @@ export default function LovePage() {
     <main className={styles.lovePage}>
       <LoveHero 
         title="Wall of Love"
-        subtitle="I've been fortunate to work with some incredible humans over the years—here's what they have to say."
+        subtitle="I've been fortunate to work with some incredible humans over the years-here's what they have to say."
         image="/assets/IMG_3254.jpg"
         objectPosition="center 20%"
         overlay={true}
@@ -122,7 +122,7 @@ export default function LovePage() {
 
       <section className={styles.testimonialsSection}>
         <div className={styles.container}>
-          {/* Featured pullquote — large & centered */}
+          {/* Featured pullquote - large & centered */}
           <div className={styles.featured}>
             <p className={styles.featuredQuote}>"{featuredTestimonial.highlight}"</p>
             <div className={styles.featuredAuthor}>
