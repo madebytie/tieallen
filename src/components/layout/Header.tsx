@@ -9,7 +9,6 @@ const SERVICES = [
   { href: "/services/web-design", label: "Web Design", desc: "Beautiful sites that convert" },
   { href: "/services/development", label: "Development", desc: "Custom builds, built to scale" },
   { href: "/services/branding", label: "Branding", desc: "Brands you're proud of" },
-  { href: "/services/funnels", label: "Funnels", desc: "Turn traffic into revenue" },
   { href: "/services/crm-automation", label: "CRM + Automation", desc: "Systems that work while you sleep" },
 ];
 

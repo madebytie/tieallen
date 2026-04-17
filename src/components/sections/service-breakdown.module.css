@@ -1,0 +1,191 @@
+/* ============================================
+   SERVICE BREAKDOWN — Dark blue gradient notched
+   section, same notch structure as Pricing but
+   with the dark blue gradient background.
+   ============================================ */
+
+.frame {
+  padding: 1.25rem;
+  background-color: var(--bg-primary);
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1600px;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  border-radius: 2.5rem;
+  overflow: hidden;
+  padding: 8rem 5rem 6rem;
+}
+
+/* ---- Top notch (same as Pricing) ---- */
+.topNotch {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 22rem;
+  height: 2.5rem;
+  background-color: var(--bg-primary);
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.topNotch::before,
+.topNotch::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.topNotch::before {
+  left: -1.5rem;
+  background: radial-gradient(circle at 0% 100%, transparent 1.5rem, var(--bg-primary) 1.5rem);
+}
+
+.topNotch::after {
+  right: -1.5rem;
+  background: radial-gradient(circle at 100% 100%, transparent 1.5rem, var(--bg-primary) 1.5rem);
+}
+
+/* ---- Header ---- */
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 3rem;
+  margin-bottom: 4.5rem;
+}
+
+.headerLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 36rem;
+}
+
+.headerRight {
+  flex-shrink: 0;
+}
+
+.headline {
+  font-family: var(--font-logo);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  color: #ffffff;
+  margin: 0;
+}
+
+.subhead {
+  font-size: 1rem;
+  font-weight: var(--font-weight-light);
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.65;
+  max-width: 42rem;
+  margin: 0;
+}
+
+/* ---- Grid ---- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0 3rem;
+}
+
+/* ---- Item ---- */
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  padding: 2.25rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.itemHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.itemIcon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.65rem;
+  background-color: #FF8F6B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #111111;
+  flex-shrink: 0;
+}
+
+.itemIcon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.itemTitle {
+  font-family: var(--font-logo);
+  font-size: 1.75rem;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin: 0;
+}
+
+.itemDesc {
+  font-size: 1rem;
+  font-weight: var(--font-weight-regular);
+  color: #ffffff;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    padding: 6rem 3rem 4rem;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .frame {
+    padding: 0.75rem;
+  }
+
+  .container {
+    padding: 5rem 1.75rem 3.5rem;
+    border-radius: 1.75rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .header {
+    margin-bottom: 3rem;
+  }
+}

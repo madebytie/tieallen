@@ -41,14 +41,6 @@ const SERVICES: Service[] = [
   },
   {
     number: "04",
-    label: "Funnels",
-    description: "High-converting sales funnels that take visitors from cold to customer — built with strategy, copy, and design working together.",
-    href: "/services/funnels",
-    image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=900&q=80",
-    imageHref: "/work/permissionless-ventures",
-  },
-  {
-    number: "05",
     label: "CRM + Automation",
     description: "Smart backend systems that nurture leads, send the right message at the right time, and keep your pipeline full while you focus on the work.",
     href: "/services/crm-automation",
