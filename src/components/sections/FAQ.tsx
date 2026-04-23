@@ -10,7 +10,7 @@ interface FAQItem {
 
 const faqData: FAQItem[] = [
   {
-    question: "What services does Tie Allen offer?",
+    question: "What services does made by tie offer?",
     answer:
       "I offer end-to-end product execution - strategy, brand identity, UI/UX design, full-stack development, and launch support. Whether you need a complete build or a focused sprint, I handle the entire pipeline.",
   },

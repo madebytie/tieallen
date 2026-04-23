@@ -4,7 +4,7 @@ import StartProjectForm from "@/components/sections/StartProjectForm";
 import styles from "./get-started.module.css";
 
 export const metadata: Metadata = {
-  title: "Start a Project | Tie Allen",
+  title: "Start a Project | made by tie",
   description: "Tell me about your project and let's build something great together.",
 };
 

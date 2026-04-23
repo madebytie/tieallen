@@ -101,8 +101,8 @@ export default function Footer() {
 
           <div className={styles.footerBrand} onMouseEnter={handleLogoHover}>
             <div className={styles.brandText}>
-              <span className={styles.brandThin}>tie</span>
-              <span className={styles.brandBold}>allen</span>
+              <span className={styles.brandThin}>madeby</span>
+              <span className={styles.brandBold}>tie</span>
               <span className={periodClasses} key={animKey}>
                 .
               </span>

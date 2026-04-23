@@ -3,7 +3,7 @@ import { ServicesHero, ServiceSection } from "@/components/sections/ServicesPage
 import styles from "@/components/sections/services-page.module.css";
 
 export const metadata: Metadata = {
-  title: "Services - tieallen.",
+  title: "Services - made by tie.",
   description: "Web design, development, branding, funnels, and CRM automation.",
 };
 

@@ -7,7 +7,7 @@ import ServiceImageSplitReverse from "@/components/sections/ServiceImageSplitRev
 import ProjectSlider from "@/components/sections/ProjectSlider";
 
 export const metadata: Metadata = {
-  title: "Branding - tieallen.",
+  title: "Branding - made by tie.",
   description: "Complete branding identity systems that help you launch with impact - logo, visual identity, and everything you need to compete.",
 };
 

@@ -178,7 +178,7 @@
   width: 100%;
   font-family: var(--font-logo);
   /* Slightly safer scale to prevent period cutoff, but still huge */
-  font-size: clamp(4rem, 22vw, 26rem);
+  font-size: clamp(3.5rem, 18vw, 22rem);
   padding: 0 1rem; /* Safely buffer the edges */
   text-transform: lowercase;
   letter-spacing: 0;

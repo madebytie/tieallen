@@ -7,7 +7,7 @@ import ServiceImageSplitReverse from "@/components/sections/ServiceImageSplitRev
 import ProjectSlider from "@/components/sections/ProjectSlider";
 
 export const metadata: Metadata = {
-  title: "Web Design - tieallen.",
+  title: "Web Design - made by tie.",
   description: "Beautiful, conversion-focused websites that deliver your business to a wider audience.",
 };
 

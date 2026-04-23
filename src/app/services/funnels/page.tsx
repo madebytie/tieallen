@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Funnels - tieallen.",
+  title: "Funnels - made by tie.",
   description: "High-converting sales funnels engineered to turn traffic into revenue.",
 };
 

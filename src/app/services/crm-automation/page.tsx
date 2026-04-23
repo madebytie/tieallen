@@ -7,7 +7,7 @@ import ServiceImageSplitReverse from "@/components/sections/ServiceImageSplitRev
 import ProjectSlider from "@/components/sections/ProjectSlider";
 
 export const metadata: Metadata = {
-  title: "CRM + Automation - tieallen.",
+  title: "CRM + Automation - made by tie.",
   description: "Smart CRM and marketing automation systems - powered by Vizon OS - that nurture leads, close deals, and run your business on autopilot.",
 };
 

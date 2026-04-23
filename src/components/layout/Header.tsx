@@ -172,8 +172,7 @@ export default function Header() {
           <nav className={styles.nav}>
             {/* Logo */}
             <Link href="/" className={styles.logo} onMouseEnter={handleLogoHover}>
-              <span className={styles.logoThin}>tie</span>
-              <span className={styles.logoBold}>allen</span>
+              <span className={styles.logoBold}>tie</span>
               <span className={periodClasses} ref={periodRef} key={`period-${animKey}`}>.</span>
             </Link>
 

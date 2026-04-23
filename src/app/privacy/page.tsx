@@ -1,8 +1,8 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Privacy Policy | Tie Allen",
-  description: "Comprehensive privacy disclosures for Tie Allen design studio, including California (CCPA/CPRA) and GDPR compliance.",
+  title: "Privacy Policy | made by tie",
+  description: "Comprehensive privacy disclosures for made by tie design studio, including California (CCPA/CPRA) and GDPR compliance.",
 };
 
 export default function PrivacyPage() {
@@ -42,7 +42,7 @@ export default function PrivacyPage() {
             1. Overview
           </h2>
           <p>
-            Tie Allen (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is committed to protecting the privacy of our clients and website visitors. This Privacy Policy describes how we collect, use, and share personal information in accordance with applicable laws, including the **California Consumer Privacy Act (CCPA)** as amended by the **California Privacy Rights Act (CPRA)** and the **General Data Protection Regulation (GDPR)**.
+            made by tie (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is committed to protecting the privacy of our clients and website visitors. This Privacy Policy describes how we collect, use, and share personal information in accordance with applicable laws, including the **California Consumer Privacy Act (CCPA)** as amended by the **California Privacy Rights Act (CPRA)** and the **General Data Protection Regulation (GDPR)**.
           </p>
         </section>
 
@@ -152,8 +152,8 @@ export default function PrivacyPage() {
           <p>
             To exercise your rights, please submit a request to:
             <br />
-            <Link href="mailto:privacy@tieallen.com" style={{ color: "var(--accent-color)", fontWeight: "600", textDecoration: "underline", fontSize: "1.2rem", display: "inline-block", marginTop: "0.5rem" }}>
-              privacy@tieallen.com
+            <Link href="mailto:privacy@madebytie.com" style={{ color: "var(--accent-color)", fontWeight: "600", textDecoration: "underline", fontSize: "1.2rem", display: "inline-block", marginTop: "0.5rem" }}>
+              privacy@madebytie.com
             </Link>
           </p>
           <p style={{ marginTop: "1.5rem", fontSize: "0.95rem" }}>
