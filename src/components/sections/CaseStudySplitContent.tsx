@@ -40,7 +40,7 @@ export default function CaseStudySplitContent({
       style={bgColor ? { backgroundColor: bgColor } : undefined}
     >
       <div className={styles.splitFrame}>
-        <div className={`${styles.splitGrid} ${imageFirst ? styles.imageFirst : ""}`}>
+        <div className={`${styles.splitGrid} ${imageFirst ? styles.imageFirst : ""} ${images.length === 0 ? styles.singleColumn : ""}`}>
           {/* Text side */}
           <div className={styles.textSide}>
             {eyebrow && <p className={styles.eyebrow}>{eyebrow}</p>}

@@ -6,7 +6,6 @@ interface CaseStudyIntroProps {
   client: string;
   industry: string;
   timeline: string;
-  services?: string[];
 }
 
 export default function CaseStudyIntro({
@@ -15,18 +14,17 @@ export default function CaseStudyIntro({
   client,
   industry,
   timeline,
-  services = [],
 }: CaseStudyIntroProps) {
   return (
     <section className={styles.introSection}>
       <div className={styles.introFrame}>
         <div className={styles.introGrid}>
-          <div className={styles.introLeft}>
-            <h2 className={styles.introHeadline}>{headline}</h2>
-            <p className={styles.introDescription}>{description}</p>
-          </div>
+          <h2 className={styles.introHeadline}>{headline}</h2>
+
           <div className={styles.introRight}>
-            <div className={styles.metaGrid}>
+            <p className={styles.introDescription}>{description}</p>
+
+            <div className={styles.metaRow}>
               <div className={styles.metaItem}>
                 <span className={styles.metaLabel}>Client</span>
                 <span className={styles.metaValue}>{client}</span>
@@ -40,15 +38,6 @@ export default function CaseStudyIntro({
                 <span className={styles.metaValue}>{timeline}</span>
               </div>
             </div>
-            {services.length > 0 && (
-              <div className={styles.servicesList}>
-                {services.map((service) => (
-                  <span key={service} className={styles.serviceTag}>
-                    {service}
-                  </span>
-                ))}
-              </div>
-            )}
           </div>
         </div>
       </div>

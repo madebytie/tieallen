@@ -44,8 +44,7 @@ export default function Introduction() {
 
         {/* Large Statement */}
         <h2 className={styles.statement}>
-          <span className={styles.statementBold}>I design and build premium brands, websites, applications and marketing funnels from end-to-end. </span>
-          <span className={styles.statementMuted}>With 18 years experience I bring visions to life for ambitious startups, enterprise teams and moonshots.</span>
+          <span className={styles.statementBold}>I design and build premium brands, websites, applications and funnels from end-to-end.</span>
         </h2>
 
         {/* Separator Icon */}
@@ -55,7 +54,7 @@ export default function Introduction() {
 
         {/* Description Text */}
         <p className={styles.description}>
-          As a designer, developer and marketer combined I bridge the gap between creative vision and technical execution. I combine high-end brand identity with custom architecture to launch applications that perform as beautifully as they look.
+          With 18 years experience I bring visions to life for ambitious startups, enterprise teams and moonshots.
         </p>
 
         {/* Call to Action */}

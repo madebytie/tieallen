@@ -15,10 +15,10 @@ interface Project {
 const projects: Project[] = [
   {
     title: "YULI",
-    client: "YULI",
+    client: "YULI Salon & Aesthetics",
     year: "2024",
-    tags: ["Web Design", "Web Development"],
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1800&q=80",
+    tags: ["Brand Identity", "Web Design", "Web Development"],
+    image: "/projects/yuli/yuli-lobby.png",
     href: "/work/yuli",
   },
   {
@@ -26,16 +26,16 @@ const projects: Project[] = [
     client: "BCH Devcon",
     year: "2024",
     tags: ["Web Design", "Web Development"],
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1800&q=80",
+    image: "/projects/bch-devcon/prize-background.png",
     href: "/work/bch-devcon",
   },
   {
-    title: "Blue Divine Aesthetics",
-    client: "Blue Divine Aesthetics",
+    title: "Windward Tech District",
+    client: "Windward Tech District",
     year: "2024",
     tags: ["Web Design", "Web Development"],
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1800&q=80",
-    href: "/work/blue-divine-aesthetics",
+    image: "/projects/windward-tech-district/district-edison.jpg",
+    href: "/work/windward-tech-district",
   },
   {
     title: "CI² Aviation",
@@ -54,11 +54,19 @@ const projects: Project[] = [
     href: "/work/expose-hair",
   },
   {
+    title: "Jennings Brands",
+    client: "Jennings Brands",
+    year: "2019",
+    tags: ["eCommerce", "Web Design", "Growth & Automation"],
+    image: "/projects/jennings-brands/jennings-brands-website-mockup.png",
+    href: "/work/jennings-brands",
+  },
+  {
     title: "Permissionless Ventures",
     client: "Permissionless Ventures",
     year: "2024",
     tags: ["Web Design", "Web Development"],
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1800&q=80",
+    image: "/projects/permissionless/hero-bg.png",
     href: "/work/permissionless-ventures",
   },
   {
@@ -86,12 +94,12 @@ const projects: Project[] = [
     href: "/work/taste-of-alpharetta",
   },
   {
-    title: "Windward Tech District",
-    client: "Windward Tech District",
+    title: "Blue Divine Aesthetics",
+    client: "Blue Divine Aesthetics",
     year: "2024",
     tags: ["Web Design", "Web Development"],
     image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1800&q=80",
-    href: "/work/windward-tech-district",
+    href: "/work/blue-divine-aesthetics",
   },
   {
     title: "Wire & Wood Festival",

@@ -30,6 +30,49 @@
   inset: 0;
 }
 
+/* Screenshot display variant */
+.screenshotItem {
+  background-color: #f0f0f0;
+}
+
+.screenshotBlur {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(24px) brightness(0.95) saturate(0.8);
+  transform: scale(1.1);
+  display: block;
+}
+
+.screenshotInner {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6%;
+}
+
+.screenshotImage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 6px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.18), 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: block;
+}
+
+.screenshotFrame {
+  position: absolute;
+  inset: 6%;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  pointer-events: none;
+}
+
 @media (max-width: 600px) {
   .grid {
     grid-template-columns: 1fr !important;

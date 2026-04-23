@@ -27,7 +27,6 @@ export default function BCHDevcon() {
         client="Bitmain"
         industry="Crypto / Blockchain / Event"
         timeline="2 Weeks"
-        services={["Brand Identity", "Web Design", "Growth & Automation"]}
       />
 
       <CaseStudySplitContent

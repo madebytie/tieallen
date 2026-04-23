@@ -4,22 +4,36 @@ interface ProjectHeroProps {
   title: string;
   tags?: string[];
   image: string;
+  video?: string;
 }
 
 export default function ProjectHero({
   title,
   tags = [],
   image,
+  video,
 }: ProjectHeroProps) {
   return (
     <section className={styles.projectHero}>
       <div className={styles.projectHeroFrame}>
         <div className={styles.projectHeroCard}>
-          <img
-            src={image}
-            alt=""
-            className={styles.projectHeroImage}
-          />
+          {video ? (
+            <video
+              src={video}
+              poster={image}
+              autoPlay
+              muted
+              loop
+              playsInline
+              className={styles.projectHeroImage}
+            />
+          ) : (
+            <img
+              src={image}
+              alt=""
+              className={styles.projectHeroImage}
+            />
+          )}
 
           {/* Top white strip - full width */}
           <div className={styles.projectHeroStrip} aria-hidden="true" />

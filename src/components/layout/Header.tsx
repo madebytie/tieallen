@@ -215,9 +215,9 @@ export default function Header() {
                     <Link href="/services" className={styles.dropdownSideCard} onClick={() => { setOpenMenu(null); document.body.classList.remove("nav-open"); }}>
                       <div className={styles.dropdownSideText}>
                         <span className={styles.dropdownSideTitle}>View all Services</span>
-                        <span className={styles.dropdownSideDesc}>We don&apos;t stop there, check out all the services we offer here.</span>
+                        <span className={styles.dropdownSideDesc}>One craftsman. End-to-end.</span>
                       </div>
-                      <div className={styles.dropdownSideImage} aria-hidden="true" />
+                      <GooeyButton label="View all" />
                     </Link>
                   </div>
                 </div>
@@ -232,14 +232,15 @@ export default function Header() {
                 onMouseEnter={() => openDropdown("about")}
                 onMouseLeave={scheduleClose}
               >
-                <button
+                <Link
+                  href="/about"
                   className={[styles.link, styles.navToggle, openMenu === "about" ? styles.linkActive : ""].filter(Boolean).join(" ")}
                   aria-expanded={openMenu === "about"}
                   aria-haspopup="true"
-                  onClick={() => openMenu === "about" ? (setOpenMenu(null), document.body.classList.remove("nav-open")) : openDropdown("about")}
+                  onClick={() => { setOpenMenu(null); document.body.classList.remove("nav-open"); }}
                 >
                   About
-                </button>
+                </Link>
                 <div
                   className={[styles.dropdown, styles.dropdownNarrow, openMenu === "about" ? styles.dropdownOpen : ""].filter(Boolean).join(" ")}
                   role="menu"

@@ -7,6 +7,7 @@ interface CaseStudyDeviceShowcaseProps {
   mobileImage?: string;
   mobileAlt?: string;
   bgColor?: string;
+  scrollable?: boolean;
 }
 
 export default function CaseStudyDeviceShowcase({
@@ -16,6 +17,7 @@ export default function CaseStudyDeviceShowcase({
   mobileImage,
   mobileAlt = "",
   bgColor,
+  scrollable = false,
 }: CaseStudyDeviceShowcaseProps) {
   return (
     <section
@@ -32,7 +34,7 @@ export default function CaseStudyDeviceShowcase({
                 <span className={styles.dotGreen} />
               </div>
             </div>
-            <div className={styles.browserScreen}>
+            <div className={scrollable ? styles.browserScreenScrollable : styles.browserScreen}>
               <img src={desktopImage} alt={desktopAlt} className={styles.desktopImage} />
             </div>
           </div>

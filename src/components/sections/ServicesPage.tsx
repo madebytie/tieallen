@@ -8,12 +8,10 @@ export function ServicesHero() {
   return (
     <div className={styles.hero}>
       <h1 className={styles.heroTitle}>
-        One craftsman. End-to-end. Made to last.
+        One craftsman. End-to-end.
       </h1>
       <p className={styles.heroBody}>
-        From brand and website to the backend systems that run it all,
-        I bring strategy, design, and build together under one roof -
-        so every part of your business works as one.
+        I bring strategy, design and development together for the creative execution of your vision into a world class digital experience.
       </p>
     </div>
   );

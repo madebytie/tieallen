@@ -5,6 +5,7 @@ interface GridImage {
   alt: string;
   span?: "wide";
   aspectRatio?: string;
+  display?: "screenshot";
 }
 
 interface CaseStudyImageGridProps {
@@ -26,13 +27,23 @@ export default function CaseStudyImageGrid({
           {images.map((img, i) => (
             <div
               key={i}
-              className={styles.gridItem}
+              className={`${styles.gridItem}${img.display === "screenshot" ? ` ${styles.screenshotItem}` : ""}`}
               style={{
                 gridColumn: img.span === "wide" ? "span 2" : undefined,
                 aspectRatio: img.aspectRatio ?? "4/3",
               }}
             >
-              <img src={img.src} alt={img.alt} className={styles.gridImage} />
+              {img.display === "screenshot" ? (
+                <>
+                  <img src={img.src} alt="" className={styles.screenshotBlur} aria-hidden="true" />
+                  <div className={styles.screenshotInner}>
+                    <img src={img.src} alt={img.alt} className={styles.screenshotImage} />
+                    <div className={styles.screenshotFrame} />
+                  </div>
+                </>
+              ) : (
+                <img src={img.src} alt={img.alt} className={styles.gridImage} />
+              )}
             </div>
           ))}
         </div>

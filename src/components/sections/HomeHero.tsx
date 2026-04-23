@@ -21,7 +21,7 @@ export default function HomeHero() {
             <h1 className={styles.homeHeroTitle}>
               <span className={`${styles.titleLine} ${styles.titleLineBold}`}>Concept to scale.</span>
               <span className={styles.titleLine}>Design for where you're going.</span>
-              <span className={styles.titleLine}>Systems to take you there.</span>
+              <span className={styles.titleLine}>Systems that take you there.</span>
             </h1>
 
             {/* Buttons */}
