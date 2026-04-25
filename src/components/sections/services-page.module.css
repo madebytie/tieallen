@@ -68,17 +68,15 @@
   width: calc(100vw - 100px);
   transform: translateX(-50%) scale(0.98);
   border-radius: var(--radius-lg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-color: var(--brand-orange);
   opacity: 0;
   transition: opacity 1.1s var(--ease-smooth), transform 1.1s var(--ease-smooth);
   pointer-events: none;
   z-index: 0;
 }
 
-.serviceSectionInView .serviceBackdrop {
-  opacity: 0.1;
+.serviceBackdropInView {
+  opacity: 0.05;
   transform: translateX(-50%) scale(1);
 }
 
@@ -89,7 +87,7 @@
 
 .serviceHeadline {
   font-family: var(--font-logo);
-  font-size: clamp(5rem, 15vw, 14rem);
+  font-size: clamp(4.5rem, 13.5vw, 12.5rem);
   font-weight: 500;
   letter-spacing: -0.015em;
   line-height: 0.92;

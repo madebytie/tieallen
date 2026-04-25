@@ -34,7 +34,7 @@
 
 .introDescription {
   font-size: clamp(1rem, 1.5vw, 1.15rem);
-  color: var(--text-secondary);
+  color: var(--text-primary);
   line-height: 1.7;
   margin: 0;
 }

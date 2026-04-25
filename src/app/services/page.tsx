@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ServicesHero, ServiceSection } from "@/components/sections/ServicesPage";
+import CallToAction from "@/components/sections/CallToAction";
 import styles from "@/components/sections/services-page.module.css";
 
 export const metadata: Metadata = {
@@ -19,7 +20,7 @@ const SERVICES = [
       "Landing Pages",
       "Graphic Design",
     ],
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1800&q=80",
+    image: "/projects/windward-tech-district/culture-screenshot.png",
   },
   {
     headline: "Development",
@@ -32,7 +33,7 @@ const SERVICES = [
       "SaaS Products",
       "Integrations",
     ],
-    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1800&q=80",
+    image: "/assets/development.png",
   },
   {
     headline: "Branding",
@@ -45,7 +46,7 @@ const SERVICES = [
       "Brand Guidelines",
       "Brand Messaging",
     ],
-    image: "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=1800&q=80",
+    image: "/projects/permissionless/pv-bcard-mockup.png",
   },
   {
     headline: "Automation",
@@ -58,7 +59,7 @@ const SERVICES = [
       "Marketing Automation",
       "CRM + Pipelines",
     ],
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1800&q=80",
+    image: "/assets/crm-v1.webp",
   },
 ];
 
@@ -70,6 +71,7 @@ export default function ServicesPage() {
       {SERVICES.map((service) => (
         <ServiceSection key={service.headline} {...service} />
       ))}
+      <CallToAction href="/start" />
     </main>
   );
 }

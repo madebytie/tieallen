@@ -28,7 +28,7 @@
 
 .button {
   background-color: var(--gooey-color, var(--brand-orange));
-  color: var(--gooey-text, #111111);
+  color: var(--gooey-text, #ffffff);
   padding: 0.45rem 1.3rem 0.45rem 1.4rem;
   border-radius: var(--radius-full);
   font-size: 0.85rem;
@@ -56,7 +56,7 @@
 .arrow svg {
   width: 16px;
   height: 16px;
-  color: var(--gooey-text, #111111);
+  color: var(--gooey-text, #ffffff);
 }
 
 .ctaGroup:hover .arrow {

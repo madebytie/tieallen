@@ -9,7 +9,7 @@ import CaseStudyQuote from "@/components/sections/CaseStudyQuote";
 export const metadata: Metadata = {
   title: "BCH Devcon - Vizonos",
   description:
-    "How we launched a fully branded global Bitcoin Cash hackathon series for Bitmain in just 2 weeks.",
+    "How I launched a fully branded global Bitcoin Cash hackathon series for Bitmain in just 2 weeks.",
 };
 
 export default function BCHDevcon() {
@@ -58,7 +58,7 @@ export default function BCHDevcon() {
       <CaseStudySplitContent
         eyebrow="• Brand Identity"
         heading="A cohesive brand built to last"
-        body="We delivered a complete brand identity system: logo, style guide, event ticket design, social media templates, and merchandise - all consistent across every touchpoint of the event. The result looked like months of planning had gone into it."
+        body="I delivered a complete brand identity system: logo, style guide, event ticket design, social media templates, and merchandise - all consistent across every touchpoint of the event. The result looked like months of planning had gone into it."
         images={[
           "/projects/bch-devcon/IMG_3257.jpg",
           "/projects/bch-devcon/IMG_3258.jpg",

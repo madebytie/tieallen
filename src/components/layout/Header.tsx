@@ -225,6 +225,8 @@ export default function Header() {
 
               <Link href="/work" className={styles.link}>Work</Link>
 
+              <Link href="/#pricing" className={styles.link}>Pricing</Link>
+
               {/* About dropdown */}
               <div
                 className={styles.navItem}
@@ -265,7 +267,7 @@ export default function Header() {
 
             {/* Desktop CTA */}
             <div ref={ctaRef} className={styles.desktopCta} style={{ position: "relative", zIndex: 10 }}>
-              <GooeyButton label="Hire Tie" href="/get-started" />
+              <GooeyButton label="Hire Tie" href="/start" />
             </div>
 
             {/* Mobile hamburger */}
@@ -322,6 +324,8 @@ export default function Header() {
 
           <Link href="/work" className={styles.mobileLink} onClick={closeMobile}>Work</Link>
 
+          <Link href="/#pricing" className={styles.mobileLink} onClick={closeMobile}>Pricing</Link>
+
           {/* About accordion */}
           <div className={styles.mobileSection}>
             <button
@@ -353,7 +357,7 @@ export default function Header() {
 
 
           <div className={styles.mobileCta}>
-            <GooeyButton label="Hire Tie" href="/get-started" />
+            <GooeyButton label="Hire Tie" href="/start" />
           </div>
         </div>
       </div>

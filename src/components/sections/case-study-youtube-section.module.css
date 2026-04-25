@@ -1,0 +1,27 @@
+.section {
+  padding: 0 1.25rem;
+  background-color: var(--bg-primary);
+}
+
+.frame {
+  max-width: 1350px;
+  margin: 0 auto;
+  border-radius: 28px;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.wrapper {
+  width: 100%;
+  position: relative;
+  line-height: 0;
+}
+
+.iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}

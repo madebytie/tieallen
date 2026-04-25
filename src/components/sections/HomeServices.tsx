@@ -12,39 +12,44 @@ interface Service {
   href: string;
   image: string;
   imageHref: string;
+  imagePosition?: string;
+  imageScale?: number;
 }
 
 const SERVICES: Service[] = [
   {
     number: "01",
     label: "Web Design",
-    description: "We design beautiful, conversion-focused websites that make your brand impossible to forget - crafted down to every pixel, interaction, and scroll.",
+    description: "High-end websites built to convert. Every pixel, interaction, and scroll is intentional - nothing is left to chance.",
     href: "/services/web-design",
-    image: "/projects/bch-devcon/bch-desktop-1024x663.png",
+    image: "/projects/windward-tech-district/culture-screenshot.png",
     imageHref: "/work/bch-devcon",
+    imagePosition: "center right",
+    imageScale: 1.2,
   },
   {
     number: "02",
     label: "Development",
-    description: "Custom-built websites and web apps engineered for speed, scale, and longevity - no templates, no shortcuts, just clean code that performs.",
+    description: "Custom platforms, SaaS products, and internal tools built to solve real problems. Clean architecture, fast performance, and code that scales with your ambitions.",
     href: "/services/development",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&q=80",
+    image: "/assets/development.png",
     imageHref: "/work/servco-wholesale",
   },
   {
     number: "03",
     label: "Branding",
-    description: "Full brand identities built from the ground up - logo, colour system, typography, and every touchpoint your audience will ever see.",
+    description: "High impact brand identities built from the ground up. Logo, color, type, and every touchpoint crafted to perfection.",
     href: "/services/branding",
-    image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=900&q=80",
+    image: "/projects/permissionless/pv-bcard-mockup.png",
     imageHref: "/work/expose-hair",
   },
   {
     number: "04",
     label: "CRM + Automation",
-    description: "Smart backend systems that nurture leads, send the right message at the right time, and keep your pipeline full while you focus on the work.",
+    description: "Intelligent systems and smart funnels that work around the clock. Automated follow-ups, lead nurturing, and pipelines designed to convert.",
     href: "/services/crm-automation",
-    image: "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=900&q=80",
+    image: "/assets/crm-v1.webp",
+    imageScale: 1.15,
     imageHref: "/work/windward-tech-district",
   },
 ];
@@ -105,7 +110,15 @@ function ServiceRow({ service, isActive, onHover }: {
         <div className={styles.serviceImageCard}>
           {/* Actual image - clipped separately */}
           <div className={styles.serviceImageClip}>
-            <img src={service.image} alt={service.label} className={styles.serviceImageImg} />
+            <img
+              src={service.image}
+              alt={service.label}
+              className={styles.serviceImageImg}
+              style={{
+                objectPosition: service.imagePosition ?? "center",
+                transform: service.imageScale ? `scale(${service.imageScale})` : undefined,
+              }}
+            />
           </div>
           {/* Top-left accent notch */}
           <div className={styles.imageAccent} aria-hidden="true" />
@@ -131,8 +144,7 @@ export default function HomeServices() {
             <h2 className={styles.servicesTitle}>my expertise</h2>
           </div>
           <p className={styles.servicesDesc}>
-            With expertise in creating inspiring designs and effective digital
-            strategies, we help brands find an authentic and memorable identity.
+            I bring visions to life for ambitious startups, enterprise teams and moonshots.
           </p>
         </div>
 

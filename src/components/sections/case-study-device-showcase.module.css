@@ -1,11 +1,15 @@
 .showcaseSection {
-  padding: 5rem 1.25rem;
-  background-color: var(--bg-secondary);
+  padding: 2rem 1.25rem 5rem;
+  background-color: var(--bg-primary);
 }
 
 .showcaseFrame {
-  max-width: 1200px;
+  max-width: 1350px;
   margin: 0 auto;
+  background-color: var(--bg-tertiary);
+  border-radius: 28px;
+  overflow: hidden;
+  padding: 3rem;
 }
 
 /* Desktop mockup */
@@ -19,6 +23,22 @@
   background-color: var(--bg-tertiary);
   padding: 0.65rem 1rem;
   border-bottom: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.browserUrl {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  background: var(--bg-primary);
+  border-radius: 6px;
+  padding: 0.2rem 0.75rem;
+  flex: 1;
+  max-width: 320px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .browserDots {
@@ -53,10 +73,23 @@
   line-height: 0;
 }
 
+.browserScreenIframe {
+  background-color: var(--bg-primary);
+  line-height: 0;
+  height: 680px;
+}
+
+.desktopIframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
 .browserScreenScrollable {
   background-color: var(--bg-primary);
   line-height: 0;
-  height: 520px;
+  height: 680px;
   overflow-y: scroll;
   overflow-x: hidden;
   scrollbar-width: thin;

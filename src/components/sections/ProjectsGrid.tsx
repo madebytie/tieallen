@@ -47,10 +47,10 @@ const projects: Project[] = [
   },
   {
     title: "Expose Hair",
-    client: "Expose Hair",
+    client: "Expose Hair Salon",
     year: "2024",
     tags: ["Web Design", "Web Development"],
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1800&q=80",
+    image: "/projects/expose-hair/salon-1.jpg",
     href: "/work/expose-hair",
   },
   {
@@ -71,10 +71,10 @@ const projects: Project[] = [
   },
   {
     title: "Servco Wholesale",
-    client: "Servco Wholesale",
+    client: "Servco Marketing",
     year: "2024",
-    tags: ["Web Design", "Web Development"],
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1800&q=80",
+    tags: ["Brand Identity", "Web Design", "Web Development"],
+    image: "/projects/servco-wholesale/servco-logo.png",
     href: "/work/servco-wholesale",
   },
   {
@@ -87,10 +87,10 @@ const projects: Project[] = [
   },
   {
     title: "Taste of Alpharetta",
-    client: "Taste of Alpharetta",
+    client: "City of Alpharetta",
     year: "2024",
     tags: ["Web Design", "Web Development"],
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1800&q=80",
+    image: "/projects/taste-of-alpharetta/event-photo.jpg",
     href: "/work/taste-of-alpharetta",
   },
   {
@@ -98,16 +98,24 @@ const projects: Project[] = [
     client: "Blue Divine Aesthetics",
     year: "2024",
     tags: ["Web Design", "Web Development"],
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1800&q=80",
+    image: "/projects/blue-divine-aesthetics/blue-divine-logo.png",
     href: "/work/blue-divine-aesthetics",
   },
   {
     title: "Wire & Wood Festival",
-    client: "Wire & Wood Festival",
+    client: "City of Alpharetta",
     year: "2024",
     tags: ["Web Design", "Web Development"],
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1800&q=80",
+    image: "/projects/wire-and-wood-festival/headliner.jpg",
     href: "/work/wire-and-wood-festival",
+  },
+  {
+    title: "Vizon OS",
+    client: "Vizon OS",
+    year: "2026",
+    tags: ["Brand Identity", "Web Design", "SaaS Development"],
+    image: "/projects/vizon-os/tasks-kanban.png",
+    href: "/work/vizon-os",
   },
 ];
 

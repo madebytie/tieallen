@@ -137,7 +137,7 @@ export default function AboutGlobal() {
             </p>
 
             <div className={styles.buttonWrapper}>
-              <GooeyButton label="Hire Tie" href="/get-started" />
+              <GooeyButton label="Hire Tie" href="/start" />
             </div>
           </div>
 

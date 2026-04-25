@@ -54,7 +54,7 @@ export default function Introduction() {
 
         {/* Description Text */}
         <p className={styles.description}>
-          With 18 years experience I bring visions to life for ambitious startups, enterprise teams and moonshots.
+          With over 15 years in the game, I know to transform chaos into order and elevate great ideas into high impact brands and world class digital experiences
         </p>
 
         {/* Call to Action */}

@@ -15,7 +15,7 @@ export default function ServicePageHero({
   titleLines,
   boldLineIndex = 0,
   primaryCta = { label: "See my work", href: "/work" },
-  secondaryCta = { label: "Start your project", href: "/get-started" },
+  secondaryCta = { label: "Start your project", href: "/start" },
   align = "center",
 }: ServicePageHeroProps) {
   return (

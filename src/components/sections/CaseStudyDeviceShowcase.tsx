@@ -1,9 +1,13 @@
+"use client";
+
+import { useRef, useEffect } from "react";
 import styles from "./case-study-device-showcase.module.css";
 
 interface CaseStudyDeviceShowcaseProps {
   type: "desktop" | "mobile" | "both";
   desktopImage?: string;
   desktopAlt?: string;
+  desktopUrl?: string;
   mobileImage?: string;
   mobileAlt?: string;
   bgColor?: string;
@@ -14,18 +18,61 @@ export default function CaseStudyDeviceShowcase({
   type,
   desktopImage,
   desktopAlt = "",
+  desktopUrl,
   mobileImage,
   mobileAlt = "",
   bgColor,
   scrollable = false,
 }: CaseStudyDeviceShowcaseProps) {
+  const screenRef = useRef<HTMLDivElement>(null);
+  const rafRef = useRef<number>(0);
+  const pausedRef = useRef(false);
+  const pauseTimerRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
+
+  useEffect(() => {
+    const el = screenRef.current;
+    if (!el || !scrollable || desktopUrl) return;
+
+    const speed = 0.6; // px per frame
+
+    const tick = () => {
+      if (!pausedRef.current) {
+        el.scrollTop += speed;
+        // Reset to top when reaching bottom
+        if (el.scrollTop + el.clientHeight >= el.scrollHeight - 2) {
+          el.scrollTop = 0;
+        }
+      }
+      rafRef.current = requestAnimationFrame(tick);
+    };
+
+    const pause = () => {
+      pausedRef.current = true;
+      clearTimeout(pauseTimerRef.current);
+      pauseTimerRef.current = setTimeout(() => {
+        pausedRef.current = false;
+      }, 2000);
+    };
+
+    el.addEventListener("scroll", pause, { passive: true });
+    el.addEventListener("mouseenter", () => { pausedRef.current = true; });
+    el.addEventListener("mouseleave", () => { pausedRef.current = false; });
+
+    rafRef.current = requestAnimationFrame(tick);
+    return () => {
+      cancelAnimationFrame(rafRef.current);
+      clearTimeout(pauseTimerRef.current);
+      el.removeEventListener("scroll", pause);
+    };
+  }, [scrollable, desktopUrl]);
+
   return (
     <section
       className={styles.showcaseSection}
       style={bgColor ? { backgroundColor: bgColor } : undefined}
     >
       <div className={styles.showcaseFrame}>
-        {(type === "desktop" || type === "both") && desktopImage && (
+        {(type === "desktop" || type === "both") && (desktopImage || desktopUrl) && (
           <div className={styles.desktopMockup}>
             <div className={styles.browserChrome}>
               <div className={styles.browserDots}>
@@ -33,9 +80,24 @@ export default function CaseStudyDeviceShowcase({
                 <span className={styles.dotYellow} />
                 <span className={styles.dotGreen} />
               </div>
+              {desktopUrl && (
+                <div className={styles.browserUrl}>{desktopUrl.replace(/^https?:\/\//, "")}</div>
+              )}
             </div>
-            <div className={scrollable ? styles.browserScreenScrollable : styles.browserScreen}>
-              <img src={desktopImage} alt={desktopAlt} className={styles.desktopImage} />
+            <div
+              ref={screenRef}
+              className={desktopUrl ? styles.browserScreenIframe : scrollable ? styles.browserScreenScrollable : styles.browserScreen}
+            >
+              {desktopUrl ? (
+                <iframe
+                  src={desktopUrl}
+                  className={styles.desktopIframe}
+                  title="Website preview"
+                  sandbox="allow-scripts allow-same-origin"
+                />
+              ) : (
+                <img src={desktopImage} alt={desktopAlt} className={styles.desktopImage} />
+              )}
             </div>
           </div>
         )}

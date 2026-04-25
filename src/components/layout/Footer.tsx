@@ -71,7 +71,7 @@ export default function Footer() {
                 <br />
                 work with me?
               </h2>
-              <GooeyButton label="Hire Tie" href="/get-started" />
+              <GooeyButton label="Hire Tie" href="/start" />
             </div>
 
             <div className={styles.footerRight}>

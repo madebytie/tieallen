@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useRef } from "react";
 import styles from "./project-hero.module.css";
 
 interface ProjectHeroProps {
@@ -13,17 +16,42 @@ export default function ProjectHero({
   image,
   video,
 }: ProjectHeroProps) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    const section = sectionRef.current;
+    if (!video || !section) return;
+
+    video.playbackRate = 0.33;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          video.currentTime = 0;
+          video.play();
+        } else {
+          video.pause();
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    observer.observe(section);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className={styles.projectHero}>
+    <section ref={sectionRef} className={styles.projectHero}>
       <div className={styles.projectHeroFrame}>
         <div className={styles.projectHeroCard}>
           {video ? (
             <video
+              ref={videoRef}
               src={video}
               poster={image}
-              autoPlay
               muted
-              loop
               playsInline
               className={styles.projectHeroImage}
             />

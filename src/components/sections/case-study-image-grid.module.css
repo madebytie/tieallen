@@ -30,6 +30,20 @@
   inset: 0;
 }
 
+/* Logo display variant — no fixed aspect ratio, image drives height */
+.logoItem {
+  position: static;
+  overflow: hidden;
+  padding: 8%;
+}
+
+.logoImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
 /* Screenshot display variant */
 .screenshotItem {
   background-color: #f0f0f0;
@@ -71,6 +85,15 @@
   border-radius: 6px;
   border: 1px solid rgba(255, 255, 255, 0.6);
   pointer-events: none;
+}
+
+@media (max-width: 900px) {
+  .grid[style*="--columns: 5"] {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+  .grid[style*="--columns: 4"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
 }
 
 @media (max-width: 600px) {

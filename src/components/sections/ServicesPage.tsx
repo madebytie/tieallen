@@ -22,7 +22,6 @@ interface ServiceSectionProps {
   href: string;
   body: string;
   capabilities: string[];
-  image?: string;
 }
 
 function ArrowIcon() {
@@ -68,7 +67,7 @@ function CapabilityRow({ number, label, href }: { number: string; label: string;
   );
 }
 
-export function ServiceSection({ headline, href, body, capabilities, image }: ServiceSectionProps) {
+export function ServiceSection({ headline, href, body, capabilities }: ServiceSectionProps) {
   const sectionRef = useRef<HTMLElement>(null);
   const [inView, setInView] = useState(false);
 
@@ -90,13 +89,7 @@ export function ServiceSection({ headline, href, body, capabilities, image }: Se
       ref={sectionRef}
       className={`${styles.serviceSection} ${inView ? styles.serviceSectionInView : ""}`}
     >
-      {image && (
-        <div
-          className={styles.serviceBackdrop}
-          style={{ backgroundImage: `url(${image})` }}
-          aria-hidden="true"
-        />
-      )}
+      <div className={`${styles.serviceBackdrop} ${inView ? styles.serviceBackdropInView : ""}`} aria-hidden="true" />
       <div className={styles.serviceContent}>
         <h2 className={styles.serviceHeadline}>{headline}</h2>
         <div className={styles.serviceGrid}>

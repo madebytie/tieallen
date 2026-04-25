@@ -1,0 +1,135 @@
+.wrapper {
+  width: 100%;
+}
+
+.inner {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  padding: 4rem 0;
+  position: relative;
+  cursor: none;
+  text-decoration: none;
+}
+
+/* ---- Marquee rows ---- */
+.marqueeRow {
+  overflow: hidden;
+  line-height: 1.1;
+}
+
+.marqueeRow + .marqueeRow {
+  margin-top: 0.5rem;
+}
+
+/* Top row scrolls left */
+.marqueeTrackLeft {
+  display: flex;
+  width: max-content;
+  animation: scrollLeft 140s linear infinite;
+}
+
+/* Bottom row scrolls right */
+.marqueeTrackRight {
+  display: flex;
+  width: max-content;
+  animation: scrollRight 140s linear infinite;
+}
+
+.marqueeText {
+  font-family: var(--font-logo);
+  font-size: clamp(4rem, 9vw, 10rem);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+  white-space: nowrap;
+  padding-right: 4rem;
+  line-height: 1.25;
+}
+
+.marqueeTextOrange {
+  font-family: var(--font-logo);
+  font-size: clamp(4rem, 9vw, 10rem);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: -0.03em;
+  color: var(--brand-orange);
+  white-space: nowrap;
+  padding-right: 4rem;
+  line-height: 1.25;
+}
+
+/* ---- Spotlight overlay layer ---- */
+.spotlightLayer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  /* mask reveals orange only near cursor */
+  -webkit-mask-image: radial-gradient(circle 280px at var(--mx, -999px) var(--my, -999px), black 0%, transparent 100%);
+  mask-image: radial-gradient(circle 280px at var(--mx, -999px) var(--my, -999px), black 0%, transparent 100%);
+  /* mirror the marquee layout exactly */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 4rem 0;
+  overflow: hidden;
+}
+
+.spotlightLayerVisible {
+  opacity: 1;
+}
+
+/* ---- Circle arrow cursor ---- */
+.cursorArrow {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border-radius: var(--radius-full);
+  background-color: var(--brand-orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.5);
+  opacity: 0;
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+  z-index: 10;
+  will-change: left, top;
+}
+
+.cursorArrow svg {
+  width: 28px;
+  height: 28px;
+  color: #111111;
+}
+
+.cursorArrowVisible {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* ---- Keyframes ---- */
+@keyframes scrollLeft {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes scrollRight {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0); }
+}
+
+/* ---- Mobile ---- */
+@media (max-width: 768px) {
+  .inner {
+    padding: 3rem 0;
+  }
+
+  .marqueeText {
+    font-size: clamp(2.8rem, 12vw, 5rem);
+    padding-right: 2.5rem;
+  }
+}

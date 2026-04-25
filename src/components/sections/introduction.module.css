@@ -81,7 +81,7 @@
   font-size: 1.35rem;
   font-weight: var(--font-weight-regular);
   line-height: 1.5;
-  color: var(--text-secondary);
+  color: var(--text-primary);
   max-width: 700px;
   margin-bottom: 2rem;
 }

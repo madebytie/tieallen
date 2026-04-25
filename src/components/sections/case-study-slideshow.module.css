@@ -1,0 +1,120 @@
+.section {
+  padding: 2rem 1.25rem 5rem;
+  background-color: var(--bg-secondary);
+}
+
+.inner {
+  max-width: 1350px;
+  margin: 0 auto;
+}
+
+.container {
+  background-color: var(--bg-tertiary);
+  border-radius: 28px;
+  overflow: hidden;
+  padding: 1.5rem 0 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 1.5rem;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 0.8rem;
+  color: var(--text-primary);
+  font-weight: 400;
+  margin: 0;
+}
+
+.controls {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.track {
+  display: flex;
+  gap: 32px;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-right: 1.5rem;
+}
+
+.track::-webkit-scrollbar {
+  display: none;
+}
+
+.slide {
+  flex: 0 0 calc((min(100vw - 2.5rem, 1350px) - 3rem - 2.8 * 32px) / 2.8);
+  scroll-snap-align: start;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #fff;
+  aspect-ratio: 1438 / 1966;
+  flex-shrink: 0;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: top left;
+}
+
+.arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  flex-shrink: 0;
+}
+
+.arrow svg {
+  width: 18px;
+  height: 18px;
+}
+
+.arrow:hover {
+  background: var(--text-primary);
+  color: var(--bg-primary);
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 3.5rem 1.25rem;
+  }
+
+  .slide {
+    flex: 0 0 75vw;
+  }
+}

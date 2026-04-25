@@ -1,15 +1,38 @@
+"use client";
+
+import { useEffect, useRef } from "react";
 import GooeyButton from "@/components/ui/GooeyButton";
-import WordCloudReveal from "@/components/ui/WordCloudReveal";
 import styles from "./home-hero.module.css";
 
 export default function HomeHero() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    video.playbackRate = 0.5;
+    video.currentTime = 6;
+    // After the first loop, reset to beginning
+    const handleLoop = () => { video.currentTime = 0; video.play(); };
+    video.addEventListener("ended", handleLoop);
+    return () => video.removeEventListener("ended", handleLoop);
+  }, []);
+
   return (
     <section className={styles.homeHero}>
       <div className={styles.homeHeroFrame}>
         <div className={styles.homeHeroCard}>
-          {/* Gradient background with interactive word reveal */}
+          {/* Background video */}
           <div className={styles.homeHeroImage} aria-hidden="true">
-            <WordCloudReveal />
+            <video
+              ref={videoRef}
+              className={styles.heroVideo}
+              autoPlay
+              muted
+              playsInline
+            >
+              <source src="/assets/home-intro.mp4" type="video/mp4" />
+            </video>
           </div>
 
           {/* Stepped white overlay with headline */}
@@ -27,7 +50,7 @@ export default function HomeHero() {
             {/* Buttons */}
             <div className={styles.homeHeroButtons}>
               <GooeyButton label="See my work" href="/work" />
-              <a href="/get-started" className={styles.textButton}>
+              <a href="/start" className={styles.textButton}>
                 Start your project
                 <svg className={styles.textButtonArrow} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <line x1="7" y1="17" x2="17" y2="7" />

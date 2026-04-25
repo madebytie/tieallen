@@ -10,7 +10,7 @@ import BrandGuideViewer from "@/components/sections/BrandGuideViewer";
 export const metadata: Metadata = {
   title: "Permissionless Ventures - Vizonos",
   description:
-    "How we built a complete brand identity and one-page website for Bitmain's $50M crypto VC fund in 3 weeks.",
+    "How I built a complete brand identity and one-page website for Bitmain's $50M crypto VC fund in 3 weeks.",
 };
 
 export default function PermissionlessVentures() {

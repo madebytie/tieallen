@@ -7,6 +7,7 @@ import FAQ from "@/components/sections/FAQ";
 import FeaturedProjects from "@/components/sections/FeaturedProjects";
 import Pricing from "@/components/sections/Pricing";
 import ClientRoster from "@/components/sections/ClientRoster";
+import CallToAction from "@/components/sections/CallToAction";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <ClientRoster />
       <HomeFeaturedTestimonial />
       <HomeServices />
+      <CallToAction href="/start" />
       <Pricing />
       <FAQ />
     </>

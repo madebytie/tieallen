@@ -55,9 +55,8 @@
 
 .servicesDesc {
   max-width: 340px;
-  font-size: 0.95rem;
   line-height: 1.7;
-  color: var(--text-secondary);
+  color: var(--text-primary);
   margin: 0;
   padding-bottom: 0.25rem;
 }
@@ -148,7 +147,7 @@
 .serviceDescription {
   font-size: 1rem;
   line-height: 1.55;
-  color: var(--text-secondary);
+  color: var(--text-primary);
   max-width: 340px;
   display: block;
   overflow: hidden;

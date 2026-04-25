@@ -356,15 +356,29 @@
   width: 100%;
   padding: 1rem;
   border-radius: var(--radius-md);
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-subtle);
-  transition: background 0.15s var(--ease-smooth);
+  background: var(--brand-dark-blue);
+  border: 1px solid var(--brand-dark-blue);
+  transition: background 0.2s var(--ease-smooth), border-color 0.2s var(--ease-smooth);
   overflow: hidden;
   gap: 0.75rem;
 }
 
 .dropdownSideCard:hover {
-  background: var(--bg-tertiary);
+  background: var(--brand-orange);
+  border-color: var(--brand-orange);
+}
+
+.dropdownSideCard:hover .dropdownSideTitle {
+  color: #ffffff;
+}
+
+.dropdownSideCard:hover .dropdownSideDesc {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.dropdownSideCard:hover * {
+  --gooey-color: #ffffff;
+  --gooey-text: #111111;
 }
 
 .dropdownSideText {
@@ -376,13 +390,13 @@
 .dropdownSideTitle {
   font-size: 0.9rem;
   font-weight: var(--font-weight-semibold);
-  color: var(--text-primary);
+  color: #ffffff;
   line-height: 1.2;
 }
 
 .dropdownSideDesc {
   font-size: 0.75rem;
-  color: var(--text-secondary);
+  color: rgba(255, 255, 255, 0.6);
   line-height: 1.4;
 }
 

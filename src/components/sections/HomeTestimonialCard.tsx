@@ -71,7 +71,7 @@ export default function HomeTestimonialCard({
 
           {/* CTA notch: Bottom-right */}
           <div className={styles.ctaNotch}>
-            <GooeyButton label="Full Case Study" href="/work/bch-devcon" size="sm" />
+            <GooeyButton label="View Project" href="/work/bch-devcon" size="sm" />
           </div>
         </div>
       </div>

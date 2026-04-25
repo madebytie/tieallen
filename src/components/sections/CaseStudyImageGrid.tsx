@@ -3,22 +3,31 @@ import styles from "./case-study-image-grid.module.css";
 interface GridImage {
   src: string;
   alt: string;
-  span?: "wide";
+  span?: "wide" | "full";
   aspectRatio?: string;
-  display?: "screenshot";
+  display?: "screenshot" | "logo" | "video";
+  bg?: string;
+  objectPosition?: string;
 }
 
 interface CaseStudyImageGridProps {
   images: GridImage[];
-  columns?: 2 | 3;
+  columns?: 2 | 3 | 4 | 5;
+  noTopPadding?: boolean;
+  bgColor?: string;
 }
 
 export default function CaseStudyImageGrid({
   images,
   columns = 2,
+  noTopPadding = false,
+  bgColor,
 }: CaseStudyImageGridProps) {
+  const sectionStyle: React.CSSProperties = {};
+  if (noTopPadding) sectionStyle.paddingTop = 0;
+  if (bgColor) sectionStyle.backgroundColor = bgColor;
   return (
-    <section className={styles.gridSection}>
+    <section className={styles.gridSection} style={Object.keys(sectionStyle).length ? sectionStyle : undefined}>
       <div className={styles.gridFrame}>
         <div
           className={styles.grid}
@@ -27,10 +36,11 @@ export default function CaseStudyImageGrid({
           {images.map((img, i) => (
             <div
               key={i}
-              className={`${styles.gridItem}${img.display === "screenshot" ? ` ${styles.screenshotItem}` : ""}`}
+              className={`${styles.gridItem}${img.display === "screenshot" ? ` ${styles.screenshotItem}` : ""}${img.display === "logo" ? ` ${styles.logoItem}` : ""}`}
               style={{
-                gridColumn: img.span === "wide" ? "span 2" : undefined,
-                aspectRatio: img.aspectRatio ?? "4/3",
+                gridColumn: img.span === "full" ? "1 / -1" : img.span === "wide" ? "span 2" : undefined,
+                aspectRatio: img.display === "logo" ? undefined : (img.aspectRatio ?? "4/3"),
+                backgroundColor: img.bg ?? undefined,
               }}
             >
               {img.display === "screenshot" ? (
@@ -41,8 +51,12 @@ export default function CaseStudyImageGrid({
                     <div className={styles.screenshotFrame} />
                   </div>
                 </>
+              ) : img.display === "logo" ? (
+                <img src={img.src} alt={img.alt} className={styles.logoImage} />
+              ) : img.display === "video" ? (
+                <video src={img.src} className={styles.gridImage} autoPlay muted loop playsInline />
               ) : (
-                <img src={img.src} alt={img.alt} className={styles.gridImage} />
+                <img src={img.src} alt={img.alt} className={styles.gridImage} style={img.objectPosition ? { objectPosition: img.objectPosition } : undefined} />
               )}
             </div>
           ))}

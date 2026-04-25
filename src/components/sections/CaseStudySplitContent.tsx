@@ -7,20 +7,24 @@ interface CaseStudySplitContentProps {
   eyebrow?: string;
   heading: string;
   body: string;
+  body2?: string;
   images?: string[];
   imageAlt?: string;
   imagePosition?: "left" | "right";
   bgColor?: string;
+  layout?: "default" | "text-split";
 }
 
 export default function CaseStudySplitContent({
   eyebrow,
   heading,
   body,
+  body2,
   images = [],
   imageAlt = "",
   imagePosition = "right",
   bgColor,
+  layout = "default",
 }: CaseStudySplitContentProps) {
   const [current, setCurrent] = useState(0);
 
@@ -34,6 +38,28 @@ export default function CaseStudySplitContent({
 
   const imageFirst = imagePosition === "left";
 
+  if (layout === "text-split") {
+    return (
+      <section
+        className={styles.splitSection}
+        style={bgColor ? { backgroundColor: bgColor } : undefined}
+      >
+        <div className={styles.splitFrame}>
+          <div className={styles.textSplitGrid}>
+            <div className={styles.textSplitLeft}>
+              {eyebrow && <p className={styles.eyebrow}>{eyebrow}</p>}
+              <h2 className={styles.heading}>{heading}</h2>
+            </div>
+            <div className={styles.textSplitRight}>
+              <p className={styles.body}>{body}</p>
+              {body2 && <p className={styles.body}>{body2}</p>}
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section
       className={styles.splitSection}
@@ -46,6 +72,7 @@ export default function CaseStudySplitContent({
             {eyebrow && <p className={styles.eyebrow}>{eyebrow}</p>}
             <h2 className={styles.heading}>{heading}</h2>
             <p className={styles.body}>{body}</p>
+            {body2 && <p className={styles.body}>{body2}</p>}
           </div>
 
           {/* Image side */}

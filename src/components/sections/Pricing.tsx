@@ -40,7 +40,7 @@ const tiers: PricingTier[] = [
       "CRM, Funnels & Automation",
     ],
     ctaLabel: "Book a discovery call",
-    ctaHref: "/get-started",
+    ctaHref: "/start",
     icon: <CircleIcon />,
   },
   {
@@ -62,7 +62,7 @@ const tiers: PricingTier[] = [
       "Pause or cancel anytime",
     ],
     ctaLabel: "Apply for retainer",
-    ctaHref: "/get-started",
+    ctaHref: "/start",
     icon: <CircleIcon />,
   },
 ];

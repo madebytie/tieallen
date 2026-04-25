@@ -2,6 +2,7 @@ import AboutHero from "@/components/sections/AboutHero";
 import AboutStats from "@/components/sections/AboutStats";
 import Philosophy from "@/components/sections/Philosophy";
 import AboutGlobal from "@/components/sections/AboutGlobal";
+import CallToAction from "@/components/sections/CallToAction";
 
 export default function AboutPage() {
   return (
@@ -15,6 +16,8 @@ export default function AboutPage() {
       <AboutStats />
       
       <Philosophy />
+
+      <CallToAction href="/start" />
 
       <AboutGlobal />
     </main>

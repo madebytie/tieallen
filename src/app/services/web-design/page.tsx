@@ -45,8 +45,45 @@ export default function WebDesignPage() {
           "Designed around your brand & mission",
           "Built to convert the right audience",
         ]}
-        cta={{ label: "Start your project", href: "/get-started" }}
+        cta={{ label: "Start your project", href: "/start" }}
         image={{ src: "/projects/yuli/yuli-lobby-2.png", alt: "YULI luxury salon lobby" }}
+      />
+      <ServiceBreakdown
+        headline="Web design that converts visitors into customers."
+        subhead="Every site I build is designed with a clear purpose - to represent your brand at its best and turn the right visitors into paying customers."
+        cta={{ label: "Get in touch today", href: "/start" }}
+        items={[
+          {
+            title: "Website Design",
+            description: "Custom, conversion-focused designs built around your brand, audience, and goals - not a template.",
+            icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>,
+          },
+          {
+            title: "Landing Pages",
+            description: "High-converting pages built to capture leads, sell products, or drive a single focused action.",
+            icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><path d="M12 20V4M5 11l7-7 7 7"/></svg>,
+          },
+          {
+            title: "eCommerce",
+            description: "Online stores designed to make buying effortless - beautiful product pages, smooth checkout, more sales.",
+            icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>,
+          },
+          {
+            title: "UX Design",
+            description: "Intuitive flows and thoughtful interactions that make your site easy and enjoyable to use.",
+            icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M8 12s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>,
+          },
+          {
+            title: "Responsive Design",
+            description: "Pixel-perfect on every device - desktop, tablet, and mobile - without compromising the experience.",
+            icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>,
+          },
+          {
+            title: "Design Systems",
+            description: "Scalable component libraries and style guides that keep your product consistent as it grows.",
+            icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="8" height="8" rx="1"/><rect x="14" y="2" width="8" height="8" rx="1"/><rect x="2" y="14" width="8" height="8" rx="1"/><rect x="14" y="14" width="8" height="8" rx="1"/></svg>,
+          },
+        ]}
       />
       <ProjectSlider
         eyebrow="My Work"
@@ -92,43 +129,6 @@ export default function WebDesignPage() {
             tags: ["Web Design"],
             image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1800&q=80",
             href: "/work/expose-hair",
-          },
-        ]}
-      />
-      <ServiceBreakdown
-        headline="Web design that converts visitors into customers."
-        subhead="Every site I build is designed with a clear purpose - to represent your brand at its best and turn the right visitors into paying customers."
-        cta={{ label: "Get in touch today", href: "/get-started" }}
-        items={[
-          {
-            title: "Website Design",
-            description: "Custom, conversion-focused designs built around your brand, audience, and goals - not a template.",
-            icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>,
-          },
-          {
-            title: "Landing Pages",
-            description: "High-converting pages built to capture leads, sell products, or drive a single focused action.",
-            icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><path d="M12 20V4M5 11l7-7 7 7"/></svg>,
-          },
-          {
-            title: "eCommerce",
-            description: "Online stores designed to make buying effortless - beautiful product pages, smooth checkout, more sales.",
-            icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>,
-          },
-          {
-            title: "UX Design",
-            description: "Intuitive flows and thoughtful interactions that make your site easy and enjoyable to use.",
-            icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M8 12s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>,
-          },
-          {
-            title: "Responsive Design",
-            description: "Pixel-perfect on every device - desktop, tablet, and mobile - without compromising the experience.",
-            icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>,
-          },
-          {
-            title: "Design Systems",
-            description: "Scalable component libraries and style guides that keep your product consistent as it grows.",
-            icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="8" height="8" rx="1"/><rect x="14" y="2" width="8" height="8" rx="1"/><rect x="2" y="14" width="8" height="8" rx="1"/><rect x="14" y="14" width="8" height="8" rx="1"/></svg>,
           },
         ]}
       />

@@ -1,11 +1,11 @@
 "use client";
 
+import { useState, useRef, useEffect } from "react";
 import styles from "./client-roster.module.css";
 
 interface Client {
   name: string;
   details?: string;
-  isHighImpact?: boolean;
 }
 
 interface Sector {
@@ -60,6 +60,51 @@ const rosterData: Sector[] = [
   },
 ];
 
+const VISIBLE_COUNT = 2;
+
+function SectorColumn({ sector }: { sector: Sector }) {
+  const [expanded, setExpanded] = useState(false);
+  const listRef = useRef<HTMLUListElement>(null);
+  const [fullHeight, setFullHeight] = useState(400);
+  const hasMore = sector.clients.length > VISIBLE_COUNT;
+
+  useEffect(() => {
+    if (listRef.current) setFullHeight(listRef.current.scrollHeight);
+  }, []);
+
+  return (
+    <div
+      className={`${styles.sectorColumn} ${expanded ? styles.sectorColumnExpanded : ""}`}
+      onMouseEnter={() => hasMore && setExpanded(true)}
+      onMouseLeave={() => hasMore && setExpanded(false)}
+    >
+      <h3 className={styles.sectorTitle}>{sector.title}</h3>
+      <div
+        className={styles.clientListWrapper}
+        style={{ "--list-full-height": `${fullHeight}px` } as React.CSSProperties}
+      >
+        <ul ref={listRef} className={styles.clientList}>
+          {sector.clients.map((client, cIdx) => (
+            <li key={cIdx} className={styles.clientItem}>
+              {client.details && (
+                <span className={styles.clientName}>{client.details}</span>
+              )}
+              <span className={styles.clientDetails}>{client.name}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+      {hasMore && (
+        <div className={`${styles.chevron} ${expanded ? styles.chevronHidden : ""}`}>
+          <svg width="22" height="6" viewBox="0 0 22 6" fill="none" aria-hidden="true">
+            <polyline points="2,2 11,5 20,2" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </div>
+      )}
+    </div>
+  );
+}
+
 export default function ClientRoster() {
   return (
     <section className={styles.rosterSection}>
@@ -71,21 +116,19 @@ export default function ClientRoster() {
             <br />
             at the highest level
           </h2>
-          
+
           <div className={styles.statsStrip}>
             <div className={styles.statItem}>
               <span className={styles.statValue}>169+</span>
-              <span className={styles.statLabel}>Projects Delivered</span>
+              <span className={styles.statLabel}>projects delivered</span>
             </div>
-            <div className={styles.statDivider} />
             <div className={styles.statItem}>
               <span className={styles.statValue}>15+</span>
-              <span className={styles.statLabel}>Industries Served</span>
+              <span className={styles.statLabel}>industries served</span>
             </div>
-            <div className={styles.statDivider} />
             <div className={styles.statItem}>
-              <span className={styles.statValue}>18 Yrs</span>
-              <span className={styles.statLabel}>Experience</span>
+              <span className={styles.statValue}>15Y</span>
+              <span className={styles.statLabel}>years experience</span>
             </div>
           </div>
         </div>
@@ -93,24 +136,9 @@ export default function ClientRoster() {
         {/* Grid */}
         <div className={styles.rosterGrid}>
           {rosterData.map((sector, idx) => (
-            <div key={idx} className={styles.sectorColumn}>
-              <h3 className={styles.sectorTitle}>{sector.title}</h3>
-              <ul className={styles.clientList}>
-                {sector.clients.map((client, cIdx) => (
-                  <li key={cIdx} className={styles.clientItem}>
-                    {client.details && (
-                      <span className={styles.clientName}>{client.details}</span>
-                    )}
-                    <span className={styles.clientDetails}>
-                      {client.name}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <SectorColumn key={idx} sector={sector} />
           ))}
         </div>
-
       </div>
     </section>
   );

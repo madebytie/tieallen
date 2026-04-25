@@ -1,0 +1,28 @@
+.section {
+  padding: 0 1.25rem;
+  background-color: var(--bg-primary);
+}
+
+.frame {
+  max-width: 1350px;
+  margin: 0 auto;
+  border-radius: 28px;
+  overflow: hidden;
+}
+
+.wrapper {
+  width: 100%;
+  line-height: 0;
+}
+
+.video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 0 1.25rem;
+  }
+}
