@@ -54,14 +54,6 @@ const projects: Project[] = [
     href: "/work/expose-hair",
   },
   {
-    title: "Jennings Brands",
-    client: "Jennings Brands",
-    year: "2019",
-    tags: ["eCommerce", "Web Design", "Growth & Automation"],
-    image: "/projects/jennings-brands/jennings-brands-website-mockup.png",
-    href: "/work/jennings-brands",
-  },
-  {
     title: "Permissionless Ventures",
     client: "Permissionless Ventures",
     year: "2024",
@@ -92,14 +84,6 @@ const projects: Project[] = [
     tags: ["Web Design", "Web Development"],
     image: "/projects/taste-of-alpharetta/event-photo.jpg",
     href: "/work/taste-of-alpharetta",
-  },
-  {
-    title: "Blue Divine Aesthetics",
-    client: "Blue Divine Aesthetics",
-    year: "2024",
-    tags: ["Web Design", "Web Development"],
-    image: "/projects/blue-divine-aesthetics/blue-divine-logo.png",
-    href: "/work/blue-divine-aesthetics",
   },
   {
     title: "Wire & Wood Festival",
@@ -234,8 +218,6 @@ function ProjectCard({ project }: { project: Project }) {
 
       {/* Info below image */}
       <div className={styles.projectMeta}>
-        <span>{project.year}</span>
-        <span className={styles.projectMetaDot} />
         <span>{project.client}</span>
       </div>
       <h3 className={styles.projectTitle}>{project.title}</h3>
