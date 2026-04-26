@@ -32,7 +32,7 @@ const projects: Project[] = [
     client: "BCH Devcon",
     year: "2024",
     tags: ["Web Design", "Web Development"],
-    image: "/projects/bch-devcon/bchdevcon-eventbrite-cover.jpg",
+    image: "/projects/bch-devcon/bch-event-badge.png",
     href: "/work/bch-devcon",
   },
   {

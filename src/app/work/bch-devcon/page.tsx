@@ -19,7 +19,7 @@ export default function BCHDevcon() {
       <ProjectHero
         title="Global Bitcoin Hackathon Series"
         tags={["Brand Identity", "Web Design", "Growth & Automation"]}
-        image="/projects/bch-devcon/bchdevcon-eventbrite-cover.jpg"
+        image="/projects/bch-devcon/bch-event-badge.png"
         imagePosition="top center"
       />
 
