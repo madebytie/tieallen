@@ -9,40 +9,46 @@ interface Project {
   year: string;
   tags: string[];
   image: string;
+  imagePosition?: string;
+  video?: string;
+  videoSpeed?: number;
   href: string;
 }
 
 const featuredProjects: Project[] = [
   {
-    title: "BCH Devcon - A Global Bitcoin Hackathon Series",
-    client: "BITMAIN",
+    title: "Windward Tech District, the tech hub of the south",
+    client: "City of Alpharetta",
     year: "2024",
-    tags: ["Web Design", "Branding", "Event", "Web Development"],
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1800&q=80",
-    href: "/work/bch-devcon",
+    tags: ["Brand Identity", "Web Design", "Web Development"],
+    image: "/projects/windward-tech-district/culture-screenshot.png",
+    video: "/projects/windward-tech-district/home-page-animated-section.mov",
+    videoSpeed: 0.33,
+    href: "/work/windward-tech-district",
   },
   {
     title: "Running 150+ National Airports & Air Traffic Control",
     client: "CI² Aviation",
     year: "2024",
-    tags: ["Enterprise", "Web Development", "Branding", "Web Design"],
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1800&q=80",
+    tags: ["Web Design", "Web Development", "Print Design", "Tradeshow Design"],
+    image: "/projects/ci2-aviation/airplane-1.webp",
     href: "/work/ci2-aviation",
   },
   {
-    title: "Windward Tech District, the tech hub of the south",
-    client: "City of Alpharetta",
+    title: "BCH Devcon - A Global Bitcoin Hackathon Series",
+    client: "Bitmain",
     year: "2024",
-    tags: ["Branding", "Web Design", "City Project", "Web Development"],
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1800&q=80",
-    href: "/work/windward-tech-district",
+    tags: ["Brand Identity", "Web Design", "Growth & Automation"],
+    image: "/projects/bch-devcon/bch-event-badge.png",
+    href: "/work/bch-devcon",
   },
   {
     title: "Permissionless Ventures - Crypto Focused VC Fund",
-    client: "BITMAIN",
+    client: "Bitmain",
     year: "2024",
-    tags: ["Web Development", "Branding", "Enterprise", "Web Design"],
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1800&q=80",
+    tags: ["Brand Identity", "Web Design"],
+    image: "/projects/permissionless/hero-bg.png",
+    video: "/projects/permissionless/Screen-Recording-2019-09-22-at-8.09.23-PM.mov",
     href: "/work/permissionless-ventures",
   },
 ];
@@ -125,15 +131,29 @@ function ProjectCard({ project }: { project: Project }) {
         onMouseLeave={handleMouseLeave}
       >
         <div className={styles.projectImageClip}>
-          <div
-            className={styles.projectImage}
-            style={{
-              backgroundColor: "#d4d4d4",
-              backgroundImage: `url(${project.image})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          />
+          {project.video ? (
+            <video
+              src={project.video}
+              poster={project.image}
+              className={styles.projectImage}
+              autoPlay
+              muted
+              loop
+              playsInline
+              style={{ objectFit: "cover", width: "100%", height: "100%" }}
+              ref={(el) => { if (el && project.videoSpeed) el.playbackRate = project.videoSpeed; }}
+            />
+          ) : (
+            <div
+              className={styles.projectImage}
+              style={{
+                backgroundColor: "#d4d4d4",
+                backgroundImage: `url(${project.image})`,
+                backgroundSize: "cover",
+                backgroundPosition: project.imagePosition ?? "center",
+              }}
+            />
+          )}
         </div>
 
         {/* Arrow follows mouse */}
