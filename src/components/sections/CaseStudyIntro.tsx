@@ -3,6 +3,7 @@ import styles from "./case-study-intro.module.css";
 interface CaseStudyIntroProps {
   headline: string;
   description: string;
+  description2?: string;
   client: string;
   industry: string;
   timeline: string;
@@ -11,6 +12,7 @@ interface CaseStudyIntroProps {
 export default function CaseStudyIntro({
   headline,
   description,
+  description2,
   client,
   industry,
   timeline,
@@ -23,6 +25,7 @@ export default function CaseStudyIntro({
 
           <div className={styles.introRight}>
             <p className={styles.introDescription}>{description}</p>
+            {description2 && <p className={styles.introDescription}>{description2}</p>}
 
             <div className={styles.metaRow}>
               <div className={styles.metaItem}>

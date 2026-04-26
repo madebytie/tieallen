@@ -120,7 +120,8 @@
       "Bash(curl -sL -o vizon-os/lenz-ai.svg \"https://vizonos.com/assets/icons/lenz-ai-icon.svg\")",
       "Bash(curl -sL -o vizon-os/discover.svg \"https://vizonos.com/assets/icons/strategy/discover-icon-v1_1.svg\")",
       "Bash(curl -sL -o vizon-os/innovate.svg \"https://vizonos.com/assets/icons/strategy/innovate-icon-v1-1.svg\")",
-      "Bash(curl -sL -o vizon-os/accelerate.svg \"https://vizonos.com/assets/icons/strategy/accelerate-icon-v1.svg\")"
+      "Bash(curl -sL -o vizon-os/accelerate.svg \"https://vizonos.com/assets/icons/strategy/accelerate-icon-v1.svg\")",
+      "Bash(xargs cat *)"
     ]
   }
 }

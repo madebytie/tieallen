@@ -12,6 +12,7 @@ interface CaseStudyDeviceShowcaseProps {
   mobileAlt?: string;
   bgColor?: string;
   scrollable?: boolean;
+  floating?: boolean;
 }
 
 export default function CaseStudyDeviceShowcase({
@@ -23,6 +24,7 @@ export default function CaseStudyDeviceShowcase({
   mobileAlt = "",
   bgColor,
   scrollable = false,
+  floating = false,
 }: CaseStudyDeviceShowcaseProps) {
   const screenRef = useRef<HTMLDivElement>(null);
   const rafRef = useRef<number>(0);
@@ -68,22 +70,24 @@ export default function CaseStudyDeviceShowcase({
 
   return (
     <section
-      className={styles.showcaseSection}
-      style={bgColor ? { backgroundColor: bgColor } : undefined}
+      className={`${styles.showcaseSection} ${floating ? styles.floating : ""}`}
+      style={bgColor && !floating ? { backgroundColor: bgColor } : undefined}
     >
-      <div className={styles.showcaseFrame}>
+      <div className={`${styles.showcaseFrame} ${floating ? styles.floatingFrame : ""}`}>
         {(type === "desktop" || type === "both") && (desktopImage || desktopUrl) && (
-          <div className={styles.desktopMockup}>
-            <div className={styles.browserChrome}>
-              <div className={styles.browserDots}>
-                <span className={styles.dotRed} />
-                <span className={styles.dotYellow} />
-                <span className={styles.dotGreen} />
+          <div className={`${styles.desktopMockup} ${floating ? styles.floatingMockup : ""}`}>
+            {!floating && (
+              <div className={styles.browserChrome}>
+                <div className={styles.browserDots}>
+                  <span className={styles.dotRed} />
+                  <span className={styles.dotYellow} />
+                  <span className={styles.dotGreen} />
+                </div>
+                {desktopUrl && (
+                  <div className={styles.browserUrl}>{desktopUrl.replace(/^https?:\/\//, "")}</div>
+                )}
               </div>
-              {desktopUrl && (
-                <div className={styles.browserUrl}>{desktopUrl.replace(/^https?:\/\//, "")}</div>
-              )}
-            </div>
+            )}
             <div
               ref={screenRef}
               className={desktopUrl ? styles.browserScreenIframe : scrollable ? styles.browserScreenScrollable : styles.browserScreen}

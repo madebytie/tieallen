@@ -9,17 +9,19 @@ interface Project {
   year: string;
   tags: string[];
   image: string;
+  imagePosition?: string;
+  imageSize?: string;
   href: string;
 }
 
 const projects: Project[] = [
   {
-    title: "YULI",
-    client: "YULI Salon & Aesthetics",
+    title: "Windward Tech District",
+    client: "Windward Tech District",
     year: "2024",
-    tags: ["Brand Identity", "Web Design", "Web Development"],
-    image: "/projects/yuli/yuli-lobby.png",
-    href: "/work/yuli",
+    tags: ["Web Design", "Web Development"],
+    image: "/projects/windward-tech-district/district-edison.jpg",
+    href: "/work/windward-tech-district",
   },
   {
     title: "BCH Devcon",
@@ -30,14 +32,6 @@ const projects: Project[] = [
     href: "/work/bch-devcon",
   },
   {
-    title: "Windward Tech District",
-    client: "Windward Tech District",
-    year: "2024",
-    tags: ["Web Design", "Web Development"],
-    image: "/projects/windward-tech-district/district-edison.jpg",
-    href: "/work/windward-tech-district",
-  },
-  {
     title: "CI² Aviation",
     client: "CI² Aviation",
     year: "2024",
@@ -46,20 +40,38 @@ const projects: Project[] = [
     href: "/work/ci2-aviation",
   },
   {
-    title: "Expose Hair",
-    client: "Expose Hair Salon",
-    year: "2024",
-    tags: ["Web Design", "Web Development"],
-    image: "/projects/expose-hair/salon-1.jpg",
-    href: "/work/expose-hair",
-  },
-  {
     title: "Permissionless Ventures",
     client: "Permissionless Ventures",
     year: "2024",
     tags: ["Web Design", "Web Development"],
     image: "/projects/permissionless/hero-bg.png",
     href: "/work/permissionless-ventures",
+  },
+  {
+    title: "YULI",
+    client: "YULI Salon & Aesthetics",
+    year: "2024",
+    tags: ["Brand Identity", "Web Design", "Web Development"],
+    image: "/projects/yuli/yuli-lobby.png",
+    href: "/work/yuli",
+  },
+  {
+    title: "Jennings Brands",
+    client: "Jennings Brands",
+    year: "2024",
+    tags: ["eCommerce", "Web Design", "Growth & Automation"],
+    image: "/projects/jennings-brands/j5-volleyball.jpg",
+    imagePosition: "bottom left",
+    imageSize: "160%",
+    href: "/work/jennings-brands",
+  },
+  {
+    title: "Expose Hair",
+    client: "Expose Hair Salon",
+    year: "2024",
+    tags: ["Web Design", "Web Development"],
+    image: "/projects/expose-hair/salon-1.jpg",
+    href: "/work/expose-hair",
   },
   {
     title: "Servco Wholesale",
@@ -188,8 +200,8 @@ function ProjectCard({ project }: { project: Project }) {
             style={{
               backgroundColor: "#d4d4d4",
               backgroundImage: `url(${project.image})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
+              backgroundSize: project.imageSize ?? "cover",
+              backgroundPosition: project.imagePosition ?? "center",
             }}
           />
         </div>

@@ -3,6 +3,11 @@
   background-color: var(--bg-primary);
 }
 
+.showcaseSection.floating {
+  padding: 0;
+  background-color: transparent;
+}
+
 .showcaseFrame {
   max-width: 1350px;
   margin: 0 auto;
@@ -12,11 +17,26 @@
   padding: 3rem;
 }
 
+.showcaseFrame.floatingFrame {
+  background-color: transparent;
+  border-radius: 0;
+  padding: 0;
+  max-width: none;
+}
+
 /* Desktop mockup */
 .desktopMockup {
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: 0 8px 48px rgba(0, 0, 0, 0.1);
+}
+
+.desktopMockup.floatingMockup {
+  border-radius: 0;
+  box-shadow: none;
+  overflow: visible;
+  max-width: 75%;
+  margin: 0 auto;
 }
 
 .browserChrome {
@@ -89,7 +109,7 @@
 .browserScreenScrollable {
   background-color: var(--bg-primary);
   line-height: 0;
-  height: 680px;
+  height: 900px;
   overflow-y: scroll;
   overflow-x: hidden;
   scrollbar-width: thin;

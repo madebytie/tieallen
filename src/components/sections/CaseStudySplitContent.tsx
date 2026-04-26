@@ -13,6 +13,8 @@ interface CaseStudySplitContentProps {
   imagePosition?: "left" | "right";
   bgColor?: string;
   layout?: "default" | "text-split";
+  smallLogo?: boolean;
+  narrowImage?: boolean;
 }
 
 export default function CaseStudySplitContent({
@@ -25,6 +27,8 @@ export default function CaseStudySplitContent({
   imagePosition = "right",
   bgColor,
   layout = "default",
+  smallLogo,
+  narrowImage,
 }: CaseStudySplitContentProps) {
   const [current, setCurrent] = useState(0);
 
@@ -82,7 +86,7 @@ export default function CaseStudySplitContent({
                 <img
                   src={images[current]}
                   alt={imageAlt}
-                  className={styles.image}
+                  className={`${styles.image} ${smallLogo ? styles.smallLogo : ""} ${narrowImage ? styles.narrowImage : ""}`}
                 />
                 {images.length > 1 && (
                   <div className={styles.dots}>

@@ -5,7 +5,7 @@ interface CaseStudyQuoteProps {
   author: string;
   role?: string;
   company?: string;
-  variant?: "light" | "dark";
+  variant?: "light" | "dark" | "services";
 }
 
 export default function CaseStudyQuote({

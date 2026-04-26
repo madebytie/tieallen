@@ -4,7 +4,8 @@ import CaseStudyIntro from "@/components/sections/CaseStudyIntro";
 import CaseStudySplitContent from "@/components/sections/CaseStudySplitContent";
 import CaseStudyImageGrid from "@/components/sections/CaseStudyImageGrid";
 import CaseStudyDeviceShowcase from "@/components/sections/CaseStudyDeviceShowcase";
-import CaseStudyQuote from "@/components/sections/CaseStudyQuote";
+import CaseStudyTestimonial from "@/components/sections/CaseStudyTestimonial";
+import CaseStudyCarousel from "@/components/sections/CaseStudyCarousel";
 
 export const metadata: Metadata = {
   title: "BCH Devcon - Vizonos",
@@ -18,7 +19,8 @@ export default function BCHDevcon() {
       <ProjectHero
         title="Global Bitcoin Hackathon Series"
         tags={["Brand Identity", "Web Design", "Growth & Automation"]}
-        image="/projects/bch-devcon/prize-background.png"
+        image="/projects/bch-devcon/bchdevcon-eventbrite-cover.jpg"
+        imagePosition="top center"
       />
 
       <CaseStudyIntro
@@ -33,39 +35,64 @@ export default function BCHDevcon() {
         eyebrow="• Context"
         heading="From zero to launch in 14 days"
         body="Bitmain needed to launch an entire event brand at SF Blockchain Week with no branding, no website, no social media, and no name - with just a two-week runway and the expectation that it would look like months of planning had gone into it."
-        images={["/projects/bch-devcon/congruency-2.png"]}
+        images={["/projects/bch-devcon/bch-devcon-event.png"]}
         imageAlt="BCH Devcon branding design"
         imagePosition="right"
         bgColor="var(--bg-secondary)"
+        narrowImage
       />
 
-      <CaseStudyImageGrid
-        columns={2}
+      <CaseStudyCarousel
         images={[
           { src: "/projects/bch-devcon/IMG_3254.jpg", alt: "BCH Devcon event" },
+          { src: "/projects/bch-devcon/IMG_3257.jpg", alt: "BCH Devcon event" },
           { src: "/projects/bch-devcon/IMG_3255.jpg", alt: "BCH Devcon event" },
-          { src: "/projects/bch-devcon/bchdevcon-eventbrite-cover.jpg", alt: "BCH Devcon Eventbrite cover", span: "wide", aspectRatio: "16/7" },
           { src: "/projects/bch-devcon/IMG_3256.jpg", alt: "BCH Devcon event" },
+          { src: "/projects/bch-devcon/IMG_3258.jpg", alt: "BCH Devcon event" },
         ]}
-      />
-
-      <CaseStudyDeviceShowcase
-        type="desktop"
-        desktopImage="/projects/bch-devcon/bch-desktop-1024x663.png"
-        desktopAlt="BCH Devcon website desktop view"
       />
 
       <CaseStudySplitContent
         eyebrow="• Brand Identity"
         heading="A cohesive brand built to last"
         body="I delivered a complete brand identity system: logo, style guide, event ticket design, social media templates, and merchandise - all consistent across every touchpoint of the event. The result looked like months of planning had gone into it."
-        images={[
-          "/projects/bch-devcon/IMG_3257.jpg",
-          "/projects/bch-devcon/IMG_3258.jpg",
-        ]}
-        imageAlt="BCH Devcon brand photography"
-        imagePosition="left"
+        layout="text-split"
         bgColor="var(--bg-secondary)"
+      />
+
+      <CaseStudyImageGrid
+        columns={2}
+        images={[
+          { src: "/projects/bch-devcon/congruency-2.png", alt: "BCH Devcon branding", span: "wide", aspectRatio: "4/3", objectFit: "contain" },
+        ]}
+      />
+
+      <CaseStudyTestimonial
+        quote="We were launching at San Francisco Blockchain Week starting at zero and needed everything ready within 2 weeks. We received a lot of great comments and feedback on the branding during the kickoff SF Hackathon. You guys did a great job!"
+        author="Vincent"
+        role="Investment Director, Bitmain"
+      />
+
+      <CaseStudySplitContent
+        eyebrow="• Website"
+        heading="A site ready for a global audience"
+        body="The website launched alongside the brand - fully designed and built inside the same two-week window. It covered event details, hackathon tracks, prizes, and speaker information, and served as the primary destination for a global developer audience."
+        layout="text-split"
+        bgColor="var(--bg-primary)"
+      />
+
+      <CaseStudyImageGrid
+        columns={2}
+        images={[
+          { src: "/projects/bch-devcon/bch-desktop-1024x663.png", alt: "BCH Devcon website desktop view", span: "wide", aspectRatio: "16/7", objectFit: "contain" },
+        ]}
+      />
+
+      <CaseStudyDeviceShowcase
+        type="desktop"
+        desktopImage="/projects/bch-devcon/bchdevcon-website.png"
+        desktopAlt="BCH Devcon website full page"
+        scrollable
       />
 
       <CaseStudyDeviceShowcase
@@ -75,12 +102,6 @@ export default function BCHDevcon() {
         bgColor="var(--bg-primary)"
       />
 
-      <CaseStudyQuote
-        quote="We were launching at San Francisco Blockchain Week starting at zero and needed everything ready within 2 weeks. We received a lot of great comments and feedback on the branding during the kickoff SF Hackathon. You guys did a great job!"
-        author="Vincent"
-        role="Investment Director"
-        company="Bitmain"
-      />
     </>
   );
 }

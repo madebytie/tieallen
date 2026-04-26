@@ -1,0 +1,81 @@
+.section {
+  background-color: var(--bg-primary);
+  padding: 1.25rem;
+}
+
+.card {
+  background-color: var(--bg-tertiary);
+  border-radius: 2rem;
+  padding: 4.5rem 0 2.5rem;
+  overflow: hidden;
+  max-width: 1350px;
+  margin: 0 auto;
+}
+
+.track {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  padding: 0 15%;
+}
+
+.track::-webkit-scrollbar {
+  display: none;
+}
+
+.slide {
+  flex: 0 0 44vw;
+  max-width: 720px;
+  height: 560px;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  scroll-snap-align: center;
+  cursor: pointer;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 2.5rem;
+}
+
+.arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background: #1a1a1a;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background 0.15s;
+  flex-shrink: 0;
+}
+
+.arrow svg {
+  width: 18px;
+  height: 18px;
+}
+
+.arrow:hover {
+  background: #333;
+}
+
+@media (max-width: 768px) {
+  .slide {
+    flex: 0 0 80vw;
+  }
+}

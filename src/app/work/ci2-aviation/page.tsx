@@ -21,7 +21,7 @@ export default function CI2Aviation() {
       <ProjectHero
         title="Running 150+ National Airports & Air Traffic"
         tags={["Web Design", "Web Development", "Print Design", "Tradeshow Design"]}
-        image="/projects/ci2-aviation/hero.jpg"
+        image="/projects/ci2-aviation/airplane-1.webp"
       />
 
       {/* Intro */}
@@ -56,21 +56,21 @@ export default function CI2Aviation() {
 
       {/* Bottom section video showcase - placeholder, swap when asset is ready */}
       <CaseStudyVideoShowcase
-        src="/projects/ci2-aviation/home-bottom-section.mov"
+        src="/projects/ci2-aviation/ci2-home-scroll.mov"
       />
 
       {/* Website pages grid - animated 3x3 */}
       <CaseStudyScreenGrid
         images={[
-          { src: "/projects/ci2-aviation/website-sections/screenshot-1.png", alt: "CI² website screenshot 1" },
-          { src: "/projects/ci2-aviation/website-sections/screenshot-2.png", alt: "CI² website screenshot 2" },
-          { src: "/projects/ci2-aviation/website-sections/screenshot-3.png", alt: "CI² website screenshot 3" },
-          { src: "/projects/ci2-aviation/website-sections/screenshot-4.png", alt: "CI² website screenshot 4" },
-          { src: "/projects/ci2-aviation/website-sections/hero-image.png", alt: "CI² website hero" },
-          { src: "/projects/ci2-aviation/website-sections/screenshot-5.png", alt: "CI² website screenshot 5" },
-          { src: "/projects/ci2-aviation/website-sections/screenshot-6.png", alt: "CI² website screenshot 6" },
-          { src: "/projects/ci2-aviation/website-sections/screenshot-7.png", alt: "CI² website screenshot 7" },
-          { src: "/projects/ci2-aviation/website-sections/screenshot-8.png", alt: "CI² website screenshot 8" },
+          { src: "/projects/ci2-aviation/ci2-screenshot-1.png", alt: "CI² website screenshot 1" },
+          { src: "/projects/ci2-aviation/ci2-screenshot-2.png", alt: "CI² website screenshot 2" },
+          { src: "/projects/ci2-aviation/ci2-screenshot-3.png", alt: "CI² website screenshot 3" },
+          { src: "/projects/ci2-aviation/ci2-screenshot-4.png", alt: "CI² website screenshot 4" },
+          { src: "/projects/ci2-aviation/ci2-screenshot-5.png", alt: "CI² website screenshot 5" },
+          { src: "/projects/ci2-aviation/ci2-screenshot-6.jpg", alt: "CI² website screenshot 6" },
+          { src: "/projects/ci2-aviation/airplane-1.webp", alt: "CI² aviation airplane" },
+          { src: "/projects/ci2-aviation/ci2-screenshot-7.png", alt: "CI² website screenshot 7" },
+          { src: "/projects/ci2-aviation/ci2-screenshot-8.png", alt: "CI² website screenshot 8" },
         ]}
       />
 

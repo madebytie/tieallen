@@ -79,6 +79,16 @@
   object-fit: cover;
 }
 
+.smallLogo {
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+.narrowImage {
+  max-width: 40%;
+  margin: 0 auto;
+}
+
 /* Dots for carousel */
 .dots {
   display: flex;

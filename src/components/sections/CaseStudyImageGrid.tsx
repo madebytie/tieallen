@@ -8,12 +8,14 @@ interface GridImage {
   display?: "screenshot" | "logo" | "video";
   bg?: string;
   objectPosition?: string;
+  objectFit?: "cover" | "contain";
 }
 
 interface CaseStudyImageGridProps {
   images: GridImage[];
   columns?: 2 | 3 | 4 | 5;
   noTopPadding?: boolean;
+  noBottomPadding?: boolean;
   bgColor?: string;
 }
 
@@ -21,10 +23,12 @@ export default function CaseStudyImageGrid({
   images,
   columns = 2,
   noTopPadding = false,
+  noBottomPadding = false,
   bgColor,
 }: CaseStudyImageGridProps) {
   const sectionStyle: React.CSSProperties = {};
   if (noTopPadding) sectionStyle.paddingTop = 0;
+  if (noBottomPadding) sectionStyle.paddingBottom = "0.75rem";
   if (bgColor) sectionStyle.backgroundColor = bgColor;
   return (
     <section className={styles.gridSection} style={Object.keys(sectionStyle).length ? sectionStyle : undefined}>
@@ -56,7 +60,7 @@ export default function CaseStudyImageGrid({
               ) : img.display === "video" ? (
                 <video src={img.src} className={styles.gridImage} autoPlay muted loop playsInline />
               ) : (
-                <img src={img.src} alt={img.alt} className={styles.gridImage} style={img.objectPosition ? { objectPosition: img.objectPosition } : undefined} />
+                <img src={img.src} alt={img.alt} className={styles.gridImage} style={{ objectPosition: img.objectPosition ?? "center", objectFit: img.objectFit ?? "cover" }} />
               )}
             </div>
           ))}

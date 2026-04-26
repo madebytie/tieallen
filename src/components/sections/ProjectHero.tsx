@@ -8,6 +8,7 @@ interface ProjectHeroProps {
   tags?: string[];
   image: string;
   video?: string;
+  imagePosition?: string;
 }
 
 export default function ProjectHero({
@@ -15,6 +16,7 @@ export default function ProjectHero({
   tags = [],
   image,
   video,
+  imagePosition,
 }: ProjectHeroProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const sectionRef = useRef<HTMLElement>(null);
@@ -60,6 +62,7 @@ export default function ProjectHero({
               src={image}
               alt=""
               className={styles.projectHeroImage}
+              style={imagePosition ? { objectPosition: imagePosition } : undefined}
             />
           )}
 

@@ -77,16 +77,15 @@ Scope: website only (https://exposehairsalon.ph/)
 ---
 
 ## 6. Jennings Brands
-**Status:** In progress
+**Status:** Completed
 
-- [ ] Hero section (title, tags, year, hero image/video)
-- [ ] Project intro / overview copy
-- [ ] Image grid / gallery assets
-- [ ] Device showcase (mockups)
-- [ ] Split content sections
-- [ ] Process / behind the scenes
-- [ ] Results / outcome section
-- [ ] Next project link
+- [x] Hero section (title, tags, year, hero image/video)
+- [x] Project intro / overview copy
+- [x] Image grid / gallery assets
+- [x] Device showcase (mockups)
+- [x] Split content sections
+- [x] Results / outcome section
+- [x] Next project link
 
 ---
 
