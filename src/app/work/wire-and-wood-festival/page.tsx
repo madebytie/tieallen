@@ -4,6 +4,9 @@ import CaseStudyIntro from "@/components/sections/CaseStudyIntro";
 import CaseStudySplitContent from "@/components/sections/CaseStudySplitContent";
 import CaseStudyImageGrid from "@/components/sections/CaseStudyImageGrid";
 import CaseStudyDeviceShowcase from "@/components/sections/CaseStudyDeviceShowcase";
+import CaseStudyScreenGrid from "@/components/sections/CaseStudyScreenGrid";
+import CaseStudyVideoShowcase from "@/components/sections/CaseStudyVideoShowcase";
+import CaseStudyCarousel from "@/components/sections/CaseStudyCarousel";
 
 export const metadata: Metadata = {
   title: "Wire & Wood Festival - made by tie.",
@@ -18,7 +21,8 @@ export default function WireAndWoodFestival() {
       <ProjectHero
         title="A festival of songwriters, on stage and online."
         tags={["Web Design", "Web Development"]}
-        image="/projects/wire-and-wood-festival/headliner.jpg"
+        image="/projects/wire-and-wood-festival/Wood-Wire-Festival-118-1-1.jpg"
+        imagePosition="bottom center"
       />
 
       {/* Intro */}
@@ -30,17 +34,9 @@ export default function WireAndWoodFestival() {
         timeline="6 Weeks"
       />
 
-      {/* Wide hero image */}
-      <CaseStudyImageGrid
-        columns={2}
-        images={[
-          {
-            src: "/projects/wire-and-wood-festival/headliner.jpg",
-            alt: "Wire & Wood headliner lineup",
-            span: "wide",
-            aspectRatio: "16/7",
-          },
-        ]}
+      <CaseStudyVideoShowcase
+        imageSrc="/projects/wire-and-wood-festival/wireandwood-hero.png"
+        imageAlt="Wire & Wood Festival"
       />
 
       {/* Discovery */}
@@ -50,6 +46,18 @@ export default function WireAndWoodFestival() {
         heading="A festival built on stories, not just sets"
         body="Wire & Wood is different from a typical music festival - the format is built around songwriters telling the story behind each track before they play it. That intimacy had to live on the site. Every artist needed room for a bio, a quote, and the songs they're known for, not just a name on a poster."
         body2="On the practical side, the site had to handle five core jobs: announce the lineup, publish the schedule, plot the stages on a downtown map, recruit sponsors, and accept band submissions for next year. Each one had its own audience and its own conversion."
+      />
+
+      <CaseStudyCarousel
+        slideWidth="34vw"
+        slideHeight={420}
+        images={[
+          { src: "/projects/wire-and-wood-festival/Wood-Wire-Festival-127.jpg", alt: "Wire & Wood Festival" },
+          { src: "/projects/wire-and-wood-festival/Wood-Wire-Festival-118-1-1.jpg", alt: "Wire & Wood Festival" },
+          { src: "/projects/wire-and-wood-festival/DSCF2248-scaled.jpg", alt: "Wire & Wood Festival" },
+          { src: "/projects/wire-and-wood-festival/49533864948_cbb3ca0709_k.jpg", alt: "Wire & Wood Festival" },
+          { src: "/projects/wire-and-wood-festival/main-stage-photo.png", alt: "Wire & Wood main stage" },
+        ]}
       />
 
       {/* Website intro */}
@@ -62,37 +70,26 @@ export default function WireAndWoodFestival() {
         bgColor="var(--bg-secondary)"
       />
 
-      {/* Live website showcase */}
       <CaseStudyDeviceShowcase
         type="desktop"
-        desktopUrl="https://wireandwoodalpharetta.com/"
+        desktopImage="/projects/wire-and-wood-festival/wireandwood-hero.png"
+        desktopAlt="Wire & Wood Festival website"
       />
 
-      {/* Brand collateral grid */}
-      <CaseStudyImageGrid
-        columns={3}
+      <CaseStudyScreenGrid
         images={[
-          {
-            src: "/projects/wire-and-wood-festival/ww-logo.png",
-            alt: "Wire & Wood logo",
-            aspectRatio: "4/3",
-            display: "logo",
-            bg: "#0a0a0a",
-          },
-          {
-            src: "/projects/wire-and-wood-festival/headliner.jpg",
-            alt: "Wire & Wood headliner combo graphic",
-            aspectRatio: "4/3",
-          },
-          {
-            src: "/projects/wire-and-wood-festival/music-city-logo.png",
-            alt: "Alpharetta Music City",
-            aspectRatio: "4/3",
-            display: "logo",
-            bg: "#ffffff",
-          },
+          { src: "/projects/wire-and-wood-festival/wirewood-screenshot-1.png", alt: "Wire & Wood website" },
+          { src: "/projects/wire-and-wood-festival/wirewood-screenshot-2.png", alt: "Wire & Wood website" },
+          { src: "/projects/wire-and-wood-festival/wirewood-screenshot-3.png", alt: "Wire & Wood website" },
+          { src: "/projects/wire-and-wood-festival/wirewood-screenshot-4.png", alt: "Wire & Wood website" },
+          { src: "/projects/wire-and-wood-festival/wirewood-screenshot-5.png", alt: "Wire & Wood website" },
+          { src: "/projects/wire-and-wood-festival/49533864948_cbb3ca0709_k.jpg", alt: "Wire & Wood Festival" },
+          { src: "/projects/wire-and-wood-festival/wireandwood-hero.png", alt: "Wire & Wood Festival hero" },
+          { src: "/projects/wire-and-wood-festival/main-stage-photo.png", alt: "Wire & Wood main stage" },
+          { src: "/projects/wire-and-wood-festival/Wood-Wire-Festival-118-1-1.jpg", alt: "Wire & Wood Festival" },
         ]}
       />
+
     </>
   );
 }

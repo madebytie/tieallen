@@ -16,9 +16,8 @@ interface CaseStudyCarouselProps {
 
 export default function CaseStudyCarousel({ images, slideWidth = "44vw", slideHeight = 560 }: CaseStudyCarouselProps) {
   const count = images.length;
-  // Triple the images so we can loop seamlessly
-  const tripled = [...images, ...images, ...images];
-  const [current, setCurrent] = useState(count); // start in the middle set
+  const repeated = [...images, ...images, ...images];
+  const [current, setCurrent] = useState(count);
   const trackRef = useRef<HTMLDivElement>(null);
   const isJumping = useRef(false);
 
@@ -32,7 +31,6 @@ export default function CaseStudyCarousel({ images, slideWidth = "44vw", slideHe
     track.scrollTo({ left: slideCenter - trackCenter, behavior: smooth ? "smooth" : "instant" });
   }, []);
 
-  // On mount, jump to middle set instantly
   useEffect(() => {
     scrollToIndex(count, false);
   }, [count, scrollToIndex]);
@@ -42,7 +40,6 @@ export default function CaseStudyCarousel({ images, slideWidth = "44vw", slideHe
     setCurrent(next);
     scrollToIndex(next, true);
 
-    // After animation, if we've gone into the first or last set, silently jump back to middle
     setTimeout(() => {
       isJumping.current = true;
       if (next < count) {
@@ -61,28 +58,28 @@ export default function CaseStudyCarousel({ images, slideWidth = "44vw", slideHe
   return (
     <section className={styles.section}>
       <div className={styles.card}>
-      <div className={styles.track} ref={trackRef}>
-        {tripled.map((img, i) => (
-          <div key={i} className={styles.slide} style={{ width: slideWidth, maxWidth: "none", height: slideHeight }}>
-            <img src={img.src} alt={img.alt} className={styles.image} />
-          </div>
-        ))}
-      </div>
+        <div className={styles.track} ref={trackRef}>
+          {repeated.map((img, i) => (
+            <div key={i} className={styles.slide} style={{ width: slideWidth, minWidth: slideWidth, height: slideHeight }}>
+              <img src={img.src} alt={img.alt} className={styles.image} />
+            </div>
+          ))}
+        </div>
 
-      <div className={styles.controls}>
-        <button className={styles.arrow} onClick={() => goTo(current - 1)} aria-label="Previous">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-            <line x1="19" y1="12" x2="5" y2="12" />
-            <polyline points="12 19 5 12 12 5" />
-          </svg>
-        </button>
-        <button className={styles.arrow} onClick={() => goTo(current + 1)} aria-label="Next">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-            <line x1="5" y1="12" x2="19" y2="12" />
-            <polyline points="12 5 19 12 12 19" />
-          </svg>
-        </button>
-      </div>
+        <div className={styles.controls}>
+          <button className={styles.arrow} onClick={() => goTo(current - 1)} aria-label="Previous">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="19" y1="12" x2="5" y2="12" />
+              <polyline points="12 19 5 12 12 5" />
+            </svg>
+          </button>
+          <button className={styles.arrow} onClick={() => goTo(current + 1)} aria-label="Next">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </button>
+        </div>
       </div>
     </section>
   );

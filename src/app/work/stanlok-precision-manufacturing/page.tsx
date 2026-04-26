@@ -5,6 +5,8 @@ import CaseStudySplitContent from "@/components/sections/CaseStudySplitContent";
 import CaseStudyDeviceShowcase from "@/components/sections/CaseStudyDeviceShowcase";
 import CaseStudyScreenGrid from "@/components/sections/CaseStudyScreenGrid";
 import CaseStudyImageGrid from "@/components/sections/CaseStudyImageGrid";
+import CaseStudyCarousel from "@/components/sections/CaseStudyCarousel";
+import StanlokIcons from "./StanlokIcons";
 
 export const metadata: Metadata = {
   title: "Stanlok Precision Manufacturing - Vizonos",
@@ -20,15 +22,26 @@ export default function StanlokPrecisionManufacturing() {
         title="Precision Parts Trusted by Moon Missions & Military Aircraft"
         tags={["Web Design", "Web Development"]}
         image="/projects/stanlok-precision-manufacturing/building.jpg"
+        video="/projects/stanlok-precision-manufacturing/home-scroll.mov"
       />
 
       {/* Intro */}
       <CaseStudyIntro
         headline="Positioning a decades-old precision manufacturer for the projects that actually need them"
         description="Stanlok Corporation has spent decades machining custom nuts, pins, and precision components for American industry - from moon mission hardware to military aircraft programs to the specialty parts other shops won't touch. The site needed to pull that legacy forward: a clear product taxonomy, fast RFQ pathways, and a presence authoritative enough for aerospace and defense buyers evaluating a long-tail supplier."
-        client="Stanlok Corporation"
-        industry="Precision Manufacturing / Aerospace & Defense"
-        timeline="Full Website Build"
+        client="Stanlok"
+        industry="Precision Manufacturing"
+        timeline="6 Weeks"
+      />
+
+      <CaseStudyImageGrid
+        columns={4}
+        images={[
+          { src: "/projects/stanlok-precision-manufacturing/special-pattern-nuts.jpg", alt: "Special pattern nuts", aspectRatio: "4/3" },
+          { src: "/projects/stanlok-precision-manufacturing/special-shapes-nut.jpg", alt: "Special shape nut", aspectRatio: "4/3" },
+          { src: "/projects/stanlok-precision-manufacturing/special-threads-nut.jpg", alt: "Special thread nut", aspectRatio: "4/3" },
+          { src: "/projects/stanlok-precision-manufacturing/cad.png", alt: "Stanlok CAD model", aspectRatio: "4/3" },
+        ]}
       />
 
       {/* Website intro */}
@@ -46,18 +59,29 @@ export default function StanlokPrecisionManufacturing() {
         desktopUrl="https://stanlok.com/"
       />
 
-      {/* Website pages grid - animated 3x3 */}
       <CaseStudyScreenGrid
         images={[
-          { src: "/projects/stanlok-precision-manufacturing/slider-hero.jpg", alt: "Stanlok hero slider" },
-          { src: "/projects/stanlok-precision-manufacturing/machining-bg.jpg", alt: "Precision machining product background" },
-          { src: "/projects/stanlok-precision-manufacturing/nut-bg.jpg", alt: "Specialty nut product background" },
-          { src: "/projects/stanlok-precision-manufacturing/taper-pin-bg.jpg", alt: "Taper pin product background" },
-          { src: "/projects/stanlok-precision-manufacturing/building.jpg", alt: "Stanlok facility exterior" },
-          { src: "/projects/stanlok-precision-manufacturing/straight-pin-bg.jpg", alt: "Straight pin product background" },
-          { src: "/projects/stanlok-precision-manufacturing/machining-bg.jpg", alt: "Precision machining product background" },
-          { src: "/projects/stanlok-precision-manufacturing/nut-bg.jpg", alt: "Specialty nut product background" },
-          { src: "/projects/stanlok-precision-manufacturing/taper-pin-bg.jpg", alt: "Taper pin product background" },
+          { src: "/projects/stanlok-precision-manufacturing/stanlok-screenshot-1.png", alt: "Stanlok website" },
+          { src: "/projects/stanlok-precision-manufacturing/stanlok-screenshot-2.png", alt: "Stanlok website" },
+          { src: "/projects/stanlok-precision-manufacturing/stanlok-screenshot-3.png", alt: "Stanlok website" },
+          { src: "/projects/stanlok-precision-manufacturing/stanlok-screenshot-4.png", alt: "Stanlok website" },
+          { src: "/projects/stanlok-precision-manufacturing/stanlok-screenshot-5.png", alt: "Stanlok website" },
+          { src: "/projects/stanlok-precision-manufacturing/stanlok-screenshot-6.png", alt: "Stanlok website" },
+          { src: "/projects/stanlok-precision-manufacturing/stanlok-screenshot-7.png", alt: "Stanlok website" },
+          { src: "/projects/stanlok-precision-manufacturing/stanlok-screenshot-8.png", alt: "Stanlok website" },
+          { src: "/projects/stanlok-precision-manufacturing/CiZO5CGvD6Z_y-PYEadstL1N496ZkDQqoq77ZW6ucGk.jpg", alt: "Stanlok precision part render" },
+        ]}
+      />
+
+      <CaseStudyCarousel
+        slideWidth="32vw"
+        slideHeight={400}
+        images={[
+          { src: "/projects/stanlok-precision-manufacturing/IMG_20141229_084252.jpg", alt: "Stanlok facility" },
+          { src: "/projects/stanlok-precision-manufacturing/IMG_20170830_115617.jpg", alt: "Stanlok facility" },
+          { src: "/projects/stanlok-precision-manufacturing/IMG_20170219_125353.jpg", alt: "Stanlok facility" },
+          { src: "/projects/stanlok-precision-manufacturing/unspecified-copy.jpg", alt: "Stanlok CNC machine" },
+          { src: "/projects/stanlok-precision-manufacturing/IMG_20141217_154528.jpg", alt: "Stanlok facility" },
         ]}
       />
 
@@ -70,16 +94,8 @@ export default function StanlokPrecisionManufacturing() {
         body2="The icons work as navigation, as product category markers, and as punctuation throughout the marketing system - tying the site, collateral, and print deliverables into one visual language."
       />
 
-      {/* Custom Icons 4-col grid */}
-      <CaseStudyImageGrid
-        columns={4}
-        images={[
-          { src: "/projects/stanlok-precision-manufacturing/icons/specialty-nut-navigation-icon2.png", alt: "Specialty nut icon", display: "logo" },
-          { src: "/projects/stanlok-precision-manufacturing/icons/straight-pin-navigation-icon1.png", alt: "Straight pin icon", display: "logo" },
-          { src: "/projects/stanlok-precision-manufacturing/icons/taper-pin-navigation-icon1.png", alt: "Taper pin icon", display: "logo" },
-          { src: "/projects/stanlok-precision-manufacturing/icons/machining-navigation-icon1.png", alt: "Machining icon", display: "logo" },
-        ]}
-      />
+      <StanlokIcons />
+      <div style={{ height: "5rem" }} />
     </>
   );
 }

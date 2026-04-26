@@ -62,6 +62,7 @@ export default function CaseStudyYouTubeSection({
               allowFullScreen
             />
           )}
+          <div className={styles.overlay} aria-hidden="true" />
         </div>
       </div>
     </section>

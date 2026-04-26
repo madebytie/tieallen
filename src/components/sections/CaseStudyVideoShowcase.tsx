@@ -4,18 +4,20 @@ import { useRef, useEffect, useState } from "react";
 import styles from "./case-study-video-showcase.module.css";
 
 interface CaseStudyVideoShowcaseProps {
-  src: string;
+  src?: string;
   posterSrc?: string;
+  imageSrc?: string;
+  imageAlt?: string;
 }
 
-export default function CaseStudyVideoShowcase({ src, posterSrc }: CaseStudyVideoShowcaseProps) {
+export default function CaseStudyVideoShowcase({ src, posterSrc, imageSrc, imageAlt }: CaseStudyVideoShowcaseProps) {
   const fgRef = useRef<HTMLVideoElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const [poster, setPoster] = useState<string | undefined>(posterSrc);
+  const [poster, setPoster] = useState<string | undefined>(posterSrc ?? imageSrc);
 
-  // Extract first frame as blurred bg if no posterSrc provided
+  // Extract first frame as blurred bg from video if no posterSrc/imageSrc
   useEffect(() => {
-    if (posterSrc) return;
+    if (posterSrc || imageSrc || !src) return;
     const video = document.createElement("video");
     video.src = src;
     video.crossOrigin = "anonymous";
@@ -29,7 +31,7 @@ export default function CaseStudyVideoShowcase({ src, posterSrc }: CaseStudyVide
       setPoster(canvas.toDataURL("image/jpeg", 0.8));
     }, { once: true });
     video.load();
-  }, [src, posterSrc]);
+  }, [src, posterSrc, imageSrc]);
 
   // Intersection observer for fg video
   useEffect(() => {
@@ -64,13 +66,17 @@ export default function CaseStudyVideoShowcase({ src, posterSrc }: CaseStudyVide
         {poster && <img src={poster} aria-hidden className={styles.bgImg} alt="" />}
         <div className={styles.bgOverlay} />
         <div className={styles.card}>
-          <video
-            ref={fgRef}
-            src={src}
-            className={styles.fgVideo}
-            muted
-            playsInline
-          />
+          {imageSrc ? (
+            <img src={imageSrc} alt={imageAlt ?? ""} className={styles.fgVideo} />
+          ) : (
+            <video
+              ref={fgRef}
+              src={src}
+              className={styles.fgVideo}
+              muted
+              playsInline
+            />
+          )}
         </div>
       </div>
     </section>

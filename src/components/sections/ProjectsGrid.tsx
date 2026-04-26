@@ -92,6 +92,7 @@ const projects: Project[] = [
     year: "2024",
     tags: ["Web Design", "Web Development"],
     image: "/projects/stanlok-precision-manufacturing/building.jpg",
+    video: "/projects/stanlok-precision-manufacturing/home-scroll.mov",
     href: "/work/stanlok-precision-manufacturing",
   },
   {
@@ -99,7 +100,7 @@ const projects: Project[] = [
     client: "City of Alpharetta",
     year: "2024",
     tags: ["Web Design", "Web Development"],
-    image: "/projects/taste-of-alpharetta/event-photo.jpg",
+    image: "/projects/taste-of-alpharetta/top-down.png",
     href: "/work/taste-of-alpharetta",
   },
   {
@@ -107,7 +108,8 @@ const projects: Project[] = [
     client: "City of Alpharetta",
     year: "2024",
     tags: ["Web Design", "Web Development"],
-    image: "/projects/wire-and-wood-festival/headliner.jpg",
+    image: "/projects/wire-and-wood-festival/Wood-Wire-Festival-118-1-1.jpg",
+    imagePosition: "bottom center",
     href: "/work/wire-and-wood-festival",
   },
   {

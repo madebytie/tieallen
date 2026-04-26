@@ -4,6 +4,7 @@ import CaseStudyIntro from "@/components/sections/CaseStudyIntro";
 import CaseStudySplitContent from "@/components/sections/CaseStudySplitContent";
 import CaseStudyImageGrid from "@/components/sections/CaseStudyImageGrid";
 import CaseStudyDeviceShowcase from "@/components/sections/CaseStudyDeviceShowcase";
+import CaseStudyYouTubeSection from "@/components/sections/CaseStudyYouTubeSection";
 
 export const metadata: Metadata = {
   title: "Taste of Alpharetta - made by tie.",
@@ -18,7 +19,8 @@ export default function TasteOfAlpharetta() {
       <ProjectHero
         title="Come for the food. Stay for the community."
         tags={["Web Design", "Web Development"]}
-        image="/projects/taste-of-alpharetta/event-photo.jpg"
+        image="/projects/taste-of-alpharetta/iphone-full-square.png"
+        imagePosition="top center"
       />
 
       {/* Intro */}
@@ -33,15 +35,27 @@ export default function TasteOfAlpharetta() {
       {/* Wide hero image */}
       <CaseStudyImageGrid
         columns={2}
+        noBottomPadding
         images={[
           {
-            src: "/projects/taste-of-alpharetta/event-photo.jpg",
-            alt: "Taste of Alpharetta festival night",
+            src: "/projects/taste-of-alpharetta/event-menu.jpg",
+            alt: "Taste of Alpharetta event menu",
             span: "wide",
             aspectRatio: "16/7",
           },
         ]}
       />
+
+      <section style={{ padding: "0 1.25rem 0.75rem", backgroundColor: "var(--bg-primary)" }}>
+        <div style={{ maxWidth: 1350, margin: "0 auto", display: "grid", gridTemplateColumns: "3fr 2fr", gap: "0.75rem", height: 480 }}>
+          <div style={{ borderRadius: "var(--radius-lg)", overflow: "hidden" }}>
+            <img src="/projects/taste-of-alpharetta/JTP_4702-scaled-e1716936138953.jpg" alt="Taste of Alpharetta festival crowd" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center center", display: "block" }} />
+          </div>
+          <div style={{ borderRadius: "var(--radius-lg)", overflow: "hidden" }}>
+            <img src="/projects/taste-of-alpharetta/shop-2-scaled-e1716938659128.jpg" alt="Taste of Alpharetta app on phone" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center center", display: "block" }} />
+          </div>
+        </div>
+      </section>
 
       {/* Discovery */}
       <CaseStudySplitContent
@@ -51,6 +65,8 @@ export default function TasteOfAlpharetta() {
         body="The festival serves three groups at once - attendees deciding what to eat, restaurants needing exposure for their booth, and sponsors looking for visibility. Discovery was about mapping how each one uses the site and making sure no one had to dig for what they came for."
         body2="The hardest part was the day-of experience. Attendees were already on-site, on their phones, looking for the next thing - which meant the site had to load instantly on a packed downtown wifi connection and surface schedule, map, and TasteBucks info in two taps."
       />
+
+      <CaseStudyYouTubeSection videoId="YHx8sy73q5A" aspectRatio="16/9" />
 
       {/* Website intro */}
       <CaseStudySplitContent
@@ -65,7 +81,8 @@ export default function TasteOfAlpharetta() {
       {/* Live website showcase */}
       <CaseStudyDeviceShowcase
         type="desktop"
-        desktopUrl="https://tasteofalpharettaga.com/"
+        desktopImage="/projects/taste-of-alpharetta/taste-above-the-fold.png"
+        desktopAlt="Taste of Alpharetta website"
       />
 
       {/* Brand collateral grid */}
