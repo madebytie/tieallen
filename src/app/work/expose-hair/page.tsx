@@ -4,6 +4,8 @@ import CaseStudyIntro from "@/components/sections/CaseStudyIntro";
 import CaseStudySplitContent from "@/components/sections/CaseStudySplitContent";
 import CaseStudyImageGrid from "@/components/sections/CaseStudyImageGrid";
 import CaseStudyDeviceShowcase from "@/components/sections/CaseStudyDeviceShowcase";
+import CaseStudyCarousel from "@/components/sections/CaseStudyCarousel";
+import CaseStudyScreenGrid from "@/components/sections/CaseStudyScreenGrid";
 
 export const metadata: Metadata = {
   title: "Expose Hair Salon - made by tie.",
@@ -18,7 +20,7 @@ export default function ExposeHair() {
       <ProjectHero
         title="Cebu's leading hair salon, online."
         tags={["Web Design", "Web Development"]}
-        image="/projects/expose-hair/salon-1.jpg"
+        image="/projects/expose-hair/tigi-slider-1.jpg"
       />
 
       {/* Intro */}
@@ -52,6 +54,20 @@ export default function ExposeHair() {
         body2="Research surfaced the moments that mattered: the booking decision, the first-time consultation, and the trust built before a client ever sits in the chair. Every section was structured around moving visitors through that journey."
       />
 
+      <CaseStudyCarousel
+        slideWidth="32vw"
+        slideHeight={400}
+        images={[
+          { src: "/projects/expose-hair/EXPOSE-16.jpg", alt: "Expose Hair Salon" },
+          { src: "/projects/expose-hair/salon-3.jpg", alt: "Salon interior" },
+          { src: "/projects/expose-hair/salon-photo.jpg", alt: "Stylist at work" },
+          { src: "/projects/expose-hair/margie.jpg", alt: "Margie Zenz, master stylist" },
+          { src: "/projects/expose-hair/stephan.jpg", alt: "Stephan Zenz, master stylist" },
+          { src: "/projects/expose-hair/salon-1.jpg", alt: "Salon detail" },
+          { src: "/projects/expose-hair/products-hero-1.jpg", alt: "Expose Hair products" },
+        ]}
+      />
+
       {/* Website intro */}
       <CaseStudySplitContent
         layout="text-split"
@@ -68,42 +84,19 @@ export default function ExposeHair() {
         desktopUrl="https://exposehairsalon.ph/"
       />
 
-      {/* Salon photography grid */}
-      <CaseStudyImageGrid
-        columns={3}
+      <CaseStudyScreenGrid
         images={[
-          {
-            src: "/projects/expose-hair/team-photo.jpg",
-            alt: "Expose Hair Salon team",
-            aspectRatio: "4/3",
-          },
-          {
-            src: "/projects/expose-hair/salon-3.jpg",
-            alt: "Salon interior",
-            aspectRatio: "4/3",
-          },
-          {
-            src: "/projects/expose-hair/salon-photo.jpg",
-            alt: "Stylist at work",
-            aspectRatio: "4/3",
-          },
-          {
-            src: "/projects/expose-hair/margie.jpg",
-            alt: "Margie Zenz, master stylist",
-            aspectRatio: "4/3",
-          },
-          {
-            src: "/projects/expose-hair/stephan.jpg",
-            alt: "Stephan Zenz, master stylist",
-            aspectRatio: "4/3",
-          },
-          {
-            src: "/projects/expose-hair/salon-1.jpg",
-            alt: "Salon detail",
-            aspectRatio: "4/3",
-          },
+          { src: "/projects/expose-hair/website-screenshot-1.png", alt: "Expose Hair website" },
+          { src: "/projects/expose-hair/website-screenshot-2.png", alt: "Expose Hair website" },
+          { src: "/projects/expose-hair/website-screenshot-3.png", alt: "Expose Hair website" },
+          { src: "/projects/expose-hair/website-screenshot-4.png", alt: "Expose Hair website" },
+          { src: "/projects/expose-hair/cut-and-style-clippers-1.jpg", alt: "Expose Hair salon tools" },
+          { src: "/projects/expose-hair/website-screenshot-5.png", alt: "Expose Hair website" },
+          { src: "/projects/expose-hair/website-screenshot-6.png", alt: "Expose Hair website" },
+          { src: "/projects/expose-hair/tigi-slider-1.jpg", alt: "Expose Hair products" },
+          { src: "/projects/expose-hair/website-screenshot-7.png", alt: "Expose Hair website" },
         ]}
       />
-    </>
+</>
   );
 }

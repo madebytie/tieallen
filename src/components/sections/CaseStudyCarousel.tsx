@@ -10,9 +10,11 @@ interface CarouselImage {
 
 interface CaseStudyCarouselProps {
   images: CarouselImage[];
+  slideWidth?: string;
+  slideHeight?: number;
 }
 
-export default function CaseStudyCarousel({ images }: CaseStudyCarouselProps) {
+export default function CaseStudyCarousel({ images, slideWidth = "44vw", slideHeight = 560 }: CaseStudyCarouselProps) {
   const count = images.length;
   // Triple the images so we can loop seamlessly
   const tripled = [...images, ...images, ...images];
@@ -61,7 +63,7 @@ export default function CaseStudyCarousel({ images }: CaseStudyCarouselProps) {
       <div className={styles.card}>
       <div className={styles.track} ref={trackRef}>
         {tripled.map((img, i) => (
-          <div key={i} className={styles.slide}>
+          <div key={i} className={styles.slide} style={{ width: slideWidth, maxWidth: "none", height: slideHeight }}>
             <img src={img.src} alt={img.alt} className={styles.image} />
           </div>
         ))}

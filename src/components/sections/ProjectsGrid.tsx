@@ -11,6 +11,8 @@ interface Project {
   image: string;
   imagePosition?: string;
   imageSize?: string;
+  video?: string;
+  videoSpeed?: number;
   href: string;
 }
 
@@ -20,7 +22,9 @@ const projects: Project[] = [
     client: "Windward Tech District",
     year: "2024",
     tags: ["Web Design", "Web Development"],
-    image: "/projects/windward-tech-district/district-edison.jpg",
+    image: "/projects/windward-tech-district/culture-screenshot.png",
+    video: "/projects/windward-tech-district/home-page-animated-section.mov",
+    videoSpeed: 0.33,
     href: "/work/windward-tech-district",
   },
   {
@@ -28,7 +32,7 @@ const projects: Project[] = [
     client: "BCH Devcon",
     year: "2024",
     tags: ["Web Design", "Web Development"],
-    image: "/projects/bch-devcon/prize-background.png",
+    image: "/projects/bch-devcon/bchdevcon-eventbrite-cover.jpg",
     href: "/work/bch-devcon",
   },
   {
@@ -36,7 +40,7 @@ const projects: Project[] = [
     client: "CI² Aviation",
     year: "2024",
     tags: ["Web Design", "Web Development"],
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1800&q=80",
+    image: "/projects/ci2-aviation/airplane-1.webp",
     href: "/work/ci2-aviation",
   },
   {
@@ -45,6 +49,7 @@ const projects: Project[] = [
     year: "2024",
     tags: ["Web Design", "Web Development"],
     image: "/projects/permissionless/hero-bg.png",
+    video: "/projects/permissionless/Screen-Recording-2019-09-22-at-8.09.23-PM.mov",
     href: "/work/permissionless-ventures",
   },
   {
@@ -52,7 +57,7 @@ const projects: Project[] = [
     client: "YULI Salon & Aesthetics",
     year: "2024",
     tags: ["Brand Identity", "Web Design", "Web Development"],
-    image: "/projects/yuli/yuli-lobby.png",
+    image: "/projects/yuli/lobby.png",
     href: "/work/yuli",
   },
   {
@@ -70,23 +75,23 @@ const projects: Project[] = [
     client: "Expose Hair Salon",
     year: "2024",
     tags: ["Web Design", "Web Development"],
-    image: "/projects/expose-hair/salon-1.jpg",
+    image: "/projects/expose-hair/tigi-slider-1.jpg",
     href: "/work/expose-hair",
   },
-  {
-    title: "Servco Wholesale",
-    client: "Servco Marketing",
-    year: "2024",
-    tags: ["Brand Identity", "Web Design", "Web Development"],
-    image: "/projects/servco-wholesale/servco-logo.png",
-    href: "/work/servco-wholesale",
-  },
+  // {
+  //   title: "Servco Wholesale",
+  //   client: "Servco Marketing",
+  //   year: "2024",
+  //   tags: ["Brand Identity", "Web Design", "Web Development"],
+  //   image: "/projects/servco-wholesale/servco-logo.png",
+  //   href: "/work/servco-wholesale",
+  // },
   {
     title: "Stanlok Precision Manufacturing",
     client: "Stanlok Precision Manufacturing",
     year: "2024",
     tags: ["Web Design", "Web Development"],
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1800&q=80",
+    image: "/projects/stanlok-precision-manufacturing/building.jpg",
     href: "/work/stanlok-precision-manufacturing",
   },
   {
@@ -195,15 +200,29 @@ function ProjectCard({ project }: { project: Project }) {
         onMouseLeave={handleMouseLeave}
       >
         <div className={styles.projectImageClip}>
-          <div
-            className={styles.projectImage}
-            style={{
-              backgroundColor: "#d4d4d4",
-              backgroundImage: `url(${project.image})`,
-              backgroundSize: project.imageSize ?? "cover",
-              backgroundPosition: project.imagePosition ?? "center",
-            }}
-          />
+          {project.video ? (
+            <video
+              src={project.video}
+              poster={project.image}
+              className={styles.projectImage}
+              autoPlay
+              muted
+              loop
+              playsInline
+              style={{ objectFit: "cover", width: "100%", height: "100%" }}
+              ref={(el) => { if (el && project.videoSpeed) el.playbackRate = project.videoSpeed; }}
+            />
+          ) : (
+            <div
+              className={styles.projectImage}
+              style={{
+                backgroundColor: "#d4d4d4",
+                backgroundImage: `url(${project.image})`,
+                backgroundSize: project.imageSize ?? "cover",
+                backgroundPosition: project.imagePosition ?? "center",
+              }}
+            />
+          )}
         </div>
 
         {/* Arrow follows mouse */}

@@ -19,7 +19,7 @@ export default function Yuli() {
       <ProjectHero
         title="Hair, Style & You"
         tags={["Brand Identity", "Web Design", "Web Development"]}
-        image="/projects/yuli/yuli-lobby-2.png"
+        image="/projects/yuli/lobby.png"
       />
 
       <CaseStudyIntro
