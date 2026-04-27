@@ -5,6 +5,7 @@ import ServiceBreakdown from "@/components/sections/ServiceBreakdown";
 import ServiceImageSplit from "@/components/sections/ServiceImageSplit";
 import ServiceImageSplitReverse from "@/components/sections/ServiceImageSplitReverse";
 import ProjectSlider from "@/components/sections/ProjectSlider";
+import CallToAction from "@/components/sections/CallToAction";
 
 export const metadata: Metadata = {
   title: "Web Design - made by tie.",
@@ -85,7 +86,7 @@ export default function WebDesignPage() {
           },
         ]}
       />
-      <ProjectSlider
+      {/* <ProjectSlider
         eyebrow="My Work"
         headline={`My favourite\nWeb Design Projects`}
         cta={{ label: "View my work", href: "/work" }}
@@ -131,7 +132,8 @@ export default function WebDesignPage() {
             href: "/work/expose-hair",
           },
         ]}
-      />
+      /> */}
+      <CallToAction href="/start" />
       <ServiceImageSplitReverse
         headline="Every detail designed with intention."
         body="From layout to micro-interactions, nothing is left to chance. I sweat the details so your visitors feel the difference - a site that's smooth, intuitive, and impossible to leave."

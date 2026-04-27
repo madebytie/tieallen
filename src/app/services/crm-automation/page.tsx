@@ -5,6 +5,7 @@ import ServiceBreakdown from "@/components/sections/ServiceBreakdown";
 import ServiceImageSplit from "@/components/sections/ServiceImageSplit";
 import ServiceImageSplitReverse from "@/components/sections/ServiceImageSplitReverse";
 import ProjectSlider from "@/components/sections/ProjectSlider";
+import CallToAction from "@/components/sections/CallToAction";
 
 export const metadata: Metadata = {
   title: "CRM + Automation - made by tie.",
@@ -85,7 +86,7 @@ export default function CrmAutomationPage() {
           },
         ]}
       />
-      <ProjectSlider
+      {/* <ProjectSlider
         eyebrow="My Work"
         headline={`My favourite\nCRM + Automation Projects`}
         cta={{ label: "View my work", href: "/work" }}
@@ -131,7 +132,8 @@ export default function CrmAutomationPage() {
             href: "/work/expose-hair",
           },
         ]}
-      />
+      /> */}
+      <CallToAction href="/start" />
       <ServiceImageSplitReverse
         headline="Built to adapt, built to scale."
         body="The systems I build aren't set-and-forget - they learn from your customers and get smarter over time. As your business grows, Vizon OS and the automations around it scale with you, so you're never the bottleneck."

@@ -5,6 +5,7 @@ import ServiceBreakdown from "@/components/sections/ServiceBreakdown";
 import ServiceImageSplit from "@/components/sections/ServiceImageSplit";
 import ServiceImageSplitReverse from "@/components/sections/ServiceImageSplitReverse";
 import ProjectSlider from "@/components/sections/ProjectSlider";
+import CallToAction from "@/components/sections/CallToAction";
 
 export const metadata: Metadata = {
   title: "Branding - made by tie.",
@@ -85,7 +86,7 @@ export default function BrandingPage() {
           },
         ]}
       />
-      <ProjectSlider
+      {/* <ProjectSlider
         eyebrow="My Work"
         headline={`My favourite\nBranding Projects`}
         cta={{ label: "View my work", href: "/work" }}
@@ -131,7 +132,8 @@ export default function BrandingPage() {
             href: "/work/expose-hair",
           },
         ]}
-      />
+      /> */}
+      <CallToAction href="/start" />
       <ServiceImageSplitReverse
         headline="Dialed in to your audience."
         body="Your brand is how people experience your product - I make sure it connects. Every detail is designed to grab attention, build trust, and inspire action. Consistent look and feel across every touchpoint so your audience gets a professionally built experience every time."

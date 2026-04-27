@@ -20,7 +20,7 @@ const SERVICES: Service[] = [
   {
     number: "01",
     label: "Web Design",
-    description: "High-end websites built to convert. Every pixel, interaction, and scroll is intentional - nothing is left to chance.",
+    description: "High-end websites built to convert. Every pixel, layout, and interaction is engineered with absolute precision.",
     href: "/services/web-design",
     image: "/projects/windward-tech-district/culture-screenshot.png",
     imageHref: "/work/bch-devcon",
@@ -30,7 +30,7 @@ const SERVICES: Service[] = [
   {
     number: "02",
     label: "Development",
-    description: "Custom platforms, SaaS products, and internal tools built to solve real problems. Clean architecture, fast performance, and code that scales with your ambitions.",
+    description: "Custom platforms, SaaS products, and internal tools built to solve real problems. Clean architecture, high performance, and a foundation engineered for scale.",
     href: "/services/development",
     image: "/assets/development.png",
     imageHref: "/work/servco-wholesale",
@@ -38,7 +38,7 @@ const SERVICES: Service[] = [
   {
     number: "03",
     label: "Branding",
-    description: "High impact brand identities built from the ground up. Logo, color, type, and every touchpoint crafted to perfection.",
+    description: "High-impact brand identities built from the ground up. Logo, color, type, and visual systems designed for consistency and market authority.",
     href: "/services/branding",
     image: "/projects/permissionless/pv-bcard-mockup.png",
     imageHref: "/work/expose-hair",
@@ -46,7 +46,7 @@ const SERVICES: Service[] = [
   {
     number: "04",
     label: "CRM + Automation",
-    description: "Intelligent systems and smart funnels that work around the clock. Automated follow-ups, lead nurturing, and pipelines designed to convert.",
+    description: "Intelligent systems and smart funnels that drive revenue in the background. Automated follow-ups, lead nurturing, and pipelines designed to convert.",
     href: "/services/crm-automation",
     image: "/assets/crm-v1.webp",
     imageScale: 1.15,

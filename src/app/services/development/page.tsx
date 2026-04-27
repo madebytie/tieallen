@@ -5,6 +5,7 @@ import ServiceBreakdown from "@/components/sections/ServiceBreakdown";
 import ServiceImageSplit from "@/components/sections/ServiceImageSplit";
 import ServiceImageSplitReverse from "@/components/sections/ServiceImageSplitReverse";
 import ProjectSlider from "@/components/sections/ProjectSlider";
+import CallToAction from "@/components/sections/CallToAction";
 
 export const metadata: Metadata = {
   title: "Development - made by tie.",
@@ -85,7 +86,7 @@ export default function DevelopmentPage() {
           },
         ]}
       />
-      <ProjectSlider
+      {/* <ProjectSlider
         eyebrow="My Work"
         headline={`My favourite\nDevelopment Projects`}
         cta={{ label: "View my work", href: "/work" }}
@@ -131,7 +132,8 @@ export default function DevelopmentPage() {
             href: "/work/expose-hair",
           },
         ]}
-      />
+      /> */}
+      <CallToAction href="/start" />
       <ServiceImageSplitReverse
         headline="Boutique builds, crafted by one hand."
         body="No offshore teams, no handoffs, no middlemen - every project is built by me personally, end-to-end. UX, UI, architecture, build - a direct line to the person shaping it at every step, so the final product reflects the care of a true craftsman."

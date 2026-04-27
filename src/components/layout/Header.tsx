@@ -267,7 +267,7 @@ export default function Header() {
 
             {/* Desktop CTA */}
             <div ref={ctaRef} className={styles.desktopCta} style={{ position: "relative", zIndex: 10 }}>
-              <GooeyButton label="Hire Tie" href="/start" />
+              <GooeyButton label="Start a project" href="/start" />
             </div>
 
             {/* Mobile hamburger */}
@@ -357,7 +357,7 @@ export default function Header() {
 
 
           <div className={styles.mobileCta}>
-            <GooeyButton label="Hire Tie" href="/start" />
+            <GooeyButton label="Start a project" href="/start" />
           </div>
         </div>
       </div>

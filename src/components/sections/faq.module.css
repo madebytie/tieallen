@@ -64,7 +64,7 @@
   max-width: 380px;
 }
 
-/* ---- Content Area: Socials + Accordion ---- */
+/* ---- Content Area: Accordion Right ---- */
 .faqContent {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -72,40 +72,12 @@
   align-items: start;
 }
 
-.faqSocials {
-  display: flex;
-  gap: 0.75rem;
-  align-items: center;
-  padding-top: 2rem;
-}
-
-.faqSocialLink {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: var(--radius-full);
-  border: 1px solid var(--border-subtle);
-  color: var(--text-secondary);
-  transition: all var(--transition-fast);
-}
-
-.faqSocialLink:hover {
-  color: var(--text-primary);
-  border-color: var(--text-muted);
-}
-
-.faqSocialLink svg {
-  width: 18px;
-  height: 18px;
-}
-
 /* ---- Accordion ---- */
 .accordion {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  grid-column: 2;
 }
 
 .accordionItem {
@@ -186,12 +158,10 @@
   }
 
   .faqContent {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+    display: block;
   }
 
-  .faqSocials {
-    order: 2;
-    padding-top: 1rem;
+  .accordion {
+    grid-column: 1;
   }
 }
