@@ -48,9 +48,8 @@ function HamburgerIcon({ open }: { open: boolean }) {
         </>
       ) : (
         <>
-          <line x1="4" y1="7" x2="20" y2="7" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
-          <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
-          <line x1="4" y1="17" x2="20" y2="17" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
+          <line x1="2" y1="9" x2="22" y2="9" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
+          <line x1="2" y1="15" x2="22" y2="15" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
         </>
       )}
     </svg>

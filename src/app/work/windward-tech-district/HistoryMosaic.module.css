@@ -61,11 +61,15 @@
 }
 
 @media (max-width: 900px) {
+  .mosaic {
+    padding-bottom: 6.5rem;
+  }
+
   .frame {
     grid-template-columns: 1fr;
   }
 
   .right {
-    aspect-ratio: 1/1;
+    aspect-ratio: 21/9;
   }
 }

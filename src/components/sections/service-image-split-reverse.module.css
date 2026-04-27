@@ -144,7 +144,7 @@
   top: 50%;
   transform: translateY(-50%);
   width: 2.25rem;
-  height: 21rem;
+  height: 12rem;
   background-color: var(--bg-primary);
   border-top-left-radius: 1.5rem;
   border-bottom-left-radius: 1.5rem;
@@ -183,22 +183,34 @@
 @media (max-width: 860px) {
   .inner {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 1.25rem;
   }
 
-  /* Stack image below text on mobile */
+  .content {
+    gap: 0.85rem;
+  }
+
+  /* Stack image on top of text on mobile */
   .imageWrap {
-    order: 2;
+    order: 1;
     aspect-ratio: 4 / 3;
   }
 
   .content {
-    order: 1;
+    order: 2;
   }
 }
 
 @media (max-width: 560px) {
   .section {
     padding: var(--section-padding);
+  }
+
+  .headline {
+    font-size: 1.75rem;
+  }
+
+  .body {
+    font-size: 0.95rem;
   }
 }

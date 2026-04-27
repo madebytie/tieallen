@@ -387,45 +387,72 @@
     padding: 0.75rem;
   }
 
-  .servicePageHeroCard {
-    border-radius: 1.75rem;
-    min-height: 460px;
-    max-height: 540px;
+  /* Hide the top-left step and its corners on mobile */
+  .servicePageHeroFrame::before,
+  .servicePageHeroFrame::after,
+  .stepCornerBottomLeft {
+    display: none;
   }
 
+  .servicePageHeroCard {
+    border-radius: 1.75rem;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+    min-height: 380px;
+    max-height: 440px;
+    overflow: visible;
+    margin-top: 6.5rem;
+  }
+
+  .servicePageHeroImage {
+    border-radius: 1.75rem;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+    overflow: hidden;
+  }
+
+  /* Pin overlay to top-left, pull it above the card */
   .servicePageHeroOverlay {
-    width: 88%;
-    padding: 1.5rem 1.4rem 1.25rem;
-    border-bottom-left-radius: 1.5rem;
+    left: 0;
+    transform: none;
+    width: 82%;
+    padding: 0.75rem 1.2rem 2.25rem;
+    border-bottom-left-radius: 0;
     border-bottom-right-radius: 1.5rem;
+    top: -6.5rem;
+    text-align: left;
   }
 
   .overlayLeft {
-    left: 50%;
-    transform: translateX(-50%);
-    width: 88%;
-    text-align: center;
-    padding-left: 1.4rem;
-    border-radius: 0 0 1.5rem 1.5rem;
-    /* on mobile it's centered so restore both bottom corners */
+    left: 0;
+    transform: none;
+    width: 82%;
+    text-align: left;
+    padding-left: 1.2rem;
+    border-radius: 0 0 1.5rem 0;
   }
 
   .buttonsLeft {
-    justify-content: center;
+    justify-content: flex-start;
   }
 
+  /* Repurpose as bottom-left concave corner (matches home hero overlayBottomLeft) */
   .overlayTopLeft {
-    left: -1.52rem;
+    top: auto;
+    left: 0;
+    bottom: -1.52rem;
     width: 1.52rem;
     height: 1.52rem;
     background: radial-gradient(
-      circle at 0% 100%,
+      circle at 100% 100%,
       transparent 1.5rem,
       var(--bg-primary) calc(1.5rem + 1px)
     );
   }
 
+  /* Reposition the right notch to where overlay meets the image */
   .overlayTopRight {
+    top: 6.5rem;
     right: -1.52rem;
     width: 1.52rem;
     height: 1.52rem;
@@ -437,12 +464,17 @@
   }
 
   .servicePageHeroTitle {
-    font-size: clamp(1.4rem, 6.5vw, 2rem);
+    font-size: clamp(1.1rem, 5vw, 1.4rem);
+    margin-bottom: 1.25rem;
+  }
+
+  .titleLineBold {
+    font-size: clamp(2rem, 10vw, 2.5rem);
   }
 
   .servicePageHeroButtons {
-    flex-direction: column;
-    gap: 1.25rem;
+    flex-direction: row;
+    gap: 1rem;
   }
 
   .servicePageHeroAccent {

@@ -296,7 +296,8 @@
   }
 
   .projectHeroTab {
-    width: 88%;
+    width: auto;
+    max-width: 280px;
     min-height: 6.25rem;
     padding: 0.95rem 1.4rem 1rem;
     border-bottom-right-radius: 1.5rem;
@@ -330,8 +331,7 @@
   }
 
   .projectHeroTags {
-    top: 0.85rem;
-    right: 1rem;
+    display: none;
   }
 
   .projectHeroAccent {

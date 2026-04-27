@@ -110,24 +110,46 @@
 }
 
 @media (max-width: 1024px) {
+  .globalSection {
+    padding: 3rem 1.25rem 6rem;
+  }
+
+  .globalInner {
+    gap: 2rem;
+  }
+
+  .titleWrapper {
+    padding-bottom: 0.5rem;
+  }
+
   .globalTitle {
     white-space: normal;
-    font-size: 4rem;
+    font-size: 2.8rem;
   }
   
   .globalGrid {
     grid-template-columns: 1fr;
-    gap: 4rem;
+    gap: 2rem;
+  }
+
+  .narrativeArea {
+    gap: 1.5rem;
+    padding-top: 0;
+  }
+
+  .mainNarrative {
+    font-size: 1.2rem;
+  }
+
+  .locationSummary {
+    font-size: 1rem;
+    text-align: left;
   }
   
   .globeContainer {
-    width: 600px;
-    height: 600px;
-    margin: 0;
+    width: 320px;
+    height: 320px;
+    margin: 2rem auto 0;
     transform: none;
-  }
-  
-  .locationSummary {
-    text-align: left;
   }
 }

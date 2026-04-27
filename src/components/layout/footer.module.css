@@ -263,5 +263,5 @@
   .footer { border-radius: 1.75rem; }
   .footerInner { padding: 3rem 1.5rem 0; }
   .footerTop { flex-direction: column; gap: 2rem; }
-  .brandText { font-size: clamp(3rem, 20vw, 6rem); }
+  .brandText { font-size: clamp(2rem, 12vw, 4rem); }
 }

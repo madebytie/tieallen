@@ -280,4 +280,8 @@
   .projectsTitle {
     font-size: clamp(2rem, 8vw, 3rem);
   }
+
+  .projectTitle {
+    font-size: 1.25rem;
+  }
 }

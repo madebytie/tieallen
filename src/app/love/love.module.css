@@ -125,3 +125,54 @@
   color: var(--text-muted);
   font-weight: var(--font-weight-medium);
 }
+
+@media (max-width: 600px) {
+  .testimonialsSection {
+    padding: 2rem 0 6rem;
+  }
+
+  .container {
+    width: 92%;
+  }
+
+  .featured {
+    padding: 1.5rem 0 4rem;
+    gap: 1.5rem;
+  }
+
+  .featuredQuote {
+    font-size: 1.35rem;
+    line-height: 1.3;
+  }
+
+  .featuredName {
+    font-size: 0.9rem;
+  }
+
+  .featuredRole {
+    font-size: 0.75rem;
+  }
+
+  .testimonialItem {
+    margin-bottom: 4rem;
+    gap: 0.85rem;
+  }
+
+  .highlight {
+    font-size: 1.15rem;
+    line-height: 1.3;
+  }
+
+  .text {
+    font-size: 0.88rem;
+    line-height: 1.65;
+  }
+
+  .name {
+    font-size: 0.8rem;
+  }
+
+  .role {
+    font-size: 0.7rem;
+  }
+}

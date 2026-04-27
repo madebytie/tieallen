@@ -27,20 +27,36 @@ export default function CaseStudyDeviceShowcase({
   floating = false,
 }: CaseStudyDeviceShowcaseProps) {
   const screenRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const rafRef = useRef<number>(0);
   const pausedRef = useRef(false);
   const pauseTimerRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
 
   useEffect(() => {
     const el = screenRef.current;
-    if (!el || !scrollable || desktopUrl) return;
+    const container = containerRef.current;
+    if (!el || !container) return;
+
+    const updateScale = () => {
+      if (window.innerWidth <= 900) {
+        const containerWidth = container.offsetWidth;
+        const desktopWidth = 1360;
+        const scale = containerWidth / desktopWidth;
+        container.style.setProperty("--iframe-scale", scale.toString());
+      } else {
+        container.style.removeProperty("--iframe-scale");
+      }
+    };
+
+    updateScale();
+    window.addEventListener("resize", updateScale);
+
+    if (!scrollable || desktopUrl) return;
 
     const speed = 0.6; // px per frame
-
     const tick = () => {
       if (!pausedRef.current) {
         el.scrollTop += speed;
-        // Reset to top when reaching bottom
         if (el.scrollTop + el.clientHeight >= el.scrollHeight - 2) {
           el.scrollTop = 0;
         }
@@ -62,6 +78,7 @@ export default function CaseStudyDeviceShowcase({
 
     rafRef.current = requestAnimationFrame(tick);
     return () => {
+      window.removeEventListener("resize", updateScale);
       cancelAnimationFrame(rafRef.current);
       clearTimeout(pauseTimerRef.current);
       el.removeEventListener("scroll", pause);
@@ -75,7 +92,7 @@ export default function CaseStudyDeviceShowcase({
     >
       <div className={`${styles.showcaseFrame} ${floating ? styles.floatingFrame : ""}`}>
         {(type === "desktop" || type === "both") && (desktopImage || desktopUrl) && (
-          <div className={`${styles.desktopMockup} ${floating ? styles.floatingMockup : ""}`}>
+          <div ref={containerRef} className={`${styles.desktopMockup} ${floating ? styles.floatingMockup : ""}`}>
             {!floating && (
               <div className={styles.browserChrome}>
                 <div className={styles.browserDots}>

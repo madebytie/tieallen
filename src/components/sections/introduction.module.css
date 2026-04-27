@@ -116,7 +116,7 @@
 /* ---- Responsive ---- */
 @media (max-width: 768px) {
   .introFrame {
-    padding: var(--section-padding);
+    padding: 3rem 1.25rem 4rem;
   }
 
   .statement {

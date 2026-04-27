@@ -72,16 +72,29 @@
 }
 
 @media (max-width: 900px) {
+  .philosophySection {
+    padding: 3rem 1.25rem;
+  }
+
   .philosophyInner {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 1.5rem;
   }
   
+  .eyebrowWrapper {
+    margin-bottom: 1rem;
+  }
+
   .philosophyTitle {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
   }
   
   .philosophyText {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
+    line-height: 1.6;
+  }
+
+  .philosophyContent {
+    padding-top: 0;
   }
 }

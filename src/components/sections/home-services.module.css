@@ -293,6 +293,14 @@
     margin-bottom: 2.5rem;
   }
 
+  .servicesTitle {
+    font-size: clamp(2.5rem, 8vw, 4rem);
+  }
+
+  .serviceName {
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+  }
+
   .servicesDesc {
     max-width: 100%;
   }
@@ -300,12 +308,27 @@
   .rowInner {
     grid-template-columns: 3.5rem 1fr;
     gap: 1rem;
+    align-items: center;
+    padding: 1rem 0;
   }
 
-  /* Image drops below on tablet */
+  .serviceRowActive .rowInner {
+    padding: 2rem 0;
+  }
+
   .serviceImageCard {
     grid-column: 1 / -1;
-    height: 120px;
+    height: 0;
+    margin-top: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: height 0.4s cubic-bezier(0.25, 0.1, 0.25, 1), opacity 0.3s ease, margin-top 0.4s ease;
+  }
+
+  .serviceRowActive .serviceImageCard {
+    height: 220px;
+    margin-top: 1rem;
+    opacity: 1;
   }
 }
 
@@ -319,7 +342,7 @@
     gap: 0.75rem;
   }
 
-  .serviceImageCard {
-    height: 100px;
+  .serviceRowActive .serviceImageCard {
+    height: 180px;
   }
 }

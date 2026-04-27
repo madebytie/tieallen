@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import GooeyButton from "@/components/ui/GooeyButton";
 import styles from "./home-services.module.css";
@@ -134,6 +134,43 @@ function ServiceRow({ service, isActive, onHover }: {
 
 export default function HomeServices() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const listRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const isMobile = window.matchMedia("(max-width: 900px)").matches;
+    if (!isMobile) return;
+
+    const handleScroll = () => {
+      if (!listRef.current) return;
+      const rows = listRef.current.querySelectorAll(`.${styles.serviceRow}`);
+      const viewportCenter = window.innerHeight / 2;
+
+      let closestIndex = 0;
+      let minDistance = Infinity;
+
+      rows.forEach((row, index) => {
+        const rect = row.getBoundingClientRect();
+        const rowCenter = rect.top + rect.height / 2;
+        const distance = Math.abs(viewportCenter - rowCenter);
+
+        if (distance < minDistance) {
+          minDistance = distance;
+          closestIndex = index;
+        }
+      });
+
+      // If the row is reasonably close to the center, activate it
+      if (minDistance < 200) {
+        setActiveIndex(closestIndex);
+      } else {
+        setActiveIndex(null);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <section className={styles.servicesSection}>
@@ -149,6 +186,7 @@ export default function HomeServices() {
         </div>
 
         <div
+          ref={listRef}
           className={styles.servicesList}
           onMouseLeave={() => setActiveIndex(null)}
         >

@@ -188,31 +188,163 @@
 @media (max-width: 900px) {
   .aboutHeroCard {
     min-height: 550px;
+    max-height: 640px;
   }
+
+  .aboutHeroStrip {
+    height: 4rem;
+  }
+
+  .aboutHeroStrip::after {
+    bottom: calc(-2rem + 1px);
+    width: 2rem;
+    height: 2rem;
+    background: radial-gradient(
+      circle at 100% 100%,
+      transparent 2rem,
+      var(--bg-primary) 2rem
+    );
+  }
+
   .aboutHeroTab {
-    width: 85%;
-    padding: 2rem;
+    width: min(75%, 36rem);
+    min-height: 9rem;
+    padding: 1.5rem 2.5rem 1.75rem;
+    border-bottom-left-radius: 2rem;
   }
+
+  .aboutHeroTab::after {
+    top: 4rem;
+    left: -2rem;
+    width: 2rem;
+    height: 2rem;
+    background: radial-gradient(
+      circle at 0% 100%,
+      transparent 2rem,
+      var(--bg-primary) 2rem
+    );
+  }
+
+  .aboutHeroTab::before {
+    bottom: -2rem;
+    width: 2rem;
+    height: 2rem;
+    background: radial-gradient(
+      circle at 0% 100%,
+      transparent 2rem,
+      var(--bg-primary) 2rem
+    );
+  }
+
   .aboutHeroTitle {
-    font-size: 2.8rem;
+    font-size: 2.4rem;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 560px) {
+  .aboutHeroFrame {
+    padding: 0.75rem;
+  }
+
   .aboutHeroCard {
     border-radius: 1.75rem;
-    min-height: 480px;
+    min-height: 420px;
+    max-height: 500px;
   }
+
+  .aboutHeroImage {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+  }
+
+  .aboutHeroStrip {
+    height: 3.25rem;
+  }
+
+  .aboutHeroStrip::after {
+    bottom: calc(-1.5rem + 1px);
+    width: 1.5rem;
+    height: 1.5rem;
+    background: radial-gradient(
+      circle at 100% 100%,
+      transparent 1.5rem,
+      var(--bg-primary) 1.5rem
+    );
+  }
+
   .aboutHeroTab {
-    width: 95%;
-    min-height: 10rem;
-    padding: 1.5rem;
+    width: auto;
+    max-width: 85%;
+    min-height: auto;
+    padding: 0.95rem 1.4rem 1rem;
+    border-bottom-left-radius: 1.5rem;
   }
+
+  .aboutHeroTab::after {
+    top: 3.25rem;
+    left: -1.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: radial-gradient(
+      circle at 0% 100%,
+      transparent 1.5rem,
+      var(--bg-primary) 1.5rem
+    );
+  }
+
+  .aboutHeroTab::before {
+    bottom: -1.5rem;
+    right: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: radial-gradient(
+      circle at 0% 100%,
+      transparent 1.5rem,
+      var(--bg-primary) 1.5rem
+    );
+  }
+
+  .aboutHeroContent {
+    gap: 0.5rem;
+  }
+
   .aboutHeroTitle {
-    font-size: 2.2rem;
+    font-size: 1.85rem;
+    line-height: 1.05;
   }
+
+  .aboutHeroSubtitle {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
   .aboutHeroAccent {
     width: 35%;
-    height: 3rem;
+    height: 2rem;
+    border-top-right-radius: 1.25rem;
+  }
+
+  .aboutHeroAccent::after {
+    top: -1.25rem;
+    width: 1.25rem;
+    height: calc(1.25rem + 1px);
+    background: radial-gradient(
+      circle at 100% 0%,
+      transparent 1.25rem,
+      var(--bg-primary) 1.25rem
+    );
+  }
+
+  .aboutHeroAccent::before {
+    right: -1.25rem;
+    width: calc(1.25rem + 1px);
+    height: 1.25rem;
+    background: radial-gradient(
+      circle at 100% 0%,
+      transparent 1.25rem,
+      var(--bg-primary) 1.25rem
+    );
   }
 }

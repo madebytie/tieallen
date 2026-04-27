@@ -446,7 +446,16 @@
   }
 
   .cardBody {
-    padding: 2.5rem 2rem 2rem;
+    padding: 8.5rem 2rem 2rem;
+  }
+
+  .titleArea {
+    top: 2.5rem;
+    left: 6.5rem;
+  }
+
+  .cardTitle {
+    font-size: 2.8rem;
   }
 }
 
@@ -455,11 +464,43 @@
     padding: 5rem 1.25rem;
   }
 
+  .pricing {
+    padding: 5rem 1.5rem 4rem;
+  }
+
+  .topNotch {
+    width: 14rem;
+    height: 2rem;
+  }
+
+  .topNotch::before {
+    left: -1.5rem;
+  }
+
+  .topNotch::after {
+    right: -1.5rem;
+  }
+
   .pricingHeader {
     margin-bottom: 2.5rem;
+    margin-top: 1rem;
   }
 
   .cardBody {
-    padding: 2.5rem 1.5rem 1.75rem;
+    padding: 7.5rem 1.5rem 1.75rem;
+  }
+
+  .titleArea {
+    top: 2rem;
+    left: 6rem;
+    right: 1rem;
+  }
+
+  .cardTitle {
+    font-size: 2.4rem;
+  }
+
+  .price {
+    font-size: clamp(2.5rem, 8vw, 3.5rem);
   }
 }

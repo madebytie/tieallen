@@ -149,6 +149,40 @@
   display: block;
 }
 
+@media (max-width: 900px) {
+  .showcaseFrame {
+    padding: 0.5rem;
+    border-radius: 16px;
+  }
+
+  .browserScreenIframe {
+    height: auto;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .desktopIframe {
+    /* Set fixed desktop width to force desktop layout */
+    width: 1360px;
+    /* Set height taller to show more content */
+    height: 1200px;
+    
+    /* Calculate scale based on container width */
+    transform: scale(var(--iframe-scale, 1));
+    transform-origin: top left;
+    
+    /* We need to set the container height manually because scale doesn't affect document flow */
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  /* Adjust the container height to match the scaled iframe */
+  .browserScreenIframe {
+    height: calc(1200px * var(--iframe-scale, 1));
+  }
+}
+
 @media (max-width: 600px) {
   .showcaseSection {
     padding: 3.5rem 1.25rem;

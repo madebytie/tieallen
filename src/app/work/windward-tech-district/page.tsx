@@ -140,6 +140,7 @@ export default function WindwardTechDistrict() {
             src: "/projects/windward-tech-district/logo-process/brand-colors.png",
             alt: "Windward Tech District brand colors",
             aspectRatio: "998/694",
+            small: true,
           },
         ]}
       />

@@ -9,6 +9,7 @@ interface GridImage {
   bg?: string;
   objectPosition?: string;
   objectFit?: "cover" | "contain";
+  small?: boolean;
 }
 
 interface CaseStudyImageGridProps {
@@ -40,7 +41,7 @@ export default function CaseStudyImageGrid({
           {images.map((img, i) => (
             <div
               key={i}
-              className={`${styles.gridItem}${img.display === "screenshot" ? ` ${styles.screenshotItem}` : ""}${img.display === "logo" ? ` ${styles.logoItem}` : ""}`}
+              className={`${styles.gridItem}${img.display === "screenshot" ? ` ${styles.screenshotItem}` : ""}${img.display === "logo" ? ` ${styles.logoItem}` : ""}${img.small ? ` ${styles.smallItem}` : ""}`}
               style={{
                 gridColumn: img.span === "full" ? "1 / -1" : img.span === "wide" ? "span 2" : undefined,
                 aspectRatio: img.display === "logo" ? undefined : (img.aspectRatio ?? "4/3"),
