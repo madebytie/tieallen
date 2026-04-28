@@ -124,7 +124,7 @@ function ServiceRow({ service, isActive, onHover }: {
           <div className={styles.imageAccent} aria-hidden="true" />
           {/* Bottom-right CTA notch */}
           <div className={styles.imageCtaNotch}>
-            <GooeyButton label="See Work" href={service.imageHref} size="sm" />
+            <GooeyButton label="Learn More" href={service.href} size="sm" />
           </div>
         </div>
       </div>
