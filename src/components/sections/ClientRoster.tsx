@@ -127,7 +127,7 @@ export default function ClientRoster() {
               <span className={styles.statLabel}>industries served</span>
             </div>
             <div className={styles.statItem}>
-              <span className={styles.statValue}>15Y</span>
+              <span className={styles.statValue}>18Y</span>
               <span className={styles.statLabel}>years experience</span>
             </div>
           </div>

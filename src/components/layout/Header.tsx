@@ -80,13 +80,11 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Lock body scroll when mobile nav open
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };
   }, [mobileOpen]);
 
-  // Close desktop dropdown on outside click
   useEffect(() => {
     if (!openMenu) return;
     const handleClick = (e: MouseEvent) => {
@@ -98,8 +96,8 @@ export default function Header() {
         document.body.classList.remove("nav-open");
       }
     };
-    document.addEventListener("mousedown", handleClick);
-    return () => document.removeEventListener("mousedown", handleClick);
+    window.addEventListener("click", handleClick);
+    return () => window.removeEventListener("click", handleClick);
   }, [openMenu]);
 
   const openDropdown = (menu: "services" | "about") => {
@@ -115,38 +113,45 @@ export default function Header() {
     }, 150);
   };
 
-  const closeMobile = () => {
+  const closeMobile = useCallback(() => {
     setMobileOpen(false);
     setMobileExpanded(null);
-  };
-
-  const handleLogoHover = useCallback(() => {
-    if (!periodRef.current || !ctaRef.current) return;
-    if (rollTimeoutRef.current) clearTimeout(rollTimeoutRef.current);
-    if (landTimeoutRef.current) clearTimeout(landTimeoutRef.current);
-
-    const periodRect = periodRef.current.getBoundingClientRect();
-    const ctaRect = ctaRef.current.getBoundingClientRect();
-    const startX = periodRect.left + periodRect.width / 2 - 5;
-    const startY = periodRect.top + periodRect.height / 2 - 5;
-    const travelX = ctaRect.left + ctaRect.width / 2 - (periodRect.left + periodRect.width / 2);
-
-    setDotVars({
-      "--dot-x": `${startX}px`,
-      "--dot-y": `${startY}px`,
-      "--dot-travel": `${travelX}px`,
-    } as React.CSSProperties);
-
-    setAnimKey((prev) => prev + 1);
-    setDotPhase("rolling");
-    rollTimeoutRef.current = setTimeout(() => {
-      setDotPhase("landed");
-      landTimeoutRef.current = setTimeout(() => setDotPhase("idle"), 1000);
-    }, 2500);
   }, []);
 
-  const outerClasses = [styles.headerOuter, scrolled ? styles.headerOuterScrolled : ""].filter(Boolean).join(" ");
-  const headerClasses = [styles.header, scrolled ? styles.headerScrolled : ""].filter(Boolean).join(" ");
+  const handleLogoHover = () => {
+    if (dotPhase !== "idle") return;
+    setAnimKey(prev => prev + 1);
+    setDotPhase("rolling");
+
+    if (periodRef.current && ctaRef.current) {
+      const startRect = periodRef.current.getBoundingClientRect();
+      const endRect = ctaRef.current.getBoundingClientRect();
+      const ctaCenterY = endRect.top + endRect.height / 2 - 5;
+      
+      setDotVars({
+        "--dot-x": `${startRect.left + 2}px`,
+        "--dot-y": `${ctaCenterY}px`,
+        "--dot-travel": `${endRect.left - startRect.left + 15}px`,
+      } as React.CSSProperties);
+    }
+
+    rollTimeoutRef.current = setTimeout(() => {
+      setDotPhase("landed");
+      landTimeoutRef.current = setTimeout(() => setDotPhase("idle"), 800);
+    }, 1200);
+  };
+
+  const outerClasses = [
+    styles.headerOuter,
+    scrolled ? styles.headerOuterScrolled : "",
+    openMenu ? styles.headerMenuOpen : "",
+  ].filter(Boolean).join(" ");
+
+  const headerClasses = [
+    styles.header,
+    scrolled ? styles.headerScrolled : "",
+  ].filter(Boolean).join(" ");
+
   const periodClasses = [
     styles.logoPeriod,
     dotPhase === "rolling" ? styles.logoPeriodBounce : "",
@@ -156,28 +161,21 @@ export default function Header() {
   return (
     <>
       <div className={outerClasses}>
-        <div
-          className={styles.blurBacking}
-          aria-hidden="true"
-          style={scrolled ? {
-            backdropFilter: "blur(16px)",
-            WebkitBackdropFilter: "blur(16px)",
-          } : undefined}
-        />
+        <div className={styles.blurBacking} aria-hidden="true" />
+        
         {dotPhase === "rolling" && (
           <div className={styles.rollingDot} style={dotVars} key={`dot-${animKey}`} />
         )}
+        
         <header className={headerClasses}>
           <nav className={styles.nav}>
-            {/* Logo */}
             <Link href="/" className={styles.logo} onMouseEnter={handleLogoHover}>
               <span className={styles.logoBold}>tie</span>
               <span className={periodClasses} ref={periodRef} key={`period-${animKey}`}>.</span>
             </Link>
 
-            {/* Desktop Navigation */}
             <div className={styles.links}>
-              {/* Services dropdown */}
+              {/* Services */}
               <div
                 className={styles.navItem}
                 ref={servicesRef}
@@ -193,10 +191,7 @@ export default function Header() {
                 >
                   Services
                 </Link>
-                <div
-                  className={[styles.dropdown, openMenu === "services" ? styles.dropdownOpen : ""].filter(Boolean).join(" ")}
-                  role="menu"
-                >
+                <div className={[styles.dropdown, openMenu === "services" ? styles.dropdownOpen : ""].filter(Boolean).join(" ")} role="menu">
                   <ul className={styles.dropdownList}>
                     {SERVICES.map((s) => (
                       <li key={s.href} role="none">
@@ -223,10 +218,9 @@ export default function Header() {
               </div>
 
               <Link href="/work" className={styles.link}>Work</Link>
-
               <Link href="/#pricing" className={styles.link}>Pricing</Link>
 
-              {/* About dropdown */}
+              {/* About */}
               <div
                 className={styles.navItem}
                 ref={aboutRef}
@@ -242,10 +236,7 @@ export default function Header() {
                 >
                   About
                 </Link>
-                <div
-                  className={[styles.dropdown, styles.dropdownNarrow, openMenu === "about" ? styles.dropdownOpen : ""].filter(Boolean).join(" ")}
-                  role="menu"
-                >
+                <div className={[styles.dropdown, styles.dropdownNarrow, openMenu === "about" ? styles.dropdownOpen : ""].filter(Boolean).join(" ")} role="menu">
                   <ul className={styles.dropdownList}>
                     {ABOUT.map((a) => (
                       <li key={a.href} role="none">
@@ -262,14 +253,13 @@ export default function Header() {
                 </div>
               </div>
 
+              <Link href="/contact" className={styles.link}>Contact</Link>
             </div>
 
-            {/* Desktop CTA */}
             <div ref={ctaRef} className={styles.desktopCta} style={{ position: "relative", zIndex: 10 }}>
               <GooeyButton label="Start a project" href="/start" />
             </div>
 
-            {/* Mobile hamburger */}
             <button
               className={styles.hamburger}
               onClick={() => setMobileOpen((v) => !v)}
@@ -282,11 +272,8 @@ export default function Header() {
         </header>
       </div>
 
-      {/* Mobile drawer */}
       <div className={[styles.mobileDrawer, mobileOpen ? styles.mobileDrawerOpen : ""].filter(Boolean).join(" ")} aria-hidden={!mobileOpen}>
         <div className={styles.mobileDrawerInner}>
-
-          {/* Services accordion */}
           <div className={styles.mobileSection}>
             <button
               className={styles.mobileSectionToggle}
@@ -322,10 +309,8 @@ export default function Header() {
           </div>
 
           <Link href="/work" className={styles.mobileLink} onClick={closeMobile}>Work</Link>
-
           <Link href="/#pricing" className={styles.mobileLink} onClick={closeMobile}>Pricing</Link>
 
-          {/* About accordion */}
           <div className={styles.mobileSection}>
             <button
               className={styles.mobileSectionToggle}
@@ -354,6 +339,7 @@ export default function Header() {
             </div>
           </div>
 
+          <Link href="/contact" className={styles.mobileLink} onClick={closeMobile}>Contact</Link>
 
           <div className={styles.mobileCta}>
             <GooeyButton label="Start a project" href="/start" />

@@ -1,0 +1,186 @@
+/* ============================================
+   CONTACT LOCATION SECTION
+   ============================================ */
+
+.locationSection {
+  width: 100%;
+  padding: 0 2rem 6rem;
+  background-color: var(--bg-primary);
+}
+
+.locationCard {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 0;
+  background-color: var(--bg-tertiary);
+  border-radius: 2rem;
+  overflow: hidden;
+  min-height: 500px;
+}
+
+/* ---- Left content ---- */
+.locationContent {
+  padding: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.locationTitle {
+  font-family: var(--font-logo);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: var(--text-primary);
+}
+
+.locationDesc {
+  font-size: 0.95rem;
+  font-weight: var(--font-weight-light);
+  color: var(--text-secondary);
+  line-height: 1.7;
+  max-width: 380px;
+}
+
+/* ---- Meta: address + social ---- */
+.locationMeta {
+  display: flex;
+  gap: 4rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.addressBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.metaLabel {
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-medium);
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.addressLine {
+  font-size: 0.9rem;
+  font-weight: var(--font-weight-regular);
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+.addressName {
+  font-weight: var(--font-weight-bold);
+}
+
+/* ---- Social links ---- */
+.socialBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.socialIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--bg-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
+  color: var(--text-primary);
+}
+
+.socialIcon:hover {
+  background-color: var(--brand-orange);
+  color: #fff;
+  transform: scale(1.08);
+}
+
+.socialIcon svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* ---- Right image ---- */
+.locationImage {
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageFrame {
+  width: 100%;
+  height: 100%;
+  border-radius: 2.5rem;
+  overflow: hidden;
+  position: relative;
+  background-color: var(--bg-primary);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+}
+
+.locationImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.25); /* moderate zoom */
+  transform-origin: center center;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .locationCard {
+    grid-template-columns: 1fr;
+    border-radius: 1.5rem;
+  }
+
+  .locationContent {
+    padding: 2.5rem 2rem;
+  }
+
+  .locationImage {
+    height: 320px;
+    padding: 1rem;
+  }
+
+  .locationImg {
+    position: relative;
+  }
+}
+
+@media (max-width: 560px) {
+  .locationSection {
+    padding: 0 1.25rem 4rem;
+  }
+
+  .locationContent {
+    padding: 2rem 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .locationTitle {
+    font-size: 1.85rem;
+  }
+
+  .locationDesc {
+    font-size: 0.88rem;
+  }
+
+  .locationMeta {
+    gap: 2rem;
+  }
+}

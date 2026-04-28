@@ -1,5 +1,5 @@
 /* ============================================
-   FAQ SECTION - Dark Theme Accordion
+   FAQ SECTION - Two-column layout
    ============================================ */
 
 .faqSection {
@@ -13,155 +13,178 @@
   margin: 0 auto;
 }
 
-/* ---- Header ---- */
-.faqHeader {
+/* ---- Grid: left header, right items ---- */
+.faqGrid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  align-items: end;
-  padding-bottom: 3rem;
-  border-bottom: 1px solid var(--border-subtle);
-  margin-bottom: 3rem;
-}
-
-.faqTitle {
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
-  line-height: 1.1;
-  letter-spacing: -0.03em;
-}
-
-.faqTitleBold {
-  display: block;
-  font-weight: var(--font-weight-bold);
-}
-
-.faqTitleBoldWithLine {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  font-weight: var(--font-weight-bold);
-}
-
-.faqTitleLine {
-  display: inline-block;
-  width: 80px;
-  height: 2px;
-  background-color: var(--text-primary);
-  flex-shrink: 0;
-}
-
-.faqTitleAccent {
-  display: block;
-  font-weight: var(--font-weight-regular);
-  color: var(--text-secondary);
-}
-
-.faqSubtitle {
-  font-size: 0.95rem;
-  font-weight: var(--font-weight-light);
-  color: var(--text-secondary);
-  line-height: 1.6;
-  max-width: 380px;
-}
-
-/* ---- Content Area: Accordion Right ---- */
-.faqContent {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0.4fr 1fr;
   gap: 4rem;
   align-items: start;
 }
 
-/* ---- Accordion ---- */
-.accordion {
+/* ---- Left column ---- */
+.faqLeft {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  grid-column: 2;
+  gap: 1.5rem;
+  position: sticky;
+  top: 8rem;
 }
 
-.accordionItem {
-  background-color: var(--bg-tertiary);
-  border-radius: var(--radius-md);
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: var(--font-weight-medium);
+  color: var(--text-secondary);
+}
+
+.eyebrowDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--text-primary);
+  flex-shrink: 0;
+}
+
+.faqTitle {
+  font-family: var(--font-logo);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  color: var(--text-primary);
+}
+
+/* ---- Right column: FAQ items ---- */
+.faqRight {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.faqItem {
+  background-color: #f7f7f7;
+  border-radius: 2rem;
   overflow: hidden;
   transition: background-color var(--transition-fast);
 }
 
-.accordionItem:hover {
-  background-color: var(--bg-secondary);
+.faqItem:hover {
+  background-color: #f0f0f0;
 }
 
-.accordionTrigger {
+.faqTrigger {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.25rem 1.5rem;
-  font-size: 0.95rem;
+  padding: 1.5rem 2rem;
+  font-size: 1.25rem;
   font-weight: var(--font-weight-regular);
+  letter-spacing: -0.01em;
   color: var(--text-primary);
   text-align: left;
   cursor: pointer;
-  transition: color var(--transition-fast);
+  gap: 1.5rem;
 }
 
-.accordionTrigger:hover {
-  color: var(--text-primary);
-}
-
-.accordionIcon {
-  width: 28px;
-  height: 28px;
+/* ---- Dark circle arrow icon ---- */
+.faqIcon {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: var(--radius-full);
-  border: 1px solid var(--border-subtle);
+  border-radius: 50%;
+  background-color: var(--text-primary);
   flex-shrink: 0;
-  transition: transform var(--transition-base), border-color var(--transition-fast);
+  transition: transform var(--transition-base), background-color var(--transition-fast);
 }
 
-.accordionIcon svg {
-  width: 14px;
-  height: 14px;
-  color: var(--text-secondary);
+.faqIcon svg {
+  width: 16px;
+  height: 16px;
+  color: #fff;
 }
 
-.accordionIconOpen {
-  transform: rotate(45deg);
-  border-color: var(--text-muted);
+.faqIconOpen {
+  transform: rotate(90deg);
+  background-color: var(--brand-orange);
 }
 
-.accordionPanel {
+/* ---- Expand panel ---- */
+.faqPanel {
   max-height: 0;
   overflow: hidden;
   transition: max-height var(--transition-base);
 }
 
-.accordionPanelOpen {
+.faqPanelOpen {
   max-height: 300px;
 }
 
-.accordionAnswer {
-  padding: 0 1.5rem 1.25rem;
-  font-size: 0.9rem;
-  font-weight: var(--font-weight-light);
-  color: var(--text-secondary);
-  line-height: 1.7;
+.faqAnswer {
+  padding: 0 1.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: var(--font-weight-regular);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.faqLink {
+  color: var(--text-primary);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  font-weight: var(--font-weight-medium);
+  transition: color var(--transition-fast);
+}
+
+.faqLink:hover {
+  color: var(--brand-orange);
 }
 
 /* ---- Responsive ---- */
-@media (max-width: 768px) {
-  .faqHeader {
+@media (max-width: 900px) {
+  .faqGrid {
     grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .faqLeft {
+    position: static;
+  }
+}
+
+@media (max-width: 560px) {
+  .faqSection {
+    padding: 4rem 1.25rem;
+  }
+
+  .faqTitle {
+    font-size: 1.85rem;
+  }
+
+  .faqTrigger {
+    padding: 1.15rem 1.25rem;
+    font-size: 0.88rem;
     gap: 1rem;
   }
 
-  .faqContent {
-    display: block;
+  .faqIcon {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
   }
 
-  .accordion {
-    grid-column: 1;
+  .faqIcon svg {
+    width: 13px;
+    height: 13px;
+  }
+
+  .faqAnswer {
+    padding: 0 1.25rem 1.25rem;
+    font-size: 0.85rem;
   }
 }

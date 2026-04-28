@@ -1,51 +1,80 @@
 "use client";
 
-import { useState } from "react";
+import Link from "next/link";
+import { useState, ReactNode } from "react";
 import styles from "./faq.module.css";
 
 interface FAQItem {
   question: string;
-  answer: string;
+  answer: ReactNode;
 }
 
 const faqData: FAQItem[] = [
   {
-    question: "What services does made by tie offer?",
-    answer:
-      "I offer end-to-end product execution - strategy, brand identity, UI/UX design, full-stack development, and launch support. Whether you need a complete build or a focused sprint, I handle the entire pipeline.",
+    question: "What services do you offer?",
+    answer: (
+      <>
+        I offer full-service execution across{" "}
+        <Link href="/services/branding" className={styles.faqLink}>Branding</Link>,{" "}
+        <Link href="/services/web-design" className={styles.faqLink}>UI/UX Design</Link>, 
+        and custom <Link href="/services/development" className={styles.faqLink}>Web Development</Link>.{" "}
+        Whether it&apos;s a high-converting <Link href="/services/web-design" className={styles.faqLink}>Landing Page</Link>, 
+        a complex eCommerce build, or <Link href="/services/crm-automation" className={styles.faqLink}>CRM + Automation</Link>, 
+        I handle the entire pipeline. You can see a full breakdown of what I 
+        can do for you on my <Link href="/services" className={styles.faqLink}>services page</Link>.
+      </>
+    ),
   },
   {
-    question: "How does the design and development process work?",
+    question: "Do you outsource any work?",
     answer:
-      "Every engagement starts with a discovery call to understand your goals. From there I move through strategy, design, development, and launch in focused phases - keeping you in the loop at every milestone.",
+      "No, I don't outsource any of my core design or development services. I personally execute every pixel and line of code for your project to ensure the highest quality. For specialized assets like professional photography or videography, I typically work with assets provided by you or can recommend partners to help.",
+  },
+  {
+    question: "How much does a website cost?",
+    answer: (
+      <>
+        Every project is unique, so I don&apos;t have set fixed prices. However, my custom project 
+        engagements generally start around $10,000 and increase based on complexity and scope. 
+        You can find more information about my general investment levels in the{" "}
+        <Link href="/pricing" className={styles.faqLink}>pricing section</Link>.
+      </>
+    ),
   },
   {
     question: "How long does a typical project take?",
     answer:
-      "Timelines depend on scope. A focused landing page or brand sprint can be done in 1–2 weeks. Full product builds typically run 4–8 weeks. Retainer clients get continuous, priority execution.",
+      "Timelines depend on the scale of the build. A focused landing page or brand sprint can be done in 1–2 weeks, while full product builds typically run 4–8 weeks. I'll give you a precise timeline once I've reviewed your brief.",
   },
   {
     question: "Do you work with startups or established companies?",
     answer:
-      "Both. I specialize in working with startups and growing companies that have a clear vision and healthy budget. If you are serious about building something exceptional, I am the right fit.",
-  },
-  {
-    question: "What does pricing look like?",
-    answer:
-      "I offer project-based pricing and monthly retainers. Retainers start at $5,000/month for ongoing design and development. Project pricing is scoped based on complexity and deliverables.",
+      "Both. I specialize in working with ambitious startups and growing companies that value high-end design and solid engineering. If you're serious about building something exceptional, we'll be a great fit.",
   },
   {
     question: "How do I get started?",
-    answer:
-      "Head over to the Get Started page and submit a brief about your project. I will review it and schedule a discovery call if it is a good fit.",
+    answer: (
+      <>
+        Head over to the <Link href="/start" className={styles.faqLink}>project planner</Link>{" "}
+        and submit a project brief. I&apos;ll review your details and we can schedule a discovery 
+        call to see if we&apos;re a good match for your next project.
+      </>
+    ),
   },
 ];
 
-function PlusIcon() {
+function ArrowIcon() {
   return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-      <line x1="12" y1="5" x2="12" y2="19" />
-      <line x1="5" y1="12" x2="19" y2="12" />
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <line x1="7" y1="17" x2="17" y2="7" />
+      <polyline points="7 7 17 7 17 17" />
     </svg>
   );
 }
@@ -60,48 +89,50 @@ export default function FAQ() {
   return (
     <section className={styles.faqSection} id="faq">
       <div className={styles.faqInner}>
-        {/* Header */}
-        <div className={styles.faqHeader}>
-          <h2 className={styles.faqTitle}>
-            <span className={styles.faqTitleBold}>Frequently</span>
-            <span className={styles.faqTitleBoldWithLine}>
-              asked <span className={styles.faqTitleLine} />
+        {/* Two-column layout */}
+        <div className={styles.faqGrid}>
+          {/* Left: header */}
+          <div className={styles.faqLeft}>
+            <span className={styles.eyebrow}>
+              <span className={styles.eyebrowDot} />
+              FAQ
             </span>
-            <span className={styles.faqTitleAccent}>questions</span>
-          </h2>
-          <p className={styles.faqSubtitle}>
-            Find answers about my services, process, pricing, and everything
-            else you might need to know.
-          </p>
-        </div>
+            <h2 className={styles.faqTitle}>
+              The answers to
+              <br />
+              your questions.
+            </h2>
+          </div>
 
-        {/* Content Grid: Accordion */}
-        <div className={styles.faqContent}>
-
-          {/* Accordion */}
-          <div className={styles.accordion}>
+          {/* Right: accordion items */}
+          <div className={styles.faqRight}>
             {faqData.map((item, index) => (
-              <div key={index} className={styles.accordionItem}>
+              <div
+                key={index}
+                className={`${styles.faqItem} ${
+                  openIndex === index ? styles.faqItemOpen : ""
+                }`}
+              >
                 <button
-                  className={styles.accordionTrigger}
+                  className={styles.faqTrigger}
                   onClick={() => toggle(index)}
                   aria-expanded={openIndex === index}
                 >
                   <span>{item.question}</span>
                   <span
-                    className={`${styles.accordionIcon} ${
-                      openIndex === index ? styles.accordionIconOpen : ""
+                    className={`${styles.faqIcon} ${
+                      openIndex === index ? styles.faqIconOpen : ""
                     }`}
                   >
-                    <PlusIcon />
+                    <ArrowIcon />
                   </span>
                 </button>
                 <div
-                  className={`${styles.accordionPanel} ${
-                    openIndex === index ? styles.accordionPanelOpen : ""
+                  className={`${styles.faqPanel} ${
+                    openIndex === index ? styles.faqPanelOpen : ""
                   }`}
                 >
-                  <p className={styles.accordionAnswer}>{item.answer}</p>
+                  <div className={styles.faqAnswer}>{item.answer}</div>
                 </div>
               </div>
             ))}

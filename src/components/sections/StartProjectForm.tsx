@@ -436,11 +436,11 @@ Project Brief: ${formData.brief ? formData.brief.name : "None uploaded"}
         )}
 
         {step < TOTAL_STEPS ? (
-          <GooeyButton label="Next Step" size="md" onClick={handleNext} />
+          <GooeyButton label="Next Step" size="lg" onClick={handleNext} />
         ) : (
           <GooeyButton
             label={sending ? "Sending…" : "Send Enquiry"}
-            size="md"
+            size="lg"
             onClick={handleSubmit}
             disabled={sending}
           />
