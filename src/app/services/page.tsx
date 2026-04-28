@@ -12,7 +12,7 @@ const SERVICES = [
   {
     headline: "Web Design",
     href: "/services/web-design",
-    body: "High-end websites built to convert. Every pixel, layout, and interaction is engineered with absolute precision.",
+    body: "High-end websites built to convert. Every pixel, layout, and interaction is crafted with absolute precision.",
     capabilities: [
       "Website Design",
       "Landing Pages",
@@ -26,7 +26,7 @@ const SERVICES = [
   {
     headline: "Development",
     href: "/services/development",
-    body: "Custom platforms, SaaS products, and internal tools built to solve real problems. Clean architecture, high performance, and a foundation engineered for scale.",
+    body: "Custom platforms, SaaS products, and internal tools built to solve real problems. High performance, seamless user experiences, and a foundation built to scale.",
     capabilities: [
       "Custom Web Apps",
       "eCommerce Platforms",

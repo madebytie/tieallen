@@ -20,7 +20,7 @@ const SERVICES: Service[] = [
   {
     number: "01",
     label: "Web Design",
-    description: "High-end websites built to convert. Every pixel, layout, and interaction is engineered with absolute precision.",
+    description: "High-end websites built to convert. Every pixel, layout, and interaction is crafted with absolute precision.",
     href: "/services/web-design",
     image: "/projects/windward-tech-district/culture-screenshot.png",
     imageHref: "/work/bch-devcon",
@@ -30,7 +30,7 @@ const SERVICES: Service[] = [
   {
     number: "02",
     label: "Development",
-    description: "Custom platforms, SaaS products, and internal tools built to solve real problems. Clean architecture, high performance, and a foundation engineered for scale.",
+    description: "Custom platforms, SaaS products, and internal tools built to solve real problems. High performance, seamless user experiences, and a foundation built to scale.",
     href: "/services/development",
     image: "/assets/development.png",
     imageHref: "/work/servco-wholesale",

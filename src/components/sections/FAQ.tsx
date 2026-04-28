@@ -49,7 +49,7 @@ const faqData: FAQItem[] = [
   {
     question: "Do you work with startups or established companies?",
     answer:
-      "Both. I specialize in working with ambitious startups and growing companies that value high-end design and solid engineering. If you're serious about building something exceptional, we'll be a great fit.",
+      "Both. I specialize in working with ambitious startups and growing companies that value high-end design and seamless user experiences. If you're serious about building something exceptional, we'll be a great fit.",
   },
   {
     question: "How do I get started?",

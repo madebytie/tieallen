@@ -26,7 +26,7 @@ export default function DevelopmentPage() {
       <ServiceCapabilities
         eyebrow="Development"
         headline={`Bespoke builds,\nbuilt for how\nyou work.`}
-        subhead="I build custom web apps, ecommerce stores, and membership platforms from the ground up. Boutique, hand-crafted software tailored to your business - no templates, no shortcuts, no compromises."
+        subhead="I build custom web apps, ecommerce stores, and membership platforms from the ground up. Boutique software tailored to your business - no templates, no shortcuts, no compromises."
         capabilities={[
           "Custom Web Apps",
           "eCommerce Platforms",

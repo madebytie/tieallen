@@ -60,7 +60,7 @@ Newsletter Opt-in: ${newsletter ? "Yes" : "No"}
           domain: "",
           description: "",
         },
-        tags: ["lead", "contact submission"],
+        tags: ["lead", "contact submission", ...(newsletter ? ["subscribed"] : [])],
         deal: {
           title: name.trim(),
           value: 0,

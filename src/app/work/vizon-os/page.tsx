@@ -24,7 +24,7 @@ export default function VizonOS() {
       {/* Intro */}
       <CaseStudyIntro
         headline="A founder-led build of an AI-native operating system that unifies strategy, CRM, and project execution into a single intelligent workspace."
-        description="Vizon OS is my company - the product I'd been wanting for the work I do every day, built from scratch and shipping to market. The brief was the hardest one I've ever taken on: design and engineer an enterprise-grade SaaS, build the brand it deserves, and launch a marketing site that earns trust on first scroll."
+        description="Vizon OS is my company - the product I'd been wanting for the work I do every day, built from scratch and shipping to market. The brief was the hardest one I've ever taken on: design and build an enterprise-grade SaaS, build the brand it deserves, and launch a marketing site that earns trust on first scroll."
         client="Vizon OS (founder)"
         industry="SaaS / AI-Native Productivity"
         timeline="Ongoing"
@@ -168,7 +168,7 @@ export default function VizonOS() {
         layout="text-split"
         eyebrow="• Product"
         heading="A full SaaS platform, built from first principles"
-        body="Vizon OS is the deepest engineering work I've done - a multi-tenant SaaS with a unified data model spanning strategy, CRM, projects, documents, messaging, and workflow automation. Built on a modern stack with real-time collaboration, role-based access, and an embedded AI layer (Lenz) that reads across the entire workspace to recommend, draft, and execute work."
+        body="Vizon OS is the most complex product build I've taken on - a multi-tenant SaaS with a unified data model spanning strategy, CRM, projects, documents, messaging, and workflow automation. Built on a modern stack with real-time collaboration, role-based access, and an embedded AI layer (Lenz) that reads across the entire workspace to recommend, draft, and execute work."
         body2="Every module - the Kanban, the docs editor, the workflow canvas, the CRM pipelines - is built in-house, sharing one component system, one auth layer, and one knowledge graph. It's the long game: a platform that compounds in value as more of the team's work flows through it."
       />
 
