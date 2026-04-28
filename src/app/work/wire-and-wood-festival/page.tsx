@@ -8,6 +8,7 @@ import CaseStudyScreenGrid from "@/components/sections/CaseStudyScreenGrid";
 import CaseStudyVideoShowcase from "@/components/sections/CaseStudyVideoShowcase";
 import CaseStudyCarousel from "@/components/sections/CaseStudyCarousel";
 import CaseStudyDeliverables from "@/components/sections/CaseStudyDeliverables";
+import CallToAction from "@/components/sections/CallToAction";
 
 export const metadata: Metadata = {
   title: "Wire & Wood Festival - made by tie.",
@@ -114,6 +115,7 @@ export default function WireAndWoodFestival() {
         ]}
       />
 
+      <CallToAction />
     </>
   );
 }

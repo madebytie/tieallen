@@ -4,6 +4,7 @@ import CaseStudyIntro from "@/components/sections/CaseStudyIntro";
 import CaseStudySplitContent from "@/components/sections/CaseStudySplitContent";
 import CaseStudyImageGrid from "@/components/sections/CaseStudyImageGrid";
 import CaseStudyDeviceShowcase from "@/components/sections/CaseStudyDeviceShowcase";
+import CallToAction from "@/components/sections/CallToAction";
 
 export const metadata: Metadata = {
   title: "Vizon OS - made by tie.",
@@ -192,6 +193,7 @@ export default function VizonOS() {
           },
         ]}
       />
+      <CallToAction />
     </>
   );
 }

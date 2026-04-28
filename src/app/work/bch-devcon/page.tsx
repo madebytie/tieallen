@@ -7,6 +7,7 @@ import CaseStudyDeviceShowcase from "@/components/sections/CaseStudyDeviceShowca
 import CaseStudyTestimonial from "@/components/sections/CaseStudyTestimonial";
 import CaseStudyCarousel from "@/components/sections/CaseStudyCarousel";
 import CaseStudyDeliverables from "@/components/sections/CaseStudyDeliverables";
+import CallToAction from "@/components/sections/CallToAction";
 
 export const metadata: Metadata = {
   title: "BCH Devcon - Vizonos",
@@ -133,6 +134,7 @@ export default function BCHDevcon() {
         bgColor="var(--bg-primary)"
       />
 
+      <CallToAction />
     </>
   );
 }

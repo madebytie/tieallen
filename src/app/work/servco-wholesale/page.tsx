@@ -3,6 +3,7 @@ import ProjectHero from "@/components/sections/ProjectHero";
 import CaseStudyIntro from "@/components/sections/CaseStudyIntro";
 import CaseStudySplitContent from "@/components/sections/CaseStudySplitContent";
 import CaseStudyImageGrid from "@/components/sections/CaseStudyImageGrid";
+import CallToAction from "@/components/sections/CallToAction";
 import CaseStudyDeviceShowcase from "@/components/sections/CaseStudyDeviceShowcase";
 
 export const metadata: Metadata = {
@@ -100,6 +101,7 @@ export default function ServcoWholesale() {
         type="desktop"
         desktopUrl="https://servcomarketing.com/"
       />
+      <CallToAction />
     </>
   );
 }

@@ -6,6 +6,7 @@ import CaseStudyImageGrid from "@/components/sections/CaseStudyImageGrid";
 import CaseStudyDeviceShowcase from "@/components/sections/CaseStudyDeviceShowcase";
 import CaseStudyYouTubeSection from "@/components/sections/CaseStudyYouTubeSection";
 import CaseStudyDeliverables from "@/components/sections/CaseStudyDeliverables";
+import CallToAction from "@/components/sections/CallToAction";
 
 export const metadata: Metadata = {
   title: "Taste of Alpharetta - made by tie.",
@@ -134,6 +135,7 @@ export default function TasteOfAlpharetta() {
           },
         ]}
       />
+      <CallToAction />
     </>
   );
 }

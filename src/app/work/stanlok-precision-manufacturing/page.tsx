@@ -8,6 +8,7 @@ import CaseStudyImageGrid from "@/components/sections/CaseStudyImageGrid";
 import CaseStudyCarousel from "@/components/sections/CaseStudyCarousel";
 import StanlokIcons from "./StanlokIcons";
 import CaseStudyDeliverables from "@/components/sections/CaseStudyDeliverables";
+import CallToAction from "@/components/sections/CallToAction";
 
 export const metadata: Metadata = {
   title: "Stanlok Precision Manufacturing - Vizonos",
@@ -126,6 +127,7 @@ export default function StanlokPrecisionManufacturing() {
 
       <StanlokIcons />
       <div style={{ height: "5rem" }} />
+      <CallToAction />
     </>
   );
 }

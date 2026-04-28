@@ -4,6 +4,7 @@ import CaseStudyIntro from "@/components/sections/CaseStudyIntro";
 import CaseStudySplitContent from "@/components/sections/CaseStudySplitContent";
 import CaseStudyImageGrid from "@/components/sections/CaseStudyImageGrid";
 import CaseStudyDeviceShowcase from "@/components/sections/CaseStudyDeviceShowcase";
+import CallToAction from "@/components/sections/CallToAction";
 import CaseStudyVideoSection from "@/components/sections/CaseStudyVideoSection";
 import CaseStudySlideshow from "@/components/sections/CaseStudySlideshow";
 import CaseStudyInViewVideo from "@/components/sections/CaseStudyInViewVideo";
@@ -179,6 +180,7 @@ export default function WindwardTechDistrict() {
           { src: "/projects/windward-tech-district/website-sections/section-8.jpg", alt: "Windward website section 8" },
         ]}
       />
+      <CallToAction />
     </>
   );
 }

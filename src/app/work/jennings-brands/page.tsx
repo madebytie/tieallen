@@ -3,6 +3,7 @@ import ProjectHero from "@/components/sections/ProjectHero";
 import CaseStudyIntro from "@/components/sections/CaseStudyIntro";
 import CaseStudySplitContent from "@/components/sections/CaseStudySplitContent";
 import CaseStudyDeviceShowcase from "@/components/sections/CaseStudyDeviceShowcase";
+import CallToAction from "@/components/sections/CallToAction";
 import CaseStudyTestimonial from "@/components/sections/CaseStudyTestimonial";
 import CaseStudyDeliverables from "@/components/sections/CaseStudyDeliverables";
 import ServiceBreakdown from "@/components/sections/ServiceBreakdown";
@@ -134,6 +135,7 @@ export default function JenningsBrands() {
       />
 
       <div style={{ height: "6rem" }} />
+      <CallToAction />
     </>
   );
 }

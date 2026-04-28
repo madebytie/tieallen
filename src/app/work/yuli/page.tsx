@@ -7,6 +7,7 @@ import CaseStudyCarousel from "@/components/sections/CaseStudyCarousel";
 import CaseStudyDeviceShowcase from "@/components/sections/CaseStudyDeviceShowcase";
 import CaseStudyScreenGrid from "@/components/sections/CaseStudyScreenGrid";
 import CaseStudyDeliverables from "@/components/sections/CaseStudyDeliverables";
+import CallToAction from "@/components/sections/CallToAction";
 
 export const metadata: Metadata = {
   title: "YULI Salon & Aesthetics - Vizonos",
@@ -122,6 +123,7 @@ export default function Yuli() {
           { src: "/projects/yuli/website-image-9.png", alt: "YULI website" },
         ]}
       />
+      <CallToAction />
     </>
   );
 }

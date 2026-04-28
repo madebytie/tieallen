@@ -7,6 +7,7 @@ import CaseStudyDeviceShowcase from "@/components/sections/CaseStudyDeviceShowca
 import CaseStudyCarousel from "@/components/sections/CaseStudyCarousel";
 import CaseStudyScreenGrid from "@/components/sections/CaseStudyScreenGrid";
 import CaseStudyDeliverables from "@/components/sections/CaseStudyDeliverables";
+import CallToAction from "@/components/sections/CallToAction";
 
 export const metadata: Metadata = {
   title: "Expose Hair Salon - made by tie.",
@@ -121,6 +122,7 @@ export default function ExposeHair() {
           { src: "/projects/expose-hair/website-screenshot-7.png", alt: "Expose Hair website" },
         ]}
       />
-</>
+      <CallToAction />
+    </>
   );
 }

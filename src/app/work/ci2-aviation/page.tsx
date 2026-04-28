@@ -8,6 +8,7 @@ import CaseStudyVideoShowcase from "@/components/sections/CaseStudyVideoShowcase
 import CaseStudyScreenGrid from "@/components/sections/CaseStudyScreenGrid";
 import CaseStudyImageGrid from "@/components/sections/CaseStudyImageGrid";
 import CaseStudyDeliverables from "@/components/sections/CaseStudyDeliverables";
+import CallToAction from "@/components/sections/CallToAction";
 
 export const metadata: Metadata = {
   title: "CI² Aviation - Vizonos",
@@ -142,6 +143,7 @@ export default function CI2Aviation() {
           },
         ]}
       />
+      <CallToAction />
     </>
   );
 }

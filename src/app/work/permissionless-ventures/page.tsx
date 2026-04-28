@@ -7,6 +7,7 @@ import CaseStudyDeviceShowcase from "@/components/sections/CaseStudyDeviceShowca
 import CaseStudyTestimonial from "@/components/sections/CaseStudyTestimonial";
 import BrandGuideViewer from "@/components/sections/BrandGuideViewer";
 import CaseStudyDeliverables from "@/components/sections/CaseStudyDeliverables";
+import CallToAction from "@/components/sections/CallToAction";
 
 export const metadata: Metadata = {
   title: "Permissionless Ventures - Vizonos",
@@ -107,6 +108,7 @@ export default function PermissionlessVentures() {
       />
 
 
+      <CallToAction />
     </>
   );
 }
