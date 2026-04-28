@@ -217,6 +217,10 @@
   .serviceHeadline {
     margin-bottom: 2.5rem;
   }
+
+  .rowArrow {
+    display: none !important;
+  }
 }
 
 @media (max-width: 600px) {

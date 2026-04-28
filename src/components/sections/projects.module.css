@@ -284,4 +284,8 @@
   .projectTitle {
     font-size: 1.25rem;
   }
+
+  .projectArrow {
+    display: none !important;
+  }
 }
