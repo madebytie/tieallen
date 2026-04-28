@@ -4,8 +4,9 @@ import CaseStudyIntro from "@/components/sections/CaseStudyIntro";
 import CaseStudySplitContent from "@/components/sections/CaseStudySplitContent";
 import CaseStudyImageGrid from "@/components/sections/CaseStudyImageGrid";
 import CaseStudyDeviceShowcase from "@/components/sections/CaseStudyDeviceShowcase";
-import CaseStudyQuote from "@/components/sections/CaseStudyQuote";
+import CaseStudyTestimonial from "@/components/sections/CaseStudyTestimonial";
 import BrandGuideViewer from "@/components/sections/BrandGuideViewer";
+import CaseStudyDeliverables from "@/components/sections/CaseStudyDeliverables";
 
 export const metadata: Metadata = {
   title: "Permissionless Ventures - Vizonos",
@@ -29,6 +30,27 @@ export default function PermissionlessVentures() {
         client="Permissionless Ventures / Bitmain"
         industry="Crypto / Venture Capital / Blockchain"
         timeline="3 Weeks"
+      />
+
+      <CaseStudyDeliverables
+        description="The full brand system covered logo design, an advanced style guide, corporate collateral including business cards, letterhead, and a master presentation deck. The website was a single scrolling page with custom vector graphics and scroll animation - fully responsive and launched in time for the SF Hackathon kickoff."
+        categories={[
+          {
+            category: "Brand Identity",
+            items: [
+              "Logo",
+              "Advanced Brand Style Guide",
+              "Corporate Collateral (Business Cards, Letterhead, Master Presentation Deck)",
+            ],
+          },
+          {
+            category: "Website",
+            items: [
+              "One Page Scrolling Website",
+              "Vector Graphics & Scroll Animation",
+            ],
+          },
+        ]}
       />
 
       <CaseStudySplitContent
@@ -61,6 +83,12 @@ export default function PermissionlessVentures() {
         bgColor="var(--bg-primary)"
       />
 
+      <CaseStudyTestimonial
+        quote="We received a lot of great comments and feedback on the branding during the kickoff SF Hackathon. You guys did a great job!"
+        author="Vincent"
+        role="Investment Director, Bitmain"
+      />
+
       <CaseStudyDeviceShowcase
         type="desktop"
         desktopImage="/projects/permissionless/one-pager-screenshot.png"
@@ -69,13 +97,7 @@ export default function PermissionlessVentures() {
         scrollable
       />
 
-      <CaseStudySplitContent
-        eyebrow="• Deliverables"
-        heading="Brand to web in three weeks"
-        body="The full brand system covered logo design, an advanced style guide, corporate collateral including business cards, letterhead, and a master presentation deck. The website was a single scrolling page with custom vector graphics and scroll animation - fully responsive and launched in time for the SF Hackathon kickoff where it drew immediate positive feedback from the blockchain community."
-        imagePosition="left"
-        bgColor="var(--bg-secondary)"
-      />
+
 
       <CaseStudyDeviceShowcase
         type="mobile"
@@ -84,13 +106,7 @@ export default function PermissionlessVentures() {
         bgColor="var(--bg-primary)"
       />
 
-      <CaseStudyQuote
-        quote="We received a lot of great comments and feedback on the branding during the kickoff SF Hackathon. You guys did a great job!"
-        author="Vincent"
-        role="Investment Director"
-        company="Bitmain"
-        variant="dark"
-      />
+
     </>
   );
 }

@@ -6,6 +6,7 @@ import CaseStudyImageGrid from "@/components/sections/CaseStudyImageGrid";
 import CaseStudyDeviceShowcase from "@/components/sections/CaseStudyDeviceShowcase";
 import CaseStudyCarousel from "@/components/sections/CaseStudyCarousel";
 import CaseStudyScreenGrid from "@/components/sections/CaseStudyScreenGrid";
+import CaseStudyDeliverables from "@/components/sections/CaseStudyDeliverables";
 
 export const metadata: Metadata = {
   title: "Expose Hair Salon - made by tie.",
@@ -30,6 +31,29 @@ export default function ExposeHair() {
         client="Expose Hair Salon"
         industry="Beauty / Hair Salon"
         timeline="6 Weeks"
+      />
+
+      <CaseStudyDeliverables
+        description="I designed and developed a premium web presence that mirrors the salon's precision and luxury. The project encompassed digital strategy, content architecture, and a mobile-optimized booking flow to turn interest into appointments."
+        categories={[
+          {
+            category: "Strategy & Copy",
+            items: [
+              "Digital Strategy",
+              "Content Architecture",
+              "Service Copywriting",
+            ],
+          },
+          {
+            category: "Website & Systems",
+            items: [
+              "Custom Website Design",
+              "Web Development",
+              "Mobile Booking Flow",
+              "Team Profiles & Directory",
+            ],
+          },
+        ]}
       />
 
       {/* Wide hero image */}

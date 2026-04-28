@@ -161,7 +161,14 @@ export default function Header() {
   return (
     <>
       <div className={outerClasses}>
-        <div className={styles.blurBacking} aria-hidden="true" />
+        <div
+          className={styles.blurBacking}
+          aria-hidden="true"
+          style={scrolled ? {
+            backdropFilter: "blur(16px)",
+            WebkitBackdropFilter: "blur(16px)",
+          } : undefined}
+        />
         
         {dotPhase === "rolling" && (
           <div className={styles.rollingDot} style={dotVars} key={`dot-${animKey}`} />

@@ -7,6 +7,7 @@ import CaseStudyScreenGrid from "@/components/sections/CaseStudyScreenGrid";
 import CaseStudyImageGrid from "@/components/sections/CaseStudyImageGrid";
 import CaseStudyCarousel from "@/components/sections/CaseStudyCarousel";
 import StanlokIcons from "./StanlokIcons";
+import CaseStudyDeliverables from "@/components/sections/CaseStudyDeliverables";
 
 export const metadata: Metadata = {
   title: "Stanlok Precision Manufacturing - Vizonos",
@@ -32,6 +33,35 @@ export default function StanlokPrecisionManufacturing() {
         client="Stanlok"
         industry="Precision Manufacturing"
         timeline="6 Weeks"
+      />
+
+      <CaseStudyDeliverables
+        description="I built the full site end to end, structuring a deep product catalog into a scannable, RFQ-driven experience. The project also included the design of a comprehensive, custom iconography system for every service and product line."
+        categories={[
+          {
+            category: "Strategy & Copy",
+            items: [
+              "Product Taxonomy & Strategy",
+              "Content Architecture",
+            ],
+          },
+          {
+            category: "Website & Systems",
+            items: [
+              "Custom Website Design",
+              "Web Development",
+              "RFQ System Architecture",
+            ],
+          },
+          {
+            category: "Brand & Assets",
+            items: [
+              "Custom Iconography System",
+              "Product Render Integration",
+              "Brand System Design",
+            ],
+          },
+        ]}
       />
 
       <CaseStudyImageGrid

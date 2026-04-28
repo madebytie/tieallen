@@ -6,6 +6,7 @@ import CaseStudyImageGrid from "@/components/sections/CaseStudyImageGrid";
 import CaseStudyDeviceShowcase from "@/components/sections/CaseStudyDeviceShowcase";
 import CaseStudyTestimonial from "@/components/sections/CaseStudyTestimonial";
 import CaseStudyCarousel from "@/components/sections/CaseStudyCarousel";
+import CaseStudyDeliverables from "@/components/sections/CaseStudyDeliverables";
 
 export const metadata: Metadata = {
   title: "BCH Devcon - Vizonos",
@@ -29,6 +30,36 @@ export default function BCHDevcon() {
         client="Bitmain"
         industry="Crypto / Blockchain / Event"
         timeline="2 Weeks"
+      />
+
+      <CaseStudyDeliverables
+        description="I delivered a complete brand identity system, a fully functional website, and the growth automation needed to kickstart their event—all designed, built, and launched inside a two-week window."
+        categories={[
+          {
+            category: "Brand Identity",
+            items: [
+              "Logo",
+              "Brand Style Guide",
+              "Event Ticket",
+              "Twitter Profile Design",
+              "EventBrite Cover Design",
+              "Event T-Shirt Design & Swag",
+            ],
+          },
+          {
+            category: "Website",
+            items: [
+              "One Page Scrolling Website",
+              "Vector Graphics & Scroll Animation",
+            ],
+          },
+          {
+            category: "Growth & Automation",
+            items: [
+              "Digital Influencer Event Invite (for inviting Crypto Influencers via social media)",
+            ],
+          },
+        ]}
       />
 
       <CaseStudySplitContent

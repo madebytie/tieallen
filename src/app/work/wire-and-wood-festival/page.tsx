@@ -7,6 +7,7 @@ import CaseStudyDeviceShowcase from "@/components/sections/CaseStudyDeviceShowca
 import CaseStudyScreenGrid from "@/components/sections/CaseStudyScreenGrid";
 import CaseStudyVideoShowcase from "@/components/sections/CaseStudyVideoShowcase";
 import CaseStudyCarousel from "@/components/sections/CaseStudyCarousel";
+import CaseStudyDeliverables from "@/components/sections/CaseStudyDeliverables";
 
 export const metadata: Metadata = {
   title: "Wire & Wood Festival - made by tie.",
@@ -32,6 +33,29 @@ export default function WireAndWoodFestival() {
         client="City of Alpharetta"
         industry="Events / Music"
         timeline="6 Weeks"
+      />
+
+      <CaseStudyDeliverables
+        description="I built the digital home for the festival, translating the intimacy of songwriter stories into a premium online experience. The site handles lineup announcements, schedules, stage mapping, and custom submission portals for bands and sponsors."
+        categories={[
+          {
+            category: "Strategy & Copy",
+            items: [
+              "Event Digital Strategy",
+              "Artist Storytelling & Copywriting",
+              "Content Architecture",
+            ],
+          },
+          {
+            category: "Website & Systems",
+            items: [
+              "Custom Festival Website",
+              "Artist Roster & Schedule Architecture",
+              "Vendor & Band Submission Portals",
+              "Sponsor & Stage Mapping",
+            ],
+          },
+        ]}
       />
 
       <CaseStudyVideoShowcase

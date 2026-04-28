@@ -6,6 +6,7 @@ import CaseStudyTestimonial from "@/components/sections/CaseStudyTestimonial";
 import CaseStudyCarousel from "@/components/sections/CaseStudyCarousel";
 import CaseStudyDeviceShowcase from "@/components/sections/CaseStudyDeviceShowcase";
 import CaseStudyScreenGrid from "@/components/sections/CaseStudyScreenGrid";
+import CaseStudyDeliverables from "@/components/sections/CaseStudyDeliverables";
 
 export const metadata: Metadata = {
   title: "YULI Salon & Aesthetics - Vizonos",
@@ -28,6 +29,29 @@ export default function Yuli() {
         client="YULI Salon & Aesthetics"
         industry="Beauty / Salon"
         timeline="3 Weeks"
+      />
+
+      <CaseStudyDeliverables
+        description="I partnered with Yulia to translate her studio's physical aesthetic into a cohesive digital experience. The project covered everything from the initial strategy and content architecture to copywriting and the complete design and development of the full website."
+        categories={[
+          {
+            category: "Strategy & Copy",
+            items: [
+              "Brand & Digital Strategy",
+              "Content Architecture",
+              "Website Copywriting",
+            ],
+          },
+          {
+            category: "Website & Systems",
+            items: [
+              "Custom Website Design",
+              "Web Development",
+              "Booking System Integration",
+              "Dynamic Instagram Feed Integration",
+            ],
+          },
+        ]}
       />
 
       <CaseStudySplitContent

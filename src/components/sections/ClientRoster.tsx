@@ -38,13 +38,11 @@ const rosterData: Sector[] = [
       { name: "CI² Aviation", details: "150 private airports" },
       { name: "IPG Medical", details: "$100M medical device provider" },
       { name: "Stanlok Precision MFG", details: "Lunar mission component manufacturing" },
-      { name: "Servco Wholesale", details: "National forklift & warehouse equipment" },
     ],
   },
   {
     title: "Tech & Ecommerce",
     clients: [
-      { name: "Vizon OS", details: "AI-powered CRM platform" },
       { name: "LoreTorch", details: "VTT + AI Game Master platform" },
       { name: "PorchLyte", details: "Membership Platform" },
       { name: "Jennings Brands", details: "Olympians & Gold Medalists" },

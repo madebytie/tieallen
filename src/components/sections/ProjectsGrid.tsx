@@ -112,14 +112,14 @@ const projects: Project[] = [
     imagePosition: "bottom center",
     href: "/work/wire-and-wood-festival",
   },
-  {
-    title: "Vizon OS",
-    client: "Vizon OS",
-    year: "2026",
-    tags: ["Brand Identity", "Web Design", "SaaS Development"],
-    image: "/projects/vizon-os/tasks-kanban.png",
-    href: "/work/vizon-os",
-  },
+  // {
+  //   title: "Vizon OS",
+  //   client: "Vizon OS",
+  //   year: "2026",
+  //   tags: ["Brand Identity", "Web Design", "SaaS Development"],
+  //   image: "/projects/vizon-os/tasks-kanban.png",
+  //   href: "/work/vizon-os",
+  // },
 ];
 
 function ArrowIcon() {

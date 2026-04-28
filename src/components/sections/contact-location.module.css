@@ -4,7 +4,7 @@
 
 .locationSection {
   width: 100%;
-  padding: 0 2rem 6rem;
+  padding: 2rem 2rem 0;
   background-color: var(--bg-primary);
 }
 
@@ -164,7 +164,7 @@
 
 @media (max-width: 560px) {
   .locationSection {
-    padding: 0 1.25rem 4rem;
+    padding: 2rem 1.25rem;
   }
 
   .locationContent {

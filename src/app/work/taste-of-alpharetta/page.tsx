@@ -5,6 +5,7 @@ import CaseStudySplitContent from "@/components/sections/CaseStudySplitContent";
 import CaseStudyImageGrid from "@/components/sections/CaseStudyImageGrid";
 import CaseStudyDeviceShowcase from "@/components/sections/CaseStudyDeviceShowcase";
 import CaseStudyYouTubeSection from "@/components/sections/CaseStudyYouTubeSection";
+import CaseStudyDeliverables from "@/components/sections/CaseStudyDeliverables";
 
 export const metadata: Metadata = {
   title: "Taste of Alpharetta - made by tie.",
@@ -30,6 +31,29 @@ export default function TasteOfAlpharetta() {
         client="City of Alpharetta"
         industry="Events / Food & Beverage"
         timeline="6 Weeks"
+      />
+
+      <CaseStudyDeliverables
+        description="I designed and developed the digital command center for the city's largest culinary festival, featuring a custom CMS for vendor management, a digital TasteBucks system, and a mobile-first day-of attendee experience."
+        categories={[
+          {
+            category: "Strategy & Copy",
+            items: [
+              "Event Digital Strategy",
+              "User Journey Mapping",
+              "Content Architecture",
+            ],
+          },
+          {
+            category: "Website & Systems",
+            items: [
+              "Custom Event Website",
+              "Custom CMS Development",
+              "Digital TasteBucks Integration",
+              "Mobile Day-of Experience",
+            ],
+          },
+        ]}
       />
 
       {/* Wide hero image */}

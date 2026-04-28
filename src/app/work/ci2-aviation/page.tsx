@@ -7,6 +7,7 @@ import CaseStudyDeviceShowcase from "@/components/sections/CaseStudyDeviceShowca
 import CaseStudyVideoShowcase from "@/components/sections/CaseStudyVideoShowcase";
 import CaseStudyScreenGrid from "@/components/sections/CaseStudyScreenGrid";
 import CaseStudyImageGrid from "@/components/sections/CaseStudyImageGrid";
+import CaseStudyDeliverables from "@/components/sections/CaseStudyDeliverables";
 
 export const metadata: Metadata = {
   title: "CI² Aviation - Vizonos",
@@ -31,6 +32,35 @@ export default function CI2Aviation() {
         client="CI² Aviation, Inc."
         industry="Aerospace / Aviation IT"
         timeline="10+ Year Partnership"
+      />
+
+      {/* Deliverables */}
+      <CaseStudyDeliverables
+        description="Across a ten-year partnership, I've worked closely with the CI² executive team to shape their digital strategy and brand presence. I built two full iterations of their corporate website—including a custom employee application portal and all copywriting—plus an expansive suite of brand and tradeshow assets."
+        categories={[
+          {
+            category: "Strategy & Copy",
+            items: [
+              "Brand & Digital Strategy",
+              "Copywriting & Content Architecture",
+            ],
+          },
+          {
+            category: "Website & Systems",
+            items: [
+              "Corporate Website Design & Development",
+              "Custom Employee Application Portal",
+            ],
+          },
+          {
+            category: "Brand & Print",
+            items: [
+              "Brand Collateral",
+              "Tradeshow Booth & Assets",
+              "Federal Proposal Design",
+            ],
+          },
+        ]}
       />
 
       {/* Hero video - YouTube, autoplay when in view */}
