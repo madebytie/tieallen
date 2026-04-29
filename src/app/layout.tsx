@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/assets/tie-logo-wall.png",
+        url: "/assets/tie-sitting-infront-logo.png",
         width: 1200,
         height: 630,
         alt: "made by tie | Concept to Scale",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "made by tie | Concept to Scale",
     description: "I design, build, and scale premium digital products - from concept through launch and beyond.",
-    images: ["/assets/tie-logo-wall.png"],
+    images: ["/assets/tie-sitting-infront-logo.png"],
   },
   alternates: {
     canonical: "/",

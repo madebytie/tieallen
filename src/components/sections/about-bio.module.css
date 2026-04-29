@@ -1,0 +1,201 @@
+/* ============================================
+   ABOUT BIO - Mirrored from ServiceImageSplitReverse
+   ============================================ */
+
+.section {
+  width: 100%;
+  padding: var(--section-padding-lg);
+  background-color: var(--bg-primary);
+}
+
+.inner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr; /* Text is wider, image is scaled down */
+  gap: 5rem;
+  align-items: center;
+}
+
+/* ---- Left - content ---- */
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.headline {
+  font-family: var(--font-logo);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.body {
+  font-size: 1.15rem;
+  font-weight: var(--font-weight-light);
+  line-height: 1.75;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.bioLink {
+  color: var(--text-primary);
+  text-decoration: none;
+  background: linear-gradient(to right, var(--brand-orange), var(--brand-orange)) no-repeat;
+  background-size: 100% 2px;
+  background-position: 0 100%;
+  transition: background-size 0.3s ease;
+  cursor: pointer;
+}
+
+.bioLink:hover {
+  background-size: 100% 4px;
+  color: var(--brand-orange);
+}
+
+.ctaWrap {
+  margin-top: 1.5rem;
+}
+
+/* ---- Right - image ---- */
+.imageWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 6 / 6.5;
+  border-radius: 2rem;
+  border-bottom-left-radius: 0;
+  overflow: hidden;
+  background-color: var(--bg-tertiary);
+}
+
+.image {
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ---- Bottom-left accent notch ---- */
+.accent {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: min(28%, 6rem);
+  height: 2.5rem;
+  background-color: var(--bg-primary);
+  border-top-right-radius: 1.5rem;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.accentCorner {
+  position: absolute;
+  z-index: 5;
+  width: 1.52rem;
+  height: 1.52rem;
+}
+
+.accentTopLeft {
+  top: -1.52rem;
+  left: 0;
+  background: radial-gradient(
+    circle at 100% 0%,
+    transparent 1.5rem,
+    var(--bg-primary) calc(1.5rem + 1px)
+  );
+}
+
+.accentBottomRight {
+  bottom: 0;
+  right: -1.52rem;
+  background: radial-gradient(
+    circle at 100% 0%,
+    transparent 1.5rem,
+    var(--bg-primary) calc(1.5rem + 1px)
+  );
+}
+
+/* ---- Right-center accent notch ---- */
+.accentRight {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.25rem;
+  height: 12rem;
+  background-color: var(--bg-primary);
+  border-top-left-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.accentRightCorner {
+  position: absolute;
+  z-index: 5;
+  width: 1.52rem;
+  height: 1.52rem;
+}
+
+.accentRightTop {
+  top: -1.52rem;
+  right: 0;
+  background: radial-gradient(
+    circle at 0% 0%,
+    transparent 1.5rem,
+    var(--bg-primary) calc(1.5rem + 1px)
+  );
+}
+
+.accentRightBottom {
+  bottom: -1.52rem;
+  right: 0;
+  background: radial-gradient(
+    circle at 0% 100%,
+    transparent 1.5rem,
+    var(--bg-primary) calc(1.5rem + 1px)
+  );
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 860px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .content {
+    gap: 0.85rem;
+  }
+
+  /* Stack image on top of text on mobile */
+  .imageWrap {
+    order: 1;
+    aspect-ratio: 4 / 3;
+  }
+
+  .content {
+    order: 2;
+  }
+
+  .accentRight {
+    height: 6rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .section {
+    padding: var(--section-padding);
+  }
+
+  .headline {
+    font-size: 1.75rem;
+  }
+
+  .body {
+    font-size: 0.95rem;
+  }
+}
