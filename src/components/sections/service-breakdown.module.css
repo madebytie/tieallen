@@ -184,6 +184,24 @@
   .topNotch {
     width: 14rem;
     height: 2rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+
+  .topNotch::before,
+  .topNotch::after {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .topNotch::before {
+    left: -1rem;
+    background: radial-gradient(circle at 0% 100%, transparent 1rem, var(--bg-primary) 1rem);
+  }
+
+  .topNotch::after {
+    right: -1rem;
+    background: radial-gradient(circle at 100% 100%, transparent 1rem, var(--bg-primary) 1rem);
   }
 
   .grid {
@@ -208,12 +226,13 @@
   }
 
   .itemTitle {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
+    line-height: 1.2;
   }
 
   .itemDesc {
     font-size: 0.85rem;
-    line-height: 1.5;
+    line-height: 1.45;
   }
 
   .header {
@@ -221,7 +240,7 @@
   }
 
   .headline {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 
   .itemHeader {

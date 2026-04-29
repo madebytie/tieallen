@@ -51,7 +51,7 @@ export default function HomeHero() {
             <div className={styles.homeHeroButtons}>
               <GooeyButton label="See my work" href="/work" />
               <a href="/start" className={styles.textButton}>
-                Start your project
+                Start<span className={styles.mobileHide}> your project</span>
                 <svg className={styles.textButtonArrow} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <line x1="7" y1="17" x2="17" y2="7" />
                   <polyline points="7 7 17 7 17 17" />

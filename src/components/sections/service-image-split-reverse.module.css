@@ -199,6 +199,10 @@
   .content {
     order: 2;
   }
+
+  .accentRight {
+    height: 6rem;
+  }
 }
 
 @media (max-width: 560px) {

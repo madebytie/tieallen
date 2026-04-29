@@ -50,7 +50,11 @@ export default function ServicePageHero({
             <div className={`${styles.servicePageHeroButtons} ${align === "left" ? styles.buttonsLeft : ""}`}>
               <GooeyButton label={primaryCta.label} href={primaryCta.href} icon={primaryCta.icon} />
               <a href={secondaryCta.href} className={styles.textButton}>
-                {secondaryCta.label}
+                {secondaryCta.label === "Start your project" ? (
+                  <>Start<span className={styles.mobileHide}> your project</span></>
+                ) : (
+                  secondaryCta.label
+                )}
                 <svg className={styles.textButtonArrow} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <line x1="7" y1="17" x2="17" y2="7" />
                   <polyline points="7 7 17 7 17 17" />

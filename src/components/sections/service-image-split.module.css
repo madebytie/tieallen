@@ -192,6 +192,10 @@
   .imageWrap {
     aspect-ratio: 4 / 3;
   }
+
+  .accentLeft {
+    height: 6rem;
+  }
 }
 
 @media (max-width: 560px) {

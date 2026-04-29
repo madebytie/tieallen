@@ -351,11 +351,20 @@
   }
 
   .titleLineBold {
-    font-size: clamp(2rem, 10vw, 2.5rem);
+    font-size: clamp(2.5rem, 12vw, 3.2rem);
+    white-space: nowrap;
   }
 
   .homeHeroButtons {
     gap: 1rem;
+  }
+
+  .textButton {
+    font-size: 0.85rem;
+  }
+
+  .mobileHide {
+    display: none;
   }
 
   .overlayBottomLeft {

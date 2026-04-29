@@ -477,6 +477,14 @@
     gap: 1rem;
   }
 
+  .textButton {
+    font-size: 0.85rem;
+  }
+
+  .mobileHide {
+    display: none;
+  }
+
   .servicePageHeroAccent {
     width: 40%;
     height: 2rem;

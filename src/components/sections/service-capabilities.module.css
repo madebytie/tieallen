@@ -152,7 +152,7 @@
 
 @media (max-width: 560px) {
   .section {
-    padding: var(--section-padding);
+    padding: 4rem 2rem 2rem;
   }
 
   .headline {

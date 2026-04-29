@@ -40,7 +40,7 @@
 
 .locationDesc {
   font-size: 0.95rem;
-  font-weight: var(--font-weight-light);
+  font-weight: var(--font-weight-regular);
   color: var(--text-secondary);
   line-height: 1.7;
   max-width: 380px;
@@ -153,6 +153,7 @@
   }
 
   .locationImage {
+    order: -1;
     height: 320px;
     padding: 1rem;
   }
