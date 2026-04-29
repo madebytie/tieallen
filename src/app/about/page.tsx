@@ -10,7 +10,7 @@ export default function AboutPage() {
       <AboutHero 
         title="I design and build for where you’re going"
         subtitle="...and help make sure you get there too. I'm here with you for the long run."
-        image="/assets/Gemini_Generated_Image_x80i5lx80i5lx80i.jpeg"
+        image="/assets/tie-office-wall.png"
       />
 
       <AboutStats />

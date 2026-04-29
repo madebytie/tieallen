@@ -38,7 +38,7 @@ export default function ContactHero() {
         <div className={styles.heroRight}>
           <div className={styles.photoCard}>
             <img
-              src="/assets/Gemini_Generated_Image_x80i5lx80i5lx80i.jpeg"
+              src="/assets/tie-office-wall.png"
               alt="Tie Allen"
               className={styles.photoImage}
             />

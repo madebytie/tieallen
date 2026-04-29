@@ -14,7 +14,7 @@ export default function GetStarted() {
       {/* ── Left - image ── */}
       <div className={styles.imagePanel}>
         <Image
-          src="/assets/Gemini_Generated_Image_x80i5lx80i5lx80i.jpeg"
+          src="/assets/tie-office-wall.png"
           alt=""
           width={700}
           height={933}
