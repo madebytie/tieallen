@@ -244,6 +244,10 @@
     gap: 1rem;
   }
 
+  .projectsSection {
+    padding-bottom: 2rem;
+  }
+
   .projectTagsWrapper {
     padding: 0.6rem 0.6rem 0.75rem 0.75rem;
     border-bottom-left-radius: 16px;

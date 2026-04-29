@@ -110,8 +110,8 @@ export default function ClientRoster() {
         {/* Header */}
         <div className={styles.rosterHeader}>
           <h2 className={styles.title}>
-            Trusted to deliver
-            <br />
+            Trusted to deliver{" "}
+            <br className={styles.desktopBr} />
             at the highest level
           </h2>
 

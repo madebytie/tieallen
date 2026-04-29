@@ -20,8 +20,8 @@
 .homeHeroCard {
   position: relative;
   width: 100%;
-  min-height: 862px;
-  max-height: 942px;
+  min-height: 780px;
+  max-height: 860px;
   border-radius: 2.5rem;
   border-top-left-radius: 0;
   border-bottom-right-radius: 0;
@@ -237,8 +237,8 @@
 /* ---- Responsive ---- */
 @media (max-width: 900px) {
   .homeHeroCard {
-    min-height: 580px;
-    max-height: 660px;
+    min-height: 600px;
+    max-height: 680px;
   }
 
   .homeHeroOverlay {
@@ -325,8 +325,8 @@
     border-radius: 1.75rem;
     border-top-left-radius: 0;
     border-bottom-right-radius: 0;
-    min-height: 620px;
-    max-height: 680px;
+    min-height: 540px;
+    max-height: 600px;
     overflow: visible;
     margin-top: 6.5rem;
   }

@@ -181,7 +181,16 @@
 
 @media (max-width: 768px) {
   .rosterSection {
-    padding: 4rem 1.5rem 1rem;
+    padding: 2rem 1.5rem 1rem;
+  }
+
+  .desktopBr {
+    display: none;
+  }
+
+  .title {
+    max-width: none;
+    width: 100%;
   }
 
   .statsStrip {
@@ -196,6 +205,14 @@
 
   .statLabel {
     font-size: 0.65rem;
+  }
+
+  .title {
+    margin-bottom: 2rem;
+  }
+
+  .statsStrip {
+    padding-bottom: 1.5rem;
   }
 
   .rosterGrid {
