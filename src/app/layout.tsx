@@ -21,11 +21,20 @@ export const metadata: Metadata = {
     siteName: "made by tie",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/assets/tie-office-wall.png",
+        width: 1200,
+        height: 630,
+        alt: "made by tie | Concept to Scale",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "made by tie | Concept to Scale",
     description: "I design, build, and scale premium digital products - from concept through launch and beyond.",
+    images: ["/assets/tie-office-wall.png"],
   },
   alternates: {
     canonical: "/",
