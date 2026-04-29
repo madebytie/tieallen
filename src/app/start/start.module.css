@@ -38,6 +38,7 @@
 @media (max-width: 900px) {
   .page {
     grid-template-columns: 1fr;
+    gap: 0;
   }
 
   .imagePanel {
@@ -49,6 +50,6 @@
   }
 
   .formPanel {
-    padding: 2.5rem 1.5rem 3rem;
+    padding: 1.5rem 1.5rem 3rem;
   }
 }

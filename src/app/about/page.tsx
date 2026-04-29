@@ -1,8 +1,14 @@
+import type { Metadata } from "next";
 import AboutHero from "@/components/sections/AboutHero";
 import AboutStats from "@/components/sections/AboutStats";
 import Philosophy from "@/components/sections/Philosophy";
 import AboutGlobal from "@/components/sections/AboutGlobal";
 import CallToAction from "@/components/sections/CallToAction";
+
+export const metadata: Metadata = {
+  title: "About",
+  description: "I'm a digital product designer and developer. I build custom web platforms and tools for the long run.",
+};
 
 export default function AboutPage() {
   return (

@@ -7,9 +7,29 @@ import { GooeyFilter } from "@/components/ui/GooeyButton";
 import styles from "@/components/layout/layout.module.css";
 
 export const metadata: Metadata = {
-  title: "made by tie | Concept to Scale",
+  metadataBase: new URL('https://tieallen.com'), // Assuming tieallen.com, please update if different
+  title: {
+    default: "made by tie | Concept to Scale",
+    template: "%s | made by tie",
+  },
   description:
     "I design, build, and scale premium digital products - from concept through launch and beyond.",
+  openGraph: {
+    title: "made by tie | Concept to Scale",
+    description: "I design, build, and scale premium digital products - from concept through launch and beyond.",
+    url: "https://tieallen.com",
+    siteName: "made by tie",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "made by tie | Concept to Scale",
+    description: "I design, build, and scale premium digital products - from concept through launch and beyond.",
+  },
+  alternates: {
+    canonical: "/",
+  },
 };
 
 export default function RootLayout({
