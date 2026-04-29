@@ -47,7 +47,7 @@ export default function CrmAutomationPage() {
           "Runs on autopilot so you can focus on growth",
         ]}
         cta={{ label: "Start your project", href: "/start" }}
-        image={{ src: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1800&q=80", alt: "CRM and automation dashboards" }}
+        image={{ src: "/projects/vizon-os/workflow.png", alt: "CRM and automation dashboards" }}
       />
       <ServiceBreakdown
         headline="Smart systems that turn traffic into revenue."
@@ -142,7 +142,7 @@ export default function CrmAutomationPage() {
           "Scales without adding complexity",
         ]}
         cta={{ label: "See my work", href: "/work" }}
-        image={{ src: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1800&q=80", alt: "Automation workflow detail" }}
+        image={{ src: "/assets/development.png", alt: "Automation workflow detail" }}
       />
     </main>
   );

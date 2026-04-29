@@ -47,7 +47,7 @@ export default function DevelopmentPage() {
           "Built on modern, scalable foundations",
         ]}
         cta={{ label: "Start your project", href: "/start" }}
-        image={{ src: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1800&q=80", alt: "Custom development work" }}
+        image={{ src: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1800&q=80", alt: "Custom development work" }}
       />
       <ServiceBreakdown
         headline="Custom platforms, built to your spec."
@@ -142,7 +142,7 @@ export default function DevelopmentPage() {
           "Direct collaboration, no middlemen",
         ]}
         cta={{ label: "See my work", href: "/work" }}
-        image={{ src: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1800&q=80", alt: "Development craft detail" }}
+        image={{ src: "https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=1800&q=80", alt: "Development craft detail" }}
       />
     </main>
   );

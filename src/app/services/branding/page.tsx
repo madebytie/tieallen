@@ -142,7 +142,7 @@ export default function BrandingPage() {
           "Consistent across every touchpoint",
         ]}
         cta={{ label: "See my work", href: "/work" }}
-        image={{ src: "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=1800&q=80", alt: "Brand design detail" }}
+        image={{ src: "https://images.unsplash.com/photo-1561070791-36c11767b26a?w=1800&q=80", alt: "Brand design detail" }}
       />
     </main>
   );
