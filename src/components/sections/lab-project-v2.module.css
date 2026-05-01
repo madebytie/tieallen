@@ -1,0 +1,1405 @@
+/* ============================================
+   LAB PROJECT V2 — Next.js-inspired template
+   Structural lines framing every content row
+   ============================================ */
+
+/* ---- Shared structural line vars ---- */
+:root {
+  --line-color: #e5e5e5;
+  --line-color-strong: #d4d4d4;
+}
+
+
+/* ============================================
+   STRUCTURAL WRAPPER
+   Vertical guide lines at container edges
+   ============================================ */
+
+.structuralWrap {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Left + right vertical guide lines */
+.structuralWrap::before,
+.structuralWrap::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: var(--line-color);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.structuralWrap::before {
+  left: 0;
+}
+
+.structuralWrap::after {
+  right: 0;
+}
+
+
+/* ============================================
+   SECTION DIVIDER
+   Horizontal line with corner dots
+   ============================================ */
+
+.sectionDivider {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 1px;
+  background-color: var(--line-color);
+}
+
+/* Corner dots at left and right edges */
+.sectionDivider::before,
+.sectionDivider::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  border: 1px solid var(--line-color-strong);
+  background-color: var(--bg-primary);
+  z-index: 2;
+}
+
+.sectionDivider::before {
+  left: -3px;
+}
+
+.sectionDivider::after {
+  right: -3px;
+}
+
+
+/* ============================================
+   DIAGONAL HATCH TRANSITION
+   Border above AND below with diagonal fill
+   ============================================ */
+
+.diagonalHatch {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 48px;
+  overflow: hidden;
+  border-top: 1px solid var(--line-color);
+  border-bottom: 1px solid var(--line-color);
+}
+
+/* Left + right vertical continuations */
+.diagonalHatch::before,
+.diagonalHatch::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: var(--line-color);
+  z-index: 1;
+}
+
+.diagonalHatch::before {
+  left: 0;
+}
+
+.diagonalHatch::after {
+  right: 0;
+}
+
+.diagonalHatchInner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: repeating-linear-gradient(-45deg,
+      transparent,
+      transparent 6px,
+      var(--line-color) 6px,
+      var(--line-color) 7px);
+  opacity: 0.5;
+}
+
+
+/* ============================================
+   HERO — Centered with row lines
+   Each content block framed by horizontals
+   ============================================ */
+
+.hero {
+  position: relative;
+  padding: 8rem 0 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+.heroInner {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---- Hero row: a horizontal-line-bounded strip ---- */
+.heroRow {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px dashed var(--line-color);
+  width: 100%;
+}
+
+.heroRow:first-child {
+  border-top: none;
+}
+
+/* Inner content container */
+.heroRowContent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+}
+
+/* Staggered widths for the tech structure */
+.contentLabel {
+  padding: 1rem 4rem;
+  width: fit-content;
+}
+
+.contentTitle {
+  padding: 1.25rem 2rem;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.contentDesc {
+  padding: 1.5rem 2rem;
+  width: 100%;
+  max-width: 800px;
+}
+
+.contentCta {
+  border-left: 1px dashed var(--line-color);
+  border-right: 1px dashed var(--line-color);
+  padding: 3rem 2rem;
+  width: 100%;
+  max-width: 500px;
+  gap: 1.5rem;
+  /* Space between buttons and command */
+}
+
+.heroCommandWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.heroRowCTA {
+  border-bottom: 1px dashed var(--line-color);
+}
+
+/* Remove border between CTA and Tags if Tags follow */
+.heroRowCTA:has(+ .heroRowTags) {
+  border-bottom: none;
+}
+
+.heroRowTags {
+  border-top: none;
+  border-bottom: none;
+}
+
+.contentTags {
+  padding: 1rem 3rem 8rem;
+  /* More breathing room at the bottom of hero */
+  width: 100%;
+  max-width: 650px;
+}
+
+/* Decorative circle elements */
+.heroCircle {
+  position: absolute;
+  border: 1px solid var(--line-color);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.heroCircleTL {
+  width: 160px;
+  height: 160px;
+  top: 4rem;
+  left: -40px;
+}
+
+.heroCircleBR {
+  width: 100px;
+  height: 100px;
+  bottom: 8rem;
+  right: -20px;
+}
+
+/* Small corner square decorations */
+.heroCorner {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--line-color);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.heroCornerTR {
+  top: 6rem;
+  right: 3rem;
+}
+
+.heroCornerBL {
+  bottom: 10rem;
+  left: 6rem;
+}
+
+/* Dot cluster decorations */
+.heroDots {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-image: radial-gradient(circle, var(--line-color-strong) 1px, transparent 1px);
+  background-size: 8px 8px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.heroDotsTopLeft {
+  top: 5rem;
+  left: 0;
+}
+
+.heroLabel {
+  display: inline-block;
+  font-family: var(--font-primary);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.heroTitle {
+  font-family: var(--font-logo);
+  font-size: clamp(3rem, 7vw, 5rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  color: var(--text-primary);
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.heroDesc {
+  font-family: var(--font-primary);
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--text-primary);
+  max-width: 580px;
+  margin: 0 auto;
+}
+
+.heroDesc strong {
+  font-weight: 600;
+}
+
+.heroCTAs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.heroCTAPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-primary);
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.75rem 2rem;
+  border-radius: var(--radius-full);
+  background-color: var(--text-primary);
+  color: var(--bg-primary);
+  transition: background-color var(--transition-fast);
+  text-decoration: none;
+}
+
+.heroCTAPrimary:hover {
+  background-color: var(--accent-hover);
+}
+
+.heroCTASecondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-primary);
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.75rem 2rem;
+  border-radius: var(--radius-full);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-strong);
+  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+  text-decoration: none;
+}
+
+.heroCTASecondary:hover {
+  border-color: var(--text-primary);
+  background-color: var(--bg-tertiary);
+}
+
+.ctaIcon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.heroCommand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', monospace;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.heroCommandIcon {
+  font-size: 0.75rem;
+}
+
+/* Tags */
+.heroTags {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.heroTag {
+  font-family: var(--font-primary);
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+  padding: 0.35rem 1rem;
+  border-radius: var(--radius-full);
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+}
+
+
+/* ============================================
+   FOUNDATION / "MADE BY TIE" SECTION
+   ============================================ */
+
+.foundationSection {
+  position: relative;
+  padding: 6rem 2rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.foundationHeadline {
+  font-family: var(--font-logo);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  color: var(--text-primary);
+  margin: 0 auto 4rem;
+  max-width: 700px;
+}
+
+/* Connector lines diagram */
+.connectorDiagram {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto 4rem;
+  height: 140px;
+}
+
+/* Central badge */
+.badgePill {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-primary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--bg-primary);
+  background-color: var(--text-primary);
+  padding: 0.65rem 1.5rem;
+  border-radius: var(--radius-md);
+  z-index: 3;
+  white-space: nowrap;
+}
+
+/* Connector lines */
+.connectorLine {
+  position: absolute;
+  top: 50%;
+  height: 1px;
+  background: linear-gradient(90deg, var(--line-color), var(--line-color-strong), var(--line-color));
+  z-index: 1;
+}
+
+.connectorLineLeft {
+  left: 0;
+  right: 50%;
+  margin-right: 80px;
+}
+
+.connectorLineRight {
+  left: 50%;
+  right: 0;
+  margin-left: 80px;
+}
+
+/* Vertical drop lines */
+.connectorVertical {
+  position: absolute;
+  width: 1px;
+  background-color: var(--line-color-strong);
+  z-index: 1;
+}
+
+.connectorV1 {
+  left: 16.6%;
+  top: 50%;
+  height: 50%;
+}
+
+.connectorV2 {
+  left: 50%;
+  top: 50%;
+  height: 50%;
+}
+
+.connectorV3 {
+  left: 83.3%;
+  top: 50%;
+  height: 50%;
+}
+
+/* Dot decorations on connectors */
+.connectorDot {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--line-color-strong);
+  z-index: 2;
+}
+
+.connectorDotL {
+  left: 16.6%;
+  top: calc(50% - 3px);
+  transform: translateX(-50%);
+}
+
+.connectorDotC {
+  left: 50%;
+  top: calc(100% - 3px);
+  transform: translateX(-50%);
+}
+
+.connectorDotR {
+  left: 83.3%;
+  top: calc(50% - 3px);
+  transform: translateX(-50%);
+}
+
+
+/* ---- Feature Cards Grid ---- */
+.featureCards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.featureCard {
+  text-align: left;
+  padding: 2rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  background-color: var(--bg-primary);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.featureCard:hover {
+  border-color: var(--border-strong);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+}
+
+.featureCardIcon {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  line-height: 1;
+}
+
+.featureCardTitle {
+  font-family: var(--font-logo);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.featureCardArrow {
+  font-size: 0.9rem;
+  opacity: 0.5;
+}
+
+.featureCardDesc {
+  font-family: var(--font-primary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+
+/* ============================================
+   STEPS SECTION — V2
+   ============================================ */
+
+.stepsSection {
+  position: relative;
+  padding: 6rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.stepsHeadline {
+  font-family: var(--font-logo);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: var(--text-primary);
+  margin: 0 0 4rem;
+  text-align: center;
+}
+
+.stepsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.stepCard {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 2rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  background-color: var(--bg-primary);
+}
+
+.stepHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.stepNumber {
+  font-family: var(--font-primary);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--brand-orange);
+}
+
+.stepTitle {
+  font-family: var(--font-logo);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.codeBlock {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--bg-tertiary);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.5rem;
+  font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', monospace;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  border: 1px solid var(--border-subtle);
+}
+
+.codeBlock code {
+  display: block;
+  white-space: pre;
+  line-height: 1.6;
+}
+
+.codeComment {
+  color: var(--text-muted);
+  opacity: 0.8;
+}
+
+.codeCommand {
+  color: var(--brand-orange);
+  font-weight: 500;
+}
+
+.codePrompt {
+  color: var(--text-muted);
+  user-select: none;
+}
+
+
+/* ============================================
+   COPY BUTTON
+   ============================================ */
+
+.copyBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: var(--radius-sm, 6px);
+  background-color: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.15s ease, color 0.15s ease, background-color 0.15s ease;
+  flex-shrink: 0;
+}
+
+.copyBtn:hover {
+  background-color: var(--border-subtle);
+  color: var(--text-primary);
+}
+
+/* Show on parent hover */
+.heroCommandWrapper:hover .copyBtn,
+.codeBlock:hover .copyBtn {
+  opacity: 1;
+}
+
+
+/* ============================================
+   WORKFLOW FLOWCHART
+   Vertical step flow with connectors + fork
+   ============================================ */
+
+.workflowSection {
+  padding: 6rem 2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.workflowHeadline {
+  font-family: var(--font-logo);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: var(--text-primary);
+  margin: 0 0 4rem;
+  text-align: center;
+}
+
+.workflowFlow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.workflowStepGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 480px;
+}
+
+/* Vertical connector between steps */
+.workflowConnector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 56px;
+}
+
+.workflowConnectorLine {
+  flex: 1;
+  width: 1px;
+  border-left: 1px dashed var(--line-color-strong);
+}
+
+.workflowConnectorArrow {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid var(--line-color-strong);
+}
+
+/* Step card */
+.workflowCard {
+  position: relative;
+  width: 100%;
+  padding: 2rem 2rem 2rem 2rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  background-color: var(--bg-primary);
+  text-align: center;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+}
+
+.workflowCardBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  border-radius: var(--radius-full);
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  margin-bottom: 1.25rem;
+}
+
+.workflowCardIcon {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.workflowCardNumber {
+  font-family: 'SFMono-Regular', monospace;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.workflowCardTitle {
+  font-family: var(--font-logo);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 0.75rem;
+}
+
+.workflowCardDesc {
+  font-family: var(--font-primary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-primary);
+  margin: 0;
+  opacity: 0.8;
+}
+
+/* Fork split into outcomes */
+.workflowFork {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.workflowForkLine {
+  width: 60%;
+  height: 1px;
+  border-top: 1px dashed var(--line-color-strong);
+  position: relative;
+  margin-bottom: 0;
+}
+
+/* Small vertical tails at each end of the fork line */
+.workflowForkLine::before,
+.workflowForkLine::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 1px;
+  height: 28px;
+  border-left: 1px dashed var(--line-color-strong);
+}
+
+.workflowForkLine::before {
+  left: 0;
+}
+
+.workflowForkLine::after {
+  right: 0;
+}
+
+.workflowOutcomes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  width: 100%;
+  margin-top: 28px;
+}
+
+.workflowOutcomeCard {
+  padding: 1.75rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  background-color: var(--bg-primary);
+  text-align: center;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+}
+
+.workflowOutcomeIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+.outcomeIconSvg {
+  width: 28px;
+  height: 28px;
+}
+
+.workflowOutcomeTitle {
+  font-family: var(--font-logo);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 0.5rem;
+}
+
+.workflowOutcomeDesc {
+  font-family: var(--font-primary);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--text-primary);
+  margin: 0;
+  opacity: 0.7;
+}
+
+
+/* ---- Scroll animations ---- */
+
+/* Default hidden state for animated elements */
+.workflowCard[data-animate] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.workflowConnector[data-animate] {
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: top center;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.workflowFork[data-animate] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease 0.1s, transform 0.5s ease 0.1s;
+}
+
+/* Visible state — toggled by IntersectionObserver */
+.workflowCard[data-animate].visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.workflowConnector[data-animate].visible {
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+.workflowFork[data-animate].visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* ---- Card hover: orange background ---- */
+
+.workflowCard:hover {
+  background-color: var(--brand-orange);
+  border-color: var(--brand-orange);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+.workflowCard:hover .workflowCardBadge {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.workflowCard:hover .workflowCardNumber {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.workflowCard:hover .workflowCardIcon {
+  color: #fff;
+}
+
+.workflowCard:hover .workflowCardTitle {
+  color: #fff;
+}
+
+.workflowCard:hover .workflowCardDesc {
+  color: rgba(255, 255, 255, 0.9);
+  opacity: 1;
+}
+
+
+/* ---- Outcome card hover: orange ---- */
+
+.workflowOutcomeCard:hover {
+  background-color: var(--brand-orange);
+  border-color: var(--brand-orange);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+.workflowOutcomeCard:hover .workflowOutcomeIcon {
+  color: #fff;
+}
+
+.workflowOutcomeCard:hover .workflowOutcomeTitle {
+  color: #fff;
+}
+
+.workflowOutcomeCard:hover .workflowOutcomeDesc {
+  color: rgba(255, 255, 255, 0.9);
+  opacity: 1;
+}
+
+/* ============================================
+   CONTENT SECTION — V2
+   ============================================ */
+
+.contentSection {
+  padding: 6rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contentHeadline {
+  font-family: var(--font-logo);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: var(--text-primary);
+  margin: 0 0 2rem;
+}
+
+.contentBody {
+  font-family: var(--font-primary);
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.contentBody a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.contentBody a:hover {
+  color: var(--brand-orange);
+}
+
+
+/* ============================================
+   FEATURE GRID — V2 (2-col card layout)
+   ============================================ */
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-top: 3rem;
+}
+
+.featureCard {
+  padding: 2rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  background-color: var(--bg-primary);
+  transition: border-color 0.25s ease;
+}
+
+.featureCard:hover {
+  border-color: var(--border-strong);
+}
+
+.featureNumber {
+  display: inline-block;
+  font-family: 'SFMono-Regular', monospace;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.featureCardHeading {
+  font-family: var(--font-logo);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 0.5rem;
+}
+
+.featureCardText {
+  font-family: var(--font-primary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-primary);
+  margin: 0;
+  opacity: 0.75;
+}
+
+
+/* ---- CTA Card (dark promo slot) ---- */
+
+.featureCtaCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  background-color: var(--brand-dark-blue);
+  text-decoration: none;
+  overflow: hidden;
+  min-height: 200px;
+  transition: box-shadow 0.25s ease, transform 0.2s ease;
+}
+
+.featureCtaCard:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Dot grid background */
+.featureCtaDots {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.25) 1px, transparent 1px);
+  background-size: 20px 20px;
+  pointer-events: none;
+  -webkit-mask-image: radial-gradient(circle at 30% 30%, black 20%, transparent 80%);
+  mask-image: radial-gradient(circle at 30% 30%, black 20%, transparent 80%);
+}
+
+/* Orange accent glow */
+.featureCtaDots::after {
+  content: "";
+  position: absolute;
+  top: 25%;
+  right: 20%;
+  width: 80px;
+  height: 80px;
+  background: var(--brand-orange);
+  border-radius: 50%;
+  opacity: 0.15;
+  filter: blur(30px);
+}
+
+.featureCtaContent {
+  position: relative;
+  z-index: 1;
+}
+
+.featureCtaHeadline {
+  font-family: var(--font-logo);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 0.5rem;
+}
+
+.featureCtaDesc {
+  font-family: var(--font-primary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+
+.featureCtaArrow {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--brand-orange);
+  color: #111;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  z-index: 1;
+}
+
+.featureCtaCard:hover .featureCtaArrow {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ============================================
+   IMAGE SPLIT — V2
+   ============================================ */
+
+.imageSplitSection {
+  padding: 6rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.imageSplitGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.imageWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+}
+
+.imageWrap img {
+  object-fit: cover;
+  object-position: center;
+}
+
+
+/* ============================================
+   VIDEO SECTION — V2
+   ============================================ */
+.videoSection {
+  width: 100%;
+  margin: 0;
+}
+
+.videoRowContent {
+  border-left: 1px dashed var(--line-color);
+  border-right: 1px dashed var(--line-color);
+  padding: 4rem 2rem;
+  width: 100%;
+  max-width: 1100px;
+}
+
+.videoBottomRow {
+  border-bottom: none;
+}
+
+.videoCaptionContent {
+  border-left: 1px dashed var(--line-color);
+  border-right: 1px dashed var(--line-color);
+  padding: 1.5rem 2rem;
+  width: 100%;
+  max-width: 850px;
+}
+
+.videoContainer {
+  position: relative;
+  width: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.08);
+}
+
+.videoElement {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.videoCaption {
+  font-family: var(--font-primary);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+
+/* ============================================
+   LINKS ROW — V2
+   ============================================ */
+
+.linksSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+.linkPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-primary);
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.75rem 2rem;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.linkPrimary {
+  background-color: var(--text-primary);
+  color: var(--bg-primary);
+}
+
+.linkPrimary:hover {
+  background-color: var(--accent-hover);
+}
+
+.linkSecondary {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-strong);
+}
+
+.linkSecondary:hover {
+  border-color: var(--text-primary);
+  background-color: var(--bg-tertiary);
+}
+
+.linkIcon {
+  width: 14px;
+  height: 14px;
+}
+
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 900px) {
+  .hero {
+    padding: 6rem 0 0;
+  }
+
+  .heroTitle {
+    font-size: clamp(2.2rem, 8vw, 3.5rem);
+  }
+
+  .heroCircle,
+  .heroDots,
+  .heroCorner,
+  .heroLines {
+    display: none;
+  }
+
+  .structuralWrap::before,
+  .structuralWrap::after {
+    display: none;
+  }
+
+  .sectionDivider::before,
+  .sectionDivider::after {
+    display: none;
+  }
+
+  .diagonalHatch {
+    height: 24px;
+  }
+
+  .featureCards {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .stepsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .featureGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .imageSplitGrid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .connectorDiagram {
+    display: none;
+  }
+
+  .workflowOutcomes {
+    grid-template-columns: 1fr;
+  }
+
+  .workflowForkLine {
+    width: 80%;
+  }
+}
+
+@media (max-width: 560px) {
+  .heroCTAs {
+    flex-direction: column;
+  }
+
+  .heroCTAPrimary,
+  .heroCTASecondary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .foundationSection {
+    padding: 5rem 1.5rem;
+  }
+}

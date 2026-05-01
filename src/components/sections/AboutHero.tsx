@@ -26,6 +26,7 @@ export default function AboutHero({
             alt=""
             className={styles.aboutHeroImage}
             style={{ objectPosition }}
+            data-edit-image="hero.image"
           />
 
           {overlay && <div className={styles.overlay} />}
@@ -36,8 +37,8 @@ export default function AboutHero({
           {/* Title tab - flipped to the RIGHT */}
           <div className={styles.aboutHeroTab}>
             <div className={styles.aboutHeroContent}>
-              <h1 className={styles.aboutHeroTitle}>{title}</h1>
-              <p className={styles.aboutHeroSubtitle}>{subtitle}</p>
+              <h1 className={styles.aboutHeroTitle} data-edit="hero.title">{title}</h1>
+              <p className={styles.aboutHeroSubtitle} data-edit="hero.subtitle">{subtitle}</p>
             </div>
           </div>
 

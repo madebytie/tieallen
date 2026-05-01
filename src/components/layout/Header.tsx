@@ -17,6 +17,12 @@ const ABOUT = [
   { href: "/love", label: "Wall of Love", desc: "Client testimonials" },
 ];
 
+const VENTURES = [
+  { href: "https://vizonos.com", label: "Vizon OS", desc: "The Intelligent Workspace" },
+  { href: "https://loretorch.com", label: "LoreTorch", desc: "Infinite Worlds, AI-Powered" },
+  { href: "/labs", label: "Labs", desc: "Tools, experiments & open source" },
+];
+
 function ArrowIcon() {
   return (
     <svg className={styles.dropdownArrow} width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
@@ -60,15 +66,16 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [dotPhase, setDotPhase] = useState<"idle" | "rolling" | "landed">("idle");
   const [animKey, setAnimKey] = useState(0);
-  const [openMenu, setOpenMenu] = useState<"services" | "about" | null>(null);
+  const [openMenu, setOpenMenu] = useState<"services" | "about" | "ventures" | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [mobileExpanded, setMobileExpanded] = useState<"services" | "about" | null>(null);
+  const [mobileExpanded, setMobileExpanded] = useState<"services" | "about" | "ventures" | null>(null);
 
   const rollTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const landTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const servicesRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
+  const venturesRef = useRef<HTMLDivElement>(null);
   const periodRef = useRef<HTMLSpanElement>(null);
   const ctaRef = useRef<HTMLDivElement>(null);
   const [dotVars, setDotVars] = useState<React.CSSProperties>({});
@@ -91,7 +98,8 @@ export default function Header() {
       const target = e.target as Node;
       const insideServices = servicesRef.current?.contains(target);
       const insideAbout = aboutRef.current?.contains(target);
-      if (!insideServices && !insideAbout) {
+      const insideVentures = venturesRef.current?.contains(target);
+      if (!insideServices && !insideAbout && !insideVentures) {
         setOpenMenu(null);
         document.body.classList.remove("nav-open");
       }
@@ -100,7 +108,7 @@ export default function Header() {
     return () => window.removeEventListener("click", handleClick);
   }, [openMenu]);
 
-  const openDropdown = (menu: "services" | "about") => {
+  const openDropdown = (menu: "services" | "about" | "ventures") => {
     if (closeTimeoutRef.current) clearTimeout(closeTimeoutRef.current);
     setOpenMenu(menu);
     document.body.classList.add("nav-open");
@@ -225,6 +233,46 @@ export default function Header() {
               </div>
 
               <Link href="/work" className={styles.link}>Work</Link>
+
+              {/* Ventures */}
+              <div
+                className={styles.navItem}
+                ref={venturesRef}
+                onMouseEnter={() => openDropdown("ventures")}
+                onMouseLeave={scheduleClose}
+              >
+                <Link
+                  href="/ventures"
+                  className={[styles.link, styles.navToggle, openMenu === "ventures" ? styles.linkActive : ""].filter(Boolean).join(" ")}
+                  aria-expanded={openMenu === "ventures"}
+                  aria-haspopup="true"
+                  onClick={() => { setOpenMenu(null); document.body.classList.remove("nav-open"); }}
+                >
+                  Ventures
+                </Link>
+                <div className={[styles.dropdown, styles.dropdownNarrow, openMenu === "ventures" ? styles.dropdownOpen : ""].filter(Boolean).join(" ")} role="menu">
+                  <ul className={styles.dropdownList}>
+                    {VENTURES.map((v) => (
+                      <li key={v.href} role="none">
+                        <Link 
+                          href={v.href} 
+                          className={styles.dropdownItem} 
+                          role="menuitem" 
+                          target={v.href.startsWith("http") ? "_blank" : undefined}
+                          onClick={() => { setOpenMenu(null); document.body.classList.remove("nav-open"); }}
+                        >
+                          <span className={styles.dropdownItemInner}>
+                            <span className={styles.dropdownLabel}>{v.label}</span>
+                            <ArrowIcon />
+                          </span>
+                          <span className={styles.dropdownDesc}>{v.desc}</span>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
               <Link href="/#pricing" className={styles.link}>Pricing</Link>
 
               {/* About */}
@@ -316,6 +364,40 @@ export default function Header() {
           </div>
 
           <Link href="/work" className={styles.mobileLink} onClick={closeMobile}>Work</Link>
+
+          <div className={styles.mobileSection}>
+            <button
+              className={styles.mobileSectionToggle}
+              onClick={() => setMobileExpanded(mobileExpanded === "ventures" ? null : "ventures")}
+              aria-expanded={mobileExpanded === "ventures"}
+            >
+              <span>Ventures</span>
+              <ChevronIcon open={mobileExpanded === "ventures"} />
+            </button>
+            <div className={[styles.mobileAccordion, mobileExpanded === "ventures" ? styles.mobileAccordionOpen : ""].filter(Boolean).join(" ")}>
+              <div className={styles.mobileAccordionInner}>
+                <ul className={styles.dropdownList}>
+                  {VENTURES.map((v) => (
+                    <li key={v.href}>
+                      <Link 
+                        href={v.href} 
+                        className={styles.dropdownItem} 
+                        target={v.href.startsWith("http") ? "_blank" : undefined}
+                        onClick={closeMobile}
+                      >
+                        <span className={styles.dropdownItemInner}>
+                          <span className={styles.dropdownLabel}>{v.label}</span>
+                          <ArrowIcon />
+                        </span>
+                        <span className={styles.dropdownDesc}>{v.desc}</span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+
           <Link href="/#pricing" className={styles.mobileLink} onClick={closeMobile}>Pricing</Link>
 
           <div className={styles.mobileSection}>

@@ -1,0 +1,17 @@
+{
+  "hero": {
+    "title": "I design and build for where you’re going",
+    "subtitle": "...and help make sure you get there too. I'm here with you for the long run.",
+    "image": "/assets/tie-office-wall.png"
+  },
+  "stats": [
+    { "value": 169, "suffix": "+", "label": "projects delivered" },
+    { "value": 15, "suffix": "+", "label": "industries served" },
+    { "value": 18, "suffix": "Y", "label": "years experience" }
+  ],
+  "bio": {
+    "headline": "I am a founder and craftsman building at the intersection of AI, systems, and design.",
+    "body": "When I’m not scaling Vizon OS or crafting worlds in LoreTorch, I’m helping ambitious brands reach their next level.",
+    "image": "/assets/tie-sitting-infront-logo.png"
+  }
+}

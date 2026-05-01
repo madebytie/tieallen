@@ -59,34 +59,21 @@ function AnimatedNumber({ value, suffix = "" }: { value: number; suffix?: string
   );
 }
 
-export default function AboutStats() {
+export default function AboutStats({ stats = [] }: { stats?: any[] }) {
   return (
     <section className={styles.statsSection}>
       <div className={styles.statsInner}>
         <div className={styles.statsGrid}>
-          {/* Projects */}
-          <div className={styles.statItem}>
-            <div className={styles.statValue}>
-              <AnimatedNumber value={169} suffix="+" />
+          {stats.map((stat, i) => (
+            <div key={i} className={styles.statItem}>
+              <div className={styles.statValue} data-edit={`stats.${i}.value`}>
+                <AnimatedNumber value={stat.value} suffix={stat.suffix} />
+              </div>
+              <span className={styles.statLabel} data-edit={`stats.${i}.label`}>
+                {stat.label}
+              </span>
             </div>
-            <span className={styles.statLabel}>projects delivered</span>
-          </div>
-
-          {/* Industries */}
-          <div className={styles.statItem}>
-            <div className={styles.statValue}>
-              <AnimatedNumber value={15} suffix="+" />
-            </div>
-            <span className={styles.statLabel}>industries served</span>
-          </div>
-
-          {/* Experience */}
-          <div className={styles.statItem}>
-            <div className={styles.statValue}>
-              <AnimatedNumber value={18} suffix="Y" />
-            </div>
-            <span className={styles.statLabel}>years experience</span>
-          </div>
+          ))}
         </div>
       </div>
     </section>

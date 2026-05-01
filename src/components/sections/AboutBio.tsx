@@ -2,20 +2,20 @@ import Image from "next/image";
 import GooeyButton from "@/components/ui/GooeyButton";
 import styles from "./about-bio.module.css";
 
-export default function AboutBio() {
+export default function AboutBio({ bio }: { bio?: any }) {
+  if (!bio) return null;
+
   return (
     <section className={styles.section}>
       <div className={styles.inner}>
 
         {/* Left - text */}
         <div className={styles.content}>
-          <h2 className={styles.headline}>
-            I am a founder and craftsman building at the intersection of AI, systems, and design.
+          <h2 className={styles.headline} data-edit="bio.headline">
+            {bio.headline}
           </h2>
-          <p className={styles.body}>
-            When I’m not scaling <a href="https://vizonos.com" target="_blank" rel="noopener noreferrer" className={styles.bioLink}>Vizon OS</a> or 
-            crafting worlds in <a href="https://loretorch.com" target="_blank" rel="noopener noreferrer" className={styles.bioLink}>LoreTorch</a>, 
-            I’m helping ambitious brands reach their next level.
+          <p className={styles.body} data-edit="bio.body">
+            {bio.body}
           </p>
 
           <div className={styles.ctaWrap}>
@@ -26,11 +26,12 @@ export default function AboutBio() {
         {/* Right - image with bottom-left notch + right-center notch */}
         <div className={styles.imageWrap}>
           <Image
-            src="/assets/tie-sitting-infront-logo.png"
+            src={bio.image}
             alt="Tie Allen"
             fill
             className={styles.image}
             sizes="(max-width: 860px) 100vw, 40vw"
+            data-edit-image="bio.image"
           />
           {/* Bottom-left accent notch */}
           <div className={styles.accent} aria-hidden="true">
