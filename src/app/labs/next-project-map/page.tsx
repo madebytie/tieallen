@@ -45,7 +45,7 @@ function PerspectivesSection() {
         <span className={styles.sectionLabel}>The Solution</span>
         <h2 className={styles.perspectivesHeadline}>One Map. Four Perspectives.</h2>
         <p className={styles.perspectivesSubhead}>
-          NEXT Project Map isn&apos;t just a diagram—it&apos;s a multi-dimensional view of your application&apos;s internal anatomy.
+          NEXT Project Map isn&apos;t just a diagram-it&apos;s a multi-dimensional view of your application&apos;s internal anatomy.
         </p>
       </div>
       <div className={styles.perspectivesGrid}>
@@ -71,7 +71,7 @@ function ProblemSection() {
     {
       label: "02",
       title: "RSC Boundary Tracking",
-      body: "Knowing where Server Components end and Client Components begin is constant cognitive overhead — nothing surfaces it visually.",
+      body: "Knowing where Server Components end and Client Components begin is constant cognitive overhead - nothing surfaces it visually.",
     },
     {
       label: "03",
@@ -111,7 +111,7 @@ function FeaturesSection() {
   const features = [
     {
       title: "Framework-Aware Route Nodes",
-      body: "Groups Next.js folder conventions — layout, page, loading, error — into logical nodes. The map reflects the app, not the filesystem.",
+      body: "Groups Next.js folder conventions - layout, page, loading, error - into logical nodes. The map reflects the app, not the filesystem.",
     },
     {
       title: "RSC Boundary Visualizer",
@@ -259,6 +259,16 @@ export default function NextProjectMapPage() {
               interactive blueprint of every route, component, and data dependency.
             </>
           }
+          primaryCTA={{
+            label: "npm package",
+            href: "https://www.npmjs.com/package/next-project-map",
+          }}
+          secondaryCTA={{
+            label: "GitHub",
+            href: "https://github.com/madebytie/next-project-map",
+            icon: "github",
+          }}
+          command="npx next-project-map"
           tags={["TypeScript", "React", "AST", "CLI", "React Flow"]}
         />
       </StructuralWrap>
@@ -301,7 +311,7 @@ export default function NextProjectMapPage() {
               number: "Step 01",
               title: "Run the CLI",
               description:
-                "Point the tool at your project root. No config file needed — it discovers your Next.js app automatically.",
+                "Point the tool at your project root. No config file needed - it discovers your Next.js app automatically.",
             },
             {
               number: "Step 02",
@@ -343,8 +353,8 @@ export default function NextProjectMapPage() {
           headline="Architecture as a Deliverable."
           body={
             <>
-              Every handoff I&apos;ve done — to a client, to a new developer, to
-              a stakeholder — runs into the same problem. The architecture exists,
+              Every handoff I&apos;ve done - to a client, to a new developer, to
+              a stakeholder - runs into the same problem. The architecture exists,
               but it&apos;s invisible. You can walk someone through a folder
               structure, but it doesn&apos;t land. The app feels like a black box
               until they&apos;ve spent enough time inside it.
@@ -352,7 +362,7 @@ export default function NextProjectMapPage() {
               <br />
               <strong>NEXT Project Map</strong> makes the architecture a deliverable. The map is
               something you can open, share, and actually point at. It shows where
-              the complexity lives, how data flows, and what depends on what —
+              the complexity lives, how data flows, and what depends on what -
               before anyone has to read a line of code.
               <br />
               <br />
@@ -362,9 +372,9 @@ export default function NextProjectMapPage() {
           }
           features={[
             {
-              title: "Show clients what they're paying for",
+              title: "Provide stakeholders with technical clarity",
               description:
-                "A visual blueprint of the architecture is a tangible artifact. It turns abstract engineering work into something a client can see.",
+                "A visual blueprint of the architecture is a tangible asset for alignment. It translates complex engineering decisions into a high-level map that non-technical stakeholders can understand and trust.",
             },
             {
               title: "Cut onboarding time",

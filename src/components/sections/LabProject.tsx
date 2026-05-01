@@ -648,7 +648,7 @@ export function VideoSection({
   src,
   caption,
 }: {
-  src: string;
+  src: string | null;
   caption?: string;
 }) {
   return (
@@ -666,14 +666,20 @@ export function VideoSection({
       <div className={`${styles.heroRow} ${styles.videoBottomRow}`}>
         <div className={`${styles.heroRowContent} ${styles.videoRowContent}`}>
           <div className={styles.videoContainer}>
-            <video
-              src={src}
-              autoPlay
-              muted
-              loop
-              playsInline
-              className={styles.videoElement}
-            />
+            {src ? (
+              <video
+                src={src}
+                autoPlay
+                muted
+                loop
+                playsInline
+                className={styles.videoElement}
+              />
+            ) : (
+              <div className={styles.videoPlaceholder}>
+                <span>Preview video coming soon</span>
+              </div>
+            )}
           </div>
         </div>
       </div>
