@@ -1,0 +1,446 @@
+/* ============================================
+   NEXT PROJECT MAP — Page-specific styles
+   Shares the lab-project design system base
+   ============================================ */
+
+.sectionLabel {
+  display: inline-block;
+  font-family: var(--font-primary);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--brand-orange);
+  margin-bottom: 1rem;
+}
+
+
+/* ============================================
+   PERSPECTIVES SECTION (The Solution)
+   ============================================ */
+
+.perspectivesSection {
+  padding: 6rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.perspectivesHeader {
+  margin-bottom: 4rem;
+}
+
+.perspectivesHeadline {
+  font-family: var(--font-logo);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: var(--text-primary);
+  margin: 0 0 1.25rem;
+}
+
+.perspectivesSubhead {
+  font-family: var(--font-primary);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  max-width: 620px;
+}
+
+.perspectivesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.perspectiveCard {
+  padding: 2rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  background-color: var(--bg-primary);
+}
+
+.perspectiveTitle {
+  font-family: var(--font-logo);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 0.75rem;
+}
+
+.perspectiveBody {
+  font-family: var(--font-primary);
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+
+/* ============================================
+   PROBLEM SECTION
+   ============================================ */
+
+.problemSection {
+  padding: 6rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.problemHeader {
+  margin-bottom: 4rem;
+}
+
+.problemHeadline {
+  font-family: var(--font-logo);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.problemGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.problemCard {
+  padding: 2rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  background-color: var(--bg-primary);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.problemCard:hover {
+  border-color: var(--border-strong);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.problemNumber {
+  display: inline-block;
+  font-family: 'SFMono-Regular', monospace;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.problemTitle {
+  font-family: var(--font-logo);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 0.65rem;
+}
+
+.problemBody {
+  font-family: var(--font-primary);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+
+/* ============================================
+   FEATURES SECTION
+   ============================================ */
+
+.featuresSection {
+  padding: 6rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.featuresHeader {
+  margin-bottom: 4rem;
+}
+
+.featuresHeadline {
+  font-family: var(--font-logo);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.featureCard {
+  padding: 2rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  background-color: var(--bg-primary);
+  transition: border-color 0.2s ease;
+}
+
+.featureCard:hover {
+  border-color: var(--border-strong);
+}
+
+.featureTitle {
+  font-family: var(--font-logo);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 0.65rem;
+  line-height: 1.3;
+}
+
+.featureBody {
+  font-family: var(--font-primary);
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+
+/* ============================================
+   TECH SECTION
+   ============================================ */
+
+.techSection {
+  padding: 6rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.techHeader {
+  max-width: 620px;
+  margin-bottom: 4rem;
+}
+
+.techHeadline {
+  font-family: var(--font-logo);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: var(--text-primary);
+  margin: 0 0 1.25rem;
+}
+
+.techSubhead {
+  font-family: var(--font-primary);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.techGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.techGroup {
+  padding: 2rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  background-color: var(--bg-primary);
+}
+
+.techGroupLabel {
+  display: block;
+  font-family: var(--font-primary);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+}
+
+.techList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.techItem {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-family: 'SFMono-Regular', 'Consolas', monospace;
+  font-size: 0.85rem;
+  color: var(--text-primary);
+}
+
+.techDot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--brand-orange);
+  flex-shrink: 0;
+}
+
+
+/* ============================================
+   ROADMAP SECTION
+   ============================================ */
+
+.roadmapSection {
+  padding: 6rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.roadmapHeader {
+  margin-bottom: 3.5rem;
+}
+
+.roadmapHeadline {
+  font-family: var(--font-logo);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.roadmapList {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.roadmapItem {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 0;
+}
+
+.roadmapItemBorder {
+  border-bottom: 1px dashed var(--line-color);
+}
+
+.roadmapMeta {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  border-right: 1px dashed var(--line-color);
+}
+
+.roadmapVersion {
+  font-family: 'SFMono-Regular', monospace;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.roadmapStatus {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-primary);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-full);
+  width: fit-content;
+}
+
+.status_current {
+  color: var(--brand-orange);
+  background-color: rgba(255, 120, 50, 0.08);
+  border: 1px solid rgba(255, 120, 50, 0.2);
+}
+
+.status_planned {
+  color: var(--text-muted);
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+}
+
+.roadmapDot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: currentColor;
+  flex-shrink: 0;
+}
+
+.roadmapContent {
+  padding: 2rem 2.5rem;
+}
+
+.roadmapTitle {
+  font-family: var(--font-logo);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 0.6rem;
+}
+
+.roadmapBody {
+  font-family: var(--font-primary);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 900px) {
+  .problemGrid,
+  .featuresGrid,
+  .techGrid,
+  .perspectivesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .problemSection,
+  .featuresSection,
+  .techSection,
+  .roadmapSection {
+    padding: 4rem 1.5rem;
+  }
+
+  .roadmapItem {
+    grid-template-columns: 1fr;
+  }
+
+  .roadmapMeta {
+    border-right: none;
+    border-bottom: 1px dashed var(--line-color);
+    flex-direction: row;
+    align-items: center;
+    padding: 1.25rem 1.5rem;
+  }
+
+  .roadmapContent {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .featuresGrid {
+    grid-template-columns: 1fr;
+  }
+}

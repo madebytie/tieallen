@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import styles from "./labs.module.css";
-import { StructuralWrap, SectionDivider, GitHubIcon, BeakerIcon } from "./LabProject";
+import { StructuralWrap, SectionDivider, DiagonalHatch, GitHubIcon, BeakerIcon } from "./LabProject";
 
 /* ---- Hero ---- */
 
@@ -76,6 +76,16 @@ const labsProjects: LabsProject[] = [
     command: "npm install next-inline-editor",
     status: "live",
   },
+  {
+    label: "02",
+    title: "NEXT Project Map",
+    description: "Next.js Project Architecture Visualizer. A CLI tool that transforms abstract codebases into interactive, high-fidelity maps.",
+    longDescription: "Generate a multi-dimensional view of your project's internal anatomy: Dependency Graphs, Architecture Maps, Route Trees, and Component Topologies. Built with AST parsing for absolute precision.",
+    tags: ["TypeScript", "React", "AST", "CLI"],
+    image: "/labs/next-project-map/next-project-map-featured-gif.mov",
+    href: "/labs/next-project-map",
+    status: "wip",
+  },
 ];
 
 /* ---- Grid ---- */
@@ -84,7 +94,15 @@ export function LabsGrid() {
   return (
     <section className={styles.gridSection}>
       {labsProjects.map((project, i) => (
-        <LabCard key={i} project={project} isLast={i === labsProjects.length - 1} />
+        <div key={i}>
+          <LabCard project={project} isLast={i === labsProjects.length - 1} />
+          {i < labsProjects.length - 1 && (
+            <>
+              <DiagonalHatch />
+              <SectionDivider />
+            </>
+          )}
+        </div>
       ))}
     </section>
   );
@@ -172,7 +190,18 @@ function LabCard({ project, isLast }: { project: LabsProject; isLast?: boolean }
                 {/* Notch overlay container sits outside overflow:hidden */}
                 <div className={styles.cardImageFrame}>
                   <Link href={project.href} className={styles.cardImageWrap} tabIndex={-1} aria-hidden="true">
-                    <img src={project.image} alt={project.title} className={styles.cardImage} />
+                    {project.image.endsWith('.mov') || project.image.endsWith('.mp4') ? (
+                      <video 
+                        src={project.image} 
+                        className={styles.cardImage} 
+                        autoPlay 
+                        muted 
+                        loop 
+                        playsInline
+                      />
+                    ) : (
+                      <img src={project.image} alt={project.title} className={styles.cardImage} />
+                    )}
                   </Link>
                   {/* Bottom-right notch — outside overflow:hidden so it isn't clipped */}
                   <div className={styles.notchBR} aria-hidden="true">

@@ -216,7 +216,7 @@ export function LabProjectHero({
         {status && (
           <div className={`${styles.heroRow} ${styles.heroRowStatus}`}>
             <div className={`${styles.heroRowContent} ${styles.contentStatus}`}>
-              <span className={styles.heroStatusBadge}>
+              <span className={`${styles.heroStatusBadge} ${styles[`heroStatus_${status}`]}`}>
                 <span className={styles.heroStatusDot} />
                 {STATUS_LABELS[status]}
               </span>
