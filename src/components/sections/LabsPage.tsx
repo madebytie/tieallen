@@ -86,7 +86,7 @@ const labsProjects: LabsProject[] = [
     href: "/labs/next-project-map",
     npm: "https://www.npmjs.com/package/next-project-map",
     github: "https://github.com/madebytie/next-project-map",
-    status: "wip",
+    status: "live",
   },
 ];
 

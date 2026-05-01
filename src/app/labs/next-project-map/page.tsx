@@ -250,7 +250,7 @@ export default function NextProjectMapPage() {
       <StructuralWrap fade="top">
         <LabProjectHero
           label="Labs"
-          status="wip"
+          status="live"
           title="NEXT Project Map"
           description={
             <>
