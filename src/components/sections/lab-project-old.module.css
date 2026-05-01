@@ -1,0 +1,498 @@
+/* ============================================
+   LAB PROJECT TEMPLATE
+   Custom hero with left-side headline notch
+   centered vertically on a 65%-width image.
+   ============================================ */
+
+/* ---- Hero Section ---- */
+.hero {
+  width: 100%;
+  background-color: var(--bg-primary);
+}
+
+.heroFrame {
+  width: 100%;
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+.heroCard {
+  position: relative;
+  width: 100%;
+  min-height: 520px;
+  max-height: 600px;
+  display: flex;
+  align-items: stretch;
+  overflow: visible;
+}
+
+/* ---- Image: right 65% ---- */
+.heroImageWrap {
+  position: relative;
+  width: 68%;
+  margin-left: auto;
+  border-radius: 2.5rem;
+  overflow: hidden;
+  background-color: var(--bg-tertiary);
+}
+
+.heroImage {
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ---- Left notch: headline area ---- */
+.heroNotch {
+  position: absolute;
+  left: 0;
+  top: 43%;
+  transform: translateY(-50%);
+  width: 42%;
+  background-color: var(--bg-primary);
+  border-top-right-radius: 2.5rem;
+  border-bottom-right-radius: 2.5rem;
+  z-index: 3;
+  padding: 0.5rem 0.5rem 0.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.25rem;
+}
+
+/* ---- Inverse concave corners ---- */
+/* Top-right: where notch top edge meets the image. */
+.heroNotch::before {
+  content: "";
+  position: absolute;
+  top: -2.49rem;
+  right: 16.2%;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: radial-gradient(
+    circle at 100% 0%,
+    transparent 2.5rem,
+    var(--bg-primary) calc(2.5rem + 1px)
+  );
+  z-index: 5;
+}
+
+/* Bottom-right: where notch bottom edge meets the image. */
+.heroNotch::after {
+  content: "";
+  position: absolute;
+  bottom: -2.49rem;
+  right: 16.2%;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: radial-gradient(
+    circle at 100% 100%,
+    transparent 2.5rem,
+    var(--bg-primary) calc(2.5rem + 1px)
+  );
+  z-index: 5;
+}
+
+.heroLabel {
+  display: block;
+  font-family: var(--font-primary);
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--text-muted);
+}
+
+.heroTitle {
+  font-family: var(--font-logo);
+  font-size: clamp(2.2rem, 4vw, 3.6rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.heroDesc {
+  font-family: var(--font-primary);
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: var(--text-primary);
+  margin: 0;
+  max-width: 460px;
+}
+
+.heroTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.heroTag {
+  padding: 0.4rem 0.95rem;
+  background-color: var(--bg-tertiary);
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+
+/* ============================================
+   STEPS SECTION
+   ============================================ */
+
+.stepsSection {
+  padding: 6rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.stepsHeadline {
+  font-family: var(--font-logo);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: var(--text-primary);
+  margin: 0 0 4rem;
+}
+
+.stepsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.stepCard {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.stepHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.stepNumber {
+  font-family: var(--font-primary);
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--brand-orange);
+}
+
+.stepTitle {
+  font-family: var(--font-logo);
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.codeBlock {
+  position: relative;
+  background-color: var(--bg-tertiary);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 2rem;
+  font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', monospace;
+  font-size: 1.05rem;
+  color: var(--text-primary);
+  overflow-x: auto;
+  border: 1px solid var(--border-subtle);
+}
+
+.codeBlock code {
+  display: block;
+  white-space: pre;
+  line-height: 1.7;
+}
+
+.codeComment {
+  color: var(--text-muted);
+  opacity: 0.8;
+}
+
+.codeCommand {
+  color: var(--brand-orange);
+  font-weight: 500;
+}
+
+.codePrompt {
+  color: var(--text-muted);
+  user-select: none;
+}
+
+
+/* ============================================
+   CONTENT SECTION - two-col overview
+   ============================================ */
+
+.contentSection {
+  padding: 0 2rem 6rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.contentHeadline {
+  font-family: var(--font-logo);
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  color: var(--text-primary);
+  margin: 0 0 1.5rem;
+}
+
+.contentBody {
+  font-family: var(--font-primary);
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.featureList {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.featureItem {
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.featureNumber {
+  font-family: var(--font-primary);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+
+.featureLabel {
+  font-family: var(--font-logo);
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+
+/* ============================================
+   IMAGE SPLIT SECTION
+   ============================================ */
+
+.imageSplitSection {
+  padding: 6rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.imageSplitGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 6rem;
+  align-items: center;
+}
+
+.imageWrapWithNotch {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 2rem;
+  overflow: hidden;
+  background-color: var(--bg-tertiary);
+}
+
+.accentNotch {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 25%;
+  height: 2.5rem;
+  background-color: var(--bg-primary);
+  border-top-right-radius: 1.5rem;
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* Corner smoothers for the notch */
+.accentNotch::before {
+  content: "";
+  position: absolute;
+  top: -1.5rem;
+  left: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: radial-gradient(
+    circle at 100% 0%,
+    transparent 1.5rem,
+    var(--bg-primary) calc(1.5rem + 1px)
+  );
+}
+
+.accentNotch::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: -1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: radial-gradient(
+    circle at 100% 0%,
+    transparent 1.5rem,
+    var(--bg-primary) calc(1.5rem + 1px)
+  );
+}
+
+
+/* ============================================
+   LINKS ROW
+   ============================================ */
+
+.linksSection {
+  padding: 0 2rem 8rem;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.linkPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.9rem 1.75rem;
+  border-radius: var(--radius-full);
+  font-family: var(--font-primary);
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: transform var(--transition-fast), opacity var(--transition-fast);
+}
+
+.linkPill:hover {
+  transform: translateY(-2px);
+}
+
+.linkPrimary {
+  background-color: var(--text-primary);
+  color: var(--bg-primary);
+}
+
+.linkSecondary {
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  background: transparent;
+}
+
+.linkSecondary:hover {
+  border-color: var(--text-primary);
+}
+
+.linkIcon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 900px) {
+  .heroCard {
+    flex-direction: column;
+    min-height: auto;
+    max-height: none;
+  }
+
+  .heroImageWrap {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+  }
+
+  .heroNotch {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    width: 100%;
+    border-radius: 0;
+    padding: 2.5rem 0 0;
+    gap: 1rem;
+  }
+
+  .heroNotch::before,
+  .heroNotch::after {
+    display: none;
+  }
+
+  .stepsGrid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .imageSplitGrid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .imageWrapWithNotch {
+    order: -1;
+  }
+}
+
+@media (max-width: 560px) {
+  .heroFrame {
+    padding: 0.75rem;
+  }
+
+  .heroImageWrap {
+    border-radius: 1.75rem;
+  }
+
+  .heroNotch {
+    padding: 2rem 0 0;
+  }
+
+  .heroTitle {
+    font-size: 1.75rem;
+  }
+
+  .installSection {
+    padding: 4rem 1.25rem;
+  }
+
+  .contentSection {
+    padding: 0 1.25rem 4rem;
+  }
+
+  .linksSection {
+    padding: 0 1.25rem 6rem;
+  }
+
+  .codeBlock {
+    padding: 1.25rem;
+    font-size: 0.85rem;
+  }
+}
