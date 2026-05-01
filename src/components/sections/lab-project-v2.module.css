@@ -1343,18 +1343,21 @@
     display: none;
   }
 
-  .structuralWrap::before,
-  .structuralWrap::after {
-    display: none;
+  /* Keep vertical lines visible on mobile — add outer padding */
+  .structuralWrap {
+    margin-left: 15px;
+    margin-right: 15px;
   }
 
-  .sectionDivider::before,
-  .sectionDivider::after {
-    display: none;
+  .sectionDivider {
+    margin-left: 15px;
+    margin-right: 15px;
   }
 
   .diagonalHatch {
     height: 24px;
+    margin-left: 15px;
+    margin-right: 15px;
   }
 
   .featureCards {
@@ -1364,6 +1367,18 @@
 
   .stepsGrid {
     grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .stepsSection {
+    padding: 4rem 0.75rem; /* Reduced padding from 2rem to 0.75rem */
+  }
+
+  .stepCard {
+    padding: 1.25rem; /* Reduced padding from 2rem to 1.25rem */
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
   }
 
   .featureGrid {
@@ -1385,6 +1400,80 @@
 
   .workflowForkLine {
     width: 80%;
+  }
+
+  /* ---- Body text: smaller on mobile ---- */
+  .heroSubtitle {
+    font-size: 0.95rem;
+  }
+
+  .heroTag {
+    font-size: 0.7rem;
+  }
+
+  .foundationBody {
+    font-size: 0.9rem;
+  }
+
+  .featureCardDesc {
+    font-size: 0.85rem;
+  }
+
+  .stepDesc {
+    font-size: 0.85rem;
+  }
+
+  .workflowOutcomeDesc {
+    font-size: 0.8rem;
+  }
+
+  .contentBody {
+    font-size: 0.9rem;
+  }
+
+  .featureCardDescV2 {
+    font-size: 0.85rem;
+  }
+
+  .imageSplitBody {
+    font-size: 0.85rem;
+  }
+
+  /* ---- Code Block Fixes ---- */
+  .codeBlock {
+    padding: 0.75rem 0.75rem 0.75rem 1rem;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    overflow: hidden;
+  }
+
+  .codeBlock code {
+    flex: 1;
+    min-width: 0;
+    white-space: pre;
+    font-size: 0.8rem;
+    overflow-x: auto;
+    padding: 0.25rem 0;
+    scrollbar-width: none; /* Hide scrollbar for cleaner look, still scrollable */
+  }
+
+  .codeBlock code::-webkit-scrollbar {
+    display: none;
+  }
+
+  .codeBlock .copyBtn {
+    opacity: 1; /* Always show on mobile so space isn't 'mysterious' */
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-subtle);
+  }
+
+  .stepCard {
+    padding: 1.25rem;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
   }
 }
 

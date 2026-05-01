@@ -50,6 +50,8 @@ type GooeyButtonBaseProps = {
   className?: string;
   /** Arrow icon direction */
   icon?: "top-right" | "down";
+  /** Optional link target */
+  target?: string;
 };
 
 type GooeyButtonLinkProps = GooeyButtonBaseProps & {
@@ -71,6 +73,7 @@ type GooeyButtonProps = GooeyButtonLinkProps | GooeyButtonActionProps;
 export default function GooeyButton({
   label,
   href,
+  target,
   onClick,
   type = "button",
   disabled,
@@ -107,7 +110,7 @@ export default function GooeyButton({
 
   if (href) {
     return (
-      <Link href={href} className={sharedClass} style={inlineVars}>
+      <Link href={href} target={target} className={sharedClass} style={inlineVars}>
         {inner}
       </Link>
     );

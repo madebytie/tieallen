@@ -12,11 +12,7 @@ export default function LabsPage() {
     <main>
       <LabsHero />
       <LabsGrid />
-      <CallToAction 
-        headline="Have a tool in mind?" 
-        subheadline="Let's build something experimental."
-        href="/start" 
-      />
+      <CallToAction href="/start" />
     </main>
   );
 }

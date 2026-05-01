@@ -43,11 +43,7 @@ export default function VenturesPage() {
       {VENTURES.map((venture) => (
         <VentureSection key={venture.label} {...venture} />
       ))}
-      <CallToAction 
-        headline="Have a venture in mind?" 
-        subheadline="Let's build the next big thing together."
-        href="/start" 
-      />
+      <CallToAction href="/start" />
     </main>
   );
 }
