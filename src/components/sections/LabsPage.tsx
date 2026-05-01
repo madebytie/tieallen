@@ -84,6 +84,8 @@ const labsProjects: LabsProject[] = [
     tags: ["TypeScript", "React", "AST", "CLI"],
     image: "/labs/next-project-map/next-project-map-featured-gif.mov",
     href: "/labs/next-project-map",
+    npm: "https://www.npmjs.com/package/next-project-map",
+    github: "https://github.com/madebytie/next-project-map",
     status: "wip",
   },
 ];
