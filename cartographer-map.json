@@ -1,0 +1,2578 @@
+{
+  "projectName": "tieallen",
+  "scannedAt": "2026-05-01T08:54:16.770Z",
+  "nodes": [
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/layout.tsx",
+      "type": "layout",
+      "name": "Layout: /",
+      "path": "layout.tsx",
+      "isClient": false,
+      "exports": [
+        "RootLayout",
+        "metadata"
+      ],
+      "importCount": 7
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/page.tsx",
+      "type": "route",
+      "name": "/",
+      "path": "page.tsx",
+      "isClient": false,
+      "exports": [
+        "Home"
+      ],
+      "importCount": 11
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/about/page.tsx",
+      "type": "route",
+      "name": "/about",
+      "path": "about/page.tsx",
+      "isClient": false,
+      "exports": [
+        "AboutPage",
+        "metadata"
+      ],
+      "importCount": 2
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/admin/page.tsx",
+      "type": "route",
+      "name": "/admin",
+      "path": "admin/page.tsx",
+      "isClient": true,
+      "exports": [
+        "AdminPage"
+      ],
+      "importCount": 3
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/contact/page.tsx",
+      "type": "route",
+      "name": "/contact",
+      "path": "contact/page.tsx",
+      "isClient": false,
+      "exports": [
+        "ContactPage",
+        "metadata"
+      ],
+      "importCount": 6
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/get-started/page.tsx",
+      "type": "route",
+      "name": "/get-started",
+      "path": "get-started/page.tsx",
+      "isClient": false,
+      "exports": [
+        "GetStarted",
+        "metadata"
+      ],
+      "importCount": 4
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/labs/page.tsx",
+      "type": "route",
+      "name": "/labs",
+      "path": "labs/page.tsx",
+      "isClient": false,
+      "exports": [
+        "LabsPage",
+        "metadata"
+      ],
+      "importCount": 3
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/love/page.tsx",
+      "type": "route",
+      "name": "/love",
+      "path": "love/page.tsx",
+      "isClient": false,
+      "exports": [
+        "LovePage"
+      ],
+      "importCount": 2
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/privacy/page.tsx",
+      "type": "route",
+      "name": "/privacy",
+      "path": "privacy/page.tsx",
+      "isClient": false,
+      "exports": [
+        "PrivacyPage",
+        "metadata"
+      ],
+      "importCount": 1
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/services/page.tsx",
+      "type": "route",
+      "name": "/services",
+      "path": "services/page.tsx",
+      "isClient": false,
+      "exports": [
+        "ServicesPage",
+        "metadata"
+      ],
+      "importCount": 4
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/start/page.tsx",
+      "type": "route",
+      "name": "/start",
+      "path": "start/page.tsx",
+      "isClient": false,
+      "exports": [
+        "GetStarted",
+        "metadata"
+      ],
+      "importCount": 4
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/test-page/page.tsx",
+      "type": "route",
+      "name": "/test-page",
+      "path": "test-page/page.tsx",
+      "isClient": false,
+      "exports": [
+        "TestPage"
+      ],
+      "importCount": 0
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/ventures/page.tsx",
+      "type": "route",
+      "name": "/ventures",
+      "path": "ventures/page.tsx",
+      "isClient": false,
+      "exports": [
+        "VenturesPage",
+        "metadata"
+      ],
+      "importCount": 4
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/page.tsx",
+      "type": "route",
+      "name": "/work",
+      "path": "work/page.tsx",
+      "isClient": false,
+      "exports": [
+        "Work",
+        "metadata"
+      ],
+      "importCount": 3
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/components/layout/Footer.tsx",
+      "type": "component",
+      "name": "Footer",
+      "path": "components/layout/Footer.tsx",
+      "isClient": true,
+      "exports": [
+        "Footer"
+      ],
+      "importCount": 4
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/components/layout/Header.tsx",
+      "type": "component",
+      "name": "Header",
+      "path": "components/layout/Header.tsx",
+      "isClient": true,
+      "exports": [
+        "Header"
+      ],
+      "importCount": 4
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/components/pages/AboutPageContent.tsx",
+      "type": "component",
+      "name": "AboutPageContent",
+      "path": "components/pages/AboutPageContent.tsx",
+      "isClient": true,
+      "exports": [
+        "AboutPageContent"
+      ],
+      "importCount": 7
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/components/sections/AboutBio.tsx",
+      "type": "component",
+      "name": "AboutBio",
+      "path": "components/sections/AboutBio.tsx",
+      "isClient": false,
+      "exports": [
+        "AboutBio"
+      ],
+      "importCount": 3
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/components/sections/AboutGlobal.tsx",
+      "type": "component",
+      "name": "AboutGlobal",
+      "path": "components/sections/AboutGlobal.tsx",
+      "isClient": true,
+      "exports": [
+        "AboutGlobal"
+      ],
+      "importCount": 3
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/components/sections/AboutHero.tsx",
+      "type": "component",
+      "name": "AboutHero",
+      "path": "components/sections/AboutHero.tsx",
+      "isClient": false,
+      "exports": [
+        "AboutHero"
+      ],
+      "importCount": 1
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/components/sections/AboutMission.tsx",
+      "type": "component",
+      "name": "AboutMission",
+      "path": "components/sections/AboutMission.tsx",
+      "isClient": false,
+      "exports": [
+        "AboutMission"
+      ],
+      "importCount": 1
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/components/sections/AboutStats.tsx",
+      "type": "component",
+      "name": "AboutStats",
+      "path": "components/sections/AboutStats.tsx",
+      "isClient": true,
+      "exports": [
+        "AboutStats"
+      ],
+      "importCount": 2
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/components/sections/BrandGuideViewer.tsx",
+      "type": "component",
+      "name": "BrandGuideViewer",
+      "path": "components/sections/BrandGuideViewer.tsx",
+      "isClient": true,
+      "exports": [
+        "BrandGuideViewer"
+      ],
+      "importCount": 2
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/components/sections/CallToAction.tsx",
+      "type": "component",
+      "name": "CallToAction",
+      "path": "components/sections/CallToAction.tsx",
+      "isClient": true,
+      "exports": [
+        "CallToAction"
+      ],
+      "importCount": 3
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyCarousel.tsx",
+      "type": "component",
+      "name": "CaseStudyCarousel",
+      "path": "components/sections/CaseStudyCarousel.tsx",
+      "isClient": true,
+      "exports": [
+        "CaseStudyCarousel"
+      ],
+      "importCount": 2
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyDeliverables.tsx",
+      "type": "component",
+      "name": "CaseStudyDeliverables",
+      "path": "components/sections/CaseStudyDeliverables.tsx",
+      "isClient": false,
+      "exports": [
+        "CaseStudyDeliverables"
+      ],
+      "importCount": 1
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyDeviceShowcase.tsx",
+      "type": "component",
+      "name": "CaseStudyDeviceShowcase",
+      "path": "components/sections/CaseStudyDeviceShowcase.tsx",
+      "isClient": true,
+      "exports": [
+        "CaseStudyDeviceShowcase"
+      ],
+      "importCount": 2
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyImageGrid.tsx",
+      "type": "component",
+      "name": "CaseStudyImageGrid",
+      "path": "components/sections/CaseStudyImageGrid.tsx",
+      "isClient": false,
+      "exports": [
+        "CaseStudyImageGrid"
+      ],
+      "importCount": 1
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyIntro.tsx",
+      "type": "component",
+      "name": "CaseStudyIntro",
+      "path": "components/sections/CaseStudyIntro.tsx",
+      "isClient": false,
+      "exports": [
+        "CaseStudyIntro"
+      ],
+      "importCount": 1
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyInViewVideo.tsx",
+      "type": "component",
+      "name": "CaseStudyInViewVideo",
+      "path": "components/sections/CaseStudyInViewVideo.tsx",
+      "isClient": true,
+      "exports": [
+        "CaseStudyInViewVideo"
+      ],
+      "importCount": 2
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyProcessViewer.tsx",
+      "type": "component",
+      "name": "CaseStudyProcessViewer",
+      "path": "components/sections/CaseStudyProcessViewer.tsx",
+      "isClient": true,
+      "exports": [
+        "CaseStudyProcessViewer"
+      ],
+      "importCount": 1
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyScreenGrid.tsx",
+      "type": "component",
+      "name": "CaseStudyScreenGrid",
+      "path": "components/sections/CaseStudyScreenGrid.tsx",
+      "isClient": true,
+      "exports": [
+        "CaseStudyScreenGrid"
+      ],
+      "importCount": 2
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudySlideshow.tsx",
+      "type": "component",
+      "name": "CaseStudySlideshow",
+      "path": "components/sections/CaseStudySlideshow.tsx",
+      "isClient": true,
+      "exports": [
+        "CaseStudySlideshow"
+      ],
+      "importCount": 2
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudySplitContent.tsx",
+      "type": "component",
+      "name": "CaseStudySplitContent",
+      "path": "components/sections/CaseStudySplitContent.tsx",
+      "isClient": true,
+      "exports": [
+        "CaseStudySplitContent"
+      ],
+      "importCount": 2
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyTestimonial.tsx",
+      "type": "component",
+      "name": "CaseStudyTestimonial",
+      "path": "components/sections/CaseStudyTestimonial.tsx",
+      "isClient": false,
+      "exports": [
+        "CaseStudyTestimonial"
+      ],
+      "importCount": 1
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyVideoSection.tsx",
+      "type": "component",
+      "name": "CaseStudyVideoSection",
+      "path": "components/sections/CaseStudyVideoSection.tsx",
+      "isClient": true,
+      "exports": [
+        "CaseStudyVideoSection"
+      ],
+      "importCount": 1
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyVideoShowcase.tsx",
+      "type": "component",
+      "name": "CaseStudyVideoShowcase",
+      "path": "components/sections/CaseStudyVideoShowcase.tsx",
+      "isClient": true,
+      "exports": [
+        "CaseStudyVideoShowcase"
+      ],
+      "importCount": 2
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyYouTubeSection.tsx",
+      "type": "component",
+      "name": "CaseStudyYouTubeSection",
+      "path": "components/sections/CaseStudyYouTubeSection.tsx",
+      "isClient": true,
+      "exports": [
+        "CaseStudyYouTubeSection"
+      ],
+      "importCount": 2
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/components/sections/ClientRoster.tsx",
+      "type": "component",
+      "name": "ClientRoster",
+      "path": "components/sections/ClientRoster.tsx",
+      "isClient": true,
+      "exports": [
+        "ClientRoster"
+      ],
+      "importCount": 2
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/components/sections/ContactForm.tsx",
+      "type": "component",
+      "name": "ContactForm",
+      "path": "components/sections/ContactForm.tsx",
+      "isClient": true,
+      "exports": [
+        "ContactForm"
+      ],
+      "importCount": 3
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/components/sections/ContactHero.tsx",
+      "type": "component",
+      "name": "ContactHero",
+      "path": "components/sections/ContactHero.tsx",
+      "isClient": false,
+      "exports": [
+        "ContactHero"
+      ],
+      "importCount": 1
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/components/sections/ContactLocation.tsx",
+      "type": "component",
+      "name": "ContactLocation",
+      "path": "components/sections/ContactLocation.tsx",
+      "isClient": false,
+      "exports": [
+        "ContactLocation"
+      ],
+      "importCount": 1
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/components/sections/FAQ.tsx",
+      "type": "component",
+      "name": "FAQ",
+      "path": "components/sections/FAQ.tsx",
+      "isClient": true,
+      "exports": [
+        "FAQ"
+      ],
+      "importCount": 3
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/components/sections/FeaturedProjects.tsx",
+      "type": "component",
+      "name": "FeaturedProjects",
+      "path": "components/sections/FeaturedProjects.tsx",
+      "isClient": true,
+      "exports": [
+        "FeaturedProjects"
+      ],
+      "importCount": 2
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/components/sections/HomeFeaturedTestimonial.tsx",
+      "type": "component",
+      "name": "HomeFeaturedTestimonial",
+      "path": "components/sections/HomeFeaturedTestimonial.tsx",
+      "isClient": true,
+      "exports": [
+        "HomeFeaturedTestimonial"
+      ],
+      "importCount": 2
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/components/sections/HomeHero.tsx",
+      "type": "component",
+      "name": "HomeHero",
+      "path": "components/sections/HomeHero.tsx",
+      "isClient": true,
+      "exports": [
+        "HomeHero"
+      ],
+      "importCount": 3
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/components/sections/HomeServices.tsx",
+      "type": "component",
+      "name": "HomeServices",
+      "path": "components/sections/HomeServices.tsx",
+      "isClient": true,
+      "exports": [
+        "HomeServices"
+      ],
+      "importCount": 4
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/components/sections/HomeTestimonialCard.tsx",
+      "type": "component",
+      "name": "HomeTestimonialCard",
+      "path": "components/sections/HomeTestimonialCard.tsx",
+      "isClient": true,
+      "exports": [
+        "HomeTestimonialCard"
+      ],
+      "importCount": 4
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/components/sections/Introduction.tsx",
+      "type": "component",
+      "name": "Introduction",
+      "path": "components/sections/Introduction.tsx",
+      "isClient": true,
+      "exports": [
+        "Introduction"
+      ],
+      "importCount": 3
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/components/sections/LabProject.tsx",
+      "type": "component",
+      "name": "LabProject",
+      "path": "components/sections/LabProject.tsx",
+      "isClient": true,
+      "exports": [
+        "BeakerIcon",
+        "StructuralWrap",
+        "SectionDivider",
+        "DiagonalHatch",
+        "GitHubIcon",
+        "VercelIcon",
+        "LabProjectHero",
+        "FoundationSection",
+        "StepsSection",
+        "ContentSection",
+        "WorkflowSection",
+        "ImageSplitSection",
+        "VideoSection",
+        "LinksRow"
+      ],
+      "importCount": 3
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/components/sections/LabProjectOld.tsx",
+      "type": "component",
+      "name": "LabProjectOld",
+      "path": "components/sections/LabProjectOld.tsx",
+      "isClient": true,
+      "exports": [
+        "LabProjectHeroOld",
+        "StepsSectionOld",
+        "ContentSectionOld",
+        "ImageSplitSectionOld",
+        "LinksRowOld"
+      ],
+      "importCount": 3
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/components/sections/LabsPage.tsx",
+      "type": "component",
+      "name": "LabsPage",
+      "path": "components/sections/LabsPage.tsx",
+      "isClient": true,
+      "exports": [
+        "LabsHero",
+        "LabsGrid"
+      ],
+      "importCount": 3
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/components/sections/LogoMarquee.tsx",
+      "type": "component",
+      "name": "LogoMarquee",
+      "path": "components/sections/LogoMarquee.tsx",
+      "isClient": true,
+      "exports": [
+        "LogoMarquee"
+      ],
+      "importCount": 1
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/components/sections/LoveHero.tsx",
+      "type": "component",
+      "name": "LoveHero",
+      "path": "components/sections/LoveHero.tsx",
+      "isClient": true,
+      "exports": [
+        "LoveHero"
+      ],
+      "importCount": 1
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/components/sections/Philosophy.tsx",
+      "type": "component",
+      "name": "Philosophy",
+      "path": "components/sections/Philosophy.tsx",
+      "isClient": false,
+      "exports": [
+        "Philosophy"
+      ],
+      "importCount": 1
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/components/sections/Pricing.tsx",
+      "type": "component",
+      "name": "Pricing",
+      "path": "components/sections/Pricing.tsx",
+      "isClient": false,
+      "exports": [
+        "Pricing"
+      ],
+      "importCount": 2
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/components/sections/ProjectHero.tsx",
+      "type": "component",
+      "name": "ProjectHero",
+      "path": "components/sections/ProjectHero.tsx",
+      "isClient": true,
+      "exports": [
+        "ProjectHero"
+      ],
+      "importCount": 2
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/components/sections/ProjectsGrid.tsx",
+      "type": "component",
+      "name": "ProjectsGrid",
+      "path": "components/sections/ProjectsGrid.tsx",
+      "isClient": true,
+      "exports": [
+        "ProjectsGrid"
+      ],
+      "importCount": 2
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/components/sections/ProjectSlider.tsx",
+      "type": "component",
+      "name": "ProjectSlider",
+      "path": "components/sections/ProjectSlider.tsx",
+      "isClient": true,
+      "exports": [
+        "ProjectSlider"
+      ],
+      "importCount": 3
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/components/sections/ServiceBreakdown.tsx",
+      "type": "component",
+      "name": "ServiceBreakdown",
+      "path": "components/sections/ServiceBreakdown.tsx",
+      "isClient": true,
+      "exports": [
+        "ServiceBreakdown"
+      ],
+      "importCount": 2
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/components/sections/ServiceCapabilities.tsx",
+      "type": "component",
+      "name": "ServiceCapabilities",
+      "path": "components/sections/ServiceCapabilities.tsx",
+      "isClient": false,
+      "exports": [
+        "ServiceCapabilities"
+      ],
+      "importCount": 1
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/components/sections/ServiceImageSplit.tsx",
+      "type": "component",
+      "name": "ServiceImageSplit",
+      "path": "components/sections/ServiceImageSplit.tsx",
+      "isClient": false,
+      "exports": [
+        "ServiceImageSplit"
+      ],
+      "importCount": 3
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/components/sections/ServiceImageSplitReverse.tsx",
+      "type": "component",
+      "name": "ServiceImageSplitReverse",
+      "path": "components/sections/ServiceImageSplitReverse.tsx",
+      "isClient": false,
+      "exports": [
+        "ServiceImageSplitReverse"
+      ],
+      "importCount": 3
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/components/sections/ServicePageHero.tsx",
+      "type": "component",
+      "name": "ServicePageHero",
+      "path": "components/sections/ServicePageHero.tsx",
+      "isClient": false,
+      "exports": [
+        "ServicePageHero"
+      ],
+      "importCount": 4
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/components/sections/ServicesPage.tsx",
+      "type": "component",
+      "name": "ServicesPage",
+      "path": "components/sections/ServicesPage.tsx",
+      "isClient": true,
+      "exports": [
+        "ServicesHero",
+        "ServiceSection"
+      ],
+      "importCount": 3
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/components/sections/StartProjectForm.tsx",
+      "type": "component",
+      "name": "StartProjectForm",
+      "path": "components/sections/StartProjectForm.tsx",
+      "isClient": true,
+      "exports": [
+        "StartProjectForm"
+      ],
+      "importCount": 3
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/components/sections/VenturesPage.tsx",
+      "type": "component",
+      "name": "VenturesPage",
+      "path": "components/sections/VenturesPage.tsx",
+      "isClient": true,
+      "exports": [
+        "VenturesHero",
+        "VentureSection"
+      ],
+      "importCount": 5
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/components/ui/GooeyButton.tsx",
+      "type": "component",
+      "name": "GooeyButton",
+      "path": "components/ui/GooeyButton.tsx",
+      "isClient": true,
+      "exports": [
+        "GooeyButton",
+        "GooeyFilter"
+      ],
+      "importCount": 2
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/components/ui/WordCloudReveal.tsx",
+      "type": "component",
+      "name": "WordCloudReveal",
+      "path": "components/ui/WordCloudReveal.tsx",
+      "isClient": true,
+      "exports": [
+        "WordCloudReveal"
+      ],
+      "importCount": 2
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/admin/login/page.tsx",
+      "type": "route",
+      "name": "/admin/login",
+      "path": "admin/login/page.tsx",
+      "isClient": true,
+      "exports": [
+        "LoginPage"
+      ],
+      "importCount": 1
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/api/contact/route.ts",
+      "type": "api",
+      "name": "/api/contact",
+      "path": "api/contact/route.ts",
+      "isClient": false,
+      "exports": [
+        "POST"
+      ],
+      "importCount": 1
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/labs/next-inline-editor/page.tsx",
+      "type": "route",
+      "name": "/labs/next-inline-editor",
+      "path": "labs/next-inline-editor/page.tsx",
+      "isClient": false,
+      "exports": [
+        "NextInlineEditorV2",
+        "metadata"
+      ],
+      "importCount": 3
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/labs/next-inline-editor-old/page.tsx",
+      "type": "route",
+      "name": "/labs/next-inline-editor-old",
+      "path": "labs/next-inline-editor-old/page.tsx",
+      "isClient": false,
+      "exports": [
+        "NextInlineEditorOld",
+        "metadata"
+      ],
+      "importCount": 3
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/services/branding/page.tsx",
+      "type": "route",
+      "name": "/services/branding",
+      "path": "services/branding/page.tsx",
+      "isClient": false,
+      "exports": [
+        "BrandingPage",
+        "metadata"
+      ],
+      "importCount": 8
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/services/crm-automation/page.tsx",
+      "type": "route",
+      "name": "/services/crm-automation",
+      "path": "services/crm-automation/page.tsx",
+      "isClient": false,
+      "exports": [
+        "CrmAutomationPage",
+        "metadata"
+      ],
+      "importCount": 8
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/services/development/page.tsx",
+      "type": "route",
+      "name": "/services/development",
+      "path": "services/development/page.tsx",
+      "isClient": false,
+      "exports": [
+        "DevelopmentPage",
+        "metadata"
+      ],
+      "importCount": 8
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/services/web-design/page.tsx",
+      "type": "route",
+      "name": "/services/web-design",
+      "path": "services/web-design/page.tsx",
+      "isClient": false,
+      "exports": [
+        "WebDesignPage",
+        "metadata"
+      ],
+      "importCount": 8
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/bch-devcon/page.tsx",
+      "type": "route",
+      "name": "/work/bch-devcon",
+      "path": "work/bch-devcon/page.tsx",
+      "isClient": false,
+      "exports": [
+        "BCHDevcon",
+        "metadata"
+      ],
+      "importCount": 10
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/blue-divine-aesthetics/page.tsx",
+      "type": "route",
+      "name": "/work/blue-divine-aesthetics",
+      "path": "work/blue-divine-aesthetics/page.tsx",
+      "isClient": false,
+      "exports": [
+        "BlueDivineAesthetics",
+        "metadata"
+      ],
+      "importCount": 7
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/ci2-aviation/page.tsx",
+      "type": "route",
+      "name": "/work/ci2-aviation",
+      "path": "work/ci2-aviation/page.tsx",
+      "isClient": false,
+      "exports": [
+        "CI2Aviation",
+        "metadata"
+      ],
+      "importCount": 11
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/expose-hair/page.tsx",
+      "type": "route",
+      "name": "/work/expose-hair",
+      "path": "work/expose-hair/page.tsx",
+      "isClient": false,
+      "exports": [
+        "ExposeHair",
+        "metadata"
+      ],
+      "importCount": 10
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/jennings-brands/page.tsx",
+      "type": "route",
+      "name": "/work/jennings-brands",
+      "path": "work/jennings-brands/page.tsx",
+      "isClient": false,
+      "exports": [
+        "JenningsBrands",
+        "metadata"
+      ],
+      "importCount": 9
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/loretorch/page.tsx",
+      "type": "route",
+      "name": "/work/loretorch",
+      "path": "work/loretorch/page.tsx",
+      "isClient": false,
+      "exports": [
+        "LoreTorchCaseStudy",
+        "metadata"
+      ],
+      "importCount": 4
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/permissionless-ventures/page.tsx",
+      "type": "route",
+      "name": "/work/permissionless-ventures",
+      "path": "work/permissionless-ventures/page.tsx",
+      "isClient": false,
+      "exports": [
+        "PermissionlessVentures",
+        "metadata"
+      ],
+      "importCount": 10
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/servco-wholesale/page.tsx",
+      "type": "route",
+      "name": "/work/servco-wholesale",
+      "path": "work/servco-wholesale/page.tsx",
+      "isClient": false,
+      "exports": [
+        "ServcoWholesale",
+        "metadata"
+      ],
+      "importCount": 7
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/stanlok-precision-manufacturing/page.tsx",
+      "type": "route",
+      "name": "/work/stanlok-precision-manufacturing",
+      "path": "work/stanlok-precision-manufacturing/page.tsx",
+      "isClient": false,
+      "exports": [
+        "StanlokPrecisionManufacturing",
+        "metadata"
+      ],
+      "importCount": 11
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/taste-of-alpharetta/page.tsx",
+      "type": "route",
+      "name": "/work/taste-of-alpharetta",
+      "path": "work/taste-of-alpharetta/page.tsx",
+      "isClient": false,
+      "exports": [
+        "TasteOfAlpharetta",
+        "metadata"
+      ],
+      "importCount": 9
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/vizon-os/page.tsx",
+      "type": "route",
+      "name": "/work/vizon-os",
+      "path": "work/vizon-os/page.tsx",
+      "isClient": false,
+      "exports": [
+        "VizonOS",
+        "metadata"
+      ],
+      "importCount": 7
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/windward-tech-district/page.tsx",
+      "type": "route",
+      "name": "/work/windward-tech-district",
+      "path": "work/windward-tech-district/page.tsx",
+      "isClient": false,
+      "exports": [
+        "WindwardTechDistrict",
+        "metadata"
+      ],
+      "importCount": 13
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/wire-and-wood-festival/page.tsx",
+      "type": "route",
+      "name": "/work/wire-and-wood-festival",
+      "path": "work/wire-and-wood-festival/page.tsx",
+      "isClient": false,
+      "exports": [
+        "WireAndWoodFestival",
+        "metadata"
+      ],
+      "importCount": 11
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/yuli/page.tsx",
+      "type": "route",
+      "name": "/work/yuli",
+      "path": "work/yuli/page.tsx",
+      "isClient": false,
+      "exports": [
+        "Yuli",
+        "metadata"
+      ],
+      "importCount": 10
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/api/admin/login/route.ts",
+      "type": "api",
+      "name": "/api/admin/login",
+      "path": "api/admin/login/route.ts",
+      "isClient": false,
+      "exports": [],
+      "importCount": 0
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/api/admin/logout/route.ts",
+      "type": "api",
+      "name": "/api/admin/logout",
+      "path": "api/admin/logout/route.ts",
+      "isClient": false,
+      "exports": [],
+      "importCount": 0
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/api/admin/save/route.ts",
+      "type": "api",
+      "name": "/api/admin/save",
+      "path": "api/admin/save/route.ts",
+      "isClient": false,
+      "exports": [
+        "POST"
+      ],
+      "importCount": 2
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/api/admin/upload/route.ts",
+      "type": "api",
+      "name": "/api/admin/upload",
+      "path": "api/admin/upload/route.ts",
+      "isClient": false,
+      "exports": [
+        "POST"
+      ],
+      "importCount": 1
+    }
+  ],
+  "edges": [
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/layout.tsx→/Users/tie/Dev/tieallen/src/components/layout/Header.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/layout.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/layout/Header.tsx",
+      "type": "imports",
+      "label": "Header"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/layout.tsx→/Users/tie/Dev/tieallen/src/components/layout/Footer.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/layout.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/layout/Footer.tsx",
+      "type": "imports",
+      "label": "Footer"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/layout.tsx→/Users/tie/Dev/tieallen/src/components/ui/GooeyButton.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/layout.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/ui/GooeyButton.tsx",
+      "type": "imports",
+      "label": "GooeyFilter"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/HomeHero.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/HomeHero.tsx",
+      "type": "imports",
+      "label": "HomeHero"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/LogoMarquee.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/LogoMarquee.tsx",
+      "type": "imports",
+      "label": "LogoMarquee"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/Introduction.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/Introduction.tsx",
+      "type": "imports",
+      "label": "Introduction"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/HomeServices.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/HomeServices.tsx",
+      "type": "imports",
+      "label": "HomeServices"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/HomeFeaturedTestimonial.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/HomeFeaturedTestimonial.tsx",
+      "type": "imports",
+      "label": "HomeFeaturedTestimonial"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/FAQ.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/FAQ.tsx",
+      "type": "imports",
+      "label": "FAQ"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/FeaturedProjects.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/FeaturedProjects.tsx",
+      "type": "imports",
+      "label": "FeaturedProjects"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/Pricing.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/Pricing.tsx",
+      "type": "imports",
+      "label": "Pricing"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/AboutBio.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/AboutBio.tsx",
+      "type": "imports",
+      "label": "AboutBio"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/ClientRoster.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/ClientRoster.tsx",
+      "type": "imports",
+      "label": "ClientRoster"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CallToAction.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CallToAction.tsx",
+      "type": "imports",
+      "label": "CallToAction"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/about/page.tsx→/Users/tie/Dev/tieallen/src/components/pages/AboutPageContent.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/about/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/pages/AboutPageContent.tsx",
+      "type": "imports",
+      "label": "AboutPageContent"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/admin/page.tsx→/Users/tie/Dev/tieallen/src/components/pages/AboutPageContent.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/admin/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/pages/AboutPageContent.tsx",
+      "type": "imports",
+      "label": "AboutPageContent"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/contact/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/ContactHero.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/contact/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/ContactHero.tsx",
+      "type": "imports",
+      "label": "ContactHero"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/contact/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/ContactForm.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/contact/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/ContactForm.tsx",
+      "type": "imports",
+      "label": "ContactForm"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/contact/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/ContactLocation.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/contact/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/ContactLocation.tsx",
+      "type": "imports",
+      "label": "ContactLocation"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/contact/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/FAQ.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/contact/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/FAQ.tsx",
+      "type": "imports",
+      "label": "FAQ"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/get-started/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/StartProjectForm.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/get-started/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/StartProjectForm.tsx",
+      "type": "imports",
+      "label": "StartProjectForm"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/labs/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/LabsPage.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/labs/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/LabsPage.tsx",
+      "type": "imports",
+      "label": "LabsHero, LabsGrid"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/labs/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CallToAction.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/labs/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CallToAction.tsx",
+      "type": "imports",
+      "label": "CallToAction"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/love/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/LoveHero.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/love/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/LoveHero.tsx",
+      "type": "imports",
+      "label": "LoveHero"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/services/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/ServicesPage.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/services/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/ServicesPage.tsx",
+      "type": "imports",
+      "label": "ServicesHero, ServiceSection"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/services/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CallToAction.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/services/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CallToAction.tsx",
+      "type": "imports",
+      "label": "CallToAction"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/start/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/StartProjectForm.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/start/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/StartProjectForm.tsx",
+      "type": "imports",
+      "label": "StartProjectForm"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/ventures/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/VenturesPage.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/ventures/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/VenturesPage.tsx",
+      "type": "imports",
+      "label": "VenturesHero, VentureSection"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/ventures/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CallToAction.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/ventures/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CallToAction.tsx",
+      "type": "imports",
+      "label": "CallToAction"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/ProjectsGrid.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/ProjectsGrid.tsx",
+      "type": "imports",
+      "label": "ProjectsGrid"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/ClientRoster.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/ClientRoster.tsx",
+      "type": "imports",
+      "label": "ClientRoster"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/labs/next-inline-editor/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/LabProject.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/labs/next-inline-editor/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/LabProject.tsx",
+      "type": "imports",
+      "label": "LabProjectHero, StepsSection, ContentSection, ImageSplitSection, WorkflowSection, VideoSection, LinksRow, StructuralWrap, SectionDivider, DiagonalHatch"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/labs/next-inline-editor/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CallToAction.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/labs/next-inline-editor/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CallToAction.tsx",
+      "type": "imports",
+      "label": "CallToAction"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/labs/next-inline-editor-old/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/LabProjectOld.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/labs/next-inline-editor-old/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/LabProjectOld.tsx",
+      "type": "imports",
+      "label": "LabProjectHeroOld, StepsSectionOld, ContentSectionOld, ImageSplitSectionOld, LinksRowOld"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/labs/next-inline-editor-old/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CallToAction.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/labs/next-inline-editor-old/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CallToAction.tsx",
+      "type": "imports",
+      "label": "CallToAction"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/services/branding/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/ServicePageHero.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/services/branding/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/ServicePageHero.tsx",
+      "type": "imports",
+      "label": "ServicePageHero"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/services/branding/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/ServiceCapabilities.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/services/branding/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/ServiceCapabilities.tsx",
+      "type": "imports",
+      "label": "ServiceCapabilities"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/services/branding/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/ServiceBreakdown.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/services/branding/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/ServiceBreakdown.tsx",
+      "type": "imports",
+      "label": "ServiceBreakdown"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/services/branding/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/ServiceImageSplit.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/services/branding/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/ServiceImageSplit.tsx",
+      "type": "imports",
+      "label": "ServiceImageSplit"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/services/branding/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/ServiceImageSplitReverse.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/services/branding/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/ServiceImageSplitReverse.tsx",
+      "type": "imports",
+      "label": "ServiceImageSplitReverse"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/services/branding/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/ProjectSlider.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/services/branding/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/ProjectSlider.tsx",
+      "type": "imports",
+      "label": "ProjectSlider"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/services/branding/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CallToAction.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/services/branding/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CallToAction.tsx",
+      "type": "imports",
+      "label": "CallToAction"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/services/crm-automation/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/ServicePageHero.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/services/crm-automation/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/ServicePageHero.tsx",
+      "type": "imports",
+      "label": "ServicePageHero"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/services/crm-automation/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/ServiceCapabilities.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/services/crm-automation/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/ServiceCapabilities.tsx",
+      "type": "imports",
+      "label": "ServiceCapabilities"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/services/crm-automation/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/ServiceBreakdown.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/services/crm-automation/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/ServiceBreakdown.tsx",
+      "type": "imports",
+      "label": "ServiceBreakdown"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/services/crm-automation/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/ServiceImageSplit.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/services/crm-automation/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/ServiceImageSplit.tsx",
+      "type": "imports",
+      "label": "ServiceImageSplit"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/services/crm-automation/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/ServiceImageSplitReverse.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/services/crm-automation/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/ServiceImageSplitReverse.tsx",
+      "type": "imports",
+      "label": "ServiceImageSplitReverse"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/services/crm-automation/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/ProjectSlider.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/services/crm-automation/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/ProjectSlider.tsx",
+      "type": "imports",
+      "label": "ProjectSlider"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/services/crm-automation/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CallToAction.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/services/crm-automation/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CallToAction.tsx",
+      "type": "imports",
+      "label": "CallToAction"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/services/development/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/ServicePageHero.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/services/development/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/ServicePageHero.tsx",
+      "type": "imports",
+      "label": "ServicePageHero"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/services/development/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/ServiceCapabilities.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/services/development/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/ServiceCapabilities.tsx",
+      "type": "imports",
+      "label": "ServiceCapabilities"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/services/development/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/ServiceBreakdown.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/services/development/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/ServiceBreakdown.tsx",
+      "type": "imports",
+      "label": "ServiceBreakdown"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/services/development/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/ServiceImageSplit.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/services/development/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/ServiceImageSplit.tsx",
+      "type": "imports",
+      "label": "ServiceImageSplit"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/services/development/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/ServiceImageSplitReverse.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/services/development/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/ServiceImageSplitReverse.tsx",
+      "type": "imports",
+      "label": "ServiceImageSplitReverse"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/services/development/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/ProjectSlider.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/services/development/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/ProjectSlider.tsx",
+      "type": "imports",
+      "label": "ProjectSlider"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/services/development/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CallToAction.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/services/development/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CallToAction.tsx",
+      "type": "imports",
+      "label": "CallToAction"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/services/web-design/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/ServicePageHero.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/services/web-design/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/ServicePageHero.tsx",
+      "type": "imports",
+      "label": "ServicePageHero"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/services/web-design/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/ServiceCapabilities.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/services/web-design/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/ServiceCapabilities.tsx",
+      "type": "imports",
+      "label": "ServiceCapabilities"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/services/web-design/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/ServiceBreakdown.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/services/web-design/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/ServiceBreakdown.tsx",
+      "type": "imports",
+      "label": "ServiceBreakdown"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/services/web-design/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/ServiceImageSplit.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/services/web-design/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/ServiceImageSplit.tsx",
+      "type": "imports",
+      "label": "ServiceImageSplit"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/services/web-design/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/ServiceImageSplitReverse.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/services/web-design/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/ServiceImageSplitReverse.tsx",
+      "type": "imports",
+      "label": "ServiceImageSplitReverse"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/services/web-design/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/ProjectSlider.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/services/web-design/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/ProjectSlider.tsx",
+      "type": "imports",
+      "label": "ProjectSlider"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/services/web-design/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CallToAction.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/services/web-design/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CallToAction.tsx",
+      "type": "imports",
+      "label": "CallToAction"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/bch-devcon/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/ProjectHero.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/bch-devcon/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/ProjectHero.tsx",
+      "type": "imports",
+      "label": "ProjectHero"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/bch-devcon/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyIntro.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/bch-devcon/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyIntro.tsx",
+      "type": "imports",
+      "label": "CaseStudyIntro"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/bch-devcon/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudySplitContent.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/bch-devcon/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudySplitContent.tsx",
+      "type": "imports",
+      "label": "CaseStudySplitContent"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/bch-devcon/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyImageGrid.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/bch-devcon/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyImageGrid.tsx",
+      "type": "imports",
+      "label": "CaseStudyImageGrid"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/bch-devcon/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyDeviceShowcase.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/bch-devcon/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyDeviceShowcase.tsx",
+      "type": "imports",
+      "label": "CaseStudyDeviceShowcase"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/bch-devcon/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyTestimonial.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/bch-devcon/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyTestimonial.tsx",
+      "type": "imports",
+      "label": "CaseStudyTestimonial"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/bch-devcon/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyCarousel.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/bch-devcon/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyCarousel.tsx",
+      "type": "imports",
+      "label": "CaseStudyCarousel"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/bch-devcon/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyDeliverables.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/bch-devcon/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyDeliverables.tsx",
+      "type": "imports",
+      "label": "CaseStudyDeliverables"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/bch-devcon/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CallToAction.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/bch-devcon/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CallToAction.tsx",
+      "type": "imports",
+      "label": "CallToAction"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/blue-divine-aesthetics/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/ProjectHero.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/blue-divine-aesthetics/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/ProjectHero.tsx",
+      "type": "imports",
+      "label": "ProjectHero"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/blue-divine-aesthetics/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyIntro.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/blue-divine-aesthetics/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyIntro.tsx",
+      "type": "imports",
+      "label": "CaseStudyIntro"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/blue-divine-aesthetics/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudySplitContent.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/blue-divine-aesthetics/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudySplitContent.tsx",
+      "type": "imports",
+      "label": "CaseStudySplitContent"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/blue-divine-aesthetics/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyImageGrid.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/blue-divine-aesthetics/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyImageGrid.tsx",
+      "type": "imports",
+      "label": "CaseStudyImageGrid"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/blue-divine-aesthetics/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CallToAction.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/blue-divine-aesthetics/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CallToAction.tsx",
+      "type": "imports",
+      "label": "CallToAction"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/blue-divine-aesthetics/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyDeviceShowcase.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/blue-divine-aesthetics/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyDeviceShowcase.tsx",
+      "type": "imports",
+      "label": "CaseStudyDeviceShowcase"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/ci2-aviation/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/ProjectHero.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/ci2-aviation/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/ProjectHero.tsx",
+      "type": "imports",
+      "label": "ProjectHero"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/ci2-aviation/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyIntro.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/ci2-aviation/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyIntro.tsx",
+      "type": "imports",
+      "label": "CaseStudyIntro"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/ci2-aviation/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyYouTubeSection.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/ci2-aviation/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyYouTubeSection.tsx",
+      "type": "imports",
+      "label": "CaseStudyYouTubeSection"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/ci2-aviation/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudySplitContent.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/ci2-aviation/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudySplitContent.tsx",
+      "type": "imports",
+      "label": "CaseStudySplitContent"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/ci2-aviation/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyDeviceShowcase.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/ci2-aviation/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyDeviceShowcase.tsx",
+      "type": "imports",
+      "label": "CaseStudyDeviceShowcase"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/ci2-aviation/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyVideoShowcase.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/ci2-aviation/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyVideoShowcase.tsx",
+      "type": "imports",
+      "label": "CaseStudyVideoShowcase"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/ci2-aviation/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyScreenGrid.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/ci2-aviation/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyScreenGrid.tsx",
+      "type": "imports",
+      "label": "CaseStudyScreenGrid"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/ci2-aviation/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyImageGrid.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/ci2-aviation/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyImageGrid.tsx",
+      "type": "imports",
+      "label": "CaseStudyImageGrid"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/ci2-aviation/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyDeliverables.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/ci2-aviation/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyDeliverables.tsx",
+      "type": "imports",
+      "label": "CaseStudyDeliverables"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/ci2-aviation/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CallToAction.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/ci2-aviation/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CallToAction.tsx",
+      "type": "imports",
+      "label": "CallToAction"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/expose-hair/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/ProjectHero.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/expose-hair/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/ProjectHero.tsx",
+      "type": "imports",
+      "label": "ProjectHero"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/expose-hair/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyIntro.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/expose-hair/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyIntro.tsx",
+      "type": "imports",
+      "label": "CaseStudyIntro"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/expose-hair/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudySplitContent.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/expose-hair/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudySplitContent.tsx",
+      "type": "imports",
+      "label": "CaseStudySplitContent"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/expose-hair/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyImageGrid.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/expose-hair/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyImageGrid.tsx",
+      "type": "imports",
+      "label": "CaseStudyImageGrid"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/expose-hair/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyDeviceShowcase.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/expose-hair/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyDeviceShowcase.tsx",
+      "type": "imports",
+      "label": "CaseStudyDeviceShowcase"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/expose-hair/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyCarousel.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/expose-hair/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyCarousel.tsx",
+      "type": "imports",
+      "label": "CaseStudyCarousel"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/expose-hair/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyScreenGrid.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/expose-hair/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyScreenGrid.tsx",
+      "type": "imports",
+      "label": "CaseStudyScreenGrid"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/expose-hair/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyDeliverables.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/expose-hair/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyDeliverables.tsx",
+      "type": "imports",
+      "label": "CaseStudyDeliverables"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/expose-hair/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CallToAction.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/expose-hair/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CallToAction.tsx",
+      "type": "imports",
+      "label": "CallToAction"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/jennings-brands/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/ProjectHero.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/jennings-brands/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/ProjectHero.tsx",
+      "type": "imports",
+      "label": "ProjectHero"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/jennings-brands/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyIntro.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/jennings-brands/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyIntro.tsx",
+      "type": "imports",
+      "label": "CaseStudyIntro"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/jennings-brands/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudySplitContent.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/jennings-brands/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudySplitContent.tsx",
+      "type": "imports",
+      "label": "CaseStudySplitContent"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/jennings-brands/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyDeviceShowcase.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/jennings-brands/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyDeviceShowcase.tsx",
+      "type": "imports",
+      "label": "CaseStudyDeviceShowcase"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/jennings-brands/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CallToAction.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/jennings-brands/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CallToAction.tsx",
+      "type": "imports",
+      "label": "CallToAction"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/jennings-brands/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyTestimonial.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/jennings-brands/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyTestimonial.tsx",
+      "type": "imports",
+      "label": "CaseStudyTestimonial"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/jennings-brands/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyDeliverables.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/jennings-brands/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyDeliverables.tsx",
+      "type": "imports",
+      "label": "CaseStudyDeliverables"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/jennings-brands/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/ServiceBreakdown.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/jennings-brands/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/ServiceBreakdown.tsx",
+      "type": "imports",
+      "label": "ServiceBreakdown"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/loretorch/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/ProjectHero.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/loretorch/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/ProjectHero.tsx",
+      "type": "imports",
+      "label": "ProjectHero"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/loretorch/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyIntro.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/loretorch/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyIntro.tsx",
+      "type": "imports",
+      "label": "CaseStudyIntro"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/loretorch/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CallToAction.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/loretorch/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CallToAction.tsx",
+      "type": "imports",
+      "label": "CallToAction"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/permissionless-ventures/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/ProjectHero.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/permissionless-ventures/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/ProjectHero.tsx",
+      "type": "imports",
+      "label": "ProjectHero"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/permissionless-ventures/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyIntro.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/permissionless-ventures/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyIntro.tsx",
+      "type": "imports",
+      "label": "CaseStudyIntro"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/permissionless-ventures/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudySplitContent.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/permissionless-ventures/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudySplitContent.tsx",
+      "type": "imports",
+      "label": "CaseStudySplitContent"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/permissionless-ventures/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyImageGrid.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/permissionless-ventures/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyImageGrid.tsx",
+      "type": "imports",
+      "label": "CaseStudyImageGrid"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/permissionless-ventures/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyDeviceShowcase.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/permissionless-ventures/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyDeviceShowcase.tsx",
+      "type": "imports",
+      "label": "CaseStudyDeviceShowcase"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/permissionless-ventures/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyTestimonial.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/permissionless-ventures/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyTestimonial.tsx",
+      "type": "imports",
+      "label": "CaseStudyTestimonial"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/permissionless-ventures/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/BrandGuideViewer.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/permissionless-ventures/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/BrandGuideViewer.tsx",
+      "type": "imports",
+      "label": "BrandGuideViewer"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/permissionless-ventures/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyDeliverables.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/permissionless-ventures/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyDeliverables.tsx",
+      "type": "imports",
+      "label": "CaseStudyDeliverables"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/permissionless-ventures/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CallToAction.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/permissionless-ventures/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CallToAction.tsx",
+      "type": "imports",
+      "label": "CallToAction"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/servco-wholesale/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/ProjectHero.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/servco-wholesale/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/ProjectHero.tsx",
+      "type": "imports",
+      "label": "ProjectHero"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/servco-wholesale/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyIntro.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/servco-wholesale/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyIntro.tsx",
+      "type": "imports",
+      "label": "CaseStudyIntro"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/servco-wholesale/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudySplitContent.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/servco-wholesale/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudySplitContent.tsx",
+      "type": "imports",
+      "label": "CaseStudySplitContent"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/servco-wholesale/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyImageGrid.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/servco-wholesale/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyImageGrid.tsx",
+      "type": "imports",
+      "label": "CaseStudyImageGrid"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/servco-wholesale/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CallToAction.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/servco-wholesale/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CallToAction.tsx",
+      "type": "imports",
+      "label": "CallToAction"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/servco-wholesale/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyDeviceShowcase.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/servco-wholesale/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyDeviceShowcase.tsx",
+      "type": "imports",
+      "label": "CaseStudyDeviceShowcase"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/stanlok-precision-manufacturing/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/ProjectHero.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/stanlok-precision-manufacturing/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/ProjectHero.tsx",
+      "type": "imports",
+      "label": "ProjectHero"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/stanlok-precision-manufacturing/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyIntro.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/stanlok-precision-manufacturing/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyIntro.tsx",
+      "type": "imports",
+      "label": "CaseStudyIntro"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/stanlok-precision-manufacturing/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudySplitContent.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/stanlok-precision-manufacturing/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudySplitContent.tsx",
+      "type": "imports",
+      "label": "CaseStudySplitContent"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/stanlok-precision-manufacturing/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyDeviceShowcase.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/stanlok-precision-manufacturing/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyDeviceShowcase.tsx",
+      "type": "imports",
+      "label": "CaseStudyDeviceShowcase"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/stanlok-precision-manufacturing/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyScreenGrid.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/stanlok-precision-manufacturing/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyScreenGrid.tsx",
+      "type": "imports",
+      "label": "CaseStudyScreenGrid"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/stanlok-precision-manufacturing/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyImageGrid.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/stanlok-precision-manufacturing/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyImageGrid.tsx",
+      "type": "imports",
+      "label": "CaseStudyImageGrid"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/stanlok-precision-manufacturing/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyCarousel.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/stanlok-precision-manufacturing/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyCarousel.tsx",
+      "type": "imports",
+      "label": "CaseStudyCarousel"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/stanlok-precision-manufacturing/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyDeliverables.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/stanlok-precision-manufacturing/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyDeliverables.tsx",
+      "type": "imports",
+      "label": "CaseStudyDeliverables"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/stanlok-precision-manufacturing/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CallToAction.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/stanlok-precision-manufacturing/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CallToAction.tsx",
+      "type": "imports",
+      "label": "CallToAction"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/taste-of-alpharetta/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/ProjectHero.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/taste-of-alpharetta/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/ProjectHero.tsx",
+      "type": "imports",
+      "label": "ProjectHero"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/taste-of-alpharetta/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyIntro.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/taste-of-alpharetta/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyIntro.tsx",
+      "type": "imports",
+      "label": "CaseStudyIntro"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/taste-of-alpharetta/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudySplitContent.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/taste-of-alpharetta/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudySplitContent.tsx",
+      "type": "imports",
+      "label": "CaseStudySplitContent"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/taste-of-alpharetta/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyImageGrid.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/taste-of-alpharetta/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyImageGrid.tsx",
+      "type": "imports",
+      "label": "CaseStudyImageGrid"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/taste-of-alpharetta/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyDeviceShowcase.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/taste-of-alpharetta/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyDeviceShowcase.tsx",
+      "type": "imports",
+      "label": "CaseStudyDeviceShowcase"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/taste-of-alpharetta/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyYouTubeSection.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/taste-of-alpharetta/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyYouTubeSection.tsx",
+      "type": "imports",
+      "label": "CaseStudyYouTubeSection"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/taste-of-alpharetta/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyDeliverables.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/taste-of-alpharetta/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyDeliverables.tsx",
+      "type": "imports",
+      "label": "CaseStudyDeliverables"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/taste-of-alpharetta/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CallToAction.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/taste-of-alpharetta/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CallToAction.tsx",
+      "type": "imports",
+      "label": "CallToAction"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/vizon-os/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/ProjectHero.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/vizon-os/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/ProjectHero.tsx",
+      "type": "imports",
+      "label": "ProjectHero"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/vizon-os/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyIntro.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/vizon-os/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyIntro.tsx",
+      "type": "imports",
+      "label": "CaseStudyIntro"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/vizon-os/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudySplitContent.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/vizon-os/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudySplitContent.tsx",
+      "type": "imports",
+      "label": "CaseStudySplitContent"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/vizon-os/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyImageGrid.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/vizon-os/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyImageGrid.tsx",
+      "type": "imports",
+      "label": "CaseStudyImageGrid"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/vizon-os/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyDeviceShowcase.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/vizon-os/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyDeviceShowcase.tsx",
+      "type": "imports",
+      "label": "CaseStudyDeviceShowcase"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/vizon-os/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CallToAction.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/vizon-os/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CallToAction.tsx",
+      "type": "imports",
+      "label": "CallToAction"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/windward-tech-district/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/ProjectHero.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/windward-tech-district/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/ProjectHero.tsx",
+      "type": "imports",
+      "label": "ProjectHero"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/windward-tech-district/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyIntro.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/windward-tech-district/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyIntro.tsx",
+      "type": "imports",
+      "label": "CaseStudyIntro"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/windward-tech-district/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudySplitContent.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/windward-tech-district/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudySplitContent.tsx",
+      "type": "imports",
+      "label": "CaseStudySplitContent"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/windward-tech-district/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyImageGrid.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/windward-tech-district/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyImageGrid.tsx",
+      "type": "imports",
+      "label": "CaseStudyImageGrid"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/windward-tech-district/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyDeviceShowcase.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/windward-tech-district/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyDeviceShowcase.tsx",
+      "type": "imports",
+      "label": "CaseStudyDeviceShowcase"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/windward-tech-district/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CallToAction.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/windward-tech-district/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CallToAction.tsx",
+      "type": "imports",
+      "label": "CallToAction"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/windward-tech-district/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyVideoSection.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/windward-tech-district/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyVideoSection.tsx",
+      "type": "imports",
+      "label": "CaseStudyVideoSection"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/windward-tech-district/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudySlideshow.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/windward-tech-district/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudySlideshow.tsx",
+      "type": "imports",
+      "label": "CaseStudySlideshow"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/windward-tech-district/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyInViewVideo.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/windward-tech-district/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyInViewVideo.tsx",
+      "type": "imports",
+      "label": "CaseStudyInViewVideo"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/windward-tech-district/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyVideoShowcase.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/windward-tech-district/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyVideoShowcase.tsx",
+      "type": "imports",
+      "label": "CaseStudyVideoShowcase"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/windward-tech-district/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyScreenGrid.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/windward-tech-district/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyScreenGrid.tsx",
+      "type": "imports",
+      "label": "CaseStudyScreenGrid"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/wire-and-wood-festival/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/ProjectHero.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/wire-and-wood-festival/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/ProjectHero.tsx",
+      "type": "imports",
+      "label": "ProjectHero"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/wire-and-wood-festival/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyIntro.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/wire-and-wood-festival/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyIntro.tsx",
+      "type": "imports",
+      "label": "CaseStudyIntro"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/wire-and-wood-festival/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudySplitContent.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/wire-and-wood-festival/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudySplitContent.tsx",
+      "type": "imports",
+      "label": "CaseStudySplitContent"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/wire-and-wood-festival/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyImageGrid.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/wire-and-wood-festival/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyImageGrid.tsx",
+      "type": "imports",
+      "label": "CaseStudyImageGrid"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/wire-and-wood-festival/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyDeviceShowcase.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/wire-and-wood-festival/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyDeviceShowcase.tsx",
+      "type": "imports",
+      "label": "CaseStudyDeviceShowcase"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/wire-and-wood-festival/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyScreenGrid.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/wire-and-wood-festival/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyScreenGrid.tsx",
+      "type": "imports",
+      "label": "CaseStudyScreenGrid"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/wire-and-wood-festival/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyVideoShowcase.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/wire-and-wood-festival/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyVideoShowcase.tsx",
+      "type": "imports",
+      "label": "CaseStudyVideoShowcase"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/wire-and-wood-festival/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyCarousel.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/wire-and-wood-festival/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyCarousel.tsx",
+      "type": "imports",
+      "label": "CaseStudyCarousel"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/wire-and-wood-festival/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyDeliverables.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/wire-and-wood-festival/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyDeliverables.tsx",
+      "type": "imports",
+      "label": "CaseStudyDeliverables"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/wire-and-wood-festival/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CallToAction.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/wire-and-wood-festival/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CallToAction.tsx",
+      "type": "imports",
+      "label": "CallToAction"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/yuli/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/ProjectHero.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/yuli/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/ProjectHero.tsx",
+      "type": "imports",
+      "label": "ProjectHero"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/yuli/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyIntro.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/yuli/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyIntro.tsx",
+      "type": "imports",
+      "label": "CaseStudyIntro"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/yuli/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudySplitContent.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/yuli/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudySplitContent.tsx",
+      "type": "imports",
+      "label": "CaseStudySplitContent"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/yuli/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyTestimonial.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/yuli/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyTestimonial.tsx",
+      "type": "imports",
+      "label": "CaseStudyTestimonial"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/yuli/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyCarousel.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/yuli/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyCarousel.tsx",
+      "type": "imports",
+      "label": "CaseStudyCarousel"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/yuli/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyDeviceShowcase.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/yuli/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyDeviceShowcase.tsx",
+      "type": "imports",
+      "label": "CaseStudyDeviceShowcase"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/yuli/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyScreenGrid.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/yuli/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyScreenGrid.tsx",
+      "type": "imports",
+      "label": "CaseStudyScreenGrid"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/yuli/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CaseStudyDeliverables.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/yuli/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CaseStudyDeliverables.tsx",
+      "type": "imports",
+      "label": "CaseStudyDeliverables"
+    },
+    {
+      "id": "/Users/tie/Dev/tieallen/src/app/work/yuli/page.tsx→/Users/tie/Dev/tieallen/src/components/sections/CallToAction.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/work/yuli/page.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/components/sections/CallToAction.tsx",
+      "type": "imports",
+      "label": "CallToAction"
+    },
+    {
+      "id": "layout:/Users/tie/Dev/tieallen/src/app/layout.tsx→/Users/tie/Dev/tieallen/src/app/page.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/layout.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/app/page.tsx",
+      "type": "layout-wraps",
+      "label": "wraps"
+    },
+    {
+      "id": "layout:/Users/tie/Dev/tieallen/src/app/layout.tsx→/Users/tie/Dev/tieallen/src/app/about/page.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/layout.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/app/about/page.tsx",
+      "type": "layout-wraps",
+      "label": "wraps"
+    },
+    {
+      "id": "layout:/Users/tie/Dev/tieallen/src/app/layout.tsx→/Users/tie/Dev/tieallen/src/app/admin/page.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/layout.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/app/admin/page.tsx",
+      "type": "layout-wraps",
+      "label": "wraps"
+    },
+    {
+      "id": "layout:/Users/tie/Dev/tieallen/src/app/layout.tsx→/Users/tie/Dev/tieallen/src/app/contact/page.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/layout.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/app/contact/page.tsx",
+      "type": "layout-wraps",
+      "label": "wraps"
+    },
+    {
+      "id": "layout:/Users/tie/Dev/tieallen/src/app/layout.tsx→/Users/tie/Dev/tieallen/src/app/get-started/page.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/layout.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/app/get-started/page.tsx",
+      "type": "layout-wraps",
+      "label": "wraps"
+    },
+    {
+      "id": "layout:/Users/tie/Dev/tieallen/src/app/layout.tsx→/Users/tie/Dev/tieallen/src/app/labs/page.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/layout.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/app/labs/page.tsx",
+      "type": "layout-wraps",
+      "label": "wraps"
+    },
+    {
+      "id": "layout:/Users/tie/Dev/tieallen/src/app/layout.tsx→/Users/tie/Dev/tieallen/src/app/love/page.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/layout.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/app/love/page.tsx",
+      "type": "layout-wraps",
+      "label": "wraps"
+    },
+    {
+      "id": "layout:/Users/tie/Dev/tieallen/src/app/layout.tsx→/Users/tie/Dev/tieallen/src/app/privacy/page.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/layout.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/app/privacy/page.tsx",
+      "type": "layout-wraps",
+      "label": "wraps"
+    },
+    {
+      "id": "layout:/Users/tie/Dev/tieallen/src/app/layout.tsx→/Users/tie/Dev/tieallen/src/app/services/page.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/layout.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/app/services/page.tsx",
+      "type": "layout-wraps",
+      "label": "wraps"
+    },
+    {
+      "id": "layout:/Users/tie/Dev/tieallen/src/app/layout.tsx→/Users/tie/Dev/tieallen/src/app/start/page.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/layout.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/app/start/page.tsx",
+      "type": "layout-wraps",
+      "label": "wraps"
+    },
+    {
+      "id": "layout:/Users/tie/Dev/tieallen/src/app/layout.tsx→/Users/tie/Dev/tieallen/src/app/test-page/page.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/layout.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/app/test-page/page.tsx",
+      "type": "layout-wraps",
+      "label": "wraps"
+    },
+    {
+      "id": "layout:/Users/tie/Dev/tieallen/src/app/layout.tsx→/Users/tie/Dev/tieallen/src/app/ventures/page.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/layout.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/app/ventures/page.tsx",
+      "type": "layout-wraps",
+      "label": "wraps"
+    },
+    {
+      "id": "layout:/Users/tie/Dev/tieallen/src/app/layout.tsx→/Users/tie/Dev/tieallen/src/app/work/page.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/layout.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/app/work/page.tsx",
+      "type": "layout-wraps",
+      "label": "wraps"
+    },
+    {
+      "id": "layout:/Users/tie/Dev/tieallen/src/app/layout.tsx→/Users/tie/Dev/tieallen/src/app/admin/login/page.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/layout.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/app/admin/login/page.tsx",
+      "type": "layout-wraps",
+      "label": "wraps"
+    },
+    {
+      "id": "layout:/Users/tie/Dev/tieallen/src/app/layout.tsx→/Users/tie/Dev/tieallen/src/app/labs/next-inline-editor/page.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/layout.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/app/labs/next-inline-editor/page.tsx",
+      "type": "layout-wraps",
+      "label": "wraps"
+    },
+    {
+      "id": "layout:/Users/tie/Dev/tieallen/src/app/layout.tsx→/Users/tie/Dev/tieallen/src/app/labs/next-inline-editor-old/page.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/layout.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/app/labs/next-inline-editor-old/page.tsx",
+      "type": "layout-wraps",
+      "label": "wraps"
+    },
+    {
+      "id": "layout:/Users/tie/Dev/tieallen/src/app/layout.tsx→/Users/tie/Dev/tieallen/src/app/services/branding/page.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/layout.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/app/services/branding/page.tsx",
+      "type": "layout-wraps",
+      "label": "wraps"
+    },
+    {
+      "id": "layout:/Users/tie/Dev/tieallen/src/app/layout.tsx→/Users/tie/Dev/tieallen/src/app/services/crm-automation/page.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/layout.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/app/services/crm-automation/page.tsx",
+      "type": "layout-wraps",
+      "label": "wraps"
+    },
+    {
+      "id": "layout:/Users/tie/Dev/tieallen/src/app/layout.tsx→/Users/tie/Dev/tieallen/src/app/services/development/page.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/layout.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/app/services/development/page.tsx",
+      "type": "layout-wraps",
+      "label": "wraps"
+    },
+    {
+      "id": "layout:/Users/tie/Dev/tieallen/src/app/layout.tsx→/Users/tie/Dev/tieallen/src/app/services/web-design/page.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/layout.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/app/services/web-design/page.tsx",
+      "type": "layout-wraps",
+      "label": "wraps"
+    },
+    {
+      "id": "layout:/Users/tie/Dev/tieallen/src/app/layout.tsx→/Users/tie/Dev/tieallen/src/app/work/bch-devcon/page.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/layout.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/app/work/bch-devcon/page.tsx",
+      "type": "layout-wraps",
+      "label": "wraps"
+    },
+    {
+      "id": "layout:/Users/tie/Dev/tieallen/src/app/layout.tsx→/Users/tie/Dev/tieallen/src/app/work/blue-divine-aesthetics/page.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/layout.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/app/work/blue-divine-aesthetics/page.tsx",
+      "type": "layout-wraps",
+      "label": "wraps"
+    },
+    {
+      "id": "layout:/Users/tie/Dev/tieallen/src/app/layout.tsx→/Users/tie/Dev/tieallen/src/app/work/ci2-aviation/page.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/layout.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/app/work/ci2-aviation/page.tsx",
+      "type": "layout-wraps",
+      "label": "wraps"
+    },
+    {
+      "id": "layout:/Users/tie/Dev/tieallen/src/app/layout.tsx→/Users/tie/Dev/tieallen/src/app/work/expose-hair/page.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/layout.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/app/work/expose-hair/page.tsx",
+      "type": "layout-wraps",
+      "label": "wraps"
+    },
+    {
+      "id": "layout:/Users/tie/Dev/tieallen/src/app/layout.tsx→/Users/tie/Dev/tieallen/src/app/work/jennings-brands/page.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/layout.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/app/work/jennings-brands/page.tsx",
+      "type": "layout-wraps",
+      "label": "wraps"
+    },
+    {
+      "id": "layout:/Users/tie/Dev/tieallen/src/app/layout.tsx→/Users/tie/Dev/tieallen/src/app/work/loretorch/page.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/layout.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/app/work/loretorch/page.tsx",
+      "type": "layout-wraps",
+      "label": "wraps"
+    },
+    {
+      "id": "layout:/Users/tie/Dev/tieallen/src/app/layout.tsx→/Users/tie/Dev/tieallen/src/app/work/permissionless-ventures/page.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/layout.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/app/work/permissionless-ventures/page.tsx",
+      "type": "layout-wraps",
+      "label": "wraps"
+    },
+    {
+      "id": "layout:/Users/tie/Dev/tieallen/src/app/layout.tsx→/Users/tie/Dev/tieallen/src/app/work/servco-wholesale/page.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/layout.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/app/work/servco-wholesale/page.tsx",
+      "type": "layout-wraps",
+      "label": "wraps"
+    },
+    {
+      "id": "layout:/Users/tie/Dev/tieallen/src/app/layout.tsx→/Users/tie/Dev/tieallen/src/app/work/stanlok-precision-manufacturing/page.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/layout.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/app/work/stanlok-precision-manufacturing/page.tsx",
+      "type": "layout-wraps",
+      "label": "wraps"
+    },
+    {
+      "id": "layout:/Users/tie/Dev/tieallen/src/app/layout.tsx→/Users/tie/Dev/tieallen/src/app/work/taste-of-alpharetta/page.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/layout.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/app/work/taste-of-alpharetta/page.tsx",
+      "type": "layout-wraps",
+      "label": "wraps"
+    },
+    {
+      "id": "layout:/Users/tie/Dev/tieallen/src/app/layout.tsx→/Users/tie/Dev/tieallen/src/app/work/vizon-os/page.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/layout.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/app/work/vizon-os/page.tsx",
+      "type": "layout-wraps",
+      "label": "wraps"
+    },
+    {
+      "id": "layout:/Users/tie/Dev/tieallen/src/app/layout.tsx→/Users/tie/Dev/tieallen/src/app/work/windward-tech-district/page.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/layout.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/app/work/windward-tech-district/page.tsx",
+      "type": "layout-wraps",
+      "label": "wraps"
+    },
+    {
+      "id": "layout:/Users/tie/Dev/tieallen/src/app/layout.tsx→/Users/tie/Dev/tieallen/src/app/work/wire-and-wood-festival/page.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/layout.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/app/work/wire-and-wood-festival/page.tsx",
+      "type": "layout-wraps",
+      "label": "wraps"
+    },
+    {
+      "id": "layout:/Users/tie/Dev/tieallen/src/app/layout.tsx→/Users/tie/Dev/tieallen/src/app/work/yuli/page.tsx",
+      "source": "/Users/tie/Dev/tieallen/src/app/layout.tsx",
+      "target": "/Users/tie/Dev/tieallen/src/app/work/yuli/page.tsx",
+      "type": "layout-wraps",
+      "label": "wraps"
+    }
+  ],
+  "stats": {
+    "totalRoutes": 34,
+    "totalComponents": 55,
+    "totalLayouts": 1,
+    "totalApiRoutes": 5,
+    "clientComponents": 42,
+    "serverComponents": 53
+  }
+}

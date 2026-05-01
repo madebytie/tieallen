@@ -23,9 +23,10 @@ export default function NextInlineEditorV2() {
   return (
     <>
       {/* ---- Hero with structural lines ---- */}
-      <StructuralWrap>
+      <StructuralWrap fade="top">
       <LabProjectHero
           label="Labs"
+          status="live"
           title="NEXT.js Inline Editor"
           description={
             <>
@@ -128,7 +129,7 @@ export default function NextInlineEditorV2() {
       <SectionDivider />
 
       {/* ---- Why I built this ---- */}
-      <StructuralWrap>
+      <StructuralWrap fade="bottom">
         <ContentSection
           headline="Why I built this."
           body={

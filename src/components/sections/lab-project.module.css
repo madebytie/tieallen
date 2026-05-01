@@ -42,6 +42,32 @@
   right: 0;
 }
 
+/* Fade variants — swap solid color for gradient */
+.fadeTop::before,
+.fadeTop::after {
+  background: linear-gradient(to bottom, transparent 0%, var(--line-color) 15%);
+  background-color: transparent;
+}
+
+.fadeBottom::before,
+.fadeBottom::after {
+  background: linear-gradient(to top, transparent 0%, var(--line-color) 15%);
+  background-color: transparent;
+}
+
+/* Both ends fade */
+.fadeTop.fadeBottom::before,
+.fadeTop.fadeBottom::after {
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    var(--line-color) 15%,
+    var(--line-color) 85%,
+    transparent 100%
+  );
+  background-color: transparent;
+}
+
 
 /* ============================================
    SECTION DIVIDER
@@ -136,7 +162,7 @@
 
 .hero {
   position: relative;
-  padding: 8rem 0 0;
+  padding: 5rem 0 0;
   text-align: center;
   overflow: hidden;
 }
@@ -171,7 +197,7 @@
 
 /* Staggered widths for the tech structure */
 .contentLabel {
-  padding: 1rem 4rem;
+  padding: 0.5rem 4rem 3rem;
   width: fit-content;
 }
 
@@ -285,20 +311,90 @@
   left: 0;
 }
 
+/* ============================================
+   BEAKER ICON + BUBBLE ANIMATIONS
+   ============================================ */
+
+.beaker {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+@keyframes bubbleRise {
+  0%   { opacity: 0;   transform: translateY(0); }
+  8%   { opacity: 0.9; }
+  100% { opacity: 0;   transform: translateY(-36px); }
+}
+
+.bubble1 { opacity: 0; animation: bubbleRise 2.6s ease-in infinite 0s; }
+.bubble2 { opacity: 0; animation: bubbleRise 2.6s ease-in infinite 0.87s; }
+.bubble3 { opacity: 0; animation: bubbleRise 2.6s ease-in infinite 1.73s; }
+
+@keyframes wave {
+  0%   { d: path("M0 25 Q3 22.2 6 25 Q9 27.8 12 25 Q15 22.2 18 25 Q21 27.8 24 25 L24 32 L0 32 Z"); }
+  50%  { d: path("M0 25 Q3 27.8 6 25 Q9 22.2 12 25 Q15 27.8 18 25 Q21 22.2 24 25 L24 32 L0 32 Z"); }
+  100% { d: path("M0 25 Q3 22.2 6 25 Q9 27.8 12 25 Q15 22.2 18 25 Q21 27.8 24 25 L24 32 L0 32 Z"); }
+}
+
+.liquidWave {
+  animation: wave 3s ease-in-out infinite;
+}
+
+/* ---- Hero label row with icon + badge ---- */
+
+.heroLabelRow {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+  padding-bottom: 2px;
+}
+
 .heroLabel {
-  display: inline-block;
+  font-family: var(--font-logo);
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.heroRowStatus {
+  border-bottom: none;
+}
+
+.contentStatus {
+  padding: 1.5rem 2rem 0.75rem;
+}
+
+.heroStatusBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
   font-family: var(--font-primary);
-  font-size: 0.8rem;
-  font-weight: 500;
-  letter-spacing: 0.15em;
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--text-muted);
+  padding: 0.15rem 0.45rem;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(34, 197, 94, 0.25);
+  background-color: rgba(34, 197, 94, 0.06);
+  color: #22c55e;
+}
+
+.heroStatusDot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: currentColor;
+  flex-shrink: 0;
 }
 
 .heroTitle {
   font-family: var(--font-logo);
   font-size: clamp(3rem, 7vw, 5rem);
-  font-weight: 800;
+  font-weight: 500;
   letter-spacing: -0.03em;
   line-height: 1.05;
   color: var(--text-primary);

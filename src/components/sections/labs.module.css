@@ -1,94 +1,164 @@
+/* ============================================
+   LABS PAGE — Uses lab-project design system
+   Left-aligned hero + structured lab cards
+   ============================================ */
+
+/* ---- Hero ---- */
+
 .hero {
-  padding: 8rem 1.25rem 6rem;
-  max-width: 1400px;
-  margin: 0 auto;
+  position: relative;
+  padding: 8rem 0 0;
+  overflow: hidden;
+}
+
+.heroInner {
+  position: relative;
+  z-index: 1;
+}
+
+/* Rows: horizontal-line-bounded strips, left-aligned */
+.heroRow {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 1px dashed var(--line-color);
+}
+
+.heroRow:first-child {
+  border-top: none;
+}
+
+.heroRowContent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.contentLabel {
+  padding: 1rem 2rem;
+}
+
+.contentTitle {
+  padding: 2rem 2rem;
+  width: 100%;
+}
+
+.contentDesc {
+  padding: 2rem 2rem 5rem;
+  width: 100%;
+  max-width: 720px;
+}
+
+/* Decorative elements */
+.heroCorner {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--line-color);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.heroCornerTR {
+  top: 6rem;
+  right: 3rem;
+}
+
+.heroDots {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background-image: radial-gradient(circle, var(--line-color) 1px, transparent 1px);
+  background-size: 10px 10px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.heroDotsTopRight {
+  top: 5rem;
+  right: 5rem;
+}
+
+.heroLabel {
+  display: inline-block;
+  font-family: var(--font-primary);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-muted);
 }
 
 .heroTitle {
   font-family: var(--font-logo);
-  font-size: clamp(4rem, 12vw, 10rem);
+  font-size: clamp(3.5rem, 8vw, 7rem);
   font-weight: 500;
-  letter-spacing: -0.02em;
-  line-height: 0.9;
-  color: var(--text-primary);
-  margin: 0 0 2rem;
-}
-
-.heroBody {
-  max-width: 680px;
-  font-family: var(--font-logo);
-  font-size: clamp(1.4rem, 2.5vw, 2.2rem);
-  font-weight: 500;
-  letter-spacing: -0.01em;
-  line-height: 1.3;
+  letter-spacing: -0.03em;
+  line-height: 1.0;
   color: var(--text-primary);
   margin: 0;
 }
 
+.heroDesc {
+  font-family: var(--font-primary);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+
+/* ============================================
+   LABS GRID
+   ============================================ */
+
 .gridSection {
-  padding: 0 1.25rem 8rem;
-  max-width: 1400px;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
-.gridInner {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  gap: 3rem;
+
+/* ============================================
+   LAB CARD
+   Sits inside a StructuralWrap section row.
+   The section provides padding; the card floats inside.
+   ============================================ */
+
+/* Section row — full width inside StructuralWrap, padded */
+.cardSection {
+  padding: 3rem 2rem;
 }
 
+/* The visual floating card */
 .card {
-  display: block;
-  text-decoration: none;
-  color: inherit;
+  position: relative;
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  background-color: var(--bg-secondary);
-  transition: transform var(--transition-base), border-color var(--transition-base);
+  background-color: var(--bg-primary);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-4px);
-  border-color: var(--text-primary);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.09);
 }
 
-.imageWrap {
-  width: 100%;
-  aspect-ratio: 16/10;
-  overflow: hidden;
-  border-bottom: 1px solid var(--border-subtle);
-}
-
-.image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 1s var(--ease-smooth);
-}
-
-.card:hover .image {
-  transform: scale(1.05);
-}
-
-.cardContent {
-  padding: 2.5rem;
-}
-
-.cardHeader {
+/* Top meta row: index + tags + status */
+.cardMetaRow {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 1.5rem;
-  gap: 1rem;
+  padding: 1.25rem 2rem;
+  border-bottom: 1px dashed var(--line-color);
 }
 
-.cardTitle {
-  font-family: var(--font-logo);
-  font-size: 2rem;
-  font-weight: 500;
-  letter-spacing: -0.01em;
-  margin: 0;
+.cardMetaLeft {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
 }
 
 .cardTags {
@@ -100,27 +170,340 @@
 .tag {
   font-family: var(--font-primary);
   font-size: 0.75rem;
-  font-weight: 500;
-  padding: 0.35rem 0.75rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+  padding: 0.3rem 0.8rem;
+  border-radius: var(--radius-full);
   border: 1px solid var(--border-subtle);
-  border-radius: 99px;
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-primary);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.85rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-subtle);
   color: var(--text-muted);
+}
+
+.statusDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: currentColor;
+  flex-shrink: 0;
+}
+
+.status_live {
+  color: #22c55e;
+  border-color: rgba(34, 197, 94, 0.25);
+  background-color: rgba(34, 197, 94, 0.06);
+}
+
+.status_beta {
+  color: var(--brand-orange);
+  border-color: rgba(255, 120, 50, 0.25);
+  background-color: rgba(255, 120, 50, 0.06);
+}
+
+.status_wip {
+  color: var(--text-muted);
+}
+
+
+/* Main card body: text left, image right */
+.cardBody {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.cardText {
+  padding: 2.75rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  border-right: 1px dashed var(--line-color);
+}
+
+.cardTitleLink {
+  text-decoration: none;
+  color: inherit;
+}
+
+.cardTitle {
+  font-family: var(--font-logo);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: var(--text-primary);
+  margin: 0;
+  transition: color 0.2s ease;
+}
+
+.cardTitleLink:hover .cardTitle {
+  color: var(--brand-orange);
 }
 
 .cardDesc {
   font-family: var(--font-primary);
   font-size: 1.1rem;
-  line-height: 1.6;
-  color: var(--text-muted);
+  line-height: 1.65;
+  color: var(--text-primary);
   margin: 0;
 }
 
+.cardLongDesc {
+  font-family: var(--font-primary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.cardCommand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 0.7rem 1.25rem;
+  font-family: 'SFMono-Regular', 'Consolas', monospace;
+  font-size: 0.85rem;
+  width: fit-content;
+  margin-top: 0.25rem;
+}
+
+.codePrompt {
+  color: var(--text-muted);
+  user-select: none;
+}
+
+.codeText {
+  color: var(--brand-orange);
+}
+
+.cardLinks {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: auto;
+  padding-top: 1.5rem;
+}
+
+.cardLinkPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-primary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.65rem 1.5rem;
+  border-radius: var(--radius-full);
+  background-color: var(--text-primary);
+  color: var(--bg-primary);
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.cardLinkPrimary:hover {
+  background-color: var(--brand-orange);
+}
+
+.cardLinkSecondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-primary);
+  font-size: 0.9rem;
+  font-weight: 400;
+  padding: 0.65rem 1.25rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-strong);
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+}
+
+.cardLinkSecondary:hover {
+  border-color: var(--text-primary);
+  color: var(--text-primary);
+  background-color: var(--bg-tertiary);
+}
+
+
+/* Image column — centers the floating notched image */
+.cardImageCol {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.75rem 3rem;
+}
+
+/* Relative container so notch divs position against the image bounds */
+.cardImageFrame {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Floating notched image — no bg, no shadow, just the clipped image */
+.cardImageWrap {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 1.5rem;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 0;
+  overflow: hidden;
+}
+
+
+.cardImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+/* ---- Notch: bottom-right ---- */
+.notchBR {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 3rem;
+  height: 2.25rem;
+  background-color: var(--bg-primary);
+  border-top-left-radius: 1.25rem;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.notchCorner {
+  position: absolute;
+  z-index: 5;
+  width: 1.3rem;
+  height: 1.3rem;
+}
+
+.notchBRTop {
+  top: -1.3rem;
+  right: 0;
+  background: radial-gradient(circle at 0% 0%, transparent 1.25rem, var(--bg-primary) calc(1.25rem + 1px));
+}
+
+.notchBRLeft {
+  bottom: 0;
+  left: -1.3rem;
+  background: radial-gradient(circle at 0% 0%, transparent 1.25rem, var(--bg-primary) calc(1.25rem + 1px));
+}
+
+/* ---- Notch: top-left ---- */
+.notchTL {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3rem;
+  height: 2.25rem;
+  background-color: var(--bg-primary);
+  border-bottom-right-radius: 1.25rem;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.notchTLBottom {
+  bottom: -1.3rem;
+  left: 0;
+  background: radial-gradient(circle at 100% 100%, transparent 1.25rem, var(--bg-primary) calc(1.25rem + 1px));
+}
+
+.notchTLRight {
+  top: 0;
+  right: -1.3rem;
+  background: radial-gradient(circle at 100% 100%, transparent 1.25rem, var(--bg-primary) calc(1.25rem + 1px));
+}
+
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
 @media (max-width: 900px) {
   .hero {
-    padding: 6rem 1.25rem 4rem;
+    padding: 6rem 0 0;
   }
-  
-  .gridInner {
+
+  .heroCorner,
+  .heroDots {
+    display: none;
+  }
+
+  .heroTitle {
+    font-size: clamp(2.5rem, 10vw, 4rem);
+  }
+
+  .cardBody {
     grid-template-columns: 1fr;
+  }
+
+  .cardText {
+    border-right: none;
+    padding: 2rem 1.5rem;
+  }
+
+  .cardSection {
+    padding: 1.5rem 1rem;
+  }
+
+  .cardImageCol {
+    padding: 2rem 1.5rem 2.5rem;
+    border-top: 1px dashed var(--line-color);
+  }
+
+  .cardImageFrame {
+    max-width: 100%;
+  }
+
+  .cardMetaRow {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding: 1rem 1.5rem;
+  }
+
+  .contentLabel {
+    padding: 0.85rem 1.5rem;
+  }
+
+  .contentTitle {
+    padding: 1.5rem 1.5rem;
+  }
+
+  .contentDesc {
+    padding: 1.5rem 1.5rem 3.5rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .cardLinks {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cardLinkPrimary,
+  .cardLinkSecondary {
+    width: 100%;
+    justify-content: center;
   }
 }

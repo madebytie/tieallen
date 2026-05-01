@@ -9,9 +9,57 @@ import styles from "./lab-project.module.css";
    Reusable layout primitives for the tech vibe
    ============================================ */
 
+/* ============================================
+   BEAKER ICON — animated, shared across labs
+   ============================================ */
+
+export function BeakerIcon() {
+  const flaskPath = "M9.75 3.5 L9.75 9.818 C9.75 10.415 9.513 10.988 9.091 11.409 L4.2 16.3 C2.968 17.532 2.35 19.618 4.068 20.911 A48.309 48.309 0 0 0 12 22 A48.309 48.309 0 0 0 19.932 20.911 C21.65 19.618 21.032 17.532 19.8 16.3 L14.909 11.409 C14.487 10.988 14.25 10.415 14.25 9.818 L14.25 3.5 Z";
+  return (
+    <span className={styles.beaker} aria-hidden="true">
+      <svg viewBox="0 0 24 30" fill="none" width="36" height="45" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <clipPath id="flaskClip">
+            <path d="M9.75 11.5 L9.75 17.818 C9.75 18.415 9.513 18.988 9.091 19.409 L4.2 24.3 C2.968 25.532 2.35 27.618 4.068 28.911 A48.309 48.309 0 0 0 12 30 A48.309 48.309 0 0 0 19.932 28.911 C21.65 27.618 21.032 25.532 19.8 24.3 L14.909 19.409 C14.487 18.988 14.25 18.415 14.25 17.818 L14.25 11.5 Z" />
+          </clipPath>
+          <clipPath id="bubbleClip">
+            <rect x="9.75" y="0" width="4.5" height="30" />
+          </clipPath>
+        </defs>
+        <g transform="translate(0,8)">
+          <g clipPath="url(#flaskClip)" transform="translate(0,-8)">
+            <rect x="0" y="25" width="24" height="7" fill="var(--brand-orange)" />
+            <path className={styles.liquidWave} d="M0 25 Q3 22.2 6 25 Q9 27.8 12 25 Q15 22.2 18 25 Q21 27.8 24 25 L24 32 L0 32 Z" fill="var(--brand-orange)" />
+          </g>
+          <path d={flaskPath} stroke="#111111" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+          <line x1="8" y1="3.5" x2="16" y2="3.5" stroke="#111111" strokeWidth="1.25" strokeLinecap="round" />
+        </g>
+        <g clipPath="url(#bubbleClip)">
+          <circle className={styles.bubble1} cx="11" cy="24" r="0.9" fill="var(--brand-orange)" />
+          <circle className={styles.bubble2} cx="13" cy="24" r="0.7" fill="var(--brand-orange)" />
+          <circle className={styles.bubble3} cx="12" cy="24" r="1.0" fill="var(--brand-orange)" />
+        </g>
+      </svg>
+    </span>
+  );
+}
+
 /** Vertical guide lines at container edges */
-export function StructuralWrap({ children }: { children: ReactNode }) {
-  return <div className={styles.structuralWrap}>{children}</div>;
+export function StructuralWrap({
+  children,
+  fade,
+}: {
+  children: ReactNode;
+  fade?: "top" | "bottom" | "both";
+}) {
+  const cls = [
+    styles.structuralWrap,
+    fade === "top" || fade === "both" ? styles.fadeTop : "",
+    fade === "bottom" || fade === "both" ? styles.fadeBottom : "",
+  ]
+    .filter(Boolean)
+    .join(" ");
+  return <div className={cls}>{children}</div>;
 }
 
 /** Horizontal divider with corner dots */
@@ -140,7 +188,10 @@ interface LabProjectHeroProps {
   command?: string;
   primaryCTA?: { label: string; href: string };
   secondaryCTA?: { label: string; href: string; icon?: "github" };
+  status?: "live" | "beta" | "wip";
 }
+
+const STATUS_LABELS = { live: "Live", beta: "Beta", wip: "In Progress" };
 
 export function LabProjectHero({
   label,
@@ -150,6 +201,7 @@ export function LabProjectHero({
   command,
   primaryCTA,
   secondaryCTA,
+  status,
 }: LabProjectHeroProps) {
   return (
     <section className={styles.hero}>
@@ -160,10 +212,25 @@ export function LabProjectHero({
       <div className={`${styles.heroDots} ${styles.heroDotsTopLeft}`} />
 
       <div className={styles.heroInner}>
+        {/* Row: Status pill — sits above the label, centered on its own */}
+        {status && (
+          <div className={`${styles.heroRow} ${styles.heroRowStatus}`}>
+            <div className={`${styles.heroRowContent} ${styles.contentStatus}`}>
+              <span className={styles.heroStatusBadge}>
+                <span className={styles.heroStatusDot} />
+                {STATUS_LABELS[status]}
+              </span>
+            </div>
+          </div>
+        )}
+
         {/* Row: Label */}
         <div className={`${styles.heroRow} ${styles.heroRowLabel}`}>
           <div className={`${styles.heroRowContent} ${styles.contentLabel}`}>
-            <span className={styles.heroLabel}>{label}</span>
+            <div className={styles.heroLabelRow}>
+              <BeakerIcon />
+              <span className={styles.heroLabel}>{label}</span>
+            </div>
           </div>
         </div>
 
