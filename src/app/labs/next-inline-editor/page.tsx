@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import {
   LabProjectHero,
-  FoundationSection,
   StepsSection,
   ContentSection,
   ImageSplitSection,
@@ -191,42 +190,6 @@ export default function NextInlineEditorV2() {
         />
       </StructuralWrap>
 
-      {/* ---- Divider ---- */}
-      <SectionDivider />
-
-      {/* ---- Foundation / "made by tie" section ---- */}
-      <StructuralWrap>
-        <FoundationSection
-          headline="Built on a foundation of modern, production-grade tooling."
-          badgeLabel="made by tie"
-          cards={[
-            {
-              icon: "⚛️",
-              title: "React",
-              description:
-                "Built on top of the latest React features including Server Components and Actions for seamless client-server integration.",
-              href: "https://react.dev",
-            },
-            {
-              icon: "▲",
-              title: "NEXT.js",
-              description:
-                "Designed specifically for the NEXT.js App Router and Pages Router. Works with ISR and on-demand revalidation out of the box.",
-              href: "https://nextjs.org",
-            },
-            {
-              icon: "🐙",
-              title: "GitHub API",
-              description:
-                "Changes commit directly to your GitHub repository via the Contents API. Version-controlled editing with zero infrastructure.",
-              href: "https://docs.github.com/en/rest",
-            },
-          ]}
-        />
-      </StructuralWrap>
-
-      {/* ---- Divider ---- */}
-      <SectionDivider />
 
       {/* ---- Links ---- */}
       <LinksRow
