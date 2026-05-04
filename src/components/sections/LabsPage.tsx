@@ -88,6 +88,16 @@ const labsProjects: LabsProject[] = [
     github: "https://github.com/madebytie/next-project-map",
     status: "live",
   },
+  {
+    label: "03",
+    title: "Scope Architect",
+    description: "Intelligent SOW & Technical Roadmap Generator. Transforms discovery notes into bankable, high-fidelity project maps.",
+    longDescription: "A specialized AI engine for digital studios. It performs a recursive 3-pass expansion on requirements to generate both Internal Technical Blueprints and Premium Client Proposals.",
+    tags: ["Gemini 3.1", "AI SDK", "Next.js", "Zustand"],
+    image: "/labs/scope-architect/featured.png",
+    href: "/labs/scope-architect",
+    status: "wip",
+  },
 ];
 
 /* ---- Grid ---- */
