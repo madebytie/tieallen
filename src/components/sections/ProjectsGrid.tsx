@@ -18,6 +18,14 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: "Allen Estates",
+    client: "Allen Estates",
+    year: "2024",
+    tags: ["Brand Identity", "Web Design", "Web Development"],
+    image: "/projects/allen-estates/hero.webp",
+    href: "/work/allen-estates",
+  },
+  {
     title: "Windward Tech District",
     client: "Windward Tech District",
     year: "2024",
@@ -49,7 +57,8 @@ const projects: Project[] = [
     year: "2024",
     tags: ["Web Design", "Web Development"],
     image: "/projects/permissionless/hero-bg.png",
-    video: "/projects/permissionless/Screen-Recording-2019-09-22-at-8.09.23-PM.mov",
+    video:
+      "/projects/permissionless/Screen-Recording-2019-09-22-at-8.09.23-PM.mov",
     href: "/work/permissionless-ventures",
   },
   {
@@ -147,9 +156,7 @@ export default function ProjectsGrid() {
       <div className={styles.projectsInner}>
         {/* Section Header */}
         <div className={styles.projectsHeader}>
-          <span className={styles.projectsLabel}>
-            some projects
-          </span>
+          <span className={styles.projectsLabel}>some projects</span>
           <h2 className={styles.projectsTitle}>
             Take a look at
             <br />
@@ -212,7 +219,10 @@ function ProjectCard({ project }: { project: Project }) {
               loop
               playsInline
               style={{ objectFit: "cover", width: "100%", height: "100%" }}
-              ref={(el) => { if (el && project.videoSpeed) el.playbackRate = project.videoSpeed; }}
+              ref={(el) => {
+                if (el && project.videoSpeed)
+                  el.playbackRate = project.videoSpeed;
+              }}
             />
           ) : (
             <div

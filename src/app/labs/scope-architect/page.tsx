@@ -47,7 +47,9 @@ function ProblemSection() {
       <div className={styles.problemHeader}>
         <span className={styles.sectionLabel}>The Problem</span>
         <h2 className={styles.problemHeadline}>
-          Scoping is the hardest part<br />of the project lifecycle.
+          Scoping is the hardest part
+          <br />
+          of the project lifecycle.
         </h2>
       </div>
       <div className={styles.problemGrid}>
@@ -90,7 +92,8 @@ function PerspectivesSection() {
         <span className={styles.sectionLabel}>The Solution</span>
         <h2 className={styles.perspectivesHeadline}>Intelligent Scoping.</h2>
         <p className={styles.perspectivesSubhead}>
-          Scope Architect is a "Senior Solutions Architect" in a box, designed to bridge the gap between vague discovery and bankable contracts.
+          Scope Architect is a "Senior Solutions Architect" in a box, designed
+          to bridge the gap between vague discovery and bankable contracts.
         </p>
       </div>
       <div className={styles.perspectivesGrid}>
@@ -156,8 +159,18 @@ function FeaturesSection() {
 function TechSection() {
   const stack = [
     { label: "Core", items: ["Next.js 15", "TypeScript", "Tailwind CSS"] },
-    { label: "Intelligence", items: ["Gemini 3.1 Flash-Lite", "Vercel AI SDK", "3-Pass Recursive Prompting"] },
-    { label: "State & Math", items: ["Zustand", "Immer", "Reactive Math Engine"] },
+    {
+      label: "Intelligence",
+      items: [
+        "Gemini 3.1 Flash-Lite",
+        "Vercel AI SDK",
+        "3-Pass Recursive Prompting",
+      ],
+    },
+    {
+      label: "State & Math",
+      items: ["Zustand", "Immer", "Reactive Math Engine"],
+    },
   ];
 
   return (
@@ -168,7 +181,8 @@ function TechSection() {
           A high-fidelity technical stack.
         </h2>
         <p className={styles.techSubhead}>
-          Built for speed and structured output, leveraging the latest in AI orchestration to ensure deterministic technical breakdowns.
+          Built for speed and structured output, leveraging the latest in AI
+          orchestration to ensure deterministic technical breakdowns.
         </p>
       </div>
       <div className={styles.techGrid}>
@@ -197,13 +211,13 @@ export default function ScopeArchitectPage() {
       <StructuralWrap fade="top">
         <LabProjectHero
           label="Labs"
-          status="internal"
+          status="wip"
           title="Scope Architect"
           description={
             <>
               Intelligent SOW & Technical Roadmap Generator. Transforms vague
-              discovery notes into <strong>bankable</strong>, high-fidelity project
-              maps using AI-orchestrated logic.
+              discovery notes into <strong>bankable</strong>, high-fidelity
+              project maps using AI-orchestrated logic.
             </>
           }
           tags={["Gemini 3.1", "AI SDK", "Next.js", "Zustand", "Framer Motion"]}
@@ -284,19 +298,21 @@ export default function ScopeArchitectPage() {
           headline="The end of the vague estimate."
           body={
             <>
-              Every agency owner knows the feeling of a discovery call that goes perfectly, 
-              only for the scoping phase to drag on for days. You're trying to guess at 
-              complexity while protecting your team's time and your client's budget.
+              Every agency owner knows the feeling of a discovery call that goes
+              perfectly, only for the scoping phase to drag on for days. You're
+              trying to guess at complexity while protecting your team's time
+              and your client's budget.
               <br />
               <br />
-              <strong>Scope Architect</strong> turns that guessing game into an architectural 
-              process. By using AI to do the "heavy lifting" of decomposition, you can focus 
-              on the strategic calibration. It ensures that every quote you send is 
-              defensible, transparent, and built on a rock-solid technical foundation.
+              <strong>Scope Architect</strong> turns that guessing game into an
+              architectural process. By using AI to do the "heavy lifting" of
+              decomposition, you can focus on the strategic calibration. It
+              ensures that every quote you send is defensible, transparent, and
+              built on a rock-solid technical foundation.
               <br />
               <br />
-              It's not just a tool for creating SOWs—it's a tool for establishing authority 
-              from day zero.
+              It's not just a tool for creating SOWs—it's a tool for
+              establishing authority from day zero.
             </>
           }
           features={[
@@ -323,7 +339,8 @@ export default function ScopeArchitectPage() {
           ]}
           ctaCard={{
             headline: "Want to talk architecture?",
-            description: "I help agencies build high-fidelity technical systems.",
+            description:
+              "I help agencies build high-fidelity technical systems.",
             href: "/start-a-project",
           }}
         />
