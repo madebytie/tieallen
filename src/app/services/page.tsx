@@ -1,11 +1,16 @@
 import type { Metadata } from "next";
-import { ServicesHero, ServiceSection } from "@/components/sections/ServicesPage";
+import {
+  ServicesHero,
+  ServiceSection,
+} from "@/components/sections/ServicesPage";
 import CallToAction from "@/components/sections/CallToAction";
+import Pricing from "@/components/sections/Pricing";
 import styles from "@/components/sections/services-page.module.css";
 
 export const metadata: Metadata = {
   title: "Services - made by tie.",
-  description: "Web design, development, branding, funnels, and CRM automation.",
+  description:
+    "Web design, development, branding, funnels, and CRM automation.",
 };
 
 const SERVICES = [
@@ -75,6 +80,7 @@ export default function ServicesPage() {
       {SERVICES.map((service) => (
         <ServiceSection key={service.headline} {...service} />
       ))}
+      <Pricing />
       <CallToAction href="/start" />
     </main>
   );
