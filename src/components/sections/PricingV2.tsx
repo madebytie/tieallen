@@ -205,8 +205,8 @@ export default function PricingV2() {
                 </div>
               </div>
               <div className={styles.ctaBlock}>
-                <Button label="Submit Project" href="/start" variant="dark" size="md" />
-                <Button label="Book Call" href="/book" variant="light" size="md" />
+                <Button label="Submit Project" href="/start" variant="dark" size="md" className={styles.ctaBtn} />
+                <Button label="Book Call" href="/book" variant="light" size="md" className={styles.ctaBtn} />
               </div>
             </div>
           </div>
@@ -282,8 +282,8 @@ export default function PricingV2() {
                 </div>
               </div>
               <div className={styles.ctaBlock}>
-                <Button label="Submit Project" href="/start" variant="dark" size="md" />
-                <Button label="Book Call" href="/book" variant="light" size="md" />
+                <Button label="Submit Project" href="/start" variant="dark" size="md" className={styles.ctaBtn} />
+                <Button label="Book Call" href="/book" variant="light" size="md" className={styles.ctaBtn} />
               </div>
             </div>
           </div>

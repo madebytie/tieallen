@@ -37,7 +37,6 @@ export default function HomeHero() {
 
           {/* Stepped white overlay with headline */}
           <div className={styles.homeHeroOverlay}>
-            {/* Corner notches for overlay */}
             <div className={`${styles.overlayCorner} ${styles.overlayBottomLeft}`} aria-hidden="true" />
             <div className={`${styles.overlayCorner} ${styles.overlayTopRight}`} aria-hidden="true" />
 
@@ -48,9 +47,8 @@ export default function HomeHero() {
               </span>
             </h1>
 
-            {/* Buttons */}
             <div className={styles.homeHeroButtons}>
-              <Button label="See my work" href="/work" />
+              <Button label="See my work" href="/work" className={styles.heroPrimaryBtn} />
               <a href="/start" className={styles.textButton}>
                 Start<span className={styles.mobileHide}> your project</span>
                 <svg className={styles.textButtonArrow} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -63,7 +61,6 @@ export default function HomeHero() {
 
           {/* Accent notch - bottom-right */}
           <div className={styles.homeHeroAccent} aria-hidden="true">
-            {/* Corner notches for accent */}
             <div className={`${styles.accentCorner} ${styles.accentTopRight}`} aria-hidden="true" />
             <div className={`${styles.accentCorner} ${styles.accentBottomLeft}`} aria-hidden="true" />
           </div>
