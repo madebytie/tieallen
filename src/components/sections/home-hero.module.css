@@ -1,8 +1,22 @@
 /* ============================================
-   HOME HERO - Stepped notch design
-   White overlay follows each text line with rounded
-   corners at each transition, starting from top-left.
-   Bottom-right accent notch preserved from ProjectHero.
+   HOME HERO — clean rebuild
+   ----------------------------------------------
+   ARCHITECTURE
+   .homeHeroFrame    relative anchor.
+   .homeHeroCard     hero video. Position controlled ONLY by its margin-top.
+   .homeHeroContent  white block. Position controlled ONLY by its `top`.
+                     Absolute on the frame — never affects the card.
+
+   The two are fully independent:
+   - Move the hero down ........ change .homeHeroCard margin-top
+   - Move the content up/down .. change .homeHeroContent top
+
+   NOTCH
+   Content has border-bottom-right-radius. Where it sits over the dark
+   card, that curve is the notch into the hero. Card has its own BR
+   accent notch (bottom-right of the video).
+
+   The bottom-right rounded accent on the card is preserved as-is.
    ============================================ */
 
 .homeHero {
@@ -10,33 +24,29 @@
 }
 
 .homeHeroFrame {
+  --content-top: 1.25rem;
+  --hero-video-offset: 7rem;
+  --notch-r: 2.5rem;
+  position: relative;
   width: 100%;
   max-width: 1450px;
   margin: 0 auto;
   padding: 1.25rem;
-  background-color: transparent;
 }
 
+/* ---- HERO CARD ---- */
 .homeHeroCard {
   position: relative;
   width: 100%;
-  min-height: 780px;
+  margin-top: var(--hero-video-offset);
+  min-height: 720px;
   max-height: 860px;
   border-radius: 2.5rem;
   border-top-left-radius: 0;
   border-bottom-right-radius: 0;
+  background-color: var(--brand-dark-blue);
   overflow: hidden;
-}
-
-/* ---- Placeholder image ---- */
-.homeHeroImage {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--brand-dark-blue);
   z-index: 1;
-  overflow: hidden;
 }
 
 .heroVideo {
@@ -46,76 +56,110 @@
   display: block;
 }
 
-/* ---- Stepped white overlay ---- */
-.homeHeroOverlay {
+/* ---- BR ACCENT NOTCH (unchanged behavior) ---- */
+.homeHeroAccent {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: min(60%, 44rem);
+  right: 0;
+  bottom: 0;
+  width: min(22%, 18rem);
+  height: 3rem;
   background-color: var(--bg-primary);
-  z-index: 4;
-  padding: 2.5rem 3rem 2rem;
-  border-bottom-right-radius: 2.5rem;
+  border-top-left-radius: 1.75rem;
+  z-index: 3;
+  pointer-events: none;
 }
 
-/* ---- Overlay corner notches ----
-   Rule: center at the corner facing INTO the dark area.
-
-   Smoothing: "transparent R, white calc(R + 1px)" puts the 1px feather
-   OUTSIDE the disc (into the white region), so it's covered by the 2px
-   size overlap and never creates a dark inset at the inner corners.
-   DO NOT use "transparent calc(R - 1px), white R" - that puts the feather
-   inside the disc (dark side) which creates a visible dark crescent.
-
-   overlayBottomLeft  - below overlay at left:0      → center 100% 100%
-   overlayTopRight    - right of overlay at top:0    → center 100% 100%
-   accentTopRight     - above accent at right:0      → center 0% 0%
-   accentBottomLeft   - left of accent at bottom:0   → center 0% 0%
-   ---- */
-.overlayCorner {
+.accentCorner {
   position: absolute;
   z-index: 5;
 }
 
-.overlayBottomLeft {
-  bottom: -2.52rem;
+.accentTopRight {
+  top: -1.77rem;
+  right: 0;
+  width: 1.77rem;
+  height: 1.77rem;
+  background: radial-gradient(
+    circle at 0% 0%,
+    transparent 1.75rem,
+    var(--bg-primary) calc(1.75rem + 1px)
+  );
+}
+
+.accentBottomLeft {
+  bottom: 0;
+  left: -1.77rem;
+  width: 1.77rem;
+  height: 1.77rem;
+  background: radial-gradient(
+    circle at 0% 0%,
+    transparent 1.75rem,
+    var(--bg-primary) calc(1.75rem + 1px)
+  );
+}
+
+/* ---- CONTENT (white block sitting half above / half over the hero) ---- */
+.homeHeroContent {
+  position: absolute;
+  top: var(--content-top);
+  left: 1.25rem;
+  width: min(58%, 44rem);
+  background-color: var(--bg-primary);
+  padding: 2.5rem 3rem 2rem;
+  border-bottom-right-radius: var(--notch-r);
+  z-index: 4;
+  overflow: visible;
+}
+
+/* Inverse concave corners (same pattern as project-hero tab / service-page-hero) */
+.notchCorner {
+  position: absolute;
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* Bottom-left of notch — tab bottom × card left (projectHeroTab::before) */
+.notchBottomLeft {
+  bottom: calc(-1 * var(--notch-r) - 0.02rem);
   left: 0;
-  width: 2.52rem;
-  height: 2.52rem;
+  width: calc(var(--notch-r) + 0.02rem);
+  height: calc(var(--notch-r) + 0.02rem);
   background: radial-gradient(
     circle at 100% 100%,
-    transparent 2.5rem,
-    var(--bg-primary) calc(2.5rem + 1px)
+    transparent var(--notch-r),
+    var(--bg-primary) calc(var(--notch-r) + 1px)
   );
 }
 
-.overlayTopRight {
-  top: 0;
-  right: -2.52rem;
-  width: 2.52rem;
-  height: 2.52rem;
+/*
+ * Top-right of notch — hero top × content right edge.
+ * NOT at top:0 of the block: content sits above the card, so this
+ * corner lives where margin-top meets the right edge (projectHeroTab::after).
+ */
+.notchTopRight {
+  top: calc(var(--hero-video-offset) - var(--content-top) + 1.25rem);
+  right: calc(-1 * var(--notch-r) - 0.02rem);
+  width: calc(var(--notch-r) + 0.02rem);
+  height: calc(var(--notch-r) + 0.02rem);
   background: radial-gradient(
     circle at 100% 100%,
-    transparent 2.5rem,
-    var(--bg-primary) calc(2.5rem + 1px)
+    transparent var(--notch-r),
+    var(--bg-primary) calc(var(--notch-r) + 1px)
   );
 }
 
-/* ---- Title with stepped line backgrounds ---- */
 .homeHeroTitle {
   font-family: var(--font-primary);
   font-size: clamp(1.9rem, 2.85vw, 2.65rem);
   font-weight: var(--font-weight-light);
   letter-spacing: -0.05em;
-  line-height: 1.25;
+  line-height: 1.2;
   color: var(--text-primary);
-  margin: 0 0 2rem 0;
+  margin: 0 0 1.5rem 0;
 }
 
 .titleLine {
   display: block;
-  position: relative;
-  padding-right: 1rem;
 }
 
 .titleLineBold {
@@ -129,22 +173,6 @@
   font-size: clamp(1.7rem, 2.5vw, 2.3rem);
 }
 
-/* Stepped notch after each line except the last */
-.titleLine:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  bottom: -0.5rem;
-  right: 0;
-  width: 1.5rem;
-  height: 1.5rem;
-  background: radial-gradient(
-    circle at 0% 100%,
-    transparent 1.5rem,
-    var(--bg-primary) calc(1.5rem + 1px)
-  );
-}
-
-/* ---- Buttons ---- */
 .homeHeroButtons {
   display: flex;
   flex-direction: row;
@@ -194,227 +222,27 @@
   width: 100%;
 }
 
-/* ---- Accent notch: bottom-right ---- */
-.homeHeroAccent {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: min(22%, 18rem);
-  height: 3rem;
-  background-color: var(--bg-primary);
-  border-top-left-radius: 1.75rem;
-  z-index: 3;
-  pointer-events: none;
-}
-
-.accentCorner {
-  position: absolute;
-  z-index: 5;
-}
-
-.accentTopRight {
-  top: -1.77rem;
-  right: 0;
-  width: 1.77rem;
-  height: 1.77rem;
-  background: radial-gradient(
-    circle at 0% 0%,
-    transparent 1.75rem,
-    var(--bg-primary) calc(1.75rem + 1px)
-  );
-}
-
-.accentBottomLeft {
-  bottom: 0;
-  left: -1.77rem;
-  width: 1.77rem;
-  height: 1.77rem;
-  background: radial-gradient(
-    circle at 0% 0%,
-    transparent 1.75rem,
-    var(--bg-primary) calc(1.75rem + 1px)
-  );
-}
-
-/* ---- Responsive ---- */
+/* ============================================
+   MOBILE (≤900px) — same architecture, scaled
+   ============================================ */
 @media (max-width: 900px) {
-  .homeHeroCard {
-    min-height: 600px;
-    max-height: 680px;
-  }
-
-  .homeHeroOverlay {
-    width: min(72%, 32rem);
-    padding: 2rem 2rem 1.5rem;
-    border-bottom-right-radius: 2rem;
-  }
-
-  .overlayBottomLeft {
-    bottom: -2.02rem;
-    width: 2.02rem;
-    height: 2.02rem;
-    background: radial-gradient(
-      circle at 100% 100%,
-      transparent 2rem,
-      var(--bg-primary) calc(2rem + 1px)
-    );
-  }
-
-  .overlayTopRight {
-    right: -2.02rem;
-    width: 2.02rem;
-    height: 2.02rem;
-    background: radial-gradient(
-      circle at 100% 100%,
-      transparent 2rem,
-      var(--bg-primary) calc(2rem + 1px)
-    );
-  }
-
-  .homeHeroTitle {
-    font-size: clamp(1.6rem, 3.5vw, 2.2rem);
-  }
-
-  .titleLineBold {
-    font-size: clamp(2.5rem, 6vw, 3.5rem);
-  }
-
-  .titleLine:not(:last-child)::after {
-    width: 1.25rem;
-    height: 1.25rem;
-    background: radial-gradient(
-      circle at 0% 100%,
-      transparent 1.25rem,
-      var(--bg-primary) calc(1.25rem + 1px)
-    );
-  }
-
-  .homeHeroAccent {
-    width: 36%;
-    height: 2.5rem;
-  }
-
-  .accentTopRight {
-    top: -1.77rem;
-    width: 1.77rem;
-    height: 1.77rem;
-    background: radial-gradient(
-      circle at 0% 0%,
-      transparent 1.75rem,
-      var(--bg-primary) calc(1.75rem + 1px)
-    );
-  }
-
-  .accentBottomLeft {
-    bottom: 0;
-    left: -1.77rem;
-    width: 1.77rem;
-    height: 1.77rem;
-    background: radial-gradient(
-      circle at 0% 0%,
-      transparent 1.75rem,
-      var(--bg-primary) calc(1.75rem + 1px)
-    );
-  }
-}
-
-@media (max-width: 560px) {
   .homeHeroFrame {
-    padding: 0.75rem;
+    --content-top: 1rem;
+    --hero-video-offset: 8.5rem;
+    --notch-r: 1.25rem;
   }
 
   .homeHeroCard {
+    margin-top: var(--hero-video-offset);
+    min-height: 560px;
+    max-height: none;
     border-radius: 1.75rem;
     border-top-left-radius: 0;
     border-bottom-right-radius: 0;
-    min-height: 540px;
-    max-height: 600px;
-    overflow: visible;
-    margin-top: 6.5rem;
-  }
-
-  .homeHeroImage {
-    border-radius: 1.75rem;
-    border-top-left-radius: 0;
-    border-bottom-right-radius: 0;
-    overflow: hidden;
-  }
-
-  .homeHeroOverlay {
-    width: 88%;
-    padding: 0.75rem 1.2rem 1.15rem;
-    border-bottom-right-radius: 1.25rem;
-    top: -6.5rem;
-  }
-
-  .homeHeroTitle {
-    font-size: clamp(1.1rem, 5vw, 1.4rem);
-    margin-bottom: 0.85rem;
-  }
-
-  .titleLineBold {
-    font-size: clamp(2.5rem, 12vw, 3.2rem);
-    white-space: nowrap;
-  }
-
-  .titleLine:not(.titleLineBold) {
-    font-size: clamp(1.1rem, 4.2vw, 1.3rem);
-    line-height: 1.5;
-  }
-
-  /* Single smooth block on mobile — no per-line steps */
-  .titleLine:not(:last-child)::after {
-    display: none;
-  }
-
-  .homeHeroButtons {
-    gap: 0.75rem;
-  }
-
-  .homeHeroButtons .heroPrimaryBtn {
-    padding: 0.55rem 0.95rem;
-    font-size: 0.82rem;
-    gap: 0.4rem;
-  }
-
-  .homeHeroButtons .heroPrimaryBtn > span:last-child {
-    width: 13px;
-    height: 13px;
-  }
-
-  .textButton {
-    font-size: 0.85rem;
-  }
-
-  .mobileHide {
-    display: none;
-  }
-
-  .overlayBottomLeft {
-    bottom: -1.27rem;
-    width: 1.27rem;
-    height: 1.27rem;
-    background: radial-gradient(
-      circle at 100% 100%,
-      transparent 1.25rem,
-      var(--bg-primary) calc(1.25rem + 1px)
-    );
-  }
-
-  .overlayTopRight {
-    top: 6.5rem;
-    right: -1.27rem;
-    width: 1.27rem;
-    height: 1.27rem;
-    background: radial-gradient(
-      circle at 100% 100%,
-      transparent 1.25rem,
-      var(--bg-primary) calc(1.25rem + 1px)
-    );
   }
 
   .homeHeroAccent {
-    width: 40%;
+    width: 42%;
     height: 2rem;
     border-top-left-radius: 1.25rem;
   }
@@ -439,5 +267,86 @@
       transparent 1.25rem,
       var(--bg-primary) calc(1.25rem + 1px)
     );
+  }
+
+  .homeHeroContent {
+    top: var(--content-top);
+    left: 1rem;
+    width: min(76%, 19.5rem);
+    padding: 1.15rem 1.25rem 0.75rem;
+  }
+
+  .notchTopRight {
+    top: calc(var(--hero-video-offset) - var(--content-top) + 0.5rem);
+  }
+
+  .notchBottomLeft {
+    bottom: calc(-1 * var(--notch-r) - 0.35rem);
+    left: 0.3rem;
+  }
+
+  .homeHeroTitle {
+    margin-bottom: 0.65rem;
+  }
+
+  .titleLineBold {
+    font-size: clamp(2.2rem, 9vw, 3rem);
+    white-space: nowrap;
+  }
+
+  .titleLine:not(.titleLineBold) {
+    font-size: clamp(1rem, 4vw, 1.2rem);
+    line-height: 1.4;
+  }
+
+  .homeHeroButtons {
+    gap: 0.85rem;
+  }
+
+  .homeHeroButtons .heroPrimaryBtn {
+    padding: 0.55rem 0.95rem;
+    font-size: 0.82rem;
+    gap: 0.4rem;
+  }
+
+  .homeHeroButtons .heroPrimaryBtn > span:last-child {
+    width: 13px;
+    height: 13px;
+  }
+
+  .textButton {
+    font-size: 0.85rem;
+  }
+
+  .mobileHide {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .homeHeroFrame {
+    padding: 0.75rem;
+    --content-top: 0.5rem;
+    --hero-video-offset: 7.25rem;
+    --notch-r: 1.1rem;
+  }
+
+  .homeHeroCard {
+    min-height: 480px;
+  }
+
+  .homeHeroContent {
+    left: 0.5rem;
+    width: 78%;
+    padding: 1rem 1.1rem 0.65rem;
+  }
+
+  .notchTopRight {
+    top: calc(var(--hero-video-offset) - var(--content-top) + 0.75rem);
+  }
+
+  .notchBottomLeft {
+    bottom: calc(-1 * var(--notch-r) - 0rem);
+    left: 0.25rem;
   }
 }
