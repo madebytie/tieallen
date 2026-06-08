@@ -80,7 +80,7 @@ export const HIRE_STACK: HireStackGroup[] = [
   },
   {
     category: "Platforms & services",
-    items: ["WordPress", "Resend"],
+    items: ["WordPress", "Resend", "SendGrid", "Stripe"],
   },
   {
     category: "AI APIs",
