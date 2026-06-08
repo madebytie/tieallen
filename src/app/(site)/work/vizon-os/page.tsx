@@ -18,7 +18,7 @@ export default function VizonOS() {
       {/* Hero */}
       <ProjectHero
         title="One intelligent workspace. The 10-to-1,000 output engine."
-        tags={["Brand Identity", "Web Design", "SaaS Development"]}
+        tags={["Brand Design", "UI Design", "UX", "Full-Stack Development w/ AI"]}
         image="/projects/vizon-os/tasks-kanban.png"
       />
 

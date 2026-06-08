@@ -1,0 +1,51 @@
+.hireChrome {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0.65rem 1.25rem;
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.85rem 1.25rem;
+}
+
+.navLink {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color var(--transition-base);
+  white-space: nowrap;
+}
+
+.navLink:hover {
+  color: var(--text-primary);
+}
+
+.iconLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color var(--transition-base);
+}
+
+.iconLink svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.iconLink:hover {
+  color: var(--text-primary);
+}

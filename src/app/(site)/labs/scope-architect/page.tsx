@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import {
   LabProjectHero,
   ContentSection,
@@ -217,7 +218,10 @@ export default function ScopeArchitectPage() {
             <>
               Intelligent SOW & Technical Roadmap Generator. Transforms vague
               discovery notes into <strong>bankable</strong>, high-fidelity
-              project maps using AI-orchestrated logic.
+              project maps using AI-orchestrated logic.{" "}
+              <Link href="/work/scope-architect" style={{ color: "var(--brand-orange)", textDecoration: "underline" }}>
+                View full case study →
+              </Link>
             </>
           }
           tags={["Gemini 3.1", "AI SDK", "Next.js", "Zustand", "Framer Motion"]}
