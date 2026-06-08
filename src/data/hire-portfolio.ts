@@ -38,7 +38,7 @@ export const HIRE_POSITIONING = {
     "Not screens in a deck. I work on business outcomes, user flows, and product ecosystems. As a founder who has launched multiple live products, I own the arc from concept through brand, UX, engineering, and iteration.",
   photo: "/assets/tie-sitting-infront-logo.png",
   linkedin: "https://www.linkedin.com/in/tielove/",
-  email: "mailto:hello@tieallen.com",
+  email: "mailto:tie@madebytie.com",
   book: "/book",
   x: "https://x.com/tielove333",
   portfolio: "/work",
