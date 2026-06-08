@@ -68,7 +68,7 @@ export interface HireStackGroup {
 export const HIRE_STACK: HireStackGroup[] = [
   {
     category: "Design",
-    items: ["Figma", "Adobe Creative Suite"],
+    items: ["Figma", "Adobe Creative Cloud"],
   },
   {
     category: "Frontend",
@@ -84,7 +84,7 @@ export const HIRE_STACK: HireStackGroup[] = [
   },
   {
     category: "AI APIs",
-    items: ["OpenAI API", "Anthropic API", "Gemini API"],
+    items: ["OpenAI API", "Anthropic API", "Gemini API", "Vercel AI SDK"],
   },
   {
     category: "IDE & AI dev",
