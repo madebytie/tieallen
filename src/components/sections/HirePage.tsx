@@ -142,6 +142,10 @@ function RailNav({
             {s.label}
           </a>
         ))}
+        <div className={styles.railCtas}>
+          <Button label="Let's talk" href={HIRE_POSITIONING.linkedin} target="_blank" size="sm" />
+          <CtaLinks />
+        </div>
       </nav>
     </>
   );
@@ -450,10 +454,6 @@ export default function HirePage() {
           <IdentityBlock />
           <ExpertiseList />
           <RailNav sections={HIRE_SECTIONS} activeSection={activeSection} />
-          <div className={styles.railCtas}>
-            <Button label="Let's talk" href={HIRE_POSITIONING.linkedin} target="_blank" size="sm" />
-            <CtaLinks />
-          </div>
         </aside>
 
         {/* Scrollable proof column */}
