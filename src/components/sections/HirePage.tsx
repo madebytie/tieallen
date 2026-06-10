@@ -10,6 +10,7 @@ import {
   HIRE_EXPERTISE,
   HIRE_STACK,
   HIRE_STATS,
+  HIRE_HOW_I_WORK,
   HIRE_PILLARS,
   HIRE_PRODUCTS,
   HIRE_CLIENT_WORK,
@@ -266,33 +267,6 @@ function FeaturedProduct({ product }: { product: HireProduct }) {
   );
 }
 
-function CompactProduct({ product }: { product: HireProduct }) {
-  return (
-    <Link href={product.href} className={styles.compactCard}>
-      <div className={styles.compactImageWrap}>
-        <Image
-          src={product.image}
-          alt={product.label}
-          fill
-          className={styles.compactImage}
-          sizes="(max-width: 1100px) 100vw, 40vw"
-        />
-      </div>
-      <span className={styles.compactLabel}>{product.label}</span>
-      <h3 className={styles.compactHeadline}>{product.headline}</h3>
-      <p className={styles.compactBody}>{product.body}</p>
-      <div className={styles.compactOutcomes}>
-        {product.outcomes.map((o) => (
-          <div key={o.label} className={styles.compactOutcome}>
-            <strong>{o.label}</strong>
-            {o.value}
-          </div>
-        ))}
-      </div>
-    </Link>
-  );
-}
-
 function ClientCard({
   project,
   wide,
@@ -398,8 +372,9 @@ function StackSection() {
       <span className={styles.eyebrow}>Tools & stack</span>
       <h2 className={styles.sectionTitle}>Design through deployment.</h2>
       <p className={styles.sectionBody}>
-        I work across the full toolchain, from design systems to production infra and AI
-        integration. Not just familiar with these tools; shipping with them daily.
+        Tools I orchestrate daily across design, production infra, real-time collaboration,
+        and AI integration. I don&apos;t list these to pass a coding test. I use them to ship
+        complex platforms at founder speed.
       </p>
       <div className={styles.stackGrid}>
         {HIRE_STACK.map((group) => (
@@ -442,9 +417,6 @@ function CtaLinks() {
 export default function HirePage() {
   const sectionIds = HIRE_SECTIONS.map((s) => s.id);
   const activeSection = useScrollSpy(sectionIds);
-
-  const heavyProducts = HIRE_PRODUCTS.filter((p) => p.weight === "heavy");
-  const compactProducts = HIRE_PRODUCTS.filter((p) => p.weight === "compact");
 
   return (
     <div className={styles.page}>
@@ -506,8 +478,9 @@ export default function HirePage() {
             <span className={styles.eyebrow}>Open to</span>
             <h2 className={styles.sectionTitle}>Roles I&apos;m targeting.</h2>
             <p className={styles.sectionBody}>
-              Senior product design roles where I can own 0→1 systems, ship AI-native
-              experiences, and drive outcomes, not just deliver screens.
+              Design-first and product leadership roles where I own 0→1 systems, ship
+              AI-native experiences, and drive outcomes. Portfolio walkthroughs and product
+              critiques, not algorithm interviews.
             </p>
             <div className={styles.rolesList}>
               {HIRE_ROLES.map((role) => (
@@ -525,19 +498,14 @@ export default function HirePage() {
               Real products. Real users. My unfair advantage.
             </h2>
             <p className={styles.sectionBody}>
-              Most candidates show mockups. I show live systems I conceived, designed,
-              built, and launched, with AI woven into the core experience.
+              Four production-grade founder platforms. On each one I owned brand, marketing
+              site, product design, platform design, and AI-orchestrated development.
+              Equal depth, equal proof.
             </p>
 
-            {heavyProducts.map((product) => (
+            {HIRE_PRODUCTS.map((product) => (
               <FeaturedProduct key={product.slug} product={product} />
             ))}
-
-            <div className={styles.compactGrid}>
-              {compactProducts.map((product) => (
-                <CompactProduct key={product.slug} product={product} />
-              ))}
-            </div>
           </section>
 
           {/* Client work */}
@@ -563,6 +531,7 @@ export default function HirePage() {
             <h2 className={styles.sectionTitle}>
               Product leadership, not task execution.
             </h2>
+            <p className={styles.sectionBody}>{HIRE_HOW_I_WORK}</p>
             <div className={styles.pillarGrid}>
               {HIRE_PILLARS.map((pillar) => (
                 <div key={pillar.title} className={styles.pillarCard}>
@@ -581,9 +550,10 @@ export default function HirePage() {
                 Let&apos;s build something that moves the needle.
               </h3>
               <p className={styles.contactBody}>
-                I&apos;d love to walk you through how I think about product, or
-                review yours and share one improvement I&apos;d prioritize on day
-                one.
+                Skip the take-home. Let&apos;s pull up Scope Architect, Capsole,
+                or Vizon live and walk through how I took each from blank canvas
+                to production. Or review your product and share one improvement
+                I&apos;d prioritize on day one.
               </p>
               <div className={styles.contactCtas}>
                 <Button
@@ -592,7 +562,7 @@ export default function HirePage() {
                   target="_blank"
                   variant="light"
                 />
-                <Button label="Book a conversation" href={HIRE_POSITIONING.book} variant="light" />
+                <Button label="Book a product walkthrough" href={HIRE_POSITIONING.book} variant="light" />
               </div>
             </div>
           </section>
