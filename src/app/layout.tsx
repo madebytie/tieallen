@@ -3,7 +3,7 @@ import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://tieallen.com"),
+  metadataBase: new URL("https://madebytie.com"),
   title: {
     default: "made by tie | Concept to Scale",
     template: "%s | made by tie",
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: "made by tie | Concept to Scale",
     description:
       "I design, build, and scale premium digital products - from concept through launch and beyond.",
-    url: "https://tieallen.com",
+    url: "https://madebytie.com",
     siteName: "made by tie",
     locale: "en_US",
     type: "website",

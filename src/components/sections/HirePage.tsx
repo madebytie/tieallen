@@ -13,8 +13,10 @@ import {
   HIRE_HOW_I_WORK,
   HIRE_PILLARS,
   HIRE_PRODUCTS,
+  HIRE_TESTIMONIALS,
   HIRE_CLIENT_WORK,
   HIRE_ROLES,
+  HIRE_ROLES_NOTE,
   HIRE_SECTIONS,
   type HireProduct,
 } from "@/data/hire-portfolio";
@@ -30,7 +32,9 @@ function ArrowIcon() {
 }
 
 function AnimatedStat({ value, suffix }: { value: number; suffix: string }) {
-  const [display, setDisplay] = useState(0);
+  // Server-renders the real value so crawlers and no-JS readers never see "0";
+  // the count-up only runs client-side once the stat scrolls into view.
+  const [display, setDisplay] = useState(value);
   const ref = useRef<HTMLSpanElement>(null);
   const [started, setStarted] = useState(false);
 
@@ -40,6 +44,7 @@ function AnimatedStat({ value, suffix }: { value: number; suffix: string }) {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
+          setDisplay(0);
           setStarted(true);
           observer.disconnect();
         }
@@ -177,6 +182,46 @@ function useScrollSpy(sectionIds: string[]) {
   return active;
 }
 
+function DemoVideo({ src, poster, title }: { src: string; poster: string; title: string }) {
+  const [playing, setPlaying] = useState(false);
+  const isEmbed = /youtube\.com|youtu\.be|player\.vimeo\.com|mux\.com/.test(src);
+
+  if (!playing) {
+    return (
+      <button
+        type="button"
+        className={styles.videoPoster}
+        onClick={() => setPlaying(true)}
+        aria-label={`Play ${title} demo video`}
+      >
+        <Image src={poster} alt={`${title} demo video poster`} fill className={styles.featuredImage} sizes="(max-width: 1100px) 100vw, 60vw" />
+        <span className={styles.videoPlayIcon} aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M8 5v14l11-7z" />
+          </svg>
+        </span>
+      </button>
+    );
+  }
+
+  if (isEmbed) {
+    const embedSrc = src.includes("youtube.com/watch")
+      ? src.replace("watch?v=", "embed/") + "?autoplay=1"
+      : src;
+    return (
+      <iframe
+        src={embedSrc}
+        className={styles.videoFrame}
+        title={`${title} demo video`}
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowFullScreen
+      />
+    );
+  }
+
+  return <video src={src} poster={poster} className={styles.videoFrame} controls autoPlay playsInline />;
+}
+
 function FeaturedProduct({ product }: { product: HireProduct }) {
   const sectionRef = useRef<HTMLElement>(null);
   const [inView, setInView] = useState(false);
@@ -202,8 +247,18 @@ function FeaturedProduct({ product }: { product: HireProduct }) {
         aria-hidden="true"
       />
       <div className={styles.featuredInner}>
-        <span className={styles.featuredLabel}>{product.label}</span>
+        <div className={styles.featuredLabelRow}>
+          <span className={styles.featuredLabel}>{product.label}</span>
+          <span className={styles.statusBadge}>{product.status}</span>
+        </div>
+        <p className={styles.featuredPositioning}>{product.positioning}</p>
         <h3 className={styles.featuredHeadline}>{product.headline}</h3>
+
+        {product.video?.src && (
+          <div className={styles.videoSlot}>
+            <DemoVideo src={product.video.src} poster={product.video.poster} title={product.label} />
+          </div>
+        )}
 
         <div className={styles.featuredTop}>
           <div className={styles.featuredTopText}>
@@ -217,15 +272,21 @@ function FeaturedProduct({ product }: { product: HireProduct }) {
             </div>
           </div>
 
-          <Link href={product.href} className={styles.featuredImageWrap}>
-            <Image
-              src={product.image}
-              alt={product.headline}
-              fill
-              className={styles.featuredImage}
-              sizes="(max-width: 1100px) 100vw, 45vw"
-            />
-          </Link>
+          {product.image ? (
+            <Link href={product.href} className={styles.featuredImageWrap}>
+              <Image
+                src={product.image}
+                alt={product.imageAlt}
+                fill
+                className={styles.featuredImage}
+                sizes="(max-width: 1100px) 100vw, 45vw"
+              />
+            </Link>
+          ) : (
+            <div className={`${styles.featuredImageWrap} ${styles.imagePlaceholder}`}>
+              <span>[SCREENSHOT: {product.label} product UI]</span>
+            </div>
+          )}
         </div>
 
         <div className={styles.outcomeGrid}>
@@ -267,13 +328,7 @@ function FeaturedProduct({ product }: { product: HireProduct }) {
   );
 }
 
-function ClientCard({
-  project,
-  wide,
-}: {
-  project: (typeof HIRE_CLIENT_WORK)[0];
-  wide?: boolean;
-}) {
+function ClientCard({ project }: { project: (typeof HIRE_CLIENT_WORK)[0] }) {
   const content = (
     <>
       <div className={styles.clientImageWrap}>
@@ -293,6 +348,8 @@ function ClientCard({
         ) : (
           <div
             className={styles.clientImage}
+            role="img"
+            aria-label={`${project.client} — ${project.title}`}
             style={{
               backgroundImage: `url(${project.image})`,
               backgroundSize: "cover",
@@ -317,10 +374,7 @@ function ClientCard({
   );
 
   return (
-    <Link
-      href={project.href}
-      className={`${styles.clientCard} ${wide ? styles.clientCardWide : ""}`}
-    >
+    <Link href={project.href} className={styles.clientCard}>
       {content}
     </Link>
   );
@@ -350,7 +404,7 @@ function IdentityBlock({ compact }: { compact?: boolean }) {
     <>
       {!compact && (
         <div className={styles.photoWrap}>
-          <Image src={p.photo} alt={p.name} fill className={styles.photo} sizes="360px" priority />
+          <Image src={p.photo} alt={p.photoAlt} fill className={styles.photo} sizes="360px" priority />
         </div>
       )}
       <div className={styles.railIdentity}>
@@ -372,9 +426,8 @@ function StackSection() {
       <span className={styles.eyebrow}>Tools & stack</span>
       <h2 className={styles.sectionTitle}>Design through deployment.</h2>
       <p className={styles.sectionBody}>
-        Tools I orchestrate daily across design, production infra, real-time collaboration,
-        and AI integration. I don&apos;t list these to pass a coding test. I use them to ship
-        complex platforms at founder speed.
+        Tools I use daily across design, production infra, real-time collaboration,
+        and AI integration — the stack behind four shipped platforms.
       </p>
       <div className={styles.stackGrid}>
         {HIRE_STACK.map((group) => (
@@ -410,6 +463,10 @@ function CtaLinks() {
         Book a call
         <ArrowIcon />
       </Link>
+      <Link href={p.resume} className={styles.textLink} download>
+        Résumé (PDF)
+        <ArrowIcon />
+      </Link>
     </div>
   );
 }
@@ -435,7 +492,7 @@ export default function HirePage() {
             <div className={styles.mobilePhotoRow}>
               <Image
                 src={HIRE_POSITIONING.photo}
-                alt={HIRE_POSITIONING.name}
+                alt={HIRE_POSITIONING.photoAlt}
                 width={88}
                 height={110}
                 className={styles.mobilePhoto}
@@ -471,16 +528,12 @@ export default function HirePage() {
             </div>
           </section>
 
-          <StackSection />
-
-          {/* Roles — early signal for recruiters */}
           <section id="roles" className={styles.section}>
             <span className={styles.eyebrow}>Open to</span>
             <h2 className={styles.sectionTitle}>Roles I&apos;m targeting.</h2>
             <p className={styles.sectionBody}>
-              Design-first and product leadership roles where I own 0→1 systems, ship
-              AI-native experiences, and drive outcomes. Portfolio walkthroughs and product
-              critiques, not algorithm interviews.
+              Design-first product leadership roles where I own 0→1 systems, ship
+              AI-native experiences, and drive outcomes.
             </p>
             <div className={styles.rolesList}>
               {HIRE_ROLES.map((role) => (
@@ -489,18 +542,21 @@ export default function HirePage() {
                 </span>
               ))}
             </div>
+            <p className={styles.rolesNote}>{HIRE_ROLES_NOTE}</p>
           </section>
+
+          <StackSection />
 
           {/* Founder products */}
           <section id="products" className={styles.section}>
             <span className={styles.eyebrow}>Founder products</span>
             <h2 className={styles.sectionTitle}>
-              Real products. Real users. My unfair advantage.
+              Real products. In production. My unfair advantage.
             </h2>
             <p className={styles.sectionBody}>
-              Four production-grade founder platforms. On each one I owned brand, marketing
-              site, product design, platform design, and AI-orchestrated development.
-              Equal depth, equal proof.
+              Four founder platforms, all live: two launching now, two in private beta.
+              On each one I owned brand, marketing site, product design, platform design,
+              and AI-orchestrated development. Equal depth, equal proof.
             </p>
 
             {HIRE_PRODUCTS.map((product) => (
@@ -508,20 +564,36 @@ export default function HirePage() {
             ))}
           </section>
 
+          {/* Testimonials */}
+          <section id="testimonials" className={styles.section}>
+            <span className={styles.eyebrow}>What people say</span>
+            <div className={styles.testimonialGrid}>
+              {HIRE_TESTIMONIALS.map((t) => (
+                <figure key={t.name} className={styles.testimonial}>
+                  <blockquote className={styles.testimonialQuote}>{t.quote}</blockquote>
+                  <figcaption className={styles.testimonialAttr}>
+                    {t.name} · {t.role}
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          </section>
+
           {/* Client work */}
           <section id="client-work" className={styles.section}>
             <span className={styles.eyebrow}>Selected client work</span>
             <h2 className={styles.sectionTitle}>
-              0→1 launches at startup speed.
+              18 years of 0→1 client launches.
             </h2>
             <p className={styles.sectionBody}>
-              Client work reframed as business outcomes under extreme timelines
-              for brands that needed to move.
+              Full launches — brand, site, and growth systems — delivered on startup
+              timelines. The founder products above are the headline; this is the
+              track record behind them.
             </p>
             <div className={styles.clientGrid}>
-              <ClientCard project={HIRE_CLIENT_WORK[0]} wide />
-              <ClientCard project={HIRE_CLIENT_WORK[1]} />
-              <ClientCard project={HIRE_CLIENT_WORK[2]} />
+              {HIRE_CLIENT_WORK.map((project) => (
+                <ClientCard key={project.href} project={project} />
+              ))}
             </div>
           </section>
 
@@ -563,6 +635,7 @@ export default function HirePage() {
                   variant="light"
                 />
                 <Button label="Book a product walkthrough" href={HIRE_POSITIONING.book} variant="light" />
+                <Button label="Download résumé (PDF)" href={HIRE_POSITIONING.resume} variant="light" />
               </div>
             </div>
           </section>

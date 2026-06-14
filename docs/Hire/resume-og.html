@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Tie Love — Lead Product Designer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --ink: #06071e;
+    --body: #2e3140;
+    --muted: #6e7180;
+    --orange: #ff6b6b;
+    --hairline: #e6e7ec;
+  }
+
+  @page {
+    size: Letter;
+    margin: 0.6in 0.65in;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    font-family: 'Outfit', sans-serif;
+    color: var(--body);
+    font-size: 9.8pt;
+    line-height: 1.5;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .page { width: 100%; }
+
+  .pagebreak { page-break-before: always; padding-top: 4pt; }
+
+  a { color: var(--ink); text-decoration: none; }
+
+  /* ---- Header ---- */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 12pt;
+    border-bottom: 1.5pt solid var(--ink);
+    margin-bottom: 16pt;
+  }
+
+  .name {
+    font-family: 'Figtree', sans-serif;
+    font-size: 22pt;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+  }
+
+  .headline {
+    font-size: 10.5pt;
+    font-weight: 500;
+    color: var(--ink);
+    margin-top: 3pt;
+  }
+
+  .headline .sep { color: var(--orange); font-weight: 600; }
+
+  .contact {
+    text-align: right;
+    font-size: 8.4pt;
+    line-height: 1.55;
+    color: var(--muted);
+  }
+
+  .contact a { font-weight: 500; }
+
+  /* ---- Sections ---- */
+  .section { margin-bottom: 15pt; }
+
+  .section-title {
+    font-size: 8pt;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 7pt;
+  }
+
+  .summary { max-width: 100%; }
+
+  .strengths {
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .strengths .sep { color: var(--orange); }
+
+  .strengths-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4pt 14pt;
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  .strengths-grid span {
+    padding-left: 10pt;
+    position: relative;
+  }
+
+  .strengths-grid span::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.52em;
+    width: 3.5pt;
+    height: 3.5pt;
+    border-radius: 50%;
+    background: var(--orange);
+  }
+
+  /* ---- Experience ---- */
+  .entry { margin-bottom: 12pt; page-break-inside: avoid; }
+
+  .entry-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12pt;
+  }
+
+  .role {
+    font-family: 'Figtree', sans-serif;
+    font-size: 10.6pt;
+    font-weight: 600;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+
+  .meta {
+    font-size: 8.8pt;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  .entry-desc { margin-top: 3pt; }
+
+  ul { list-style: none; margin-top: 4pt; }
+
+  li {
+    padding-left: 10pt;
+    position: relative;
+    margin-bottom: 3pt;
+  }
+
+  li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.52em;
+    width: 3.5pt;
+    height: 3.5pt;
+    border-radius: 50%;
+    background: var(--orange);
+  }
+
+  li strong, .entry-desc strong { color: var(--ink); font-weight: 600; }
+  .status { color: var(--muted); }
+
+  .subrole {
+    font-weight: 600;
+    color: var(--ink);
+    font-size: 9.8pt;
+    margin-top: 6pt;
+  }
+  .subrole .meta { font-weight: 400; }
+
+  .footer-rule {
+    border: none;
+    border-top: 1pt solid var(--hairline);
+    margin: 2pt 0 10pt;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="header">
+    <div>
+      <div class="name">TIE LOVE</div>
+      <div class="headline">Lead Product Designer <span class="sep">|</span> AI-Native Products <span class="sep">|</span> 0&rarr;1 Systems</div>
+    </div>
+    <div class="contact">
+      Boise, ID &middot; Open to remote &amp; relocation<br />
+      <a href="https://madebytie.com/hire">madebytie.com/hire</a> &middot; <a href="https://www.linkedin.com/in/tielove/">linkedin.com/in/tielove</a><br />
+      <a href="mailto:tie@madebytie.com">tie@madebytie.com</a>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="section-title">Summary</div>
+    <p class="summary">Product designer and AI product builder with 18 years shipping digital products end to end &mdash; from agency client launches to founder platforms. I bring founder-level ownership into team environments: faster shipping, less design-to-engineering friction, and AI-native features that reach production. Four production-grade platforms designed and built solo; 169+ client projects delivered.</p>
+  </section>
+
+  <section class="section">
+    <div class="section-title">Core Strengths</div>
+    <div class="strengths-grid">
+      <span>0&rarr;1 Product Ownership</span>
+      <span>Product Design &amp; UX</span>
+      <span>AI-Native Product Strategy</span>
+      <span>Platform &amp; Systems Design</span>
+      <span>Design Systems &amp; Brand</span>
+      <span>AI-Orchestrated Development</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-title">Experience</div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <span class="role">Founder &amp; Lead Product Designer &mdash; made by tie</span>
+        <span class="meta">Boise, ID &middot; Mar 2025 &ndash; Present</span>
+      </div>
+      <p class="entry-desc">Independent product studio. Designed and shipped four production platforms solo, owning brand, product design, platform design, and AI-orchestrated development:</p>
+      <ul>
+        <li><strong>Scope Architect</strong> <span class="status">(launched 2026)</span> &mdash; mission control for building with AI: turns an idea into an agent-ready plan, hands work to coding agents over MCP, and keeps every task, token, and PR visible through cloud sandbox execution</li>
+        <li><strong>Vizon OS</strong> <span class="status">(private beta, in use with client teams)</span> &mdash; multi-tenant AI-native business OS: CRM, projects, collaborative docs, real-time messaging, and AI agents in one data model</li>
+        <li><strong>Capsole</strong> <span class="status">(private beta)</span> &mdash; agency operating system: AI scoping, proposals, e-sign, project management, client portals</li>
+        <li><strong>LoreTorch</strong> <span class="status">(launching 2026)</span> &mdash; virtual tabletop with an AI game master; live multiplayer state and real-time session orchestration</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <span class="role">Founder &amp; Principal Designer &mdash; Capsole (launch studio)</span>
+        <span class="meta">Las Vegas, NV &middot; Sep 2019 &ndash; Aug 2025</span>
+      </div>
+      <p class="entry-desc">Launch services studio for startups and SMBs &mdash; brand, web, and product launches.</p>
+      <ul>
+        <li>Ran client engagements end to end &mdash; aligning founders and stakeholders from discovery through launch</li>
+        <li>Wound down the studio in 2025 as founder products went full-time; its operations became the blueprint for Capsole, the agency OS (above)</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <span class="role">IPG</span>
+        <span class="meta">2016 &ndash; 2017</span>
+      </div>
+      <div class="subrole">Web Design &amp; Developer (consulting) <span class="meta">&middot; 6 months</span></div>
+      <ul>
+        <li>Led the corporate website redesign end to end &mdash; aligning executives, department leads, and the marketing team from discovery through launch</li>
+      </ul>
+      <div class="subrole">Designer, Marketing Team (full-time) <span class="meta">&middot; 1 year</span></div>
+      <ul>
+        <li>Hired full-time following the consulting engagement; owned internal design systems, internal and client-facing product UI, and design for sales and event materials across departments</li>
+      </ul>
+    </div>
+
+    <div class="pagebreak"></div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <span class="role">Founder &amp; Product Designer &mdash; aPage</span>
+        <span class="meta">2017 &ndash; Sep 2019</span>
+      </div>
+      <p class="entry-desc">Product venture run concurrently with Avolve Digital. One-page website system for startups to validate product-market fit before investing in a full site build. Designed the product, brand, and template system.</p>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <span class="role">Founder &amp; Design Lead &mdash; Avolve Digital</span>
+        <span class="meta">Jan 2012 &ndash; Sep 2019</span>
+      </div>
+      <p class="entry-desc">Growth-driven design and inbound marketing agency: branding, web design, and digital marketing for startups and global brands.</p>
+      <ul>
+        <li>Bitmain / BCH Devcon &mdash; global hackathon brand, site, and growth systems, 0&rarr;launch in 2 weeks</li>
+        <li>Permissionless Ventures &mdash; $50M VC fund brand and marketing site in 3 weeks</li>
+        <li>Windward Tech District &mdash; city-scale tech ecosystem brand and launch platform</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <span class="role">Freelance Web &amp; Brand Designer</span>
+        <span class="meta">2008 &ndash; 2012</span>
+      </div>
+      <p class="entry-desc">Independent client work from age 18: brand identities and websites for small businesses &mdash; the start of 18 years working directly with clients.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-title">Tools &amp; Technology</div>
+    <p>Figma &middot; Adobe Creative Cloud &middot; Next.js &middot; React &middot; TypeScript &middot; Tailwind &middot; Vercel &middot; Supabase &middot; AWS &middot; Google Cloud &middot; Cloudflare &middot; Stripe &middot; LiveKit &middot; TipTap &middot; OpenAI &middot; Anthropic &middot; Gemini &middot; Vercel AI SDK &middot; Claude Code &middot; Codex &middot; Cursor</p>
+  </section>
+
+  <section class="section">
+    <div class="section-title">Target Roles</div>
+    <p class="strengths">Founding Designer <span class="sep">&middot;</span> AI Product Lead <span class="sep">&middot;</span> Lead Product Designer <span class="sep">&middot;</span> Principal Product Designer <span class="sep">&middot;</span> Founder in Residence</p>
+  </section>
+
+</div>
+</body>
+</html>

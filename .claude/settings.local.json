@@ -121,7 +121,19 @@
       "Bash(curl -sL -o vizon-os/discover.svg \"https://vizonos.com/assets/icons/strategy/discover-icon-v1_1.svg\")",
       "Bash(curl -sL -o vizon-os/innovate.svg \"https://vizonos.com/assets/icons/strategy/innovate-icon-v1-1.svg\")",
       "Bash(curl -sL -o vizon-os/accelerate.svg \"https://vizonos.com/assets/icons/strategy/accelerate-icon-v1.svg\")",
-      "Bash(xargs cat *)"
+      "Bash(xargs cat *)",
+      "Bash(npx eslint *)",
+      "Bash(ls \"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" 2>/dev/null && echo CHROME_OK; ls /Users/tie/Dev/tieallen/node_modules/.bin/ 2>/dev/null | grep -i \"playwright\\\\|puppeteer\")",
+      "Read(//Applications/Google Chrome.app/Contents/MacOS/**)",
+      "Bash(node docs/Hire/generate-resume-pdf.mjs)",
+      "Bash(awk '{print $5}')",
+      "Bash(node -e ' *)",
+      "Bash(python3 -)",
+      "Bash(python3 -c \"import pypdf\")",
+      "Bash(pdftotext public/tie-love-resume.pdf -)",
+      "Bash(pdftotext -layout public/tie-love-resume.pdf -)",
+      "Bash(grep -v '^$')",
+      "Bash(pdftotext public/tie-love-resume-product-leadership.pdf -)"
     ]
   }
 }

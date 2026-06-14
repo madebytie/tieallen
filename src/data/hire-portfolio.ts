@@ -6,12 +6,20 @@ export interface OutcomeBlock {
 export interface HireProduct {
   slug: string;
   label: string;
+  /** Honest product status shown next to the label — never imply user adoption. */
+  status: string;
+  /** One unique lead-positioning line stating what this product proves. */
+  positioning: string;
   headline: string;
   body: string;
+  /** Empty string renders a visible placeholder slot instead of an image. */
   image: string;
+  imageAlt: string;
   tags: string[];
   href: string;
   externalHref?: string;
+  /** Demo video slot. Renders only when src is set — accepts YouTube, Mux, or self-hosted URLs. */
+  video?: { src: string; poster: string };
   info: { label: string; value: string }[];
   outcomes: OutcomeBlock[];
 }
@@ -27,6 +35,12 @@ export interface HireClientProject {
   href: string;
 }
 
+export interface HireTestimonial {
+  quote: string;
+  name: string;
+  role: string;
+}
+
 export const HIRE_POSITIONING = {
   name: "Tie Love",
   title: "Lead Product Designer · AI Product Builder",
@@ -34,11 +48,14 @@ export const HIRE_POSITIONING = {
   status: "Open to full-time roles",
   headline: "I design and ship complex products end to end.",
   intro:
-    "Not screens in a deck. I work on business outcomes, user flows, and product ecosystems. As a founder who has launched four production-grade platforms solo, I own brand, product design, platform design, and AI-orchestrated development. My portfolio is the interview: walk through live systems, not algorithm puzzles.",
+    "Not screens in a deck. I work on business outcomes, user flows, and product ecosystems. As a founder who has taken four production-grade platforms from blank canvas to deployment solo, I own brand, product design, platform design, and AI-orchestrated development. Every system on this page is live and walkable. Inside a team, that's what I bring: founder-level ownership that ships faster, cuts design-to-engineering friction, and puts AI-native features into production.",
   photo: "/assets/tie-sitting-infront-logo.png",
+  photoAlt: "Tie Love, Lead Product Designer, seated in front of the made by tie logo",
   linkedin: "https://www.linkedin.com/in/tielove/",
   email: "mailto:tie@madebytie.com",
   book: "/book",
+  // PLACEHOLDER: upload the PDF to /public/tie-love-resume.pdf — link is live but the file does not exist yet.
+  resume: "/tie-love-resume.pdf",
   x: "https://x.com/tielove333",
   portfolio: "/work",
 };
@@ -98,13 +115,13 @@ export const HIRE_STATS = [
 ];
 
 export const HIRE_HOW_I_WORK =
-  "I use AI-driven engineering pipelines to move at the speed of a full product team. I own the design decisions, platform design, and product direction. AI handles the heavy lifting of implementation so I can focus on what actually moves the business. Evaluate me on live deployments and product walkthroughs, not whiteboard coding exercises.";
+  "I use AI-driven engineering pipelines to move at the speed of a full product team. I own the design decisions, platform design, and product direction. AI handles the heavy lifting of implementation so I can focus on what actually moves the business.";
 
 export const HIRE_PILLARS = [
   {
     value: "0→1",
     title: "Full Product Ownership",
-    desc: "Brand, marketing site, product design, platform design, and production deployment. One owner from blank canvas to live users, no handoffs.",
+    desc: "Brand, marketing site, product design, platform design, and production deployment. One owner from blank canvas to live deployment, no handoffs.",
   },
   {
     value: "AI",
@@ -112,9 +129,9 @@ export const HIRE_PILLARS = [
     desc: "I integrate AI into product experiences and development workflows to reduce friction and ship faster, from autonomous agents to cloud sandboxes and intelligent scoping.",
   },
   {
-    value: "Proof",
-    title: "Portfolio Over Puzzles",
-    desc: "Four complex platforms built solo. I'd rather walk you through Scope Architect or Capsole live than reverse a binary tree. Product vision and shipped systems are the evaluation.",
+    value: "Teams",
+    title: "Built Solo, Designed for Teams",
+    desc: "Eighteen years of client and stakeholder collaboration. Founder ownership means I've sat on every side of the table — PM, engineering, design, support — so I know what each discipline needs from a designer. I give direct critique and expect it back.",
   },
 ];
 
@@ -122,46 +139,55 @@ export const HIRE_PRODUCTS: HireProduct[] = [
   {
     slug: "scope-architect",
     label: "Scope Architect",
-    headline: "A command center for building with AI.",
-    body: "Scope Architect is a founder-built platform that turns vague discovery into bankable contracts. I designed and built the full product: brand, marketing site, dual-audience UX, calibration engine, and an AI orchestration layer that runs Codex inside cloud VM sandboxes with OAuth-connected dev accounts.",
+    status: "Launching now",
+    positioning: "Dev tooling + agent infrastructure",
+    headline: "Mission control for building with AI.",
+    body: "Scope Architect turns a raw idea into an agent-ready plan, hands the work to coding agents over MCP, and keeps every task, token, and PR visible as the build moves. I designed and built the full product: brand, marketing site, product UX, and the orchestration layer — scoping engine, cloud sandbox execution, context management, and BYOK — the same product category as Vercel Sandbox and agent platforms.",
     image: "/labs/scope-architect/featured.png",
-    tags: ["Brand", "Product Design", "Platform Design", "AI-Orchestrated Build"],
+    imageAlt:
+      "Scope Architect interface showing an agent-ready project scope with modules, features, and tasks",
+    tags: ["Dev Tooling", "Agent Orchestration", "MCP + Cloud Sandboxes"],
     href: "/work/scope-architect",
+    // PLACEHOLDER: drop the demo video URL into src (YouTube, Mux, or self-hosted MP4). Slot renders once src is set.
+    video: { src: "", poster: "/labs/scope-architect/featured.png" },
     info: [
       { label: "01", value: "Brand, site, and product design" },
-      { label: "02", value: "Cloud VM sandboxes + OAuth Codex" },
-      { label: "03", value: "Gemini + Vercel AI SDK" },
+      { label: "02", value: "MCP handoff + cloud sandboxes" },
+      { label: "03", value: "Context engine + BYOK" },
     ],
     outcomes: [
       {
         label: "Problem",
         value:
-          "Scoping eats senior time, misses edge cases, and erodes margins before a project even starts.",
+          "AI coding sessions lose context, drift silently, and leave you flying blind. Chat forgets, and the thread breaks between the idea and the shipped code.",
       },
       {
         label: "Design",
         value:
-          "Dual-perspective UX: dense internal blueprint for devs, polished client proposal for stakeholders. Brand, site, and calibration engine for real-time budget math.",
+          "UX that keeps a human in command of agent work: idea-to-scope flow, a shared command center for you and your agent, and execution views that surface every task, token, and PR in real time.",
       },
       {
         label: "Platform",
         value:
-          "AI command center with recursive 3-pass expansion, Zod-validated schemas, and cloud sandbox execution. OAuth-linked Codex accounts run inside VMs directly in the platform.",
+          "Structured scoping engine with Zod-validated schemas, MCP handoff to coding agents, cloud sandbox execution, context and memory management, and BYOK across providers.",
       },
       {
         label: "Outcome",
         value:
-          "Scoping drops from days to minutes. Defensible quotes, clearer client trust, and margin protection from day zero.",
+          "Launching now. In production: a raw idea becomes an agent-ready plan in minutes, and the build stays visible and on-thread from scope to merged PR.",
       },
     ],
   },
   {
     slug: "vizon-os",
     label: "Vizon OS",
+    status: "Private beta · in use with clients",
+    positioning: "Multi-tenant enterprise scope",
     headline: "An AI-native operating system for modern business.",
-    body: "Vizon OS is my moonshot platform: a live, multi-tenant SaaS that replaces an entire stack of disconnected tools with one shared brain. Strategy, operations, and intelligence in a single product. I built the brand, marketing site, product design, and the full production-grade platform using AI-orchestrated development to ship enterprise infrastructure solo.",
+    body: "Vizon OS is my moonshot platform: a live, multi-tenant SaaS that replaces an entire stack of disconnected tools with one shared brain. CRM, docs, messaging, and AI agents in one data model. I built the brand, marketing site, product design, and the full production-grade platform using AI-orchestrated development to ship enterprise infrastructure solo.",
     image: "/projects/vizon-os/tasks-kanban.png",
-    tags: ["Brand", "Product Design", "Platform Design", "AI-Orchestrated Build"],
+    imageAlt: "Vizon OS task board showing kanban columns inside the projects module",
+    tags: ["Multi-Tenant SaaS", "CRM + Docs + Messaging", "AI Agents"],
     href: "/work/vizon-os",
     externalHref: "https://vizonos.com",
     info: [
@@ -178,27 +204,31 @@ export const HIRE_PRODUCTS: HireProduct[] = [
       {
         label: "Design",
         value:
-          "Full brand system, marketing site, and product UI across three platform layers: Strategy (Discover, Innovate, Accelerate), Operations (CRM, Projects, Docs, Messaging), and Intelligence (Nexus, Lenz AI, Agents, Workflows). One cohesive visual language from moonshot planning to daily execution.",
+          "Full brand system, marketing site, and product UI across three platform layers: Strategy, Operations, and Intelligence. One cohesive visual language from moonshot planning to daily execution.",
       },
       {
         label: "Platform",
         value:
-          "Multi-tenant SaaS with a unified data model. Strategy suite for masterplans, personas, and campaigns. CRM with contacts, deals, emails, and workflows. Projects & tasks execution engine. TipTap collaborative docs with AI writing. Real-time messaging with LiveKit voice and video. Vizon Nexus as the context engine. Lenz AI for insights and contextual chat. One-click AI agents. Platform-wide workflow rules with multi-step AI nodes.",
+          "Multi-tenant SaaS with a unified data model: CRM, projects, TipTap collaborative docs, LiveKit messaging, Lenz AI, one-click agents, and platform-wide workflow rules with multi-step AI nodes.",
       },
       {
         label: "Outcome",
         value:
-          "One shared brain for the business. Strategy, CRM, and AI in a single system. Reduced tool sprawl, faster execution, and intelligence that actually understands context across every module.",
+          "In private beta, running live with client teams. One system in place of a CRM, a docs tool, a messaging app, and a strategy suite — with AI that keeps context across every module.",
       },
     ],
   },
   {
     slug: "capsole",
     label: "Capsole",
+    status: "Private beta",
+    positioning: "Deep domain expertise, productized",
     headline: "The operating system for creative agencies.",
-    body: "Capsole is an agency OS I designed and built to unify the full client lifecycle: AI project scoping, client proposals, e-sign, project management, real-time collaborative documents, and LiveKit voice and video. Brand, product design, platform design, and AI-driven development, all from 18 years of running client work.",
-    image: "/projects/vizon-os/workflow.png",
-    tags: ["Brand", "Product Design", "Platform Design", "AI-Orchestrated Build"],
+    body: "Capsole is an agency OS I designed and built to unify the full client lifecycle: AI project scoping, client proposals, e-sign, project management, real-time collaborative documents, and LiveKit voice and video. Eighteen years of running agency work, productized into one system.",
+    // PLACEHOLDER: no Capsole screenshot exists in the repo — add one and set the path here. Empty string renders a visible placeholder slot.
+    image: "",
+    imageAlt: "Capsole agency workspace showing proposals and project delivery views",
+    tags: ["Agency OS", "Proposals + E-Sign", "Real-Time Collaboration"],
     href: "/work/capsole",
     info: [
       { label: "01", value: "Proposals, e-sign, and AI scoping" },
@@ -224,17 +254,21 @@ export const HIRE_PRODUCTS: HireProduct[] = [
       {
         label: "Outcome",
         value:
-          "Less coordination overhead, more billable craft. Scoping connects directly to delivery. One system for how agencies actually work.",
+          "In private beta. Scoping connects directly to proposals, e-sign, and delivery in one system — built to give agencies back the billable hours coordination eats.",
       },
     ],
   },
   {
     slug: "loretorch",
     label: "LoreTorch",
+    status: "Launching now",
+    positioning: "Interaction-heavy real-time UX",
     headline: "A full AI dungeon master inside a virtual tabletop.",
-    body: "LoreTorch is a complete VTT platform built around Aris, an AI game master that improvises worlds, tracks state, and runs sessions. I own the brand, website, product design, and the full production-grade platform, using AI-orchestrated development for one of the most interaction-heavy product categories there is.",
+    body: "LoreTorch is a complete VTT platform built around Aris, an AI game master that improvises worlds, tracks state, and runs sessions. I own the brand, website, product design, and the full production-grade platform — live multiplayer state and AI orchestration in one of the most interaction-heavy product categories there is.",
     image: "/assets/loretorch-hero.png",
-    tags: ["Brand", "Product Design", "Platform Design", "AI-Orchestrated Build"],
+    imageAlt:
+      "LoreTorch virtual tabletop showing a fantasy map with the Aris AI game master interface",
+    tags: ["Real-Time Multiplayer", "AI Game Master", "Live World State"],
     href: "/work/loretorch",
     externalHref: "https://loretorch.com",
     info: [
@@ -261,13 +295,29 @@ export const HIRE_PRODUCTS: HireProduct[] = [
       {
         label: "Outcome",
         value:
-          "Faster session prep, richer narrative flow, and a product category wedge competitors aren't building.",
+          "Launching now at loretorch.com. An AI game master that improvises worlds and runs live multiplayer sessions — a category wedge no incumbent VTT is building.",
       },
     ],
   },
 ];
 
+// PLACEHOLDER: replace all three with real quotes — never invent testimonials.
+export const HIRE_TESTIMONIALS: HireTestimonial[] = [
+  {
+    quote: "[TESTIMONIAL: quote from a client or collaborator]",
+    name: "[Name]",
+    role: "[Role, Company]",
+  },
+  {
+    quote: "[TESTIMONIAL: quote from a client or collaborator]",
+    name: "[Name]",
+    role: "[Role, Company]",
+  },
+];
+
 export const HIRE_CLIENT_WORK: HireClientProject[] = [
+  // PLACEHOLDER: add a recent client project here to lead the row, e.g.
+  // { title: "[RECENT CLIENT PROJECT]", client: "...", outcome: "...", tags: [...], image: "...", href: "..." },
   {
     title: "Global hackathon series, 0 to launch in 2 weeks",
     client: "BCH Devcon · Bitmain",
@@ -303,16 +353,19 @@ export const HIRE_CLIENT_WORK: HireClientProject[] = [
 export const HIRE_ROLES = [
   "Principal Product Designer",
   "Lead Product Designer",
-  "AI Product Lead",
   "Founding Designer",
-  "AI Product Designer",
+  "AI Product Lead",
+  "Founder in Residence",
 ];
+
+export const HIRE_ROLES_NOTE =
+  "I'm also open to design-led founding roles where 0→1 ownership is the job.";
 
 export const HIRE_SECTIONS = [
   { id: "overview", label: "Overview" },
   { id: "proof", label: "Proof" },
-  { id: "stack", label: "Stack" },
   { id: "roles", label: "Open To" },
+  { id: "stack", label: "Stack" },
   { id: "products", label: "Products" },
   { id: "client-work", label: "Client Work" },
   { id: "approach", label: "Approach" },
