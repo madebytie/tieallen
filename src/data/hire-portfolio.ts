@@ -6,7 +6,7 @@ export interface OutcomeBlock {
 export interface HireProduct {
   slug: string;
   label: string;
-  /** Honest product status shown next to the label — never imply user adoption. */
+  /** Honest product status shown next to the label - never imply user adoption. */
   status: string;
   /** One unique lead-positioning line stating what this product proves. */
   positioning: string;
@@ -18,7 +18,7 @@ export interface HireProduct {
   tags: string[];
   href: string;
   externalHref?: string;
-  /** Demo video slot. Renders only when src is set — accepts YouTube, Mux, or self-hosted URLs. */
+  /** Demo video slot. Renders only when src is set - accepts YouTube, Mux, or self-hosted URLs. */
   video?: { src: string; poster: string };
   info: { label: string; value: string }[];
   outcomes: OutcomeBlock[];
@@ -48,13 +48,13 @@ export const HIRE_POSITIONING = {
   status: "Open to full-time roles",
   headline: "I design and ship complex products end to end.",
   intro:
-    "Not screens in a deck. I work on business outcomes, user flows, and product ecosystems. As a founder who has taken four production-grade platforms from blank canvas to deployment solo, I own brand, product design, platform design, and AI-orchestrated development. Every system on this page is live and walkable. Inside a team, that's what I bring: founder-level ownership that ships faster, cuts design-to-engineering friction, and puts AI-native features into production.",
+    "I'm a designer and builder with range across the whole product. My roots are in brand systems, UI and website design, and the development to ship them, for clients from startups to enterprise. Over 18 years that grew into designing and building complete products end to end. As a founder I've launched four production-grade platforms on my own: brand, product, platform, and the AI-orchestrated development behind them. Every one is live and on this page. Inside a team I bring the same range and ownership. I work close to engineering, move quickly, and get AI-native features into production.",
   photo: "/assets/tie-sitting-infront-logo.png",
   photoAlt: "Tie Love, Lead Product Designer, seated in front of the made by tie logo",
   linkedin: "https://www.linkedin.com/in/tielove/",
   email: "mailto:tie@madebytie.com",
   book: "/book",
-  // PLACEHOLDER: upload the PDF to /public/tie-love-resume.pdf — link is live but the file does not exist yet.
+  // PLACEHOLDER: upload the PDF to /public/tie-love-resume.pdf - link is live but the file does not exist yet.
   resume: "/tie-love-resume.pdf",
   x: "https://x.com/tielove333",
   portfolio: "/work",
@@ -115,13 +115,13 @@ export const HIRE_STATS = [
 ];
 
 export const HIRE_HOW_I_WORK =
-  "I use AI-driven engineering pipelines to move at the speed of a full product team. I own the design decisions, platform design, and product direction. AI handles the heavy lifting of implementation so I can focus on what actually moves the business.";
+  "I use AI-driven engineering pipelines to move at the speed of a full product team. I own the design, platform, and product direction, and AI handles the bulk of the implementation. That lets one person take a product from idea to production without the usual handoffs.";
 
 export const HIRE_PILLARS = [
   {
     value: "0→1",
     title: "Full Product Ownership",
-    desc: "Brand, marketing site, product design, platform design, and production deployment. One owner from blank canvas to live deployment, no handoffs.",
+    desc: "Brand, marketing website, product design, platform design, and production deployment. One owner from first idea to live deployment, no handoffs.",
   },
   {
     value: "AI",
@@ -131,7 +131,7 @@ export const HIRE_PILLARS = [
   {
     value: "Teams",
     title: "Built Solo, Designed for Teams",
-    desc: "Eighteen years of client and stakeholder collaboration. Founder ownership means I've sat on every side of the table — PM, engineering, design, support — so I know what each discipline needs from a designer. I give direct critique and expect it back.",
+    desc: "Eighteen years of client and stakeholder collaboration. Founder ownership means I've sat on every side of the table: PM, engineering, design, and support. I know what each discipline needs from a designer. I give direct critique and expect it back.",
   },
 ];
 
@@ -142,7 +142,7 @@ export const HIRE_PRODUCTS: HireProduct[] = [
     status: "Launching now",
     positioning: "Dev tooling + agent infrastructure",
     headline: "Mission control for building with AI.",
-    body: "Scope Architect turns a raw idea into an agent-ready plan, hands the work to coding agents over MCP, and keeps every task, token, and PR visible as the build moves. I designed and built the full product: brand, marketing site, product UX, and the orchestration layer — scoping engine, cloud sandbox execution, context management, and BYOK — the same product category as Vercel Sandbox and agent platforms.",
+    body: "Scope Architect turns a raw idea into an agent-ready plan, hands the work to coding agents over MCP, and keeps every task, token, and PR visible as the build moves. I designed and built the full product: brand, marketing website, product UX, and the orchestration layer (scoping engine, cloud sandbox execution, context management, and BYOK). It's the same product category as Vercel Sandbox and agent platforms.",
     image: "/labs/scope-architect/featured.png",
     imageAlt:
       "Scope Architect interface showing an agent-ready project scope with modules, features, and tasks",
@@ -151,7 +151,7 @@ export const HIRE_PRODUCTS: HireProduct[] = [
     // PLACEHOLDER: drop the demo video URL into src (YouTube, Mux, or self-hosted MP4). Slot renders once src is set.
     video: { src: "", poster: "/labs/scope-architect/featured.png" },
     info: [
-      { label: "01", value: "Brand, site, and product design" },
+      { label: "01", value: "Brand, website, and product design" },
       { label: "02", value: "MCP handoff + cloud sandboxes" },
       { label: "03", value: "Context engine + BYOK" },
     ],
@@ -184,7 +184,7 @@ export const HIRE_PRODUCTS: HireProduct[] = [
     status: "Private beta · in use with clients",
     positioning: "Multi-tenant enterprise scope",
     headline: "An AI-native operating system for modern business.",
-    body: "Vizon OS is my moonshot platform: a live, multi-tenant SaaS that replaces an entire stack of disconnected tools with one shared brain. CRM, docs, messaging, and AI agents in one data model. I built the brand, marketing site, product design, and the full production-grade platform using AI-orchestrated development to ship enterprise infrastructure solo.",
+    body: "Vizon OS is my moonshot platform: a live, multi-tenant SaaS that replaces an entire stack of disconnected tools with one shared brain. CRM, docs, messaging, and AI agents in one data model. I built the brand, marketing website, product design, and the full production-grade platform using AI-orchestrated development to ship enterprise infrastructure solo.",
     image: "/projects/vizon-os/tasks-kanban.png",
     imageAlt: "Vizon OS task board showing kanban columns inside the projects module",
     tags: ["Multi-Tenant SaaS", "CRM + Docs + Messaging", "AI Agents"],
@@ -204,7 +204,7 @@ export const HIRE_PRODUCTS: HireProduct[] = [
       {
         label: "Design",
         value:
-          "Full brand system, marketing site, and product UI across three platform layers: Strategy, Operations, and Intelligence. One cohesive visual language from moonshot planning to daily execution.",
+          "Full brand system, marketing website, and product UI across three platform layers: Strategy, Operations, and Intelligence. One cohesive visual language from moonshot planning to daily execution.",
       },
       {
         label: "Platform",
@@ -214,7 +214,7 @@ export const HIRE_PRODUCTS: HireProduct[] = [
       {
         label: "Outcome",
         value:
-          "In private beta, running live with client teams. One system in place of a CRM, a docs tool, a messaging app, and a strategy suite — with AI that keeps context across every module.",
+          "In private beta, running live with client teams. One system in place of a CRM, a docs tool, a messaging app, and a strategy suite, with AI that keeps context across every module.",
       },
     ],
   },
@@ -225,7 +225,7 @@ export const HIRE_PRODUCTS: HireProduct[] = [
     positioning: "Deep domain expertise, productized",
     headline: "The operating system for creative agencies.",
     body: "Capsole is an agency OS I designed and built to unify the full client lifecycle: AI project scoping, client proposals, e-sign, project management, real-time collaborative documents, and LiveKit voice and video. Eighteen years of running agency work, productized into one system.",
-    // PLACEHOLDER: no Capsole screenshot exists in the repo — add one and set the path here. Empty string renders a visible placeholder slot.
+    // PLACEHOLDER: no Capsole screenshot exists in the repo - add one and set the path here. Empty string renders a visible placeholder slot.
     image: "",
     imageAlt: "Capsole agency workspace showing proposals and project delivery views",
     tags: ["Agency OS", "Proposals + E-Sign", "Real-Time Collaboration"],
@@ -254,7 +254,7 @@ export const HIRE_PRODUCTS: HireProduct[] = [
       {
         label: "Outcome",
         value:
-          "In private beta. Scoping connects directly to proposals, e-sign, and delivery in one system — built to give agencies back the billable hours coordination eats.",
+          "In private beta. Scoping connects directly to proposals, e-sign, and delivery in one system, built to give agencies back the billable hours that coordination eats.",
       },
     ],
   },
@@ -264,7 +264,7 @@ export const HIRE_PRODUCTS: HireProduct[] = [
     status: "Launching now",
     positioning: "Interaction-heavy real-time UX",
     headline: "A full AI dungeon master inside a virtual tabletop.",
-    body: "LoreTorch is a complete VTT platform built around Aris, an AI game master that improvises worlds, tracks state, and runs sessions. I own the brand, website, product design, and the full production-grade platform — live multiplayer state and AI orchestration in one of the most interaction-heavy product categories there is.",
+    body: "LoreTorch is a complete VTT platform built around Aris, an AI game master that improvises worlds, tracks state, and runs sessions. I own the brand, website, product design, and the full production-grade platform: live multiplayer state and AI orchestration in one of the most interaction-heavy product categories there is.",
     image: "/assets/loretorch-hero.png",
     imageAlt:
       "LoreTorch virtual tabletop showing a fantasy map with the Aris AI game master interface",
@@ -285,7 +285,7 @@ export const HIRE_PRODUCTS: HireProduct[] = [
       {
         label: "Design",
         value:
-          "Brand, marketing site, and narrative-first UX for session setup, world state, and player interaction. High-fantasy depth without overwhelming new players.",
+          "Brand, marketing website, and narrative-first UX for session setup, world state, and player interaction. High-fantasy depth without overwhelming new players.",
       },
       {
         label: "Platform",
@@ -295,18 +295,19 @@ export const HIRE_PRODUCTS: HireProduct[] = [
       {
         label: "Outcome",
         value:
-          "Launching now at loretorch.com. An AI game master that improvises worlds and runs live multiplayer sessions — a category wedge no incumbent VTT is building.",
+          "Launching now at loretorch.com. An AI game master that improvises worlds and runs live multiplayer sessions. A category wedge no incumbent VTT is building.",
       },
     ],
   },
 ];
 
-// PLACEHOLDER: replace all three with real quotes — never invent testimonials.
+// Real testimonials only - never invent quotes.
 export const HIRE_TESTIMONIALS: HireTestimonial[] = [
   {
-    quote: "[TESTIMONIAL: quote from a client or collaborator]",
-    name: "[Name]",
-    role: "[Role, Company]",
+    quote:
+      "We were launching a global hackathon series at San Francisco Blockchain Week starting at zero and needed everything ready to launch within 2 weeks. Tie delivered. We received a lot of great comments on the branding during the kickoff SF Hackathon. You did a great job!",
+    name: "Vincent",
+    role: "Investment Director, BITMAIN",
   },
   {
     quote: "[TESTIMONIAL: quote from a client or collaborator]",
@@ -322,16 +323,16 @@ export const HIRE_CLIENT_WORK: HireClientProject[] = [
     title: "Global hackathon series, 0 to launch in 2 weeks",
     client: "BCH Devcon · Bitmain",
     outcome:
-      "Bitmain needed a global hackathon brand, site, and growth automation from zero. I delivered the full identity, website, and launch systems inside a two-week runway.",
+      "Bitmain needed a global hackathon brand, website, and growth automation from zero. I delivered the full identity, website, and launch systems inside a two-week runway.",
     tags: ["0→1 Launch", "Brand", "Growth Systems"],
     image: "/projects/bch-devcon/bch-event-badge.png",
     href: "/work/bch-devcon",
   },
   {
-    title: "$50M crypto VC fund, brand and site in 3 weeks",
+    title: "$50M crypto VC fund, brand and website in 3 weeks",
     client: "Permissionless Ventures · Bitmain",
     outcome:
-      "A fund launch that needed to look institutional and move at startup speed. Full brand system and marketing site shipped in three weeks.",
+      "A fund launch that needed to look institutional and move at startup speed. Full brand system and marketing website shipped in three weeks.",
     tags: ["Brand", "Product Marketing", "Velocity"],
     image: "/projects/permissionless/hero-bg.png",
     video: "/projects/permissionless/Screen-Recording-2019-09-22-at-8.09.23-PM.mov",
@@ -341,7 +342,7 @@ export const HIRE_CLIENT_WORK: HireClientProject[] = [
     title: "Tech corridor launch for a city ecosystem",
     client: "Windward Tech District · Alpharetta",
     outcome:
-      "Positioned Alpharetta's tech corridor as a credible innovation hub with brand, launch site, and ecosystem storytelling delivered in four weeks.",
+      "Positioned Alpharetta's tech corridor as a credible innovation hub with brand, launch website, and ecosystem storytelling delivered in four weeks.",
     tags: ["Ecosystem Design", "Brand", "Web"],
     image: "/projects/windward-tech-district/culture-screenshot.png",
     video: "/projects/windward-tech-district/home-page-animated-section.mov",

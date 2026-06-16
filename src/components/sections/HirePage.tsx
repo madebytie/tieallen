@@ -349,7 +349,7 @@ function ClientCard({ project }: { project: (typeof HIRE_CLIENT_WORK)[0] }) {
           <div
             className={styles.clientImage}
             role="img"
-            aria-label={`${project.client} — ${project.title}`}
+            aria-label={`${project.client}: ${project.title}`}
             style={{
               backgroundImage: `url(${project.image})`,
               backgroundSize: "cover",
@@ -427,7 +427,7 @@ function StackSection() {
       <h2 className={styles.sectionTitle}>Design through deployment.</h2>
       <p className={styles.sectionBody}>
         Tools I use daily across design, production infra, real-time collaboration,
-        and AI integration — the stack behind four shipped platforms.
+        and AI integration. The stack behind four shipped platforms.
       </p>
       <div className={styles.stackGrid}>
         {HIRE_STACK.map((group) => (
@@ -478,7 +478,7 @@ export default function HirePage() {
   return (
     <div className={styles.page}>
       <div className={styles.layout}>
-        {/* Identity rail — desktop */}
+        {/* Identity rail - desktop */}
         <aside className={styles.rail} aria-label="Profile">
           <IdentityBlock />
           <ExpertiseList />
@@ -551,12 +551,12 @@ export default function HirePage() {
           <section id="products" className={styles.section}>
             <span className={styles.eyebrow}>Founder products</span>
             <h2 className={styles.sectionTitle}>
-              Real products. In production. My unfair advantage.
+              Real products. In production.
             </h2>
             <p className={styles.sectionBody}>
               Four founder platforms, all live: two launching now, two in private beta.
-              On each one I owned brand, marketing site, product design, platform design,
-              and AI-orchestrated development. Equal depth, equal proof.
+              On each one I owned brand, marketing website, product design, platform design,
+              and AI-orchestrated development.
             </p>
 
             {HIRE_PRODUCTS.map((product) => (
@@ -586,9 +586,8 @@ export default function HirePage() {
               18 years of 0→1 client launches.
             </h2>
             <p className={styles.sectionBody}>
-              Full launches — brand, site, and growth systems — delivered on startup
-              timelines. The founder products above are the headline; this is the
-              track record behind them.
+              A few client launches from my agency years. Brand, website, and growth
+              systems, usually built from scratch on tight timelines.
             </p>
             <div className={styles.clientGrid}>
               {HIRE_CLIENT_WORK.map((project) => (
@@ -619,13 +618,12 @@ export default function HirePage() {
           <section id="contact" className={styles.section}>
             <div className={styles.contactBlock}>
               <h3 className={styles.contactTitle}>
-                Let&apos;s build something that moves the needle.
+                Let&apos;s talk about what you&apos;re building.
               </h3>
               <p className={styles.contactBody}>
-                Skip the take-home. Let&apos;s pull up Scope Architect, Capsole,
-                or Vizon live and walk through how I took each from blank canvas
-                to production. Or review your product and share one improvement
-                I&apos;d prioritize on day one.
+                Pull up Scope Architect, Capsole, or Vizon OS and I&apos;ll walk you
+                through how I built each one, from idea to production. Or send me your
+                product and I&apos;ll tell you the first thing I&apos;d improve.
               </p>
               <div className={styles.contactCtas}>
                 <Button

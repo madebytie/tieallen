@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import HirePage from "@/components/sections/HirePage";
 
-const title = "Tie Love — Lead Product Designer · Founding Designer · AI Product Builder";
+const title = "Tie Love · Lead Product Designer · Founding Designer · AI Product Builder";
 const description =
-  "Lead Product Designer and AI Product Builder open to Principal Product Designer, Founding Designer, and AI Product Lead roles. Four production platforms designed and shipped solo — brand through deployment.";
+  "Lead Product Designer and AI Product Builder open to Principal Product Designer, Founding Designer, and AI Product Lead roles. Four production platforms designed and shipped solo, brand through deployment.";
 
 export const metadata: Metadata = {
   title: { absolute: title },
