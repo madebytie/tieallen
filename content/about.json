@@ -5,7 +5,7 @@
     "image": "/assets/tie-office-wall.png"
   },
   "stats": [
-    { "value": 169, "suffix": "+", "label": "projects delivered" },
+    { "value": 179, "suffix": "+", "label": "projects delivered" },
     { "value": 15, "suffix": "+", "label": "industries served" },
     { "value": 18, "suffix": "Y", "label": "years experience" }
   ],

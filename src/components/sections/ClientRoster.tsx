@@ -117,7 +117,7 @@ export default function ClientRoster() {
 
           <div className={styles.statsStrip}>
             <div className={styles.statItem}>
-              <span className={styles.statValue}>169+</span>
+              <span className={styles.statValue}>179+</span>
               <span className={styles.statLabel}>projects delivered</span>
             </div>
             <div className={styles.statItem}>

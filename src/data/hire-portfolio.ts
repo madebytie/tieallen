@@ -110,7 +110,7 @@ export const HIRE_STACK: HireStackGroup[] = [
 
 export const HIRE_STATS = [
   { value: 4, suffix: "", label: "founder products shipped" },
-  { value: 169, suffix: "+", label: "projects delivered" },
+  { value: 179, suffix: "+", label: "projects delivered" },
   { value: 18, suffix: "Y", label: "years in design & product" },
 ];
 
@@ -143,13 +143,13 @@ export const HIRE_PRODUCTS: HireProduct[] = [
     positioning: "Dev tooling + agent infrastructure",
     headline: "Mission control for building with AI.",
     body: "Scope Architect turns a raw idea into an agent-ready plan, hands the work to coding agents over MCP, and keeps every task, token, and PR visible as the build moves. I designed and built the full product: brand, marketing website, product UX, and the orchestration layer (scoping engine, cloud sandbox execution, context management, and BYOK). It's the same product category as Vercel Sandbox and agent platforms.",
-    image: "/labs/scope-architect/featured.png",
+    image: "/projects/scope-architect/command-center.png",
     imageAlt:
-      "Scope Architect interface showing an agent-ready project scope with modules, features, and tasks",
+      "Scope Architect Command Center showing live task execution across modules and agents",
     tags: ["Dev Tooling", "Agent Orchestration", "MCP + Cloud Sandboxes"],
     href: "/work/scope-architect",
     // PLACEHOLDER: drop the demo video URL into src (YouTube, Mux, or self-hosted MP4). Slot renders once src is set.
-    video: { src: "", poster: "/labs/scope-architect/featured.png" },
+    video: { src: "", poster: "/projects/scope-architect/command-center.png" },
     info: [
       { label: "01", value: "Brand, website, and product design" },
       { label: "02", value: "MCP handoff + cloud sandboxes" },
