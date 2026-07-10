@@ -554,9 +554,10 @@ export default function HirePage() {
               Real products. In production.
             </h2>
             <p className={styles.sectionBody}>
-              Four founder platforms, all live: two launching now, two in private beta.
-              On each one I owned brand, marketing website, product design, platform design,
-              and AI-orchestrated development.
+              Four founder platforms: Scope Architect is live, LoreTorch is launching now,
+              and Vizon OS and Capsole are in private beta. On each one I owned brand,
+              marketing website, product design, platform design, and AI-orchestrated
+              development.
             </p>
 
             {HIRE_PRODUCTS.map((product) => (
@@ -621,9 +622,9 @@ export default function HirePage() {
                 Let&apos;s talk about what you&apos;re building.
               </h3>
               <p className={styles.contactBody}>
-                Pull up Scope Architect, Capsole, or Vizon OS and I&apos;ll walk you
-                through how I built each one, from idea to production. Or send me your
-                product and I&apos;ll tell you the first thing I&apos;d improve.
+                Pull up Scope Architect or LoreTorch and I&apos;ll walk you through how
+                I built each one, from idea to production. Or send me your product and
+                I&apos;ll tell you the first thing I&apos;d improve.
               </p>
               <div className={styles.contactCtas}>
                 <Button

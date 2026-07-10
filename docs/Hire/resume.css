@@ -2,6 +2,49 @@
    Edit here once; both HTML files link it. Regenerate PDFs with
    node docs/Hire/generate-resume-pdf.mjs */
 
+/* Self-hosted static (non-variable) weights. Google Fonts serves Figtree/Outfit
+   as variable fonts by default; Chrome's PDF printer subsets each rendered
+   variation instance into its own font object, which fragments the PDF's
+   ToUnicode text layer and mangles copy-paste (esp. in macOS Preview/Quick Look).
+   Static per-weight files avoid that entirely. Re-fetch via the css2 API with a
+   single weight (no range) per family if these ever need updating. */
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 500;
+  src: url('fonts/Figtree-500.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 600;
+  src: url('fonts/Figtree-600.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/Outfit-400.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 500;
+  src: url('fonts/Outfit-500.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 600;
+  src: url('fonts/Outfit-600.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 700;
+  src: url('fonts/Outfit-700.woff2') format('woff2');
+}
+
 :root {
   --ink: #06071e;
   --body: #2e3140;
@@ -67,8 +110,54 @@ a { color: var(--ink); text-decoration: none; }
 
 .contact a { font-weight: 500; }
 
+/* ---- Stat strip ---- */
+.statstrip {
+  display: flex;
+  border-top: 1pt solid var(--hairline);
+  border-bottom: 1pt solid var(--hairline);
+  margin-bottom: 14pt;
+}
+
+.stat {
+  flex: 1;
+  padding: 7pt 0 6pt;
+  text-align: center;
+}
+
+.stat + .stat { border-left: 1pt solid var(--hairline); }
+
+.stat-num {
+  display: block;
+  font-family: 'Figtree', sans-serif;
+  font-size: 14pt;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+
+.stat-num .plus { color: var(--orange); }
+
+.stat-label {
+  display: block;
+  margin-top: 1pt;
+  font-size: 7.6pt;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ---- Differentiator line ---- */
+.difftag {
+  margin-top: 6pt;
+  padding-left: 11pt;
+  border-left: 1.5pt solid var(--orange);
+  font-weight: 500;
+  color: var(--ink);
+}
+
 /* ---- Sections ---- */
-.section { margin-bottom: 13pt; }
+.section { margin-bottom: 11.5pt; }
 
 .section-title {
   font-size: 8pt;
@@ -76,7 +165,7 @@ a { color: var(--ink); text-decoration: none; }
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--orange);
-  margin-bottom: 7pt;
+  margin-bottom: 6pt;
 }
 
 .summary { max-width: 100%; }
@@ -112,7 +201,7 @@ a { color: var(--ink); text-decoration: none; }
 }
 
 /* ---- Experience ---- */
-.entry { margin-bottom: 11pt; page-break-inside: avoid; }
+.entry { margin-bottom: 9.5pt; page-break-inside: avoid; }
 
 .entry-head {
   display: flex;
@@ -142,7 +231,7 @@ ul { list-style: none; margin-top: 4pt; }
 li {
   padding-left: 10pt;
   position: relative;
-  margin-bottom: 3pt;
+  margin-bottom: 2.5pt;
 }
 
 li::before {

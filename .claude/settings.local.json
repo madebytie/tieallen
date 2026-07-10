@@ -133,7 +133,9 @@
       "Bash(pdftotext public/tie-love-resume.pdf -)",
       "Bash(pdftotext -layout public/tie-love-resume.pdf -)",
       "Bash(grep -v '^$')",
-      "Bash(pdftotext public/tie-love-resume-product-leadership.pdf -)"
+      "Bash(pdftotext public/tie-love-resume-product-leadership.pdf -)",
+      "Bash(osascript -l JavaScript -e ' *)",
+      "Bash(python3)"
     ]
   }
 }

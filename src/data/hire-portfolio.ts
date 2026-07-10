@@ -54,7 +54,6 @@ export const HIRE_POSITIONING = {
   linkedin: "https://www.linkedin.com/in/tielove/",
   email: "mailto:tie@madebytie.com",
   book: "/book",
-  // PLACEHOLDER: upload the PDF to /public/tie-love-resume.pdf - link is live but the file does not exist yet.
   resume: "/tie-love-resume.pdf",
   x: "https://x.com/tielove333",
   portfolio: "/work",
@@ -139,7 +138,7 @@ export const HIRE_PRODUCTS: HireProduct[] = [
   {
     slug: "scope-architect",
     label: "Scope Architect",
-    status: "Launching now",
+    status: "Launched 2026",
     positioning: "Dev tooling + agent infrastructure",
     headline: "Mission control for building with AI.",
     body: "Scope Architect turns a raw idea into an agent-ready plan, hands the work to coding agents over MCP, and keeps every task, token, and PR visible as the build moves. I designed and built the full product: brand, marketing website, product UX, and the orchestration layer (scoping engine, cloud sandbox execution, context management, and BYOK). It's the same product category as Vercel Sandbox and agent platforms.",
@@ -148,6 +147,7 @@ export const HIRE_PRODUCTS: HireProduct[] = [
       "Scope Architect Command Center showing live task execution across modules and agents",
     tags: ["Dev Tooling", "Agent Orchestration", "MCP + Cloud Sandboxes"],
     href: "/work/scope-architect",
+    externalHref: "https://scopearchitect.com",
     // PLACEHOLDER: drop the demo video URL into src (YouTube, Mux, or self-hosted MP4). Slot renders once src is set.
     video: { src: "", poster: "/projects/scope-architect/command-center.png" },
     info: [
@@ -174,7 +174,7 @@ export const HIRE_PRODUCTS: HireProduct[] = [
       {
         label: "Outcome",
         value:
-          "Launching now. In production: a raw idea becomes an agent-ready plan in minutes, and the build stays visible and on-thread from scope to merged PR.",
+          "Live in production: a raw idea becomes an agent-ready plan in minutes, and the build stays visible and on-thread from scope to merged PR.",
       },
     ],
   },
@@ -308,11 +308,6 @@ export const HIRE_TESTIMONIALS: HireTestimonial[] = [
       "We were launching a global hackathon series at San Francisco Blockchain Week starting at zero and needed everything ready to launch within 2 weeks. Tie delivered. We received a lot of great comments on the branding during the kickoff SF Hackathon. You did a great job!",
     name: "Vincent",
     role: "Investment Director, BITMAIN",
-  },
-  {
-    quote: "[TESTIMONIAL: quote from a client or collaborator]",
-    name: "[Name]",
-    role: "[Role, Company]",
   },
 ];
 

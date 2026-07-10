@@ -16,11 +16,20 @@ export const metadata: Metadata = {
     description,
     url: "/hire",
     type: "profile",
+    images: [
+      {
+        url: "/assets/tie-sitting-infront-logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Tie Love, Lead Product Designer and AI Product Builder",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title,
     description,
+    images: ["/assets/tie-sitting-infront-logo.png"],
   },
   robots: {
     index: true,
