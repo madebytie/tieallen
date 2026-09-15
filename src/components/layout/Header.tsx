@@ -40,9 +40,19 @@ const ABOUT = [
 
 const VENTURES = [
   {
+    href: "https://scopearchitect.com",
+    label: "Scope Architect",
+    desc: "Mission control for AI",
+  },
+  {
     href: "https://vizonos.com",
     label: "Vizon OS",
     desc: "The Intelligent Workspace",
+  },
+  {
+    href: "https://capsole.io",
+    label: "Capsole",
+    desc: "Agency OS",
   },
   {
     href: "https://loretorch.com",
