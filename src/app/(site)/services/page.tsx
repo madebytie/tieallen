@@ -11,7 +11,7 @@ import styles from "@/components/sections/services-page.module.css";
 export const metadata: Metadata = {
   title: "Services - made by tie.",
   description:
-    "Product design, development, branding, and systems that ship.",
+    "Product design, web design, development, branding, and systems that ship.",
 };
 
 const SERVICES = [
@@ -28,6 +28,20 @@ const SERVICES = [
       "Prototyping",
     ],
     image: "/projects/scope-architect/command-center.png",
+  },
+  {
+    headline: "Web Design",
+    href: "/services/web-design",
+    body: "High-end websites built to convert. Every pixel, layout, and interaction is crafted with absolute precision.",
+    capabilities: [
+      "Website Design",
+      "Landing Pages",
+      "eCommerce",
+      "UI & UX Design",
+      "Responsive Design",
+      "Design Systems",
+    ],
+    image: "/projects/windward-tech-district/culture-screenshot.png",
   },
   {
     headline: "Development",

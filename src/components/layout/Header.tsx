@@ -12,6 +12,11 @@ const SERVICES = [
     desc: "UX, UI, and systems that ship",
   },
   {
+    href: "/services/web-design",
+    label: "Web Design",
+    desc: "Beautiful sites that convert",
+  },
+  {
     href: "/services/development",
     label: "Development",
     desc: "Platforms and products, live",
