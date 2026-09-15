@@ -230,6 +230,7 @@ export const HIRE_PRODUCTS: HireProduct[] = [
     imageAlt: "Capsole agency workspace showing proposals and project delivery views",
     tags: ["Agency OS", "Proposals + E-Sign", "Real-Time Collaboration"],
     href: "/work/capsole",
+    externalHref: "https://capsole.io",
     info: [
       { label: "01", value: "Proposals, e-sign, and AI scoping" },
       { label: "02", value: "TipTap collab + LiveKit calling" },
