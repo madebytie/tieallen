@@ -21,9 +21,6 @@ export default function HireChrome() {
         <span className={headerStyles.logoPeriod}>.</span>
       </Link>
       <nav className={styles.nav} aria-label="Hire page">
-        <Link href={p.portfolio} className={styles.navLink}>
-          Portfolio
-        </Link>
         <Link
           href={p.linkedin}
           className={styles.navLink}

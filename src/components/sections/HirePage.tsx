@@ -273,7 +273,7 @@ function FeaturedProduct({ product }: { product: HireProduct }) {
           </div>
 
           {product.image ? (
-            <Link href={product.href} className={styles.featuredImageWrap}>
+            <div className={styles.featuredImageWrap}>
               <Image
                 src={product.image}
                 alt={product.imageAlt}
@@ -281,7 +281,7 @@ function FeaturedProduct({ product }: { product: HireProduct }) {
                 className={styles.featuredImage}
                 sizes="(max-width: 1100px) 100vw, 45vw"
               />
-            </Link>
+            </div>
           ) : (
             <div className={`${styles.featuredImageWrap} ${styles.imagePlaceholder}`}>
               <span>[SCREENSHOT: {product.label} product UI]</span>
@@ -299,9 +299,8 @@ function FeaturedProduct({ product }: { product: HireProduct }) {
         </div>
 
         <div className={styles.featuredFooter}>
-          <div className={styles.ctaRow}>
-            <Button label="View case study" href={product.href} size="sm" />
-            {product.externalHref && (
+          {product.externalHref && (
+            <div className={styles.ctaRow}>
               <Link
                 href={product.externalHref}
                 className={styles.secondaryLink}
@@ -311,8 +310,8 @@ function FeaturedProduct({ product }: { product: HireProduct }) {
                 Visit live product
                 <ArrowIcon />
               </Link>
-            )}
-          </div>
+            </div>
+          )}
 
           <div className={styles.infoList}>
             {product.info.map((item) => (

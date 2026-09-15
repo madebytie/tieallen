@@ -435,8 +435,70 @@ Cold ATS applications are the weakest channel for this profile. Priority order:
       "why join a team now?" — written and rehearsed, not improvised. Add:
       the confident builder framing — "the products are live; pull one up and
       I'll walk you through every decision"
+- [ ] **Retainer conversion play** (Tie's insight, July 10): many hire convos
+      at seed/A companies are really contract work in disguise. Existing
+      Monthly Retainer: $6,299 (1 task) / $9,299 (2 tasks) — 2× top tier ≈
+      $223k/yr, hits the comp target. Rules:
+      1. NEVER pitch role + contract in the same breath — pursue the role
+         straight; convert only when it stalls on budget/stage/timing
+      2. Frame as contract-to-hire ("start next week; if it grows into the
+         seat, even better"), not contract-instead-of-hire
+      3. Don't send these founders the task-retainer page (Logo/Funnels/48h
+         updates = execution-vendor altitude that undercuts the product-leader
+         story). Build a quiet ownership-altitude offer instead:
+- [ ] **Reposition the Monthly Retainer itself to product-partner altitude**
+      (upgraded from the one-pager idea — Tie, July 10: "this is what I am
+      doing now for clients and what I want to lean into"). Rationale: AI is
+      commoditizing task-level design; the durable, hireable layer is judgment
+      + direction + shipped-outcome ownership — and the AI-orchestration angle
+      is differentiation, not threat. Changes to the services pricing card:
+      - "Active tasks" counter → workstreams / engagement scope
+      - Chips: Logo/Funnels/Brand Assets → Product Strategy · 0→1 Product
+        Design · Design Systems · AI-Native Features · Brand · Production
+        Shipping
+      - "Updates every 48 hours" → weekly ship cadence / embedded Slack
+      - Keep "pause or cancel anytime"
+      - Anchor embedded-partner tier $12.5–15k/mo with replaces-two-hires math
+        on the page; optional single-workstream on-ramp ~$8–9k
+      - Trade-off accepted: fewer, bigger conversations (funded founders, not
+        SMB website buyers) — matches the job-search lanes
+      - Aligns services altitude with /hire: one story, one-person product org
 
-## 6. Progress log
+## 6. Site pivot — web design/branding agency → product partner (decided July 10)
+
+Tie's call: pivot the whole site to the new direction — product lead, strategy,
+shipping, AI-native tools and systems. Third leg of the same decision as the
+resume identity rule and the retainer reposition; the site was the last asset
+telling the old story. Principle: **demote brand/web from offers to
+capabilities** ("brand through production"), don't delete them.
+
+**Offer architecture (services side):**
+1. Fractional Product Partner — repositioned retainer (§5 spec)
+2. 0→1 Product Builds — idea → shipped product (proof: Scope Architect, LoreTorch)
+3. AI-Native Systems for Your Business — absorbs crm-automation page
+   (proof: Vizon OS)
+
+**Phases:**
+- [ ] Phase 1 (most of the perceived pivot): homepage hero + narrative,
+      pricing/retainer card reposition, services-page headline reframe
+- [ ] Phase 2: services IA restructure (branding/web-design/development/
+      crm-automation → the three offers; keep old pages as reframed SEO doors
+      funneling up-altitude)
+- [ ] Phase 3: work-page curation (lead with 4 platforms), about emphasis,
+      /start + /get-started funnel copy
+
+**Stays untouched:** design system, /hire, case-study pages, ClientRoster.
+**Trade-off accepted:** fewer/bigger leads (funded founders + operators), same
+narrowing as the retainer reposition — aligned with job-search lanes and comp
+target.
+
+**Execution moved to `docs/product-focused-pivot/`** (July 10):
+`content-updates.md` (per-page edits, P0 = portfolio liveness for Scope
+Architect / Vizon OS / Capsole / LoreTorch / RE Success Path / Return To
+Radiance, screenshot-first) + `implementation-plan.md` (mechanics, screenshot
+pipeline, sequencing). Cross-refs `docs/case-studies/` status matrix.
+
+## 6b. Progress log
 
 - **2026-07-09** — Full review of both resume PDFs + /hire page completed
   (findings in §2–§3). Resume PDFs shipped June 14. Scope Architect launched
