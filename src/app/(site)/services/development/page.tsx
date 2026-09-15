@@ -9,7 +9,8 @@ import CallToAction from "@/components/sections/CallToAction";
 
 export const metadata: Metadata = {
   title: "Development - made by tie.",
-  description: "Custom web and platform development - bespoke web apps, ecommerce, and membership sites built for performance, scale, and growth.",
+  description:
+    "Product and platform development - SaaS, custom web apps, and production systems built to ship and scale.",
 };
 
 export default function DevelopmentPage() {
@@ -18,30 +19,30 @@ export default function DevelopmentPage() {
       <ServicePageHero
         titleLines={[
           "Development.",
-          "Custom software,",
-          "crafted end-to-end.",
+          "Products and platforms,",
+          "shipped end-to-end.",
         ]}
         boldLineIndex={0}
       />
       <ServiceCapabilities
         eyebrow="Development"
         headline={`Bespoke builds,\nbuilt for how\nyou work.`}
-        subhead="I build custom web apps, ecommerce stores, and membership platforms from the ground up. Boutique software tailored to your business - no templates, no shortcuts, no compromises."
+        subhead="I build production software: SaaS products, custom web apps, and the infrastructure around them. Boutique engineering tailored to the product - no templates, no shortcuts, no compromises."
         capabilities={[
-          "Custom Web Apps",
-          "eCommerce Platforms",
-          "Membership Sites",
           "SaaS Products",
-          "Web Development",
+          "Custom Web Apps",
+          "Full-stack Systems",
           "API Development",
           "Integrations",
+          "eCommerce Platforms",
+          "Membership Sites",
           "Performance",
           "Hosting + Deployment",
         ]}
       />
       <ServiceImageSplit
-        headline="Software built around your business - not the other way around."
-        body="Off-the-shelf tools force you to work how they work. I build custom platforms that fit your exact process, your audience, and your goals. Every feature is made with intention, clean, fast, and built to last."
+        headline="Software built around the product - not the other way around."
+        body="Off-the-shelf tools force you to work how they work. I build platforms that fit the product, the process, and the people using it. Every feature is made with intention: clean, fast, and built to last."
         checkpoints={[
           "Tailored to your exact requirements",
           "Built on modern, scalable foundations",
@@ -51,7 +52,7 @@ export default function DevelopmentPage() {
       />
       <ServiceBreakdown
         headline="Custom platforms, built to your spec."
-        subhead="From web apps to ecommerce stores to membership platforms - I build bespoke software that fits your business exactly, with no bloat and no compromises."
+        subhead="From SaaS products to internal tools to ecommerce - I build software that fits the business exactly, with no bloat and no compromises."
         cta={{ label: "Get in touch today", href: "/start" }}
         items={[
           {

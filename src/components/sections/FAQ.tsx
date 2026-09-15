@@ -16,11 +16,11 @@ const faqData: FAQItem[] = [
       <>
         I offer full-service execution across{" "}
         <Link href="/services/branding" className={styles.faqLink}>Branding</Link>,{" "}
-        <Link href="/services/web-design" className={styles.faqLink}>UI/UX Design</Link>, 
-        and custom <Link href="/services/development" className={styles.faqLink}>Web Development</Link>.{" "}
-        Whether it&apos;s a high-converting <Link href="/services/web-design" className={styles.faqLink}>Landing Page</Link>, 
-        a complex eCommerce build, or <Link href="/services/crm-automation" className={styles.faqLink}>CRM + Automation</Link>, 
-        I handle the entire pipeline. You can see a full breakdown of what I 
+        <Link href="/services/product-design" className={styles.faqLink}>Product Design</Link>,{" "}
+        and custom <Link href="/services/development" className={styles.faqLink}>Development</Link>.{" "}
+        Whether it&apos;s a 0→1 product, a high-converting <Link href="/services/product-design" className={styles.faqLink}>landing page</Link>,
+        or <Link href="/services/crm-automation" className={styles.faqLink}>CRM + Automation</Link>,{" "}
+        I handle the entire pipeline. You can see a full breakdown of what I
         can do for you on my <Link href="/services" className={styles.faqLink}>services page</Link>.
       </>
     ),

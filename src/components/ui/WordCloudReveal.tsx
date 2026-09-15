@@ -12,7 +12,7 @@ import styles from "./word-cloud-reveal.module.css";
  */
 
 const ROWS = [
-  ["Strategy", "Branding", "Web Design"],
+  ["Strategy", "Branding", "Product Design"],
   ["Development", "UI/UX", "SaaS", "SEO"],
   ["E-Commerce", "React", "Next.js"],
   ["Execution", "Launch", "Product", "Scale"],

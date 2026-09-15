@@ -23,8 +23,8 @@ interface FormData {
 
 const SERVICES = [
   "Branding",
-  "Web Design",
-  "Web Development",
+  "Product Design",
+  "Development",
   "Web App Development",
   "eCommerce",
   "Funnels",

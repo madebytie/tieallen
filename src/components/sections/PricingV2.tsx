@@ -85,14 +85,14 @@ const tabs = [
 ];
 
 const capabilities = [
-  "Logo",
-  "Websites",
+  "Product Design",
+  "Product Strategy",
+  "Design Systems",
   "UI Design",
   "Web Apps",
-  "CRM & Automation",
-  "Brand Assets",
-  "Funnels",
-  "Product Design",
+  "AI-Native Features",
+  "Brand",
+  "Websites",
 ];
 
 type RetainerTier = {
@@ -108,7 +108,7 @@ function getRetainerTier(tasks: number): RetainerTier {
   if (tasks === 1) return {
     badge: "Standard",
     subtitle: "One active task at a time",
-    description: "Steady, ongoing execution. One craftsman embedded with your team for whatever's next - design, dev, brand, all of it.",
+    description: "A product partner embedded with your team. Product design, strategy, and shipping - plus brand and web when the product needs it.",
     price: "$6,299",
     suffix: "/ month",
     isCustom: false,
@@ -116,7 +116,7 @@ function getRetainerTier(tasks: number): RetainerTier {
   if (tasks === 2) return {
     badge: "Accelerated",
     subtitle: "Two active tasks in parallel",
-    description: "Multiple workstreams running in parallel. Brand, web, and dev moving at the same time without the agency overhead.",
+    description: "Multiple workstreams in parallel. Product, brand, and engineering moving at the same time without the agency overhead.",
     price: "$9,299",
     suffix: "/ month",
     isCustom: false,
@@ -124,7 +124,7 @@ function getRetainerTier(tasks: number): RetainerTier {
   return {
     badge: "Custom",
     subtitle: "3+ active tasks - full capacity",
-    description: "Full design and development bandwidth locked to you. Scope, pricing, and capacity set to your exact needs.",
+    description: "Full product design and development bandwidth locked to you. Scope, pricing, and capacity set to your exact needs.",
     price: "Let's talk",
     suffix: "",
     isCustom: true,

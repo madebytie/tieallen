@@ -11,34 +11,34 @@ import styles from "@/components/sections/services-page.module.css";
 export const metadata: Metadata = {
   title: "Services - made by tie.",
   description:
-    "Web design, development, branding, funnels, and CRM automation.",
+    "Product design, development, branding, and systems that ship.",
 };
 
 const SERVICES = [
   {
-    headline: "Web Design",
-    href: "/services/web-design",
-    body: "High-end websites built to convert. Every pixel, layout, and interaction is crafted with absolute precision.",
+    headline: "Product Design",
+    href: "/services/product-design",
+    body: "0→1 product UX, interface systems, and the surfaces people actually use. Strategy through high-fidelity design, ready to ship.",
     capabilities: [
-      "Website Design",
-      "Landing Pages",
-      "eCommerce",
-      "UI & UX Design",
-      "Responsive Design",
+      "Product Strategy",
+      "UX Design",
+      "UI Design",
       "Design Systems",
+      "Websites",
+      "Prototyping",
     ],
-    image: "/projects/windward-tech-district/culture-screenshot.png",
+    image: "/projects/scope-architect/command-center.png",
   },
   {
     headline: "Development",
     href: "/services/development",
-    body: "Custom platforms, SaaS products, and internal tools built to solve real problems. High performance, seamless user experiences, and a foundation built to scale.",
+    body: "Production platforms and product engineering. SaaS, internal tools, and the systems that take a designed product live.",
     capabilities: [
-      "Custom Web Apps",
-      "eCommerce Platforms",
-      "Membership Sites",
       "SaaS Products",
+      "Custom Web Apps",
       "Full-stack Systems",
+      "APIs + Integrations",
+      "eCommerce Platforms",
       "Performance",
     ],
     image: "/assets/development.png",

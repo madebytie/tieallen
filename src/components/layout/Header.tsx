@@ -7,14 +7,14 @@ import styles from "./header.module.css";
 
 const SERVICES = [
   {
-    href: "/services/web-design",
-    label: "Web Design",
-    desc: "Beautiful sites that convert",
+    href: "/services/product-design",
+    label: "Product Design",
+    desc: "UX, UI, and systems that ship",
   },
   {
     href: "/services/development",
     label: "Development",
-    desc: "Custom builds, built to scale",
+    desc: "Platforms and products, live",
   },
   {
     href: "/services/branding",

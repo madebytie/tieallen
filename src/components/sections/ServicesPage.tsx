@@ -12,8 +12,8 @@ export function ServicesHero() {
         <h1 className={styles.heroTitle}>One craftsman. End-to-end.</h1>
       </div>
       <p className={styles.heroBody}>
-        I bring strategy, design and development together for the creative
-        execution of your vision into a world class digital experience.
+        I bring product strategy, design, and development together so you ship
+        a complete product - not a pile of disconnected deliverables.
       </p>
     </div>
   );
